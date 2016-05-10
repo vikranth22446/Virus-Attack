@@ -1,6 +1,6 @@
 
 import java.awt.Canvas;
-import java.lang.reflect.Array;
+import java.awt.Graphics;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -15,12 +15,10 @@ public class VirusGroupManager {
     int groupNum;
 
     public VirusGroupManager(){
-        groups = new HashMap<>();
-        VirusGroup virusGroup = new VirusGroup();
-        virusGroup.addVirus(new Virus(100,100));
-        groups.put(1, virusGroup);
+        groups = new HashMap<Integer, VirusGroup>();
+        groups.put(1, new VirusGroup(new Virus(100, 100)));
 
-        keys = new ArrayList<>();
+        keys = new ArrayList<Integer>();
         keys.add(1);
 
         currentGroup = 1;
@@ -29,8 +27,7 @@ public class VirusGroupManager {
 
     public void update(Canvas canvas){
         for(int n : keys){
-            groups.get(n).update();
-            groups.get(n).draw(canvas);
+            groups.get(n).update(canvas);
         }
     }
 
@@ -43,21 +40,24 @@ public class VirusGroupManager {
     }
 
     public void split(int current){
-        ArrayList<Virus> virusList = new ArrayList<>();
-        for(int i=0; i<groups.get(current).size()/2; i++){
-            virusList.add(groups.get(current).remove(i));
+        Virus[] newGroup = new Virus[groups.get(current).size()/2];
+        for(int i=0; i<newGroup.length; i++){
+            newGroup[i] = groups.get(current).remove(i);
         }
         groupNum++;
-        groups.put(groupNum, new VirusGroup(virusList, groupNum));
+        groups.put(groupNum, new VirusGroup(newGroup, groupNum));
         keys.add(groupNum);
     }
 
     public int groupNum(){
         return groupNum;
     }
+    public VirusGroup currentGroup()
+    {
+        return groups.get( groupNum );
+    }
+
+
 
 
 }
-
-
-

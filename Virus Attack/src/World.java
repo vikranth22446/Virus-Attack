@@ -6,27 +6,31 @@ import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.util.ArrayList;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-import javax.swing.*;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.Timer;
 
 public class World extends Canvas implements Runnable {
-    private int [][] setOfValues = {
-            {100,200},{300,400},{400,700},{600,800}
-    };
+
     private static final int HEIGHT = 300;
+    public static final Color BCOLOR = Color.green;
     private static final int WIDTH = 400;
-    private static final int SCALE = 4;
+    private static final int SCALE = 2;
     private static final String NAME = "Virus";
 
     private JFrame frame;
     private JPanel panel;
 
-    private CellManager cellManager;
     Graphics g;
 
+    private CellManager cellManager;
+    private AntiVirusManager avm;
     public VirusGroupManager vgm;
     public InputHandler input;
+
 
     public World() {
         setMinimumSize(new Dimension(WIDTH * SCALE, HEIGHT * SCALE));
@@ -35,13 +39,11 @@ public class World extends Canvas implements Runnable {
 
         frame = new JFrame(NAME);
 
-        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new BorderLayout());
 
         frame.add(this, BorderLayout.CENTER);
         frame.pack();
-
-
 
         panel = new JPanel();
         Container c = frame.getContentPane();
@@ -55,42 +57,64 @@ public class World extends Canvas implements Runnable {
         frame.setVisible(true);
 
         vgm = new VirusGroupManager();
-        input = new InputHandler(vgm);
+        avm = new AntiVirusManager();
         cellManager = new CellManager();
-        createCellsInPositions();
+        cellManager.createCellsInPositions();
+
+        input = new InputHandler(vgm);
         addMouseListener(input);
         addKeyListener(input);
 
-    }
-    public void createCellsInPositions(){
-        for (int i = 0; i <setOfValues.length; i++) {
-            Cell cell;
-            if(i<(setOfValues.length+1)/2){
-                cell = new SickCells(setOfValues[i][0],setOfValues[i][1],100,i);
-            }
-            else{
-               cell = new WhiteCell(setOfValues[i][0],setOfValues[i][1],100,i);
-            }
-            cellManager.addCell(cell);
-        }
-    }
-    public void run() {
-        while (true) {
-            g.fillRect(0, 0, WIDTH*SCALE, HEIGHT*SCALE);
-            vgm.update(this);
-            cellManager.updateDrawing(this);
-            try {
-                Thread.sleep(100);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
+
     }
 
+
+    public void run() {
+        setBackground( Color.green );
+        g.setColor( Color.green );
+        g.fillRect( 0, 0, WIDTH * SCALE, HEIGHT * SCALE);
+        World w = this;
+        ActionListener taskPerformer = new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                vgm.update(w);
+                avm.update(w);
+                avm.checkDead(w);
+                cellManager.updateViruses( vgm, w );
+                cellManager.updateDrawing(w);
+
+            }
+        };
+        Timer timer = new Timer(100 ,taskPerformer);
+        timer.setRepeats(true);
+        timer.start();
+
+        try
+        {
+            Thread.sleep(100);
+        }
+        catch ( InterruptedException e1 )
+        {
+            // TODO Auto-generated catch block
+            e1.printStackTrace();
+        }
+
+//        while (true) {
+//
+//           // g.fillRect(0, 0, WIDTH * SCALE, HEIGHT * SCALE);
+//
+//
+//
+//
+//            try {
+//                Thread.sleep(100);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//        }
+    }
 
     public synchronized void start() {
         new Thread(this).start();
     }
-
 
 }
