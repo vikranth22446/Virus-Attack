@@ -10,7 +10,7 @@ public class AntiVirusManager {
     public static ArrayList<AntiVirus> anti;
 
     public AntiVirusManager() {
-        anti = new ArrayList<AntiVirus>();
+        anti = new ArrayList<>();
         anti.add(new AntiVirus(300, 300));
         anti.add(new AntiVirus(310, 310));
 
@@ -25,7 +25,7 @@ public class AntiVirusManager {
 
     public void updateCoord(int current, int newX, int newY) {
         for (AntiVirus n : anti) {
-            n.setCoord(newX, newY);;
+            n.setCoord(newX, newY);
         }
     }
 

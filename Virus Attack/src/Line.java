@@ -35,6 +35,4 @@ public class Line
         return av;
     }
 
-
-
 }
