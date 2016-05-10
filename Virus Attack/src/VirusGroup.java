@@ -1,5 +1,6 @@
 
 import java.awt.Canvas;
+import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
@@ -13,13 +14,18 @@ public class VirusGroup{
     ArrayList<Virus> viruses;
     private int groupNum;
 
-    public VirusGroup(){
+    public VirusGroup(Virus v){
         viruses = new ArrayList<Virus>();
+        viruses.add(v);
+        viruses.add(new Virus(150, 200));
+
     }
 
-    public VirusGroup(ArrayList<Virus> viruses, int n){
-        this.viruses = new ArrayList<Virus>();
-        this.viruses.addAll(viruses);
+    public VirusGroup(Virus[] toAdd, int n){
+        viruses = new ArrayList<Virus>();
+        for(Virus v : toAdd){
+            viruses.add(v);
+        }
         groupNum = n;
     }
 
@@ -27,17 +33,14 @@ public class VirusGroup{
         viruses.add(v);
     }
 
-    public void update(){
+    public void update(Canvas canvas){
         for(Virus v : viruses){
-            v.update();
+            v.update(canvas);
+            v.draw(canvas);
+
         }
     }
 
-    public void draw(Canvas canvas){
-        for(Virus v : viruses){
-            v.draw(canvas);
-        }
-    }
 
     public void setCoord(int x, int y){
         for(Virus v : viruses){
@@ -48,8 +51,13 @@ public class VirusGroup{
     public int size(){
         return viruses.size();
     }
+    public Virus getVirus(int i){
+        return viruses.get( i );
+    }
+
 
     public Virus remove(int n){
         return viruses.remove(n);
     }
+
 }
