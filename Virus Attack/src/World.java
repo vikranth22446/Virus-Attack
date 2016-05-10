@@ -65,7 +65,6 @@ public class World extends Canvas implements Runnable {
         addMouseListener(input);
         addKeyListener(input);
 
-
     }
 
 
