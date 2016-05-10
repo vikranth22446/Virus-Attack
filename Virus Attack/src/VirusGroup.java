@@ -1,25 +1,18 @@
 
 import java.awt.Canvas;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionListener;
 import java.util.ArrayList;
 
 
 public class VirusGroup{
-
     ArrayList<Virus> viruses;
     private int groupNum;
 
     public VirusGroup(){
-        viruses = new ArrayList<Virus>();
+        viruses = new ArrayList<>();
     }
 
-    public VirusGroup(ArrayList<Virus> viruses, int n){
-        this.viruses = new ArrayList<Virus>();
-        this.viruses.addAll(viruses);
+    public VirusGroup(ArrayList<Virus> toAdd, int n){
+        viruses.addAll(toAdd);
         groupNum = n;
     }
 

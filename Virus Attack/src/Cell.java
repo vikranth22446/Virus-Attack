@@ -1,16 +1,20 @@
-/**
- * Created by Vikranth on 5/4/2016.
- */
+import java.awt.*;
 
 public abstract class Cell implements Locatable {
     private int x;
     private int y;
     private int health;
-
-    public Cell(int x, int y, int health) {
+    private int index;
+    public Cell(int x, int y, int health,  int index) {
         this.x = x;
         this.y = y;
         this.health = health;
+        this.index = index;
+    }
+    public void draw(Canvas canvas,int position){
+        Graphics g = canvas.getGraphics();
+        g.setColor(new Color(19, 255, 240));
+        g.fillOval(x, y, 50, 50);
     }
 
     @Override
@@ -22,8 +26,7 @@ public abstract class Cell implements Locatable {
     public int getY() {
         return y;
     }
-    public abstract void decrementHealth(int decrement);
-    public abstract void incrementHealth(int increment);
+
 
     public void setX(int x) {
         this.x = x;
@@ -41,5 +44,8 @@ public abstract class Cell implements Locatable {
     public int getHealth() {
         return health;
     }
-}
 
+    public abstract void produceValues();
+
+    public abstract boolean canEnemeyHurt(int enemyX, int enemyY, int ableRadius);
+}

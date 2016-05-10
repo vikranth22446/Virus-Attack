@@ -1,22 +1,30 @@
-/**
- * Created by Vikranth on 5/4/2016.
- */
-public class RedCell extends Cell {
+public class RedCell extends Cell
+{
 
-    public RedCell(int x, int y, int health) {
-        super(x, y, health);
+    public RedCell(int x, int y, int health,int index)
+    {
+        super(x, y, health,index);
     }
 
     @Override
-    public void decrementHealth(int decrement) {
-        setHealth(getHealth() - decrement);
+    public void produceValues() {
+
     }
 
     @Override
-    public void incrementHealth(int increment) {
-        setHealth(getHealth() + increment);
+    public boolean canEnemeyHurt(int enemyX, int enemyY, int ableRadius) {
+        return false;
     }
 
+    public  void decrementHealth(int decreaseBy)
+    {
+        setHealth(getHealth() - decreaseBy);
+
+    }
+    public  void increaseHealth(int increaseBy)
+    {
+        setHealth(getHealth() + increaseBy);
+
+    }
 
 }
-
