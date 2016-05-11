@@ -85,7 +85,7 @@ public class Virus implements Locatable, Attacker {
 				c.decrementHealth(attack);
 				g = canvas.getGraphics();
 				g.setColor(Color.black);
-				g.drawLine(x + width / 4, y + height / 4, c.getX() + c.getRadius()/2, c.getY() + c.getRadius()/4);
+				g.drawLine(x + width / 4, y + height / 4, c.getX()+c.getRadius()/2, c.getY()+c.getRadius()/2 );
 				if(c.getHealth() <= 0){
 					CellManager.convertSick(c);
 				}

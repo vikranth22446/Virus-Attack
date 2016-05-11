@@ -34,7 +34,7 @@ public abstract class Cell implements Locatable
     /**
      * Radius value for cell
      */
-    private int radius;
+    private int radius = 50;
 
     /**
      * Health value for cell

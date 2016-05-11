@@ -23,7 +23,7 @@ public class CellManager {
     public CellManager() {
         redValues = new ArrayList<>();
         whiteValues = new ArrayList<>();
-
+        sickValues = new ArrayList<>();
     }
     public void createCellsInPositions()
     {
