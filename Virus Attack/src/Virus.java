@@ -7,139 +7,141 @@ import java.util.ArrayList;
 
 public class Virus implements Locatable, Attacker {
 
-	private int x, y; // current loc
+    private int x, y; // current loc
 
-	private int prex, prey;
+    private int prex, prey;
 
-	private int speed, attack, health; // stats
+    private int speed, attack, health; // stats
 
-	private int vx, vy;
+    private int vx, vy;
 
-	private int xL, yL; // location it is headed to
+    private int xL, yL; // location it is headed to
 
-	private int width, height;
+    private int width, height;
 
-	private int attackRadius = 80;
+    private int attackRadius = 80;
 
-	private int num;
-	ArrayList<Line> lines;
+    private int num;
+    ArrayList<Line> lines;
 
-	// construct a virus
-	public Virus(int x, int y) {
+    // construct a virus
+    public Virus(int x, int y) {
 
-		this.x = x;
-		prex = x;
-		this.y = y;
-		prey = y;
-		speed = 5;
-		attack = 2;
-		health = 6;
+        this.x = x;
+        prex = x;
+        this.y = y;
+        prey = y;
+        speed = 5;
+        attack = 2;
+        health = 6;
 
-		width = 30;
-		height = 30;
-		lines = new ArrayList<Line>();
+        width = 30;
+        height = 30;
+        lines = new ArrayList<Line>();
 
-	}
+    }
 
-	// set a new coordinate for the virus to head to
-	public void setCoord(int nx, int ny) {
+    // set a new coordinate for the virus to head to
+    public void setCoord(int nx, int ny) {
 
-		xL = nx;
-		yL = ny;
-		double hyp = Math.sqrt((xL - x) * (xL - x) + (yL - y) * (yL - y));
-		double scale = speed / hyp;
-		vx = (int) ((xL - x) * scale);
-		vy = (int) ((yL - y) * scale);
-	}
+        xL = nx;
+        yL = ny;
+        double hyp = Math.sqrt((xL - x) * (xL - x) + (yL - y) * (yL - y));
+        double scale = speed / hyp;
+        vx = (int) ((xL - x) * scale);
+        vy = (int) ((yL - y) * scale);
+    }
 
-	// update the status of the virus
-	// Also checks if anything is in attack radius
-	public void update(Canvas canvas) {
-		x += vx;
-		y += vy;
+    // update the status of the virus
+    // Also checks if anything is in attack radius
+    public void update(Canvas canvas) {
+        x += vx;
+        y += vy;
 
-		Graphics g;
-		boolean attacking = false;
-		for (int i = 0; i < AntiVirusManager.anti.size(); i++) {
-			AntiVirus av = AntiVirusManager.anti.get(i);
-			if (getDistance(av) <= attackRadius) {
-				av.reduceHealth(attack);
-				g = canvas.getGraphics();
-				g.setColor(Color.black);
-				g.drawLine(x + width / 4, y + height / 4, av.getX() + av.getWidth() / 4,
-						av.getY() + av.getHeight() / 4);
-				if (av.isDead()) {
-					AntiVirusManager.anti.remove(av);
-				}
-				attacking = true;
-				break;
-			}
+        Graphics g;
+        boolean attacking = false;
+        for (int i = 0; i < AntiVirusManager.anti.size(); i++) {
+            AntiVirus av = AntiVirusManager.anti.get(i);
+            if (getDistance(av) <= attackRadius) {
+                av.reduceHealth(attack);
+                g = canvas.getGraphics();
+                g.setColor(Color.black);
+                g.drawLine(x + width / 4, y + height / 4, av.getX() + av.getWidth() / 4,
+                        av.getY() + av.getHeight() / 4);
+                if (av.isDead()) {
+                    AntiVirusManager.anti.remove(av);
+                }
+                attacking = true;
+                break;
+            }
 
-		}
-		
-		if(attacking) return;
-		
-		for(int i=0; i<CellManager.redValues.size(); i++){
-			Cell c = CellManager.redValues.get(i);
-			if(getDistance(c) <= attackRadius){
-				c.decrementHealth(attack);
-				g = canvas.getGraphics();
-				g.setColor(Color.black);
-				g.drawLine(x + width / 4, y + height / 4, c.getX()+c.getRadius()/2, c.getY()+c.getRadius()/2 );
-				if(c.getHealth() <= 0){
-					CellManager.convertSick(c);
-				}
-				attacking = true;
-				break;
-			}
-			
-		}
-		
-		if(attacking) return;
-		
-		for(int i=0; i<CellManager.whiteValues.size(); i++){
-			Cell c = CellManager.whiteValues.get(i);
-			if(getDistance(c) <= attackRadius){
-				c.decrementHealth(attack);
-				g = canvas.getGraphics();
-				g.setColor(Color.black);
-				g.drawLine(x + width / 4, y + height / 4, c.getX() + c.getRadius()/4, c.getY() + c.getRadius()/4);
-				if(c.getHealth() <= 0){
-					CellManager.removeCell(i);
-				}
-				attacking = true;
-				break;
-			}
-			
-		}
-		
-		
-	}
+        }
 
-	public void draw(Canvas canvas) {
-		Graphics g = canvas.getGraphics();
-		g.setColor(new Color(122, 122, 0));
-		g.fillRect(x, y, width, height);
-		g.setColor(World.BCOLOR);
-		g.drawRect(x + width / 4, y + height / 4, width / 2, height / 2);
-	}
+        if (attacking) return;
 
-	public int getX() {
-		return x;
-	}
+        for (int i = 0; i < CellManager.redValues.size(); i++) {
+            Cell c = CellManager.redValues.get(i);
+            if (getDistance(c) <= attackRadius) {
+                c.decrementHealth(attack);
+                g = canvas.getGraphics();
+                g.setColor(Color.black);
+                if (!(c instanceof SickCell)) {
+                    g.drawLine(x + width / 4, y + height / 4, c.getX() + c.getRadius() / 2, c.getY() + c.getRadius() / 2);
+                    if (c.getHealth() <= 0) {
+                        CellManager.convertSick(c);
+                    }
+                    attacking = true;
+                }
+                break;
+            }
 
-	public int getY() {
-		return y;
-	}
+        }
 
-	public double getDistance(Locatable other) {
-		double distance = (x - other.getX()) * (x - other.getX())
-				+ (y - other.getY()) * (y - other.getY());
-		distance = Math.sqrt(distance);
-		return distance;
-	}
+        if (attacking) return;
 
-	public int getAttackRadius() {
-		return attackRadius;
-	}
+        for (int i = 0; i < CellManager.whiteValues.size(); i++) {
+            Cell c = CellManager.whiteValues.get(i);
+            if (getDistance(c) <= attackRadius) {
+                c.decrementHealth(attack);
+                g = canvas.getGraphics();
+                g.setColor(Color.black);
+                g.drawLine(x + width / 4, y + height / 4, c.getX() + c.getRadius() / 4, c.getY() + c.getRadius() / 4);
+                if (c.getHealth() <= 0) {
+                    CellManager.removeCell(i);
+                }
+                attacking = true;
+                break;
+            }
+
+        }
+
+
+    }
+
+    public void draw(Canvas canvas) {
+        Graphics g = canvas.getGraphics();
+        g.setColor(new Color(122, 122, 0));
+        g.fillRect(x, y, width, height);
+        g.setColor(World.BCOLOR);
+        g.drawRect(x + width / 4, y + height / 4, width / 2, height / 2);
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public double getDistance(Locatable other) {
+        double distance = (x - other.getX()) * (x - other.getX())
+                + (y - other.getY()) * (y - other.getY());
+        distance = Math.sqrt(distance);
+        return distance;
+    }
+
+    public int getAttackRadius() {
+        return attackRadius;
+    }
 }
