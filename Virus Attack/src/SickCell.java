@@ -1,4 +1,3 @@
-package v2;
 
 import javax.swing.*;
 import java.awt.*;
@@ -67,6 +66,11 @@ public class SickCell extends Cell
 //            }
 //        }
 
+    }
+
+    @Override
+    public boolean canEnemyHurt(int enemyX, int enemyY, int ableRadius) {
+        return false;
     }
 
 }

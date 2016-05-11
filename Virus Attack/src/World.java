@@ -1,19 +1,11 @@
-package v2;
-
-import java.awt.AlphaComposite;
 import java.awt.BorderLayout;
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.Timer;
 
 public class World extends Canvas implements Runnable {
 
@@ -22,7 +14,7 @@ public class World extends Canvas implements Runnable {
     private static final int WIDTH = 400;
     private static final int SCALE = 4;
     private static final String NAME = "Virus";
-    
+
     private JFrame frame;
     private JPanel panel;
 
@@ -71,17 +63,17 @@ public class World extends Canvas implements Runnable {
     }
 
 
-    public void run() {     
+    public void run() {
         while (true) {
 
             g.fillRect(0, 0, WIDTH * SCALE, HEIGHT * SCALE);
 
 
-        	 vgm.update(this);
-             avm.update(this);
-             avm.checkDead(this);
-             cellManager.updateViruses( vgm, this );
-             cellManager.updateDrawing(this);
+            vgm.update(this);
+            avm.update(this);
+            avm.checkDead(this);
+            cellManager.updateViruses(vgm, this);
+            cellManager.updateDrawing(this);
 
             try {
                 Thread.sleep(100);

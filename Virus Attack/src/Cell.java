@@ -34,7 +34,7 @@ public abstract class Cell implements Locatable
     /**
      * Radius value for cell
      */
-    private double radius;
+    private int radius;
 
     /**
      * Health value for cell
@@ -71,7 +71,7 @@ public abstract class Cell implements Locatable
         return viruses.size();
     }
 
-    public double getRadius()
+    public int getRadius()
     {
         return radius;
     }

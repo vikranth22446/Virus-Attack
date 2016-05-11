@@ -1,4 +1,3 @@
-package v2;
 
 import java.awt.Canvas;
 import java.awt.Color;
@@ -51,5 +50,10 @@ public class RedCell extends Cell
 //            }
 //        }
 
+    }
+
+    @Override
+    public boolean canEnemyHurt(int enemyX, int enemyY, int ableRadius) {
+        return false;
     }
 }
