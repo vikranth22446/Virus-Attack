@@ -1,3 +1,5 @@
+package v2;
+
 import java.awt.*;
 
 public class WhiteCell extends Cell
@@ -54,19 +56,20 @@ public class WhiteCell extends Cell
     }
     public void updateViruses( VirusGroup group )
     {
-        // TODO Auto-generated method stub
-        for ( int i = 0; i < group.size(); i++ )
-        {
-            if (getDistance( group.getVirus( i ) ) <= group.getVirus(i).getAttackRadius())
-            {
-                setHealth( getHealth() - 1 );
-                if (!getViruses().contains(group.getVirus( i )))
-                {
-                    addVirus(group.getVirus( i ));
-                }
-
-            }
-        }
+//        // TODO Auto-generated method stub
+//        for ( int i = 0; i < group.size(); i++ )
+//        {
+//            if (getDistance( group.getVirus( i ) ) <= group.getVirus(i).getAttackRadius())
+//            {
+//                setHealth( getHealth() - 1 );
+//                if (!getViruses().contains(group.getVirus( i )))
+//                {
+//                    addVirus(group.getVirus( i ));
+//                }
+//
+//            }
+//        }
 
     }
+    
 }
