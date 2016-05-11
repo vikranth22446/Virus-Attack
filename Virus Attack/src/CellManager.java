@@ -7,6 +7,7 @@ import java.util.LinkedList;
 public class CellManager {
     public static ArrayList<Cell> redValues;
     public static ArrayList<Cell> whiteValues;
+    public static ArrayList<Cell> sickValues;
 
 
     private int [][] setOfValues = {
@@ -14,6 +15,9 @@ public class CellManager {
     };
     private int [][] set2 = {
             {150,250},{350,450},{450,750},{650,850}
+    };
+    private int [][] set3 = {
+            {400,250}
     };
     //using id numbers as positions
     public CellManager() {
@@ -33,7 +37,17 @@ public class CellManager {
 
             addWhiteCell(cell);
         }
+        for (int i = 0; i <set2.length; i++) {
+            Cell cell=new SickCell(set2[i][0],set2[i][1],100,i);
+
+           addSickCell(cell);
+        }
     }
+
+    private void addSickCell(Cell cell) {
+        sickValues.add(cell);
+    }
+
     public void addSetOfValues(ArrayList<Cell> arrayList){
         redValues.addAll(arrayList);
     }
