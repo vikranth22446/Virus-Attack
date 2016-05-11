@@ -1,3 +1,4 @@
+package v2;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -5,8 +6,8 @@ import java.util.LinkedList;
 
 
 public class CellManager {
-    private ArrayList<Cell> redValues;
-    private LinkedList<Cell> whiteValues;
+    public static ArrayList<Cell> redValues;
+    public static ArrayList<Cell> whiteValues;
 
 
     private int [][] setOfValues = {
@@ -18,7 +19,7 @@ public class CellManager {
     //using id numbers as positions
     public CellManager() {
         redValues = new ArrayList<>();
-        whiteValues = new LinkedList<>();
+        whiteValues = new ArrayList<>();
 
     }
     public void createCellsInPositions()
@@ -46,7 +47,7 @@ public class CellManager {
     {
         whiteValues.add(x);
     }
-    public void convertSick (Cell x)
+    public static void convertSick (Cell x)
     {
         if (x instanceof RedCell)
         {
@@ -59,9 +60,11 @@ public class CellManager {
         }
 
     }
-    public void removeCell(int id){
+    public static void removeCell(int id){
         whiteValues.remove(id);
     }
+    
+    
     public void updateViruses(VirusGroupManager vgm, Canvas c){
         for (int i =0 ; i < redValues.size(); i++)
         {

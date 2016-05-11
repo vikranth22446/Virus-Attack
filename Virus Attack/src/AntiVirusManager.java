@@ -1,3 +1,4 @@
+package v2;
 
 import java.awt.Canvas;
 import java.awt.Color;
@@ -10,7 +11,7 @@ public class AntiVirusManager {
     public static ArrayList<AntiVirus> anti;
 
     public AntiVirusManager() {
-        anti = new ArrayList<>();
+        anti = new ArrayList<AntiVirus>();
         anti.add(new AntiVirus(300, 300));
         anti.add(new AntiVirus(310, 310));
 
@@ -25,7 +26,7 @@ public class AntiVirusManager {
 
     public void updateCoord(int current, int newX, int newY) {
         for (AntiVirus n : anti) {
-            n.setCoord(newX, newY);
+            n.setCoord(newX, newY);;
         }
     }
 

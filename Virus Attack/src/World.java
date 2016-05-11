@@ -1,3 +1,5 @@
+package v2;
+
 import java.awt.AlphaComposite;
 import java.awt.BorderLayout;
 import java.awt.Canvas;
@@ -15,12 +17,12 @@ import javax.swing.Timer;
 
 public class World extends Canvas implements Runnable {
 
-    private static final int HEIGHT = 300;
+    private static final int HEIGHT = 400;
     public static final Color BCOLOR = Color.green;
     private static final int WIDTH = 400;
-    private static final int SCALE = 2;
+    private static final int SCALE = 4;
     private static final String NAME = "Virus";
-
+    
     private JFrame frame;
     private JPanel panel;
 
@@ -65,51 +67,28 @@ public class World extends Canvas implements Runnable {
         addMouseListener(input);
         addKeyListener(input);
 
+
     }
 
 
-    public void run() {
-        setBackground( Color.green );
-        g.setColor( Color.green );
-        g.fillRect( 0, 0, WIDTH * SCALE, HEIGHT * SCALE);
-        World w = this;
-        ActionListener taskPerformer = new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
-                vgm.update(w);
-                avm.update(w);
-                avm.checkDead(w);
-                cellManager.updateViruses( vgm, w );
-                cellManager.updateDrawing(w);
+    public void run() {     
+        while (true) {
 
+            g.fillRect(0, 0, WIDTH * SCALE, HEIGHT * SCALE);
+
+
+        	 vgm.update(this);
+             avm.update(this);
+             avm.checkDead(this);
+             cellManager.updateViruses( vgm, this );
+             cellManager.updateDrawing(this);
+
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
-        };
-        Timer timer = new Timer(100 ,taskPerformer);
-        timer.setRepeats(true);
-        timer.start();
-
-        try
-        {
-            Thread.sleep(100);
         }
-        catch ( InterruptedException e1 )
-        {
-            // TODO Auto-generated catch block
-            e1.printStackTrace();
-        }
-
-//        while (true) {
-//
-//           // g.fillRect(0, 0, WIDTH * SCALE, HEIGHT * SCALE);
-//
-//
-//
-//
-//            try {
-//                Thread.sleep(100);
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
-//        }
     }
 
     public synchronized void start() {

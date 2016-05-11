@@ -1,3 +1,5 @@
+package v2;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -46,35 +48,24 @@ public class SickCell extends Cell
     }
 
 
-    @Override
-    public boolean canEnemyHurt( int enemyX, int enemyY, int ableRadius )
-    {
-        double hyp = Math
-                .sqrt( Math.pow( Math.abs( getX() - enemyX ), 2 ) + Math.pow( Math.abs( getY() - enemyY ), 2 ) );
-        if ( ableRadius > hyp )
-        {
-            return false;
-        }
-        return true;
-    }
+  
 
 
     @Override
-    public void updateViruses( VirusGroup group )
-    {
-        // TODO Auto-generated method stub
-        for ( int i = 0; i < group.size(); i++ )
-        {
-            if (getDistance( group.getVirus( i ) ) <= group.getVirus(i).getAttackRadius())
-            {
-                setHealth( getHealth() - 1 );
-                if (!getViruses().contains(group.getVirus( i )))
-                {
-                    addVirus(group.getVirus( i ));
-                }
-
-            }
-        }
+    public void updateViruses( VirusGroup group ){
+//    
+//        for ( int i = 0; i < group.size(); i++ )
+//        {
+//            if (getDistance( group.getVirus( i ) ) <= group.getVirus(i).getAttackRadius())
+//            {
+//                setHealth( getHealth() - 1 );
+//                if (!getViruses().contains(group.getVirus( i )))
+//                {
+//                    addVirus(group.getVirus( i ));
+//                }
+//
+//            }
+//        }
 
     }
 
