@@ -15,18 +15,22 @@ public class AntiVirus implements Locatable, Attacker{
     private int width, height;
 
     private int num;
+    
+    private int attackRadius;
     //construct a virus
     public AntiVirus(int x, int y) {
 
         this.x = x;
         this.y = y;
         speed = 5;
-        attack = 2;
-        health = 100;
+        attack = 0;//2
+        health = 1;//100
 
         width = 50;
         height = 50;
         move =true;
+        
+        attackRadius = 100;
     }
 
     //set a new coordinate for the virus to head to
@@ -48,10 +52,26 @@ public class AntiVirus implements Locatable, Attacker{
         move = true;
     }
     //update the status of the virus
-    public void update(){
+    
+    public void update(Canvas canvas){
         if (!move) return;
         x += vx;
         y += vy;
+        
+        boolean attacking = false;
+		for(int i=0; i<VirusGroupManager.groups.get(VirusGroupManager.currentGroup).size(); i++){
+			Virus v = VirusGroupManager.groups.get(VirusGroupManager.currentGroup).getVirus(i);
+			if( getDistance(v) <= attackRadius){
+				v.reduceHealth(attack);
+				Graphics g = canvas.getGraphics();
+				g.setColor(Color.green);
+				g.drawLine(x + width/4, y + height/4, v.getX() + v.getWidth()/4, v.getY() + v.getHeight()/4);
+				if(v.isDead())  VirusGroupManager.groups.get(VirusGroupManager.currentGroup).remove(i);
+				attacking = true;
+				break;
+			}
+		}
+		if(attacking) return;
         
     }
 

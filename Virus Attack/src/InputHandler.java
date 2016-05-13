@@ -1,3 +1,4 @@
+package v2;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
@@ -20,37 +21,42 @@ public class InputHandler implements MouseListener, KeyListener{
     public void keyPressed(KeyEvent e) {
         // 0 to create new virus at (300, 300)
         if(e.getKeyCode() == KeyEvent.VK_0){
-            vgm.addVirus(currentGroup);
+            vgm.addVirus(200, 200);
         }
         // S to split
         if(e.getKeyCode() == KeyEvent.VK_S){
             if(vgm.groupNum() <= 6){
-                vgm.split(currentGroup);
+                vgm.split();
             }
         }
         //Different Groups
         if(e.getKeyCode() == KeyEvent.VK_1){
-            currentGroup = 1;
+            vgm.changeCurrent(1);
         }
         if(e.getKeyCode() == KeyEvent.VK_2){
-            currentGroup = 2;
+            vgm.changeCurrent(2);
+
         }
         if(e.getKeyCode() == KeyEvent.VK_3){
-            currentGroup = 3;
+            vgm.changeCurrent(3);
+
         }
         if(e.getKeyCode() == KeyEvent.VK_4){
-            currentGroup = 4;
+            vgm.changeCurrent(4);
+
         }
         if(e.getKeyCode() == KeyEvent.VK_5){
-            currentGroup = 5;
+            vgm.changeCurrent(5);
+
         }
         if(e.getKeyCode() == KeyEvent.VK_6){
-            currentGroup = 6;
+            vgm.changeCurrent(6);
+
         }
     }
 
     public void mousePressed(MouseEvent e) {
-        vgm.updateCoord(currentGroup, e.getX(), e.getY());
+        vgm.updateCoord(e.getX(), e.getY());
 
     }
 
@@ -62,6 +68,3 @@ public class InputHandler implements MouseListener, KeyListener{
     public void mouseEntered(MouseEvent e) {}
     public void mouseExited(MouseEvent e) {}
 }
-
-
-

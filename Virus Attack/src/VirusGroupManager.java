@@ -9,10 +9,10 @@ import java.util.HashMap;
 
 public class VirusGroupManager {
 
-    HashMap<Integer, VirusGroup> groups; //hashmap holding all the groups
+    public static HashMap<Integer, VirusGroup> groups; //hashmap holding all the groups
     ArrayList<Integer> keys; //keys of hashmap
 
-    int currentGroup; //current group being controled
+    public static int currentGroup; //current group being controled
     int groupNum;
 
     public VirusGroupManager(){
@@ -26,24 +26,34 @@ public class VirusGroupManager {
         groupNum = 1;
     }
 
-    public void update(Canvas canvas){
+    public void draw(Canvas canvas){
         for(int n : keys){
-            groups.get(n).update(canvas);
+            groups.get(n).draw(canvas);
         }
     }
-
-    public void updateCoord(int current, int newX, int newY){
-        groups.get(current).setCoord(newX, newY);
+    
+    public void updateLocation(Canvas canvas){
+    	for(int n: keys){
+    		groups.get(n).update(canvas);
+    	}
+    }
+    
+    public void changeCurrent(int current){
+    	currentGroup = current;
     }
 
-    public void addVirus(int current){
-        groups.get(current).addVirus(new Virus(300, 300));
+    public void updateCoord(int newX, int newY){
+        groups.get(currentGroup).setCoord(newX, newY);
     }
 
-    public void split(int current){
-        Virus[] newGroup = new Virus[groups.get(current).size()/2];
+    public static void addVirus(int x, int y){
+        groups.get(currentGroup).addVirus(new Virus(300, 300));
+    }
+
+    public void split(){
+        Virus[] newGroup = new Virus[groups.get(currentGroup).size()/2];
         for(int i=0; i<newGroup.length; i++){
-            newGroup[i] = groups.get(current).remove(i);
+            newGroup[i] = groups.get(currentGroup).remove(i);
         }
         groupNum++;
         groups.put(groupNum, new VirusGroup(newGroup, groupNum));

@@ -29,7 +29,7 @@ public class RedCell extends Cell
         // TODO Auto-generated method stub
 
     }
-    public void draw( Canvas canvas, int position )
+    public void draw( Canvas canvas)
     {
         Graphics g = canvas.getGraphics();
         g.setColor( new Color( 255, 0, 0 ) );
@@ -52,4 +52,10 @@ public class RedCell extends Cell
 //        }
 
     }
+
+	@Override
+	public void produceUnit() {
+		// TODO Auto-generated method stub
+		
+	}
 }

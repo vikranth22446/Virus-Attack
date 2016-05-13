@@ -6,10 +6,16 @@ import java.awt.*;
 
 public class SickCell extends Cell
 {
+	
+	private int generateAt;
+	private int ticks;
 
     public SickCell( int x, int y, int health, int index )
     {
         super( x, y, health, index );
+        
+        ticks = 0;
+        generateAt = 100;
     }
 
 
@@ -21,7 +27,7 @@ public class SickCell extends Cell
 
 
     @Override
-    public void draw( Canvas canvas, int position )
+    public void draw( Canvas canvas)
     {
         Graphics g = canvas.getGraphics();
         g.setColor( new Color( 5, 26, 41 ) );
@@ -68,5 +74,13 @@ public class SickCell extends Cell
 //        }
 
     }
+
+	public void produceUnit() {
+		if(ticks >= generateAt){
+    		VirusGroupManager.addVirus(getX()+getRadius(), getY()+getRadius());
+    		ticks = 0;
+    	}
+    	ticks++;
+	}
 
 }

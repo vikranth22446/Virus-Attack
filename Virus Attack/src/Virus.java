@@ -53,6 +53,8 @@ public class Virus implements Locatable, Attacker {
 		vy = (int) ((yL - y) * scale);
 	}
 
+	
+	
 	// update the status of the virus
 	// Also checks if anything is in attack radius
 	public void update(Canvas canvas) {
@@ -67,8 +69,9 @@ public class Virus implements Locatable, Attacker {
 				av.reduceHealth(attack);
 				g = canvas.getGraphics();
 				g.setColor(Color.black);
-				g.drawLine(x + width / 4, y + height / 4, av.getX() + av.getWidth() / 4,
-						av.getY() + av.getHeight() / 4);
+				g.drawLine(x + width / 2, y + height / 2,
+						av.getX() + av.getWidth() / 2,
+						av.getY() + av.getHeight() / 2);
 				if (av.isDead()) {
 					AntiVirusManager.anti.remove(av);
 				}
@@ -77,44 +80,50 @@ public class Virus implements Locatable, Attacker {
 			}
 
 		}
-		
-		if(attacking) return;
-		
-		for(int i=0; i<CellManager.redValues.size(); i++){
+
+		if (attacking)
+			return;
+
+		for (int i = 0; i < CellManager.redValues.size(); i++) {
 			Cell c = CellManager.redValues.get(i);
-			if(getDistance(c) <= attackRadius){
+			if (getDistance(c) <= attackRadius && !(c instanceof SickCell)) {
 				c.decrementHealth(attack);
 				g = canvas.getGraphics();
 				g.setColor(Color.black);
-				g.drawLine(x + width / 4, y + height / 4, c.getX() + c.getRadius()/2, c.getY() + c.getRadius()/4);
-				if(c.getHealth() <= 0){
+				g.drawLine(x + width / 2, y + height / 2,
+						c.getX() + c.getRadius() / 2, c.getY() + c.getRadius()
+								/ 2);
+				if (c.getHealth() <= 0) {
 					CellManager.convertSick(c);
 				}
 				attacking = true;
+
 				break;
 			}
-			
+
 		}
-		
-		if(attacking) return;
-		
-		for(int i=0; i<CellManager.whiteValues.size(); i++){
+
+		if (attacking)
+			return;
+
+		for (int i = 0; i < CellManager.whiteValues.size(); i++) {
 			Cell c = CellManager.whiteValues.get(i);
-			if(getDistance(c) <= attackRadius){
+			if (getDistance(c) <= attackRadius) {
 				c.decrementHealth(attack);
 				g = canvas.getGraphics();
 				g.setColor(Color.black);
-				g.drawLine(x + width / 4, y + height / 4, c.getX() + c.getRadius()/4, c.getY() + c.getRadius()/4);
-				if(c.getHealth() <= 0){
+				g.drawLine(x + width / 2, y + height / 2,
+						c.getX() + c.getRadius() / 2, c.getY() + c.getRadius()
+								/ 2);
+				if (c.getHealth() <= 0) {
 					CellManager.removeCell(i);
 				}
 				attacking = true;
 				break;
 			}
-			
+
 		}
-		
-		
+
 	}
 
 	public void draw(Canvas canvas) {
@@ -123,6 +132,22 @@ public class Virus implements Locatable, Attacker {
 		g.fillRect(x, y, width, height);
 		g.setColor(World.BCOLOR);
 		g.drawRect(x + width / 4, y + height / 4, width / 2, height / 2);
+	}
+
+	public boolean isDead() {
+		return health == 0;
+	}
+
+	public void reduceHealth(int n) {
+		health -= n;
+	}
+
+	public int getWidth() {
+		return width;
+	}
+
+	public int getHeight() {
+		return height;
 	}
 
 	public int getX() {

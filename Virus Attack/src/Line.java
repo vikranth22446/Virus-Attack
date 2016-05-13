@@ -1,3 +1,5 @@
+package v2;
+
 public class Line
 {
     private int virusx;
@@ -34,5 +36,7 @@ public class Line
     {
         return av;
     }
+
+
 
 }
