@@ -23,7 +23,7 @@ public class SickCell extends Cell
     public void draw( Canvas canvas, int position )
     {
         Graphics g = canvas.getGraphics();
-        g.setColor( new Color( 5, 26, 41 ) );
+        g.setColor( new Color(0, 0, 0 ) );
         g.fillOval( getX(), getY(), 50, 50 );
     }
 

@@ -34,11 +34,10 @@ public class CellManager {
         }
         for (int i = 0; i <set2.length; i++) {
             Cell cell=new WhiteCell(set2[i][0],set2[i][1],100,i);
-
             addWhiteCell(cell);
         }
-        for (int i = 0; i <set2.length; i++) {
-            Cell cell=new SickCell(set2[i][0],set2[i][1],100,i);
+        for (int i = 0; i <set3.length; i++) {
+            Cell cell=new SickCell(set3[i][0],set3[i][1],-100,i);
 
            addSickCell(cell);
         }
@@ -114,6 +113,11 @@ public class CellManager {
         }
         int i = 0;
         for (Cell c: whiteValues)
+        {
+            c.draw( canvas, i++ );
+        }
+         i = 0;
+        for (Cell c: sickValues)
         {
             c.draw( canvas, i++ );
         }
