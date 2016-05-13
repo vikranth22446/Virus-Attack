@@ -35,25 +35,28 @@ public class RedCell extends Cell
         g.fillOval( getX(), getY(), 50, 50 );
     }
 
-    public void updateViruses( VirusGroup group )
-    {
-//        for ( int i = 0; i < group.size(); i++ )
-//        {
-//            if (getDistance( group.getVirus( i ) ) <= group.getVirus(i).getAttackRadius())
-//            {
-//                setHealth( getHealth() - 1 );
-//                if (!getViruses().contains(group.getVirus( i )))
-//                {
-//                    addVirus(group.getVirus( i ));
-//                }
-//
-//            }
-//        }
-
-    }
-
     @Override
-    public boolean canEnemyHurt(int enemyX, int enemyY, int ableRadius) {
+    public boolean canEnemyHurt( int enemyX, int enemyY, int ableRadius )
+    {
+        // TODO Auto-generated method stub
         return false;
     }
+    public void updateViruses( VirusGroup group )
+    {
+        // TODO Auto-generated method stub
+        for ( int i = 0; i < group.size(); i++ )
+        {
+            if (getDistance( group.getVirus( i ) ) <= group.getVirus(i).getAttackRadius())
+            {
+                setHealth( getHealth() - 1 );
+                if (!getViruses().contains(group.getVirus( i )))
+                {
+                    addVirus(group.getVirus( i ));
+                }
+
+            }
+        }
+
+    }
+
 }

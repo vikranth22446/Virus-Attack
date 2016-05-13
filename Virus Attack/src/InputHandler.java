@@ -61,7 +61,7 @@ public class InputHandler implements MouseListener, KeyListener{
     public void mouseClicked(MouseEvent arg0) {}
     public void mouseEntered(MouseEvent e) {}
     public void mouseExited(MouseEvent e) {}
-}
 
+}
 
 

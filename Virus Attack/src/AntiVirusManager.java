@@ -25,7 +25,7 @@ public class AntiVirusManager {
 
     public void updateCoord(int current, int newX, int newY) {
         for (AntiVirus n : anti) {
-            n.setCoord(newX, newY);;
+            n.setCoord(newX, newY);
         }
     }
 

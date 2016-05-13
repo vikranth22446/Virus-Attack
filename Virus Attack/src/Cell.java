@@ -19,8 +19,7 @@ import java.util.ArrayList;
  *
  * @author Sources: n/a
  */
-public abstract class Cell implements Locatable
-{
+public abstract class Cell implements Locatable {
     /**
      * The x-value on coordinate grid
      */
@@ -50,97 +49,84 @@ public abstract class Cell implements Locatable
      * @param y
      * @param health
      */
-    public Cell( int x, int y, int health, int index )
-    {
+    public Cell(int x, int y, int health, int index) {
         this.x = x;
         this.y = y;
         this.health = health;
         viruses = new ArrayList<Virus>();
     }
 
-    public ArrayList<Virus> getViruses()
-    {
+    public ArrayList<Virus> getViruses() {
         return viruses;
     }
-    public void addVirus(Virus e)
-    {
-        viruses.add( e );
+
+    public void addVirus(Virus e) {
+        viruses.add(e);
     }
-    public int numViruses()
-    {
+
+    public int numViruses() {
         return viruses.size();
     }
 
-    public int getRadius()
-    {
+    public int getRadius() {
         return radius;
     }
 
-
-    public int getX()
-    {
+    public int getX() {
         return x;
     }
 
 
-    public int getY()
-    {
+    public int getY() {
         return y;
     }
 
 
-    public void setX( int x )
-    {
+    public void setX(int x) {
         this.x = x;
     }
 
 
-    public void setY( int y )
-    {
+    public void setY(int y) {
         this.y = y;
     }
 
 
-    public void setHealth( double health )
-    {
+    public void setHealth(double health) {
         this.health = health;
     }
 
 
     public abstract void produceValues();
+
     public abstract void updateViruses(VirusGroup group);
 
 
-
-    public double getDistance( Locatable other )
-    {
+    public double getDistance(Locatable other) {
         double dist = Math.sqrt(
-                ( ( (double)x - other.getX() ) * ( x - other.getX() ) + ( y - other.getY() ) * ( y - other.getY() ) ) );
+                (((double) x - other.getX()) * (x - other.getX()) + (y - other.getY()) * (y - other.getY())));
         return dist;
     }
 
 
-    public abstract boolean canEnemyHurt( int enemyX, int enemyY, int ableRadius );
+    public abstract boolean canEnemyHurt(int enemyX, int enemyY, int ableRadius);
 
 
-    public void draw( Canvas canvas, int position )
-    {
+    public void draw(Canvas canvas, int position) {
         Graphics g = canvas.getGraphics();
-        g.setColor( new Color( 19, 255, 240 ) );
-        g.fillOval( x, y, 50, 50 );
+        g.setColor(new Color(19, 255, 240));
+        g.fillOval(x, y, 50, 50);
     }
 
 
-    public abstract void decrementHealth( int down );
+    public abstract void decrementHealth(int down);
 
 
-    public abstract void increaseHealth( int up );
+    public abstract void increaseHealth(int up);
 
 
-    public double getHealth()
-    {
+    public double getHealth() {
         return health;
     }
 
 }
-

@@ -16,6 +16,7 @@ public class CellManager {
     private int [][] set2 = {
             {150,250},{350,450},{450,750},{650,850}
     };
+
     private int [][] set3 = {
             {400,250}
     };
@@ -34,6 +35,7 @@ public class CellManager {
         }
         for (int i = 0; i <set2.length; i++) {
             Cell cell=new WhiteCell(set2[i][0],set2[i][1],100,i);
+
             addWhiteCell(cell);
         }
         for (int i = 0; i <set3.length; i++) {
@@ -55,26 +57,7 @@ public class CellManager {
     {
         redValues.add(x);
     }
-    public void addWhiteCell (Cell x)
-    {
-        whiteValues.add(x);
-    }
-    public static void convertSick (Cell x)
-    {
-        if (x instanceof RedCell)
-        {
-            redValues.set( redValues.indexOf( x ) , new SickCell(x.getX(), x.getY(), -10, 0) );
 
-        }
-        else if (x instanceof WhiteCell)
-        {
-            whiteValues.remove(x);
-        }
-
-    }
-    public static void removeCell(int id){
-        whiteValues.remove(id);
-    }
     
     
     public void updateViruses(VirusGroupManager vgm, Canvas c){
@@ -103,6 +86,27 @@ public class CellManager {
 
 
     }
+    public void addWhiteCell (Cell x)
+    {
+        whiteValues.add(x);
+    }
+    public static void convertSick (Cell x)
+    {
+        if (x instanceof RedCell)
+        {
+            redValues.set( redValues.indexOf( x ) , new SickCell(x.getX(), x.getY(), -10, 0) );
+
+        }
+        else if (x instanceof WhiteCell)
+        {
+            whiteValues.remove(x);
+        }
+
+    }
+    public static void removeCell(int id){
+        whiteValues.remove(id);
+    }
+
     public ArrayList<Cell> getValues() {
         return redValues;
     }
