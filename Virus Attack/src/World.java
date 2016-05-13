@@ -25,7 +25,6 @@ public class World extends Canvas implements Runnable {
     public VirusGroupManager vgm;
     public InputHandler input;
 
-
     public World() {
         setMinimumSize(new Dimension(WIDTH * SCALE, HEIGHT * SCALE));
         setMaximumSize(new Dimension(WIDTH * SCALE, HEIGHT * SCALE));
