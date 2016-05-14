@@ -1,22 +1,13 @@
-import java.awt.BorderLayout;
-import java.awt.Canvas;
-import java.awt.Color;
-import java.awt.Container;
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.Timer;
+import javax.swing.*;
+import java.awt.*;
 
 public class World extends Canvas implements Runnable {
 
-    private static final int HEIGHT = 300;
+    private static final int HEIGHT = 400;
     public static final Color BCOLOR = Color.green;
     private static final int WIDTH = 400;
-    private static final int SCALE = 2;
+    private static final int SCALE = 4;
     private static final String NAME = "Virus";
 
     private JFrame frame;
@@ -63,40 +54,30 @@ public class World extends Canvas implements Runnable {
         addMouseListener(input);
         addKeyListener(input);
 
-
     }
-
 
     public void run() {
         while (true) {
+            g.fillRect(0, 0, WIDTH * SCALE, HEIGHT * SCALE);
 
-                g.fillRect(0, 0, WIDTH * SCALE, HEIGHT * SCALE);
-                World w = this;
-                ActionListener taskPerformer = new ActionListener() {
-                    public void actionPerformed(ActionEvent evt) {
-                        vgm.update(w);
-                        avm.update(w);
-                        avm.checkDead(w);
-                        cellManager.updateViruses(vgm, w);
-                        cellManager.updateDrawing(w);
-                    }
-                };
-                Timer timer = new Timer(100, taskPerformer);
-                timer.setRepeats(true);
-                timer.start();
+            vgm.draw(this);
+            avm.draw(this);
+            cellManager.draw(this);
 
-                try {
-                    Thread.sleep(100);
-                } catch (InterruptedException e1) {
-                    // TODO Auto-generated catch block
-                    e1.printStackTrace();
-                }
+            vgm.updateLocation(this);
+            avm.updateLocation(this);
+            cellManager.produce();
 
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
         }
-
-        public synchronized void start () {
-            new Thread(this).start();
-        }
-
     }
+
+    public synchronized void start() {
+        new Thread(this).start();
+    }
+
+}

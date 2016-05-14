@@ -1,3 +1,4 @@
+
 public class Line
 {
     private int virusx;
@@ -36,5 +37,5 @@ public class Line
     }
 
 
-}
 
+}

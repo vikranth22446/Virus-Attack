@@ -16,16 +16,21 @@ public class AntiVirusManager {
 
     }
 
-    public void update(Canvas canvas) {
+    public void draw(Canvas canvas) {
         for (AntiVirus n : anti) {
             n.draw(canvas);
-            n.update();
+        }
+    }
+
+    public void updateLocation(Canvas canvas){
+        for(AntiVirus av : anti){
+            av.update(canvas);
         }
     }
 
     public void updateCoord(int current, int newX, int newY) {
         for (AntiVirus n : anti) {
-            n.setCoord(newX, newY);
+            n.setCoord(newX, newY);;
         }
     }
 
@@ -46,8 +51,8 @@ public class AntiVirusManager {
         }
     }
 
-    public void addVirus(AntiVirus av) {
-        anti.add(av);
+    public static void addAnti(int x, int y) {
+        anti.add(new AntiVirus(x, y));
     }
 
     public ArrayList<AntiVirus> getAnti(){
