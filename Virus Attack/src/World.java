@@ -4,10 +4,10 @@ import java.awt.*;
 
 public class World extends Canvas implements Runnable {
 
-    private static final int HEIGHT = 400;
+    public static final int HEIGHT = 400;
     public static final Color BCOLOR = Color.green;
-    private static final int WIDTH = 400;
-    private static final int SCALE = 4;
+    public static final int WIDTH = 400;
+    public static final int SCALE = 4;
     private static final String NAME = "Virus";
 
     private JFrame frame;
@@ -59,7 +59,6 @@ public class World extends Canvas implements Runnable {
     public void run() {
         while (true) {
             g.fillRect(0, 0, WIDTH * SCALE, HEIGHT * SCALE);
-
             vgm.draw(this);
             avm.draw(this);
             cellManager.draw(this);

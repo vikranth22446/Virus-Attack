@@ -11,9 +11,6 @@ public class AntiVirusManager {
 
     public AntiVirusManager() {
         anti = new ArrayList<AntiVirus>();
-        anti.add(new AntiVirus(300, 300));
-        anti.add(new AntiVirus(310, 310));
-
     }
 
     public void draw(Canvas canvas) {

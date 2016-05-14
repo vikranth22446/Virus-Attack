@@ -49,13 +49,12 @@ public abstract class Cell implements Locatable
      * @param y
      * @param health
      */
-    public Cell( int x, int y, int health, int index )
+    public Cell( int x, int y, int health)
     {
         this.x = x;
         this.y = y;
         this.health = health;
         viruses = new ArrayList<Virus>();
-
         radius = 50;
     }
 
@@ -131,6 +130,7 @@ public abstract class Cell implements Locatable
         Graphics g = canvas.getGraphics();
         g.setColor( new Color( 19, 255, 240 ) );
         g.fillOval( x, y, 50, 50 );
+
     }
 
 
@@ -139,7 +139,7 @@ public abstract class Cell implements Locatable
 
     public abstract void increaseHealth( int up );
 
-
+    public abstract int getIndex();
     public double getHealth()
     {
         return health;
