@@ -3,7 +3,6 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionListener;
 
 
 public class InputHandler implements MouseListener, KeyListener{
@@ -27,6 +26,9 @@ public class InputHandler implements MouseListener, KeyListener{
             if(vgm.groupNum() <= 6){
                 vgm.split();
             }
+        }
+        if(e.getKeyCode() == KeyEvent.VK_C){
+                vgm.combine();
         }
         //Different Groups
         if(e.getKeyCode() == KeyEvent.VK_1){

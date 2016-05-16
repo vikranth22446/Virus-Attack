@@ -58,16 +58,18 @@ public class AntiVirus implements Locatable, Attacker{
         y += vy;
 
         boolean attacking = false;
-        for(int i=0; i<VirusGroupManager.groups.get(VirusGroupManager.currentGroup).size(); i++){
-            Virus v = VirusGroupManager.groups.get(VirusGroupManager.currentGroup).getVirus(i);
-            if( getDistance(v) <= attackRadius){
-                v.reduceHealth(attack);
-                Graphics g = canvas.getGraphics();
-                g.setColor(Color.green);
-                g.drawLine(x + width/4, y + height/4, v.getX() + v.getWidth()/4, v.getY() + v.getHeight()/4);
-                if(v.isDead())  VirusGroupManager.groups.get(VirusGroupManager.currentGroup).remove(i);
-                attacking = true;
-                break;
+        if(VirusGroupManager.groups.get(VirusGroupManager.currentGroup)!=null) {
+            for (int i = 0; i < VirusGroupManager.groups.get(VirusGroupManager.currentGroup).size(); i++) {
+                Virus v = VirusGroupManager.groups.get(VirusGroupManager.currentGroup).getVirus(i);
+                if (getDistance(v) <= attackRadius) {
+                    v.reduceHealth(attack);
+                    Graphics g = canvas.getGraphics();
+                    g.setColor(Color.green);
+                    g.drawLine(x + width / 4, y + height / 4, v.getX() + v.getWidth() / 4, v.getY() + v.getHeight() / 4);
+                    if (v.isDead()) VirusGroupManager.groups.get(VirusGroupManager.currentGroup).remove(i);
+                    attacking = true;
+                    break;
+                }
             }
         }
         if(attacking) return;

@@ -1,4 +1,3 @@
-
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -67,6 +66,8 @@ public class VirusGroupManager {
     }
 
 
+    public void combine() {
 
-
+        //TODO IMPLEMENT IT
+    }
 }
