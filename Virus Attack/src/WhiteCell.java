@@ -1,10 +1,12 @@
 
 import java.awt.*;
+import java.util.ArrayList;
 
 public class WhiteCell extends Cell {
     private int ticks;
     private int generateAt;
     private int index;
+    private int splitTime;
 
     public int getIndex() {
         return index;
@@ -29,7 +31,14 @@ public class WhiteCell extends Cell {
         g.drawOval(getX(), getY(), 50, 50);
 
     }
+    public void split(ArrayList<Cell> w)
+    {
+        int t1 = (int) (getX()+ Math.random()*67);
+        int t2 = (int) (getY()+ Math.random()*67);
 
+        w.add(new WhiteCell(t1, t2 , 100, w.size()));
+        splitTime = 0;
+    }
 
     @Override
     public void draw(Canvas canvas) {
@@ -60,7 +69,16 @@ public class WhiteCell extends Cell {
         return true;
 
     }
+    public int getTime()
+    {
+        return splitTime;
+    }
 
+    public void updateTime()
+    {
+        splitTime++;
+       // System.out.println( splitTime );
+    }
     public void updateViruses(VirusGroup group) {
 //        // TODO Auto-generated method stub
 //        for ( int i = 0; i < group.size(); i++ )
@@ -77,6 +95,27 @@ public class WhiteCell extends Cell {
 //        }
 
     }
+    public void move() {
+        int moveX = (int) (Math.random() * 2);
+        if (moveX == 1)
+        {
+            setX(getX()+5);
+        }
+        else
+        {
+            setX(getX()-5);
+        }
+        int moveY = (int) (Math.random() * 2);
+        if (moveY == 1)
+        {
+            setY(getY()+5);
+        }
+        else
+        {
+            setY(getY()-5);
+        }
+    }
+
 
 
     public void produceUnit() {

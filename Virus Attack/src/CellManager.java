@@ -45,6 +45,18 @@ public class CellManager {
             addSickCell(cell);
         }
     }
+    public void mitosis()
+    {
+     for (int i = 0 ; i < whiteValues.size(); i++)   
+     {
+        WhiteCell w = (WhiteCell)whiteValues.get( i );
+        w.updateTime();
+        if(w.getTime() > 150)
+        {
+            w.split( whiteValues );
+        }
+     }
+    }
 
     private void addSickCell(Cell cell) {
         sickValues.add(cell);
@@ -105,8 +117,18 @@ public class CellManager {
     public ArrayList<Cell> getValues() {
         return redValues;
     }
+    public void moveWhiteCells() {
+        for (int i = 0; i < whiteValues.size(); i++)
+        {
+            WhiteCell w = (WhiteCell)whiteValues.get( i );
+            w.move();
+        }
+    }
+
 
     public void draw(Canvas canvas) {
+        mitosis();
+        moveWhiteCells();
         HealthBar healthBar = new HealthBar();
         for (Cell c : redValues) {
             c.draw(canvas);

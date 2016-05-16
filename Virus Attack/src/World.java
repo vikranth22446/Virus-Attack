@@ -68,7 +68,7 @@ public class World extends Canvas implements Runnable {
             cellManager.produce();
 
             try {
-                Thread.sleep(100);
+                Thread.sleep(40);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
