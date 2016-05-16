@@ -45,7 +45,7 @@ public class VirusGroupManager {
     }
 
     public static void addVirus(int x, int y){
-        groups.get(currentGroup).addVirus(new Virus(300, 300));
+        groups.get(currentGroup).addVirus(new Virus(x, y));
     }
 
     public void split(){

@@ -29,7 +29,7 @@ public class Virus implements Locatable, Attacker {
         this.y = y;
         prey = y;
         speed = 5;
-        attack = 2;
+        attack = 1;
         health = 6;
 
         width = 30;
