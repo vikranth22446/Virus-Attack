@@ -13,15 +13,15 @@ public class AntiVirusManager {
         anti = new ArrayList<AntiVirus>();
     }
 
-    public void draw(Canvas canvas) {
+    public void draw(Graphics g) {
         for (AntiVirus n : anti) {
-            n.draw(canvas);
+            n.draw(g);
         }
     }
 
-    public void updateLocation(Canvas canvas){
+    public void updateLocation(Graphics g){
         for(AntiVirus av : anti){
-            av.update(canvas);
+            av.update(g);
         }
     }
 

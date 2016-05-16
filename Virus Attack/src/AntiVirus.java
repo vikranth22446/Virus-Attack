@@ -52,7 +52,7 @@ public class AntiVirus implements Locatable, Attacker{
     }
     //update the status of the virus
 
-    public void update(Canvas canvas){
+    public void update(Graphics g){
         if (!move) return;
         x += vx;
         y += vy;
@@ -62,7 +62,7 @@ public class AntiVirus implements Locatable, Attacker{
             Virus v = VirusGroupManager.groups.get(VirusGroupManager.currentGroup).getVirus(i);
             if( getDistance(v) <= attackRadius){
                 v.reduceHealth(attack);
-                Graphics g = canvas.getGraphics();
+              //  Graphics g = canvas.getGraphics();
                 g.setColor(Color.green);
                 g.drawLine(x + width/4, y + height/4, v.getX() + v.getWidth()/4, v.getY() + v.getHeight()/4);
                 if(v.isDead())  VirusGroupManager.groups.get(VirusGroupManager.currentGroup).remove(i);
@@ -76,8 +76,8 @@ public class AntiVirus implements Locatable, Attacker{
 
 
 
-    public void draw(Canvas canvas){
-        Graphics g = canvas.getGraphics();
+    public void draw(Graphics g){
+      //  Graphics g = canvas.getGraphics();
         g.setColor(Color.blue);
         g.fillRect(x, y, width, height);
     }

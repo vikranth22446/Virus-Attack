@@ -53,17 +53,16 @@ public class Virus implements Locatable, Attacker {
 
     // update the status of the virus
     // Also checks if anything is in attack radius
-    public void update(Canvas canvas) {
+    public void update(Graphics g) {
         x += vx;
         y += vy;
 
-        Graphics g;
         boolean attacking = false;
         for (int i = 0; i < AntiVirusManager.anti.size(); i++) {
             AntiVirus av = AntiVirusManager.anti.get(i);
             if (getDistance(av) <= attackRadius) {
                 av.reduceHealth(attack);
-                g = canvas.getGraphics();
+                //g = canvas.getGraphics();
                 g.setColor(Color.black);
                 g.drawLine(x + width / 2, y + height / 2,
                         av.getX() + av.getWidth() / 2,
@@ -84,7 +83,7 @@ public class Virus implements Locatable, Attacker {
             Cell c = CellManager.redValues.get(i);
             if (getDistance(c) <= attackRadius && !(c instanceof SickCell)) {
                 c.decrementHealth(attack);
-                g = canvas.getGraphics();
+               // g = canvas.getGraphics();
                 g.setColor(Color.black);
                 g.drawLine(x + width / 2, y + height / 2,
                         c.getX() + c.getRadius() / 2, c.getY() + c.getRadius()
@@ -106,7 +105,7 @@ public class Virus implements Locatable, Attacker {
             Cell c = CellManager.whiteValues.get(i);
             if (getDistance(c) <= attackRadius) {
                 c.decrementHealth(attack);
-                g = canvas.getGraphics();
+               // g = canvas.getGraphics();
                 g.setColor(Color.black);
                 g.drawLine(x + width / 2, y + height / 2,
                         c.getX() + c.getRadius() / 2, c.getY() + c.getRadius()
@@ -122,8 +121,8 @@ public class Virus implements Locatable, Attacker {
 
     }
 
-    public void draw(Canvas canvas) {
-        Graphics g = canvas.getGraphics();
+    public void draw(Graphics g) {
+//        Graphics g = canvas.getGraphics();
         g.setColor(new Color(122, 122, 0));
         g.fillRect(x, y, width, height);
         g.setColor(World.BCOLOR);

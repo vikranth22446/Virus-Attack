@@ -24,15 +24,15 @@ public class VirusGroupManager {
         groupNum = 1;
     }
 
-    public void draw(Canvas canvas){
+    public void draw(Graphics g){
         for(int n : keys){
-            groups.get(n).draw(canvas);
+            groups.get(n).draw(g);
         }
     }
 
-    public void updateLocation(Canvas canvas){
+    public void updateLocation(Graphics g){
         for(int n: keys){
-            groups.get(n).update(canvas);
+            groups.get(n).update(g);
         }
     }
 

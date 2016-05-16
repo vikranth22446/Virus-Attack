@@ -126,21 +126,21 @@ public class CellManager {
     }
 
 
-    public void draw(Canvas canvas) {
+    public void draw(Graphics g) {
         mitosis();
         moveWhiteCells();
         HealthBar healthBar = new HealthBar();
         for (Cell c : redValues) {
-            c.draw(canvas);
-            healthBar.draw(canvas, c);
+            c.draw(g);
+            healthBar.draw(g, c);
         }
         for (Cell c : whiteValues) {
-            c.draw(canvas);
-            healthBar.draw(canvas, c);
+            c.draw(g);
+            healthBar.draw(g, c);
         }
         for (Cell c : sickValues) {
-            c.draw(canvas);
-            healthBar.draw(canvas, c);
+            c.draw(g);
+            healthBar.draw(g, c);
         }
     }
 

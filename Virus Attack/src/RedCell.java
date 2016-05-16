@@ -31,8 +31,8 @@ public class RedCell extends Cell {
 
     }
 
-    public void draw(Canvas canvas) {
-        Graphics g = canvas.getGraphics();
+    public void draw(Graphics g) {
+      //  Graphics g = canvas.getGraphics();
         g.setColor(new Color(255, 0, 0));
         g.fillOval(getX(), getY(), 50, 50);
     }

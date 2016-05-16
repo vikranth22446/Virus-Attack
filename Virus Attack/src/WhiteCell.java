@@ -41,8 +41,8 @@ public class WhiteCell extends Cell {
     }
 
     @Override
-    public void draw(Canvas canvas) {
-        Graphics g = canvas.getGraphics();
+    public void draw(Graphics g) {
+      //  Graphics g = canvas.getGraphics();
         g.setColor(Color.WHITE);
         g.fillOval(getX(), getY(), 50, 50);
         g.setColor(Color.blue);

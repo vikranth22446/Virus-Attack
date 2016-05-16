@@ -125,9 +125,9 @@ public abstract class Cell implements Locatable
 
     public abstract void produceUnit();
 
-    public void draw( Canvas canvas)
+    public void draw(Graphics g)
     {
-        Graphics g = canvas.getGraphics();
+       // Graphics g = canvas.getGraphics();
         g.setColor( new Color( 19, 255, 240 ) );
         g.fillOval( x, y, 50, 50 );
 

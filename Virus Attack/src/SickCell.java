@@ -27,8 +27,8 @@ public class SickCell extends Cell {
 
 
     @Override
-    public void draw(Canvas canvas) {
-        Graphics g = canvas.getGraphics();
+    public void draw(Graphics g) {
+    //    Graphics g = canvas.getGraphics();
         g.setColor(new Color(5, 26, 41));
         g.fillOval(getX(), getY(), 50, 50);
 //        HealthBar healthBar = new HealthBar(this);
