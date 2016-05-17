@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Virus Attack/Virus Attack.iml" filepath="$PROJECT_DIR$/Virus Attack/Virus Attack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Virus_Attack/Virus Attack.iml" filepath="$PROJECT_DIR$/Virus_Attack/Virus Attack.iml" />
     </modules>
   </component>
 </project>

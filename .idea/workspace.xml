@@ -1,7 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db7114d6-e625-4df5-b478-8fc896f80992" name="Default" comment="" />
+    <list default="true" id="db7114d6-e625-4df5-b478-8fc896f80992" name="Default" comment="">
+      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus Attack\.idea\uiDesigner.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus Attack\.idea\vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus Attack\.idea\workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus Attack\out\production\Virus Attack\Attacker.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus Attack\out\production\Virus Attack\Cell.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus Attack\out\production\Virus Attack\Locatable.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus Attack\out\production\Virus Attack\RedCell.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus Attack\out\production\Virus Attack\SickleCell.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus Attack\out\production\Virus Attack\Virus.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus Attack\out\production\Virus Attack\WhiteCell.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus Attack\out\production\Virus Attack\World.class" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\pancake.txt" afterPath="" />
+      <change type="MOVED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus Attack\.gitignore" afterPath="$PROJECT_DIR$/Virus_Attack/.gitignore" />
+      <change type="MOVED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus Attack\.idea\.name" afterPath="$PROJECT_DIR$/Virus_Attack/.idea/.name" />
+      <change type="MOVED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus Attack\.idea\compiler.xml" afterPath="$PROJECT_DIR$/Virus_Attack/.idea/compiler.xml" />
+      <change type="MOVED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus Attack\.idea\copyright\profiles_settings.xml" afterPath="$PROJECT_DIR$/Virus_Attack/.idea/copyright/profiles_settings.xml" />
+      <change type="MOVED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus Attack\.idea\misc.xml" afterPath="$PROJECT_DIR$/Virus_Attack/.idea/misc.xml" />
+      <change type="MOVED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus Attack\.idea\modules.xml" afterPath="$PROJECT_DIR$/Virus_Attack/.idea/modules.xml" />
+      <change type="MOVED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus Attack\Virus Attack.iml" afterPath="$PROJECT_DIR$/Virus_Attack/Virus Attack.iml" />
+      <change type="MOVED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus Attack\src\AI.java" afterPath="$PROJECT_DIR$/Virus_Attack/src/AI.java" />
+      <change type="MOVED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus Attack\src\AntiVirus.java" afterPath="$PROJECT_DIR$/Virus_Attack/src/AntiVirus.java" />
+      <change type="MOVED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus Attack\src\AntiVirusManager.java" afterPath="$PROJECT_DIR$/Virus_Attack/src/AntiVirusManager.java" />
+      <change type="MOVED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus Attack\src\Attacker.java" afterPath="$PROJECT_DIR$/Virus_Attack/src/Attacker.java" />
+      <change type="MOVED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus Attack\src\Cell.java" afterPath="$PROJECT_DIR$/Virus_Attack/src/Cell.java" />
+      <change type="MOVED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus Attack\src\CellManager.java" afterPath="$PROJECT_DIR$/Virus_Attack/src/CellManager.java" />
+      <change type="MOVED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus Attack\src\HealthBar.java" afterPath="$PROJECT_DIR$/Virus_Attack/src/HealthBar.java" />
+      <change type="MOVED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus Attack\src\InputHandler.java" afterPath="$PROJECT_DIR$/Virus_Attack/src/InputHandler.java" />
+      <change type="MOVED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus Attack\src\Line.java" afterPath="$PROJECT_DIR$/Virus_Attack/src/Line.java" />
+      <change type="MOVED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus Attack\src\Locatable.java" afterPath="$PROJECT_DIR$/Virus_Attack/src/Locatable.java" />
+      <change type="MOVED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus Attack\src\Point.java" afterPath="$PROJECT_DIR$/Virus_Attack/src/Point.java" />
+      <change type="MOVED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus Attack\src\RedCell.java" afterPath="$PROJECT_DIR$/Virus_Attack/src/RedCell.java" />
+      <change type="MOVED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus Attack\src\SickCell.java" afterPath="$PROJECT_DIR$/Virus_Attack/src/SickCell.java" />
+      <change type="MOVED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus Attack\src\Virus.java" afterPath="$PROJECT_DIR$/Virus_Attack/src/Virus.java" />
+      <change type="MOVED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus Attack\src\VirusGame.java" afterPath="$PROJECT_DIR$/Virus_Attack/src/VirusGame.java" />
+      <change type="MOVED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus Attack\src\VirusGroup.java" afterPath="$PROJECT_DIR$/Virus_Attack/src/VirusGroup.java" />
+      <change type="MOVED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus Attack\src\VirusGroupManager.java" afterPath="$PROJECT_DIR$/Virus_Attack/src/VirusGroupManager.java" />
+      <change type="MOVED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus Attack\src\WhiteCell.java" afterPath="$PROJECT_DIR$/Virus_Attack/src/WhiteCell.java" />
+      <change type="MOVED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus Attack\src\World.java" afterPath="$PROJECT_DIR$/Virus_Attack/src/World.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="Virus Attack.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -29,7 +70,18 @@
     <favorites_list name="Virus Attack" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="AntiVirus.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Virus_Attack/src/AntiVirus.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7923729">
+              <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -124,6 +176,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -132,11 +186,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="APCS-Final-Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Virus_Attack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="APCS-Final-Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Virus_Attack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -453,34 +529,34 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="676" y="0" width="697" height="735" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33333334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1708126" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33333334" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2511774" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2511774" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.08326253" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32843137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17156863" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32932165" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -510,6 +586,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Virus_Attack/src/AntiVirus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7923729">
+          <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
