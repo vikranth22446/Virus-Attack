@@ -1,4 +1,3 @@
-package Virus_Attack.src;
 public interface Locatable {
     public int getX();
 
