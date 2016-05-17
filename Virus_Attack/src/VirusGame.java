@@ -1,6 +1,8 @@
+package Virus_Attack.src;
 public class VirusGame {
     public static void main(String[] args) {
         World world = new World();
+        System.out.println( "gpt" );
         world.start();
     }
 }

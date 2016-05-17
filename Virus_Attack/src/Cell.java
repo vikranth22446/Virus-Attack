@@ -1,3 +1,4 @@
+package Virus_Attack.src;
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Graphics;

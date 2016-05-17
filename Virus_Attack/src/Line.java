@@ -1,4 +1,4 @@
-
+package Virus_Attack.src;
 public class Line
 {
     private int virusx;

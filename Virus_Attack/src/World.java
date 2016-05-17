@@ -1,3 +1,4 @@
+package Virus_Attack.src;
 
 import javax.swing.*;
 import java.awt.*;
