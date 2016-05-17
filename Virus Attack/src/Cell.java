@@ -1,4 +1,3 @@
-
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Graphics;
@@ -34,7 +33,7 @@ public abstract class Cell implements Locatable
     /**
      * Radius value for cell
      */
-    private double radius;
+    private int radius;
 
     /**
      * Health value for cell
@@ -56,6 +55,8 @@ public abstract class Cell implements Locatable
         this.y = y;
         this.health = health;
         viruses = new ArrayList<Virus>();
+
+        radius = 50;
     }
 
     public ArrayList<Virus> getViruses()
@@ -71,7 +72,7 @@ public abstract class Cell implements Locatable
         return viruses.size();
     }
 
-    public double getRadius()
+    public int getRadius()
     {
         return radius;
     }
@@ -115,15 +116,17 @@ public abstract class Cell implements Locatable
     public double getDistance( Locatable other )
     {
         double dist = Math.sqrt(
-                ( ( (double)x - other.getX() ) * ( x - other.getX() ) + ( y - other.getY() ) * ( y - other.getY() ) ) );
+                ( ( (x + radius/2)- other.getX() ) * ( x - other.getX() ) + ( y - other.getY() ) * ( y - other.getY() ) ) );
         return dist;
     }
 
 
-    public abstract boolean canEnemyHurt( int enemyX, int enemyY, int ableRadius );
+    // public abstract boolean canEnemyHurt( int enemyX, int enemyY, int ableRadius );
 
 
-    public void draw( Canvas canvas, int position )
+    public abstract void produceUnit();
+
+    public void draw( Canvas canvas)
     {
         Graphics g = canvas.getGraphics();
         g.setColor( new Color( 19, 255, 240 ) );
@@ -143,4 +146,3 @@ public abstract class Cell implements Locatable
     }
 
 }
-

@@ -1,11 +1,5 @@
 
-import java.awt.Canvas;
-import java.awt.Graphics;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
-import java.awt.event.MouseMotionListener;
+import java.awt.*;
 import java.util.ArrayList;
 
 
@@ -33,11 +27,15 @@ public class VirusGroup{
         viruses.add(v);
     }
 
+    public void draw(Canvas canvas){
+        for(Virus v : viruses){
+            v.draw(canvas);
+        }
+    }
+
     public void update(Canvas canvas){
         for(Virus v : viruses){
             v.update(canvas);
-            v.draw(canvas);
-
         }
     }
 

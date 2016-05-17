@@ -1,11 +1,16 @@
+
 import java.awt.*;
 
 public class WhiteCell extends Cell
 {
+    private int ticks;
+    private int generateAt;
 
     public WhiteCell(int x, int y, int health,int index)
     {
         super(x, y, health, index);
+        ticks = 0;
+        generateAt = 200;
     }
 
     @Override
@@ -23,7 +28,7 @@ public class WhiteCell extends Cell
 
 
     @Override
-    public void draw(Canvas canvas, int position) {
+    public void draw(Canvas canvas) {
         Graphics g = canvas.getGraphics();
         g.setColor(Color.WHITE);
         g.fillOval(getX(), getY(), 50, 50);
@@ -54,19 +59,29 @@ public class WhiteCell extends Cell
     }
     public void updateViruses( VirusGroup group )
     {
-        // TODO Auto-generated method stub
-        for ( int i = 0; i < group.size(); i++ )
-        {
-            if (getDistance( group.getVirus( i ) ) <= group.getVirus(i).getAttackRadius())
-            {
-                setHealth( getHealth() - 1 );
-                if (!getViruses().contains(group.getVirus( i )))
-                {
-                    addVirus(group.getVirus( i ));
-                }
-
-            }
-        }
+//        // TODO Auto-generated method stub
+//        for ( int i = 0; i < group.size(); i++ )
+//        {
+//            if (getDistance( group.getVirus( i ) ) <= group.getVirus(i).getAttackRadius())
+//            {
+//                setHealth( getHealth() - 1 );
+//                if (!getViruses().contains(group.getVirus( i )))
+//                {
+//                    addVirus(group.getVirus( i ));
+//                }
+//
+//            }
+//        }
 
     }
+
+
+    public void produceUnit() {
+        if(ticks >= generateAt){
+            AntiVirusManager.addAnti(getX()+getRadius(), getY()+getRadius());
+            ticks = 0;
+        }
+        ticks++;
+    }
+
 }
