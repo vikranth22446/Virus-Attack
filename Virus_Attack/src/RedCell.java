@@ -1,8 +1,4 @@
-package src;
-
-import java.awt.Canvas;
-import java.awt.Color;
-import java.awt.Graphics;
+import java.awt.*;
 
 public class RedCell extends Cell {
     private int index;

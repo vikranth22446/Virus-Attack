@@ -1,4 +1,4 @@
-package src;
+
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -52,7 +52,7 @@ public class CellManager {
      {
         WhiteCell w = (WhiteCell)whiteValues.get( i );
         w.updateTime();
-        if(w.getTime() > 150)
+        if(w.getTime() > 150 && whiteValues.size()<20)
         {
             w.split( whiteValues );
         }

@@ -1,7 +1,3 @@
-package src;
-
-import java.awt.Graphics;
-
 /**
  * Created by ("vikranth") and his cat on 5/13/2016.
  */

@@ -1,10 +1,8 @@
-package src;
+import java.awt.*;
 
-import java.awt.Canvas;
-import java.awt.Color;
-import java.awt.Graphics;
-
-
+/**
+ *
+ */
 public class AntiVirus implements Locatable, Attacker{
 
     private int x, y; //current loc
