@@ -1,5 +1,3 @@
-
-
 import java.awt.*;
 import java.util.ArrayList;
 
@@ -8,8 +6,7 @@ public class CellManager {
     public static ArrayList<Cell> whiteValues;
     public static ArrayList<Cell> sickValues;
 
-    private int[][] whitePoints = {{1000, 400}, {900, 700},
-            {200, 200}};
+    private int[][] whitePoints = {{1000, 400}, {900, 700},{200, 200}};
     ArrayList<Point> redPoints = new ArrayList<>();
 
     private int[][] sickPoints = {
@@ -127,22 +124,43 @@ public class CellManager {
         }
     }
 
+    public void toDraw(int xOffset, int yOffset, Graphics g){
+    	ArrayList<Cell> toDraw = new ArrayList<Cell>();
+    	
+    	for(Cell c : redValues){
+    		if(inRange(c.getX(), c.getY() , xOffset, yOffset)){
+    			toDraw.add(c);
+    		}
+    	}
+    	for(Cell c: whiteValues){
+    		if(inRange(c.getX(), c.getY() , xOffset, yOffset)){
+    			toDraw.add(c);
+    		}
+    	}
+    	for(Cell c: sickValues){
+    		if(inRange(c.getX(), c.getY() , xOffset, yOffset)){
+    			toDraw.add(c);
+    		}
+    	}
+    	
+    	draw(g, toDraw, xOffset, yOffset);
+    	
+    }
+    
+    public boolean inRange(int Cellx, int Celly, int xOffset, int yOffset ){
+    	return Cellx >= xOffset && Cellx <= xOffset + World.WIDTH*World.SCALE 
+    			&& Celly >= yOffset && Celly <= yOffset + World.HEIGHT*World.SCALE; 	
+    }
 
-    public void draw(Graphics g) {
+
+    public void draw(Graphics g, ArrayList<Cell> toDraw, int xOffset, int yOffset) {
         mitosis();
         moveWhiteCells(g);
-        HealthBar healthBar = new HealthBar();
-        for (Cell c : redValues) {
-            c.draw(g);
-            healthBar.draw(g, c);
-        }
-        for (Cell c : whiteValues) {
-            c.draw(g);
-            healthBar.draw(g, c);
-        }
-        for (Cell c : sickValues) {
-            c.draw(g);
-            healthBar.draw(g, c);
+        //HealthBar healthBar = new HealthBar();
+
+        for(Cell c : toDraw){
+        	c.draw(g, xOffset, yOffset);
+        //	healthBar.draw(g, c);
         }
     }
 

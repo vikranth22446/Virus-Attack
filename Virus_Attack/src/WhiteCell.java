@@ -54,7 +54,7 @@ public class WhiteCell extends Cell implements AI {
     }
 
     @Override
-    public void draw(Graphics g) {
+    public void draw(Graphics g,int xOffset, int yOffset) {
       //  Graphics g = canvas.getGraphics();
         g.setColor(Color.WHITE);
         g.fillOval(getX(), getY(), 50, 50);

@@ -28,7 +28,7 @@ public class SickCell extends Cell {
 
 
     @Override
-    public void draw(Graphics g) {
+    public void draw(Graphics g,int xOffset,int yOffset) {
     //    Graphics g = canvas.getGraphics();
         g.setColor(new Color(5, 26, 41));
         g.fillOval(getX(), getY(), 50, 50);

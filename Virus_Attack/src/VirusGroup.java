@@ -28,15 +28,16 @@ public class VirusGroup{
         viruses.add(v);
     }
 
-    public void draw(Graphics g){
+
+    public void draw(Graphics g, int xOffset, int yOffset){
         for(Virus v : viruses){
-            v.draw(g);
+            v.draw(g, xOffset, yOffset);
         }
     }
 
-    public void update(Graphics g){
+    public void update(Graphics g, int xOffset, int yOffset){
         for(Virus v : viruses){
-            v.update(g);
+            v.update(g, xOffset, yOffset);
         }
     }
 

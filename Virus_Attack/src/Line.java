@@ -1,5 +1,4 @@
 
-
 public class Line
 {
     private int virusx;

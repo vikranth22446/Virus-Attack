@@ -1,4 +1,5 @@
 
+
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -24,15 +25,15 @@ public class VirusGroupManager {
         groupNum = 1;
     }
 
-    public void draw(Graphics g){
+    public void draw(Graphics g, int xOffset, int yOffset){
         for(int n : keys){
-            groups.get(n).draw(g);
+            groups.get(n).draw(g, xOffset, yOffset);
         }
     }
 
-    public void updateLocation(Graphics g){
+    public void updateLocation(Graphics g, int xOffset, int yOffset){
         for(int n: keys){
-            groups.get(n).update(g);
+            groups.get(n).update(g, xOffset, yOffset);
         }
     }
 

@@ -1,19 +1,41 @@
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
+import java.awt.event.*;
 
 
-public class InputHandler implements MouseListener, KeyListener{
+public class InputHandler implements MouseListener, MouseMotionListener, KeyListener{
 
     private int currentGroup;
 
     private VirusGroupManager vgm;
 
+    public static int xOffset, yOffset;
+    
+    public static int xChange, yChange;
+    
+    public static int allow;
+
+    public int move;
+    
     public InputHandler(VirusGroupManager vgm){
         currentGroup = 1;
         this.vgm = vgm;
+        
+        xOffset = 0;
+        yOffset = 0;
+        
+        xChange = 0;
+        yChange = 0;
+        allow = 50;
+
+	move = 3;
     }
+    
+    public static int getXOffset(){
+    	return xOffset;
+    }
+    public static int getYOffset(){
+    	return yOffset;
+    }
+    
 
     public void keyPressed(KeyEvent e) {
         // 0 to create new virus at (300, 300)
@@ -51,9 +73,39 @@ public class InputHandler implements MouseListener, KeyListener{
 
         }
     }
+    
+
+    
+	public void mouseMoved(MouseEvent e) {	
+		int x = e.getX() + xOffset;
+		int y = e.getY() + yOffset;
+		//System.out.println(xOffset + " " + yOffset);
+		
+		//System.out.println(x +  " " + y);
+		//System.out.println(World.getWidth + " " + World.getHeight);
+		if(x <= (xOffset + allow) && xOffset  > 0){
+			xChange -= move;
+		}
+		else if(x >= (xOffset + World.getWidth - allow) && xOffset < World.GAME_WIDTH){
+			xChange += move;
+		}
+		else if(y <= (yOffset + allow) && yOffset > 0){
+			yChange -= move;
+		}
+		else if(y >= (yOffset + World.getHeight - allow) && xOffset < World.GAME_HEIGHT){
+			yChange += move;
+		}	
+		
+		xOffset += xChange;
+		yOffset += yChange;
+		xChange = 0;
+		yChange = 0;
+	}
+	
+	public void mouseDragged(MouseEvent e) {}
 
     public void mousePressed(MouseEvent e) {
-        vgm.updateCoord(e.getX(), e.getY());
+        vgm.updateCoord(e.getX() + xOffset, e.getY() + yOffset);
 
     }
 
@@ -64,4 +116,5 @@ public class InputHandler implements MouseListener, KeyListener{
     public void mouseClicked(MouseEvent arg0) {}
     public void mouseEntered(MouseEvent e) {}
     public void mouseExited(MouseEvent e) {}
+
 }

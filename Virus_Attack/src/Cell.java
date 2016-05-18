@@ -43,6 +43,7 @@ public abstract class Cell implements Locatable
         this.x = x;
         this.y = y;
         this.health = health;
+        radius = 50;
     }
   public int getRadius()
     {
@@ -98,13 +99,7 @@ public abstract class Cell implements Locatable
 
     public abstract void produceUnit();
 
-    public void draw(Graphics g)
-    {
-       // Graphics g = canvas.getGraphics();
-        g.setColor( new Color( 19, 255, 240 ) );
-        g.fillOval( x, y, 50, 50 );
-
-    }
+    public abstract void draw(Graphics g, int xOffset, int yOffset);
 
 
     public abstract void decrementHealth( int down );

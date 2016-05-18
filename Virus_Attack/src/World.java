@@ -9,7 +9,10 @@ public class World extends Canvas implements Runnable {
     public static final Color BCOLOR = Color.green;
     public static final int WIDTH = 400;
     public static final int HEIGHT = WIDTH/12 * 9;
-
+    public static final int GAME_WIDTH = WIDTH * 4;
+    public static final int GAME_HEIGHT = HEIGHT * 4;
+    
+    public static int getWidth, getHeight;
     public static final int SCALE = 2;
     private static final String NAME = "Virus";
 
@@ -55,10 +58,15 @@ public class World extends Canvas implements Runnable {
 
         input = new InputHandler(vgm);
         addMouseListener(input);
+        addMouseMotionListener(input);
         addKeyListener(input);
-
+        
+        getWidth = getWidth();
+        getHeight = getHeight();
     }
+    
 
+    
     public void run() {
         while (true) {
             render();
@@ -83,12 +91,13 @@ public class World extends Canvas implements Runnable {
         g.setColor(Color.white);
         g.fillRect(0, 0, getWidth(), getHeight());
 
-        vgm.draw(g);
-        avm.draw(g);
-        cellManager.draw(g);
+        vgm.draw(g, input.getXOffset(), input.getYOffset());
+        avm.draw(g, input.getXOffset(), input.getYOffset());
+        //cellManager.draw(g);
+        cellManager.toDraw(input.getXOffset(), input.getYOffset(), g);
 
-        vgm.updateLocation(g);
-        avm.updateLocation(g);
+        vgm.updateLocation(g, input.getXOffset(), input.getYOffset());
+        avm.updateLocation(g, input.getXOffset(), input.getYOffset());
 
         bs.show();
     }
