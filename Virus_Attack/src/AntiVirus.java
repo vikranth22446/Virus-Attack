@@ -23,7 +23,7 @@ public class AntiVirus implements Locatable, Attacker{
         this.x = x;
         this.y = y;
         speed = 5;
-        attack = 0;//2
+        attack = 2;//2
         health = 1;//100
 
         width = 50;
@@ -115,6 +115,13 @@ public class AntiVirus implements Locatable, Attacker{
                 (y - other.getY()) *(y - other.getY()) ;
         distance = Math.sqrt( distance );
         return distance;
+    }
+
+    @Override
+    public void attack()
+    {
+        // TODO Auto-generated method stub
+        
     }
 
 

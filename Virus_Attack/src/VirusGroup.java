@@ -50,6 +50,7 @@ public class VirusGroup{
     public int size(){
         return viruses.size();
     }
+    
     public Virus getVirus(int i){
         return viruses.get( i );
     }

@@ -9,7 +9,7 @@ public class CellManager {
     public static ArrayList<Cell> sickValues;
 
     private int[][] whitePoints = {{1000, 400}, {900, 700},
-            {1400, 600}};
+            {200, 200}};
     ArrayList<Point> redPoints = new ArrayList<>();
 
     private int[][] sickPoints = {
@@ -118,10 +118,11 @@ public class CellManager {
     public ArrayList<Cell> getValues() {
         return redValues;
     }
-    public void moveWhiteCells() {
+    public void moveWhiteCells(Graphics g) {
         for (int i = 0; i < whiteValues.size(); i++)
         {
             WhiteCell w = (WhiteCell)whiteValues.get( i );
+            w.findVirus( g );
             w.move();
         }
     }
@@ -129,7 +130,7 @@ public class CellManager {
 
     public void draw(Graphics g) {
         mitosis();
-        moveWhiteCells();
+        moveWhiteCells(g);
         HealthBar healthBar = new HealthBar();
         for (Cell c : redValues) {
             c.draw(g);

@@ -66,6 +66,10 @@ public class VirusGroupManager {
     {
         return groups.get( groupNum );
     }
+    public static HashMap<Integer, VirusGroup> virusGroupMap()
+    {
+        return groups;
+    }
 
 
 

@@ -2,12 +2,23 @@ package src;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
 
-public class WhiteCell extends Cell {
+public class WhiteCell extends Cell implements AI {
     private int ticks;
     private int generateAt;
     private int index;
     private int splitTime;
+    private int vx, xL;
+    private int vy, yL;
+    private boolean attacking;
+    private int speed;
+    private int sightRadius = 300;
+
+    private int attackRadius = 80;
+    private int attack;
 
     public int getIndex() {
         return index;
@@ -18,6 +29,10 @@ public class WhiteCell extends Cell {
         this.index = index;
         ticks = 0;
         generateAt = 200;
+        vx = 0;
+        vy = 0;
+        speed = 5;
+        attack = 1;
     }
 
     @Override
@@ -96,25 +111,36 @@ public class WhiteCell extends Cell {
 //        }
 
     }
+    public void setCoord(int nx, int ny) {
+
+        xL = nx;
+        yL = ny;
+        double hyp = Math.sqrt((xL - getX()) * (xL - getX()) + (yL - getY()) * (yL - getY()));
+        double scale = speed / hyp;
+        vx = (int) ((xL - getX()) * scale/2.0);
+        vy = (int) ((yL - getY()) * scale/2.0);
+    }
     public void move() {
-        int moveX = (int) (Math.random() * 2);
-        if (moveX == 1)
-        {
-            setX(getX()+5);
-        }
-        else
-        {
-            setX(getX()-5);
-        }
-        int moveY = (int) (Math.random() * 2);
-        if (moveY == 1)
-        {
-            setY(getY()+5);
-        }
-        else
-        {
-            setY(getY()-5);
-        }
+       setX(getX() + vx);
+       setY(getY() + vy);
+//        int moveX = (int) (Math.random() * 2);
+//        if (moveX == 1)
+//        {
+//            setX(getX()+5);
+//        }
+//        else
+//        {
+//            setX(getX()-5);
+//        }
+//        int moveY = (int) (Math.random() * 2);
+//        if (moveY == 1)
+//        {
+//            setY(getY()+5);
+//        }
+//        else
+//        {
+//            setY(getY()-5);
+//        }
     }
 
 
@@ -125,6 +151,81 @@ public class WhiteCell extends Cell {
             ticks = 0;
         }
         ticks++;
+    }
+
+    @Override
+    public void sendSignal()
+    {
+        // TODO Auto-generated method stub
+        
+    }
+
+   // @Override
+    public void findVirus(Graphics g)
+    {
+        // TODO Auto-generated method stub
+        boolean attacking = false;
+        int closest = Integer.MAX_VALUE;
+        Iterator<Entry<Integer, VirusGroup>> it = VirusGroupManager.virusGroupMap().entrySet().iterator();
+        while (it.hasNext()) {
+            VirusGroup pair = it.next().getValue();
+            int add = 0;
+            for (int i = 0; i < pair.size(); i+=add)
+            {
+                Virus v = pair.getVirus( i );
+                add = 1;
+                if (getDistance(v) <= sightRadius && getDistance(v) < closest)
+                {
+                    setCoord(v.getX(), v.getY());
+                }
+                if (getDistance(v) <= attackRadius) 
+                {
+                    attacking = true;
+                    v.reduceHealth(attack);
+                    //g = canvas.getGraphics();
+                    g.setColor(Color.black);
+                    g.drawLine(getX() + getRadius(), getY() + getRadius() / 2,
+                            v.getX() + v.getWidth() / 2,
+                            v.getY() + v.getHeight() / 2);
+                    if (v.isDead()) {
+                        pair.remove(i);
+                        add = 0;
+                    }
+                    
+                }
+                if (attacking) break;
+                
+            }
+
+
+          //  it.remove(); // avoids a ConcurrentModificationException
+        }
+           
+        if (attacking)
+            return;
+        
+    }
+   
+
+    @Override
+    public void callHelp()
+    {
+        // TODO Auto-generated method stub
+        
+    }
+
+    @Override
+    public boolean needHelp()
+    {
+        // TODO Auto-generated method stub
+        return false;
+    }
+
+    @Override
+    public boolean canGiveHelp()
+    {
+        // TODO Auto-generated method stub
+        return false;
     }
 
 }

@@ -31,7 +31,7 @@ public class Virus implements Locatable, Attacker {
         prey = y;
         speed = 5;
         attack = 1;
-        health = 6;
+        health = 60;
 
         width = 30;
         height = 30;
@@ -163,5 +163,12 @@ public class Virus implements Locatable, Attacker {
 
     public int getAttackRadius() {
         return attackRadius;
+    }
+
+    @Override
+    public void attack()
+    {
+        // TODO Auto-generated method stub
+        
     }
 }
