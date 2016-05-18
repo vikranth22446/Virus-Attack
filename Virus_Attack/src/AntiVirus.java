@@ -1,3 +1,4 @@
+package src;
 
 import java.awt.Canvas;
 import java.awt.Color;

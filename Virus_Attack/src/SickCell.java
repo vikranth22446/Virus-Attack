@@ -1,3 +1,4 @@
+package src;
 
 import java.awt.*;
 
@@ -16,7 +17,7 @@ public class SickCell extends Cell {
         super(x, y, health);
         this.index = index;
         ticks = 0;
-        generateAt = 50;
+        generateAt = 300;
     }
 
 
