@@ -1,13 +1,21 @@
 
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.image.BufferStrategy;
 
 public class World extends Canvas implements Runnable {
 
-    private static final int HEIGHT = 400;
     public static final Color BCOLOR = Color.green;
-    private static final int WIDTH = 400;
-    private static final int SCALE = 4;
+    public static final int WIDTH = 400;
+    public static final int HEIGHT = WIDTH/12 * 9;
+    
+    public static final int GAME_WIDTH = WIDTH * 4;
+    public static final int GAME_HEIGHT = HEIGHT * 4;
+    
+    public static int getWidth, getHeight;
+
+    public static final int SCALE = 2;
     private static final String NAME = "Virus";
 
     private JFrame frame;
@@ -52,32 +60,53 @@ public class World extends Canvas implements Runnable {
 
         input = new InputHandler(vgm);
         addMouseListener(input);
+        addMouseMotionListener(input);
         addKeyListener(input);
-
+        
+        getWidth = getWidth();
+        getHeight = getHeight();
     }
+    
 
+    
     public void run() {
         while (true) {
-            g.fillRect(0, 0, WIDTH * SCALE, HEIGHT * SCALE);
-
-            vgm.draw(this);
-            avm.draw(this);
-            cellManager.draw(this);
-
-            vgm.updateLocation(this);
-            avm.updateLocation(this);
+            render();
             cellManager.produce();
 
             try {
-                Thread.sleep(100);
+                Thread.sleep(40);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
     }
 
+    public void render(){
+        BufferStrategy bs = getBufferStrategy();
+        if(bs == null){
+            createBufferStrategy(3);
+            return;
+        }
+
+        Graphics g = bs.getDrawGraphics();
+        g.setColor(Color.white);
+        g.fillRect(0, 0, getWidth(), getHeight());
+
+        vgm.draw(g, input.getXOffset(), input.getYOffset());
+        avm.draw(g, input.getXOffset(), input.getYOffset());
+        //cellManager.draw(g);
+        cellManager.toDraw(input.getXOffset(), input.getYOffset(), g);
+
+        vgm.updateLocation(g, input.getXOffset(), input.getYOffset());
+        avm.updateLocation(g, input.getXOffset(), input.getYOffset());
+
+        bs.show();
+    }
+
     public synchronized void start() {
         new Thread(this).start();
     }
+
 
 }

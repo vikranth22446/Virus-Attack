@@ -1,12 +1,11 @@
 
+
 import java.awt.*;
 import java.util.ArrayList;
 
 public class Virus implements Locatable, Attacker {
 
     private int x, y; // current loc
-
-    private int prex, prey;
 
     private int speed, attack, health; // stats
 
@@ -25,11 +24,9 @@ public class Virus implements Locatable, Attacker {
     public Virus(int x, int y) {
 
         this.x = x;
-        prex = x;
         this.y = y;
-        prey = y;
         speed = 5;
-        attack = 2;
+        attack = 1;
         health = 6;
 
         width = 30;
@@ -53,21 +50,20 @@ public class Virus implements Locatable, Attacker {
 
     // update the status of the virus
     // Also checks if anything is in attack radius
-    public void update(Canvas canvas) {
+    public void update(Graphics g, int xOffset, int yOffset) {
         x += vx;
         y += vy;
 
-        Graphics g;
         boolean attacking = false;
         for (int i = 0; i < AntiVirusManager.anti.size(); i++) {
             AntiVirus av = AntiVirusManager.anti.get(i);
             if (getDistance(av) <= attackRadius) {
                 av.reduceHealth(attack);
-                g = canvas.getGraphics();
+                //g = canvas.getGraphics();
                 g.setColor(Color.black);
-                g.drawLine(x + width / 2, y + height / 2,
-                        av.getX() + av.getWidth() / 2,
-                        av.getY() + av.getHeight() / 2);
+                g.drawLine(x + width / 2 - xOffset, y + height / 2 - yOffset,
+                        av.getX() + av.getWidth() / 2 - xOffset,
+                        av.getY() + av.getHeight() / 2 - yOffset);
                 if (av.isDead()) {
                     AntiVirusManager.anti.remove(av);
                 }
@@ -84,11 +80,11 @@ public class Virus implements Locatable, Attacker {
             Cell c = CellManager.redValues.get(i);
             if (getDistance(c) <= attackRadius && !(c instanceof SickCell)) {
                 c.decrementHealth(attack);
-                g = canvas.getGraphics();
+               // g = canvas.getGraphics();
                 g.setColor(Color.black);
-                g.drawLine(x + width / 2, y + height / 2,
-                        c.getX() + c.getRadius() / 2, c.getY() + c.getRadius()
-                                / 2);
+                g.drawLine(x + width / 2 - xOffset, y + height / 2 - yOffset,
+                        c.getX() + c.getRadius() / 2 - xOffset, 
+                        c.getY() + c.getRadius()/ 2 - yOffset);
                 if (c.getHealth() <= 0) {
                     CellManager.convertSick(c);
                 }
@@ -106,11 +102,10 @@ public class Virus implements Locatable, Attacker {
             Cell c = CellManager.whiteValues.get(i);
             if (getDistance(c) <= attackRadius) {
                 c.decrementHealth(attack);
-                g = canvas.getGraphics();
+               // g = canvas.getGraphics();
                 g.setColor(Color.black);
-                g.drawLine(x + width / 2, y + height / 2,
-                        c.getX() + c.getRadius() / 2, c.getY() + c.getRadius()
-                                / 2);
+                g.drawLine(x + width / 2 - xOffset, y + height / 2 - yOffset,
+                        c.getX() + c.getRadius() / 2 - xOffset, c.getY() + c.getRadius()/2 - yOffset);
                 if (c.getHealth() <= 0) {
                     CellManager.removeCell(i);
                 }
@@ -122,12 +117,12 @@ public class Virus implements Locatable, Attacker {
 
     }
 
-    public void draw(Canvas canvas) {
-        Graphics g = canvas.getGraphics();
+    public void draw(Graphics g, int xOffset, int yOffset) {
+//        Graphics g = canvas.getGraphics();
         g.setColor(new Color(122, 122, 0));
-        g.fillRect(x, y, width, height);
+        g.fillRect(x - xOffset, y - yOffset, width, height);
         g.setColor(World.BCOLOR);
-        g.drawRect(x + width / 4, y + height / 4, width / 2, height / 2);
+        g.drawRect((x + width / 4) - xOffset, (y + height / 4) - yOffset, width / 2, height / 2);
     }
 
     public boolean isDead() {

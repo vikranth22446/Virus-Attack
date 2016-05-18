@@ -1,4 +1,5 @@
 
+
 import java.awt.*;
 import java.util.ArrayList;
 
@@ -27,15 +28,15 @@ public class VirusGroup{
         viruses.add(v);
     }
 
-    public void draw(Canvas canvas){
+    public void draw(Graphics g, int xOffset, int yOffset){
         for(Virus v : viruses){
-            v.draw(canvas);
+            v.draw(g, xOffset, yOffset);
         }
     }
 
-    public void update(Canvas canvas){
+    public void update(Graphics g, int xOffset, int yOffset){
         for(Virus v : viruses){
-            v.update(canvas);
+            v.update(g, xOffset, yOffset);
         }
     }
 

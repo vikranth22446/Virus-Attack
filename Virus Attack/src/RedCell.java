@@ -3,40 +3,43 @@ import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Graphics;
 
-public class RedCell extends Cell
-{
+public class RedCell extends Cell {
+    private int index;
 
-    public RedCell(int x, int y, int health, int index)
-    {
-        super(x, y, health, index);
+    public int getIndex() {
+        return index;
     }
 
-    public  void decrementHealth(int decreaseBy)
-    {
+    public RedCell(int x, int y, int health, int index) {
+        super(x, y, health);
+        this.index = index;
+    }
+
+    public void decrementHealth(int decreaseBy) {
         setHealth(getHealth() - decreaseBy);
 
     }
-    public  void increaseHealth(int increaseBy)
-    {
+
+    public void increaseHealth(int increaseBy) {
         setHealth(getHealth() + increaseBy);
 
     }
 
     @Override
-    public void produceValues()
-    {
+    public void produceValues() {
         // TODO Auto-generated method stub
 
     }
-    public void draw( Canvas canvas)
-    {
-        Graphics g = canvas.getGraphics();
-        g.setColor( new Color( 255, 0, 0 ) );
-        g.fillOval( getX(), getY(), 50, 50 );
+
+    public void draw(Graphics g, int xOffset, int yOffset) {
+      //  Graphics g = canvas.getGraphics();
+        g.setColor(new Color(255, 0, 0));
+        g.fillOval(getX() - xOffset, getY() - yOffset, 50, 50);
+        HealthBar healthBar = new HealthBar(this);
+        healthBar.draw(g, xOffset, yOffset);
     }
 
-    public void updateViruses( VirusGroup group )
-    {
+    public void updateViruses(VirusGroup group) {
 //        for ( int i = 0; i < group.size(); i++ )
 //        {
 //            if (getDistance( group.getVirus( i ) ) <= group.getVirus(i).getAttackRadius())

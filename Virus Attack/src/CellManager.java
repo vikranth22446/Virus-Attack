@@ -1,18 +1,18 @@
-
 import java.awt.*;
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedList;
 
 public class CellManager {
     public static ArrayList<Cell> redValues;
     public static ArrayList<Cell> whiteValues;
     public static ArrayList<Cell> sickValues;
 
-    private int[][] setOfValues = { { 100, 200 }, { 300, 400 }, { 400, 700 },
-            { 600, 800 } };
-    private int[][] set2 = { { 150, 250 }, { 350, 450 }, { 450, 750 },
-            { 650, 850 } };
+    private int[][] whitePoints = {{1000, 400}, {900, 700},
+            {1400, 600}};
+    ArrayList<Point> redPoints = new ArrayList<>();
+
+    private int[][] sickPoints = {
+            {100, 300}, {500, 100}, {300, 600}
+    };
 
     // using id numbers as positions
     public CellManager() {
@@ -23,16 +23,42 @@ public class CellManager {
     }
 
     public void createCellsInPositions() {
-        for (int i = 0; i < setOfValues.length; i++) {
+        for (int i = 0; i < whitePoints.length; i++) {
             Cell cell;
-            cell = new RedCell(setOfValues[i][0], setOfValues[i][1], 100, i);
-            addRedCell(cell);
-        }
-        for (int i = 0; i < set2.length; i++) {
-            Cell cell = new WhiteCell(set2[i][0], set2[i][1], 100, i);
-
+            cell = new WhiteCell(whitePoints[i][0], whitePoints[i][1], 100, i);
             addWhiteCell(cell);
         }
+        for (int i = 0; i < 15; i++) {
+            redPoints.add(new Point((int)(Math.random()*1000),(int)(Math.random()*1000)));
+        }
+        for (int i = 0; i < redPoints.size(); i++) {
+
+            Point point = redPoints.get(i);
+            Cell cell = new RedCell(point.getX(),point.getY(), 100, i);
+
+            addRedCell(cell);
+        }
+        for (int i = 0; i < sickPoints.length; i++) {
+            Cell cell = new SickCell(sickPoints[i][0], sickPoints[i][1], -100, i);
+
+            addSickCell(cell);
+        }
+    }
+    public void mitosis()
+    {
+     for (int i = 0 ; i < whiteValues.size(); i++)   
+     {
+        WhiteCell w = (WhiteCell)whiteValues.get( i );
+        w.updateTime();
+        if(w.getTime() >= 600)
+        {
+            w.split( whiteValues );
+        }
+     }
+    }
+
+    private void addSickCell(Cell cell) {
+        sickValues.add(cell);
     }
 
     public void addSetOfValues(ArrayList<Cell> arrayList) {
@@ -52,7 +78,7 @@ public class CellManager {
             // redValues.set( redValues.indexOf( x ) , new SickCell(x.getX(),
             // x.getY(), -10, 0) );
             redValues.remove(c);
-            sickValues.add(new SickCell(c.getX(), c.getY(), 10, 0 ));
+            sickValues.add(new SickCell(c.getX(), c.getY(), -100, 0));
 
 
         } else if (c instanceof WhiteCell) {
@@ -87,28 +113,74 @@ public class CellManager {
 //	}
 
 
-
     public ArrayList<Cell> getValues() {
         return redValues;
     }
-
-    public void draw(Canvas canvas) {
-        for (Cell c : redValues) {
-            c.draw(canvas);
-        }
-        for (Cell c : whiteValues) {
-            c.draw(canvas);
-        }
-        for(Cell c : sickValues){
-            c.draw(canvas);
+    public void moveWhiteCells() {
+        for (int i = 0; i < whiteValues.size(); i++)
+        {
+            WhiteCell w = (WhiteCell)whiteValues.get( i );
+            w.move();
         }
     }
+    
+    public void toDraw(int xOffset, int yOffset, Graphics g){
+    	ArrayList<Cell> toDraw = new ArrayList<Cell>();
+    	
+    	for(Cell c : redValues){
+    		if(inRange(c.getX(), c.getY() , xOffset, yOffset)){
+    			toDraw.add(c);
+    		}
+    	}
+    	for(Cell c: whiteValues){
+    		if(inRange(c.getX(), c.getY() , xOffset, yOffset)){
+    			toDraw.add(c);
+    		}
+    	}
+    	for(Cell c: sickValues){
+    		if(inRange(c.getX(), c.getY() , xOffset, yOffset)){
+    			toDraw.add(c);
+    		}
+    	}
+    	
+    	draw(g, toDraw, xOffset, yOffset);
+    	
+    }
+    
+    public boolean inRange(int Cellx, int Celly, int xOffset, int yOffset ){
+    	return Cellx >= xOffset && Cellx <= xOffset + World.WIDTH*World.SCALE 
+    			&& Celly >= yOffset && Celly <= yOffset + World.HEIGHT*World.SCALE; 	
+    }
 
-    public void produce(){
+
+    public void draw(Graphics g, ArrayList<Cell> toDraw, int xOffset, int yOffset) {
+        mitosis();
+        moveWhiteCells();
+        //HealthBar healthBar = new HealthBar();
+
+        for(Cell c : toDraw){
+        	c.draw(g, xOffset, yOffset);
+        //	healthBar.draw(g, c);
+        }
+//        for (Cell c : redValues) {
+//            c.draw(g);
+//            healthBar.draw(g, c);
+//        }
+//        for (Cell c : whiteValues) {
+//            c.draw(g);
+//            healthBar.draw(g, c);
+//        }
+//        for (Cell c : sickValues) {
+//            c.draw(g);
+//            healthBar.draw(g, c);
+//        }
+    }
+
+    public void produce() {
         for (Cell c : whiteValues) {
             c.produceUnit();
         }
-        for(Cell c : sickValues){
+        for (Cell c : sickValues) {
             c.produceUnit();
         }
     }

@@ -1,63 +1,59 @@
 
-import javax.swing.*;
 import java.awt.*;
 
 
-public class SickCell extends Cell
-{
+public class SickCell extends Cell {
 
     private int generateAt;
     private int ticks;
+    private int index;
 
-    public SickCell( int x, int y, int health, int index )
-    {
-        super( x, y, health, index );
+    public int getIndex() {
+        return index;
+    }
 
+    public SickCell(int x, int y, int health, int index) {
+        super(x, y, health);
+        this.index = index;
         ticks = 0;
-        generateAt = 100;
+        generateAt = 300;
     }
 
 
     @Override
-    public void produceValues()
-    {
+    public void produceValues() {
 
     }
 
 
     @Override
-    public void draw( Canvas canvas)
-    {
-        Graphics g = canvas.getGraphics();
-        g.setColor( new Color( 5, 26, 41 ) );
-        g.fillOval( getX(), getY(), 50, 50 );
+    public void draw(Graphics g, int xOffset, int yOffset) {
+    //    Graphics g = canvas.getGraphics();
+        g.setColor(new Color(5, 26, 41));
+        g.fillOval(getX() - xOffset, getY() - yOffset, 50, 50);
+        HealthBar healthBar = new HealthBar(this);
+        healthBar.draw(g, xOffset, yOffset);
     }
 
 
-    public boolean isCured()
-    {
+    public boolean isCured() {
         return getHealth() > 0;
     }
 
 
-    public void decrementHealth( int decreaseBy )
-    {
-        setHealth( getHealth() - decreaseBy );
+    public void decrementHealth(int decreaseBy) {
+        setHealth(getHealth() - decreaseBy);
 
     }
 
 
-    public void increaseHealth( int increaseBy )
-    {
-        setHealth( getHealth() + increaseBy );
+    public void increaseHealth(int increaseBy) {
+        setHealth(getHealth() + increaseBy);
     }
-
-
-
 
 
     @Override
-    public void updateViruses( VirusGroup group ){
+    public void updateViruses(VirusGroup group) {
 //
 //        for ( int i = 0; i < group.size(); i++ )
 //        {
@@ -75,8 +71,8 @@ public class SickCell extends Cell
     }
 
     public void produceUnit() {
-        if(ticks >= generateAt){
-            VirusGroupManager.addVirus(getX()+getRadius(), getY()+getRadius());
+        if (ticks >= generateAt) {
+            VirusGroupManager.addVirus(-20+getX(), getY());
             ticks = 0;
         }
         ticks++;

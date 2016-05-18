@@ -1,4 +1,5 @@
 
+
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Graphics;
@@ -11,20 +12,17 @@ public class AntiVirusManager {
 
     public AntiVirusManager() {
         anti = new ArrayList<AntiVirus>();
-        anti.add(new AntiVirus(300, 300));
-        anti.add(new AntiVirus(310, 310));
-
     }
 
-    public void draw(Canvas canvas) {
+    public void draw(Graphics g, int xOffset, int yOffset) {
         for (AntiVirus n : anti) {
-            n.draw(canvas);
+            n.draw(g, xOffset, yOffset);
         }
     }
 
-    public void updateLocation(Canvas canvas){
+    public void updateLocation(Graphics g, int xOffset, int yOffset){
         for(AntiVirus av : anti){
-            av.update(canvas);
+            av.update(g, xOffset, yOffset);
         }
     }
 
