@@ -28,7 +28,7 @@ public class Virus implements Locatable, Attacker {
         this.y = y;
         speed = 5;
         attack = 1;
-        health = 60;
+        health = 110;
         width = 30;
         height = 30;
         lines = new ArrayList<Line>();
@@ -107,14 +107,18 @@ public class Virus implements Locatable, Attacker {
                 g.setColor(Color.black);
                 g.drawLine(x + width / 2 - xOffset, y + height / 2 - yOffset,
                         c.getX() + c.getRadius() / 2 - xOffset, c.getY() + c.getRadius()/2 - yOffset);
+               WhiteCell wc = (WhiteCell)c;
+               wc.setAttacked(true);
                 if (c.getHealth() <= 0) {
                     CellManager.removeCell(i);
                 }
                 attacking = true;
+                wc.setAttacked(false);
                 break;
             }
 
         }
+
 
     }
 
