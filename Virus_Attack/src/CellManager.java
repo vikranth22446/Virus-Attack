@@ -1,3 +1,4 @@
+package src;
 import java.awt.*;
 import java.util.ArrayList;
 
@@ -6,7 +7,7 @@ public class CellManager {
     public static ArrayList<Cell> whiteValues;
     public static ArrayList<Cell> sickValues;
 
-    private int[][] whitePoints = {{1000, 400}, {900, 700},{200, 200}};
+    private int[][] whitePoints = {{1000, 400}, {900, 700},{400, 400}};
     ArrayList<Point> redPoints = new ArrayList<>();
 
     private int[][] sickPoints = {
@@ -83,6 +84,11 @@ public class CellManager {
         } else if (c instanceof WhiteCell) {
             whiteValues.remove(c);
         }
+        else if (c instanceof SickCell)
+        {
+            sickValues.remove(c);
+            redValues.add(new RedCell(c.getX(), c.getY(), 100, 0));
+        }
 
     }
 
@@ -115,11 +121,11 @@ public class CellManager {
     public ArrayList<Cell> getValues() {
         return redValues;
     }
-    public void moveWhiteCells(Graphics g) {
+    public void moveWhiteCells(Graphics g, int xOffset, int yOffset) {
         for (int i = 0; i < whiteValues.size(); i++)
         {
             WhiteCell w = (WhiteCell)whiteValues.get( i );
-            w.findVirus( g );
+            w.findVirus( g, xOffset, yOffset );
             w.move();
         }
     }
@@ -155,7 +161,7 @@ public class CellManager {
 
     public void draw(Graphics g, ArrayList<Cell> toDraw, int xOffset, int yOffset) {
         mitosis();
-        moveWhiteCells(g);
+        moveWhiteCells(g, xOffset,  yOffset);
         //HealthBar healthBar = new HealthBar();
 
         for(Cell c : toDraw){

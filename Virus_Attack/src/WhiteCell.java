@@ -1,3 +1,4 @@
+package src;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -10,9 +11,11 @@ public class WhiteCell extends Cell implements AI {
     private int splitTime;
     private int vx, xL;
     private int vy, yL;
-    private boolean attacking;
+    private boolean attacking, healing;
     private int speed;
     private int sightRadius = 300;
+    private int drift = 0;
+   
 
     private int attackRadius = 80;
     private int attack;
@@ -57,9 +60,9 @@ public class WhiteCell extends Cell implements AI {
     public void draw(Graphics g,int xOffset, int yOffset) {
       //  Graphics g = canvas.getGraphics();
         g.setColor(Color.WHITE);
-        g.fillOval(getX(), getY(), 50, 50);
+        g.fillOval(getX() - xOffset, getY()-yOffset, 50, 50);
         g.setColor(Color.blue);
-        g.drawOval(getX(), getY(), 50, 50);
+        g.drawOval(getX()-xOffset, getY()-yOffset, 50, 50);
 
     }
 
@@ -158,7 +161,7 @@ public class WhiteCell extends Cell implements AI {
     }
 
    // @Override
-    public void findVirus(Graphics g)
+    public void findVirus(Graphics g, int xOffset, int yOffset)
     {
         // TODO Auto-generated method stub
         boolean attacking = false;
@@ -180,10 +183,10 @@ public class WhiteCell extends Cell implements AI {
                     attacking = true;
                     v.reduceHealth(attack);
                     //g = canvas.getGraphics();
-                    g.setColor(Color.black);
-                    g.drawLine(getX() + getRadius(), getY() + getRadius() / 2,
-                            v.getX() + v.getWidth() / 2,
-                            v.getY() + v.getHeight() / 2);
+                    g.setColor(Color.red);
+                    g.drawLine(getX() + getRadius() -xOffset, getY() + getRadius() / 2 - yOffset,
+                            v.getX() + v.getWidth() / 2-xOffset,
+                            v.getY() + v.getHeight() / 2- yOffset);
                     if (v.isDead()) {
                         pair.remove(i);
                         add = 0;
@@ -191,6 +194,33 @@ public class WhiteCell extends Cell implements AI {
                     
                 }
                 if (attacking) break;
+                else
+                {
+                    drift++;
+                    if (drift > 200)
+                    {
+                        System.out.println( "mew" );
+                      int moveX = (int) (Math.random() * 2);
+                      if (moveX == 0)
+                      {
+                          setCoord(getX()+200, getY()+200 );
+                      }
+                      else if (moveX == 1)
+                      {
+                          setCoord(getX()+200, getY()-200 );
+                      }
+                      else if (moveX == 2)
+                      {
+                          setCoord(getX()-100, getY()-200 );
+                      }
+                      else
+                      {
+                          setCoord(getX()-200, getY()+200 );
+                      }
+                      drift = 0;
+                    }
+                        
+                }
                 
             }
 

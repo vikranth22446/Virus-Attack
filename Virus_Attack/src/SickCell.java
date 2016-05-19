@@ -1,3 +1,4 @@
+package src;
 
 
 import java.awt.*;
@@ -31,7 +32,9 @@ public class SickCell extends Cell {
     public void draw(Graphics g,int xOffset,int yOffset) {
     //    Graphics g = canvas.getGraphics();
         g.setColor(new Color(5, 26, 41));
-        g.fillOval(getX(), getY(), 50, 50);
+        g.fillOval(getX() - xOffset, getY() - yOffset, 50, 50);
+        HealthBar healthBar = new HealthBar(this);
+        healthBar.draw(g,this, xOffset, yOffset);
 //        HealthBar healthBar = new HealthBar(this);
 //        healthBar.draw(canvas);
     }

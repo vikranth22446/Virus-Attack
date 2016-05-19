@@ -1,3 +1,4 @@
+package src;
 import java.awt.*;
 
 /**
@@ -26,14 +27,14 @@ public class AntiVirus implements Locatable {
 		this.x = x;
 		this.y = y;
 		speed = 5;
-		attack = 2;// 2
-		health = 100;// 100
+		attack = 1;// 2
+		health = 5;// 100
 
-		width = 50;
-		height = 50;
+		width = 15;
+		height = 15;
 		move = true;
 
-		attackRadius = 100;
+		attackRadius = 20;
 	}
 
 	// set a new coordinate for the virus to head to
@@ -87,13 +88,16 @@ public class AntiVirus implements Locatable {
 
 		for (int i = 0; i < CellManager.sickValues.size(); i++) {
 			Cell c = CellManager.sickValues.get(i);
+	        System.out.println( c.getHealth() +"hhi");
+
 			if (getDistance(c) <= attackRadius) {
-				c.decrementHealth(attack);
+				c.increaseHealth(attack);
 				g.setColor(Color.green);
 				g.drawLine((x + width / 2) - xOffset, (y + height / 2)
 						- yOffset, (c.getX() + c.getRadius() / 2) - xOffset,
 						(c.getY() + c.getRadius() / 2) - yOffset);
-				if (c.getHealth() <= 0)
+				System.out.println( c.getHealth() );
+				if (c.getHealth() >= 0)
 					CellManager.convertSick(c);
 				break;
 
