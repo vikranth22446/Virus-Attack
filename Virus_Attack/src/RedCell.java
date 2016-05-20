@@ -1,4 +1,4 @@
-package src;
+//package src;
 import java.awt.*;
 
 public class RedCell extends Cell {
