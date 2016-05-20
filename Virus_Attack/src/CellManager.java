@@ -1,4 +1,4 @@
-//package src;
+package src;
 import java.awt.*;
 import java.util.ArrayList;
 
@@ -25,7 +25,7 @@ public class CellManager {
     public void createCellsInPositions() {
         for (int i = 0; i < whitePoints.length; i++) {
             Cell cell;
-            cell = new WhiteCell(whitePoints[i][0], whitePoints[i][1], 100, i);
+            cell = new WhiteCell(whitePoints[i][0], whitePoints[i][1], 500, i);
             addWhiteCell(cell);
         }
         for (int i = 0; i < 15; i++) {

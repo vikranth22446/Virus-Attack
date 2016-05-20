@@ -1,4 +1,4 @@
-//package src;
+package src;
 import java.awt.*;
 import java.util.ArrayList;
 
@@ -39,18 +39,23 @@ public abstract class Cell implements Locatable
      * @param y
      * @param health
      */
+    private final double maxHealth;
     public Cell( int x, int y, int health)
     {
         this.x = x;
         this.y = y;
         this.health = health;
         radius = 50;
+        maxHealth = health;
     }
   public int getRadius()
     {
         return radius;
     }
-
+  public double max()
+  {
+      return maxHealth;
+  }
 
     public int getX()
     {

@@ -1,4 +1,4 @@
-//package src;
+package src;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -89,6 +89,8 @@ public class WhiteCell extends Cell implements AI
         g.fillOval( getX() - xOffset, getY() - yOffset, 50, 50 );
         g.setColor( Color.blue );
         g.drawOval( getX() - xOffset, getY() - yOffset, 50, 50 );
+        HealthBar healthBar = new HealthBar(this);
+        healthBar.draw(g,this, xOffset, yOffset, (int)max());
 
     }
 

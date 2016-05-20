@@ -1,4 +1,4 @@
-//package src;
+package src;
 import java.awt.*;
 
 public class RedCell extends Cell {
@@ -34,7 +34,7 @@ public class RedCell extends Cell {
         g.setColor(new Color(255, 0, 0));
         g.fillOval(getX() - xOffset, getY() - yOffset, 50, 50);
         HealthBar healthBar = new HealthBar(this);
-        healthBar.draw(g,this, xOffset, yOffset);
+        healthBar.draw(g,this, xOffset, yOffset, (int)max());
     }
 
     public void updateViruses(VirusGroup group) {
