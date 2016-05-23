@@ -1,3 +1,5 @@
+
+
 public interface Locatable {
     public int getX();
 

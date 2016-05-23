@@ -1,7 +1,5 @@
-import java.awt.Canvas;
-import java.awt.Color;
-import java.awt.Graphics;
-import java.util.ArrayList;
+
+import java.awt.*;
 
 
 /**
@@ -10,13 +8,7 @@ import java.util.ArrayList;
  * but different cells have different functions. This class contains very basic
  * methods that pertain to all cells, as well as several abstract methods such
  * as update(), setHealth(), etc.
- *
- * @author Melissa Wei
- * @version May 6, 2016
- * @author Period: 6
- * @author Assignment: APCSFinalProject
- *
- * @author Sources: n/a
+ **
  */
 public abstract class Cell implements Locatable
 {
@@ -33,15 +25,12 @@ public abstract class Cell implements Locatable
     /**
      * Radius value for cell
      */
-    private int radius;
+    private int radius = 50;
 
     /**
      * Health value for cell
      */
     private double health;
-    private ArrayList<Virus> viruses;
-
-
     /**
      * Constructs a new cell object.
      *
@@ -49,33 +38,23 @@ public abstract class Cell implements Locatable
      * @param y
      * @param health
      */
+    private final double maxHealth;
     public Cell( int x, int y, int health)
     {
         this.x = x;
         this.y = y;
         this.health = health;
-        viruses = new ArrayList<Virus>();
         radius = 50;
+        maxHealth = health;
     }
-
-    public ArrayList<Virus> getViruses()
-    {
-        return viruses;
-    }
-    public void addVirus(Virus e)
-    {
-        viruses.add( e );
-    }
-    public int numViruses()
-    {
-        return viruses.size();
-    }
-
-    public int getRadius()
+  public int getRadius()
     {
         return radius;
     }
-
+  public double max()
+  {
+      return maxHealth;
+  }
 
     public int getX()
     {
@@ -125,13 +104,7 @@ public abstract class Cell implements Locatable
 
     public abstract void produceUnit();
 
-    public void draw( Canvas canvas)
-    {
-        Graphics g = canvas.getGraphics();
-        g.setColor( new Color( 19, 255, 240 ) );
-        g.fillOval( x, y, 50, 50 );
-
-    }
+    public abstract void draw(Graphics g, int xOffset, int yOffset);
 
 
     public abstract void decrementHealth( int down );

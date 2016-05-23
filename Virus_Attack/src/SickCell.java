@@ -1,4 +1,6 @@
 
+
+
 import java.awt.*;
 
 
@@ -16,7 +18,7 @@ public class SickCell extends Cell {
         super(x, y, health);
         this.index = index;
         ticks = 0;
-        generateAt = 300;
+        generateAt = 500;
     }
 
 
@@ -27,12 +29,14 @@ public class SickCell extends Cell {
 
 
     @Override
-    public void draw(Graphics g, int xOffset, int yOffset) {
+    public void draw(Graphics g,int xOffset,int yOffset) {
     //    Graphics g = canvas.getGraphics();
         g.setColor(new Color(5, 26, 41));
         g.fillOval(getX() - xOffset, getY() - yOffset, 50, 50);
         HealthBar healthBar = new HealthBar(this);
-        healthBar.draw(g, xOffset, yOffset);
+        healthBar.draw(g,this, xOffset, yOffset, (int)max());
+//        HealthBar healthBar = new HealthBar(this);
+//        healthBar.draw(canvas);
     }
 
 

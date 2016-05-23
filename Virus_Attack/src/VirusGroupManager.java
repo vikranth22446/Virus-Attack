@@ -23,15 +23,15 @@ public class VirusGroupManager {
         groupNum = 1;
     }
 
-    public void draw(Canvas canvas){
+    public void draw(Graphics g, int xOffset, int yOffset){
         for(int n : keys){
-            groups.get(n).draw(canvas);
+            groups.get(n).draw(g, xOffset, yOffset);
         }
     }
 
-    public void updateLocation(Canvas canvas){
+    public void updateLocation(Graphics g, int xOffset, int yOffset){
         for(int n: keys){
-            groups.get(n).update(canvas);
+            groups.get(n).update(g, xOffset, yOffset);
         }
     }
 
@@ -63,6 +63,10 @@ public class VirusGroupManager {
     public VirusGroup currentGroup()
     {
         return groups.get( groupNum );
+    }
+    public static HashMap<Integer, VirusGroup> virusGroupMap()
+    {
+        return groups;
     }
 
 

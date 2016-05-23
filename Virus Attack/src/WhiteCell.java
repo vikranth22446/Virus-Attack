@@ -1,4 +1,5 @@
 
+
 import java.awt.*;
 import java.util.ArrayList;
 
@@ -16,7 +17,7 @@ public class WhiteCell extends Cell {
         super(x, y, health);
         this.index = index;
         ticks = 0;
-        generateAt = 200;
+        generateAt = 300;
     }
 
     @Override
@@ -41,12 +42,14 @@ public class WhiteCell extends Cell {
     }
 
     @Override
-    public void draw(Canvas canvas) {
-        Graphics g = canvas.getGraphics();
+    public void draw(Graphics g, int xOffset, int yOffset) {
+      //  Graphics g = canvas.getGraphics();
         g.setColor(Color.WHITE);
-        g.fillOval(getX(), getY(), 50, 50);
+        g.fillOval(getX() - xOffset, getY() - yOffset, 50, 50);
         g.setColor(Color.blue);
-        g.drawOval(getX(), getY(), 50, 50);
+        g.fillOval(getX() - xOffset, getY() - yOffset, 50, 50);
+        HealthBar healthBar = new HealthBar(this);
+        healthBar.draw(g, xOffset, yOffset);
 
     }
 
