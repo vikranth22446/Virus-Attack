@@ -1,10 +1,9 @@
-
-
+//package src;
+import java.awt.*;
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.util.ArrayList;
-
 
 public class AntiVirusManager {
 

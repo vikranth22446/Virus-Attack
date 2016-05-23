@@ -1,7 +1,5 @@
-
-import java.awt.Canvas;
-import java.awt.Color;
-import java.awt.Graphics;
+//package src;
+import java.awt.*;
 
 public class RedCell extends Cell {
     private int index;
@@ -36,7 +34,7 @@ public class RedCell extends Cell {
         g.setColor(new Color(255, 0, 0));
         g.fillOval(getX() - xOffset, getY() - yOffset, 50, 50);
         HealthBar healthBar = new HealthBar(this);
-        healthBar.draw(g, xOffset, yOffset);
+        healthBar.draw(g,this, xOffset, yOffset);
     }
 
     public void updateViruses(VirusGroup group) {

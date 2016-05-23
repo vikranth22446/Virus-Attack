@@ -1,3 +1,4 @@
+//package src;
 import java.awt.*;
 import java.util.ArrayList;
 
@@ -6,8 +7,7 @@ public class CellManager {
     public static ArrayList<Cell> whiteValues;
     public static ArrayList<Cell> sickValues;
 
-    private int[][] whitePoints = {{1000, 400}, {900, 700},
-            {1400, 600}};
+    private int[][] whitePoints = {{1000, 400}, {900, 700},{400, 400}};
     ArrayList<Point> redPoints = new ArrayList<>();
 
     private int[][] sickPoints = {
@@ -50,7 +50,7 @@ public class CellManager {
      {
         WhiteCell w = (WhiteCell)whiteValues.get( i );
         w.updateTime();
-        if(w.getTime() >= 600)
+        if(w.getTime() > 150 && whiteValues.size()<20)
         {
             w.split( whiteValues );
         }
@@ -84,6 +84,11 @@ public class CellManager {
         } else if (c instanceof WhiteCell) {
             whiteValues.remove(c);
         }
+        else if (c instanceof SickCell)
+        {
+            sickValues.remove(c);
+            redValues.add(new RedCell(c.getX(), c.getY(), 100, 0));
+        }
 
     }
 
@@ -116,14 +121,15 @@ public class CellManager {
     public ArrayList<Cell> getValues() {
         return redValues;
     }
-    public void moveWhiteCells() {
+    public void moveWhiteCells(Graphics g, int xOffset, int yOffset) {
         for (int i = 0; i < whiteValues.size(); i++)
         {
             WhiteCell w = (WhiteCell)whiteValues.get( i );
+            w.findVirus( g, xOffset, yOffset );
             w.move();
         }
     }
-    
+
     public void toDraw(int xOffset, int yOffset, Graphics g){
     	ArrayList<Cell> toDraw = new ArrayList<Cell>();
     	
@@ -155,25 +161,13 @@ public class CellManager {
 
     public void draw(Graphics g, ArrayList<Cell> toDraw, int xOffset, int yOffset) {
         mitosis();
-        moveWhiteCells();
+        moveWhiteCells(g, xOffset,  yOffset);
         //HealthBar healthBar = new HealthBar();
 
         for(Cell c : toDraw){
         	c.draw(g, xOffset, yOffset);
         //	healthBar.draw(g, c);
         }
-//        for (Cell c : redValues) {
-//            c.draw(g);
-//            healthBar.draw(g, c);
-//        }
-//        for (Cell c : whiteValues) {
-//            c.draw(g);
-//            healthBar.draw(g, c);
-//        }
-//        for (Cell c : sickValues) {
-//            c.draw(g);
-//            healthBar.draw(g, c);
-//        }
     }
 
     public void produce() {

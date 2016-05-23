@@ -1,3 +1,4 @@
+//package src;
 
 
 import java.awt.*;
@@ -28,6 +29,7 @@ public class VirusGroup{
         viruses.add(v);
     }
 
+
     public void draw(Graphics g, int xOffset, int yOffset){
         for(Virus v : viruses){
             v.draw(g, xOffset, yOffset);
@@ -50,6 +52,7 @@ public class VirusGroup{
     public int size(){
         return viruses.size();
     }
+    
     public Virus getVirus(int i){
         return viruses.get( i );
     }

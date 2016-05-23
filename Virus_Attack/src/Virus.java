@@ -1,3 +1,4 @@
+//package src;
 
 
 import java.awt.*;
@@ -27,8 +28,7 @@ public class Virus implements Locatable, Attacker {
         this.y = y;
         speed = 5;
         attack = 1;
-        health = 6;
-
+        health = 110;
         width = 30;
         height = 30;
         lines = new ArrayList<Line>();
@@ -50,6 +50,7 @@ public class Virus implements Locatable, Attacker {
 
     // update the status of the virus
     // Also checks if anything is in attack radius
+
     public void update(Graphics g, int xOffset, int yOffset) {
         x += vx;
         y += vy;
@@ -106,14 +107,18 @@ public class Virus implements Locatable, Attacker {
                 g.setColor(Color.black);
                 g.drawLine(x + width / 2 - xOffset, y + height / 2 - yOffset,
                         c.getX() + c.getRadius() / 2 - xOffset, c.getY() + c.getRadius()/2 - yOffset);
+               WhiteCell wc = (WhiteCell)c;
+               wc.setAttacked(true);
                 if (c.getHealth() <= 0) {
                     CellManager.removeCell(i);
                 }
                 attacking = true;
+                wc.setAttacked(false);
                 break;
             }
 
         }
+
 
     }
 
@@ -158,5 +163,12 @@ public class Virus implements Locatable, Attacker {
 
     public int getAttackRadius() {
         return attackRadius;
+    }
+
+    @Override
+    public void attack()
+    {
+        // TODO Auto-generated method stub
+        
     }
 }

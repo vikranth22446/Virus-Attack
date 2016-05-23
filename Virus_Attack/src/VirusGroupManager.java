@@ -1,3 +1,4 @@
+//package src;
 
 
 import java.awt.*;
@@ -65,6 +66,10 @@ public class VirusGroupManager {
     public VirusGroup currentGroup()
     {
         return groups.get( groupNum );
+    }
+    public static HashMap<Integer, VirusGroup> virusGroupMap()
+    {
+        return groups;
     }
 
 
