@@ -1,4 +1,4 @@
-//package src;
+package src;
 
 import java.awt.*;
 
@@ -20,29 +20,37 @@ public class HealthBar {
     public void updateHealth(){
        healthValue = cell.getHealth();
     }
-    public void draw(Graphics graph,Cell c,int xOffset, int yOffset){
+    public void draw(Graphics graph,Cell c,int xOffset, int yOffset, int cellHealth){
         cell = c;
         if(cell instanceof SickCell){
            // Graphics graph = canvas.getGraphics();
-            int x = 100;
+            int x = cellHealth;
             graph.setColor( new Color(255, 26, 41) );
-            graph.fillRect(cell.getX()-25 - xOffset,cell.getY()-20-yOffset,(int)Math.abs(cell.getHealth()),10);
+            graph.fillRect(cell.getX()-25 - xOffset,cell.getY()-20-yOffset,(int)(Math.abs(cell.getHealth()/cellHealth *100)),10);
+        //    System.out.println( (Math.abs(cell.getHealth()/cellHealth *100)));
             x+=(int)cell.getHealth();
-            drawOtherHalf(graph,x,xOffset,yOffset,new Color(0, 255, 59 ));
+           // drawOtherHalfSick(graph,x,xOffset,yOffset, cellHealth);
         }
         else {
            // Graphics graph = canvas.getGraphics();
-            int x = 100;
+            int x = cellHealth;
+
             graph.setColor( new Color(0, 255, 59) );
-            graph.fillRect(cell.getX()-25-xOffset,cell.getY()-20-yOffset,(int)Math.abs(cell.getHealth()),10);
+            graph.fillRect(cell.getX()-25-xOffset,cell.getY()-20-yOffset,(int)(Math.abs(cell.getHealth())/cellHealth *100),10);
             x-=(int)cell.getHealth();
           //  System.out.println( xOffset + " " + yOffset );
-            drawOtherHalf(graph,x,xOffset,yOffset,new Color(255, 26, 41));
+            drawOtherHalf(graph,x,xOffset,yOffset, cellHealth);
         }
     }
-    public void drawOtherHalf(Graphics g, int x, int xOffset,int yOffset,Color color){
+    public void drawOtherHalf(Graphics g, int x, int xOffset,int yOffset, int cellHealth){
        // Graphics graph = canvas.getGraphics();
-        g.setColor(color);
-        g.fillRect(cell.getX()-25+(int)Math.abs(cell.getHealth()) -xOffset,cell.getY()-20 -yOffset,Math.abs(x),10);
+
+        x = (int)(x /((double)cellHealth)*100.0);
+        //System.out.println( x );
+
+        g.setColor(new Color(255, 26, 41));
+        g.fillRect((int)(cell.getX()-25)+(int)(Math.abs(cell.getHealth()/cellHealth *100)) -xOffset,cell.getY()-20 -yOffset,Math.abs(x),10);
     }
+   
+
 }

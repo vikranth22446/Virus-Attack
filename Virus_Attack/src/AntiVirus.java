@@ -1,13 +1,9 @@
-//package src;
-
+package src;
 import java.awt.*;
 
 /**
  *
  */
-import java.awt.Canvas;
-import java.awt.Color;
-import java.awt.Graphics;
 
 
 public class AntiVirus implements Locatable
@@ -107,7 +103,7 @@ public class AntiVirus implements Locatable
         for ( int i = 0; i < CellManager.sickValues.size(); i++ )
         {
             Cell c = CellManager.sickValues.get( i );
-            System.out.println( c.getHealth() + "hhi" );
+          //  System.out.println( c.getHealth() + "hhi" );
 
             if ( getDistance( c ) <= attackRadius )
             {
@@ -117,7 +113,7 @@ public class AntiVirus implements Locatable
                     ( y + height / 2 ) - yOffset,
                     ( c.getX() + c.getRadius() / 2 ) - xOffset,
                     ( c.getY() + c.getRadius() / 2 ) - yOffset );
-                System.out.println( c.getHealth() );
+             //   System.out.println( c.getHealth() );
                 if ( c.getHealth() >= 0 )
                     CellManager.convertSick( c );
                 break;

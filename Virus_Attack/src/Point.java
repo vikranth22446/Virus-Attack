@@ -1,8 +1,5 @@
-//package src;
+package src;
 
-/**
- * Created by vikranth on 5/13/2016.
- */
 public class Point implements Locatable {
     private int x;
     private int y;

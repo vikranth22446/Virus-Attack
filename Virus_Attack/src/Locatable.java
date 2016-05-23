@@ -1,4 +1,5 @@
-//package src;
+package src;
+
 
 public interface Locatable {
     public int getX();

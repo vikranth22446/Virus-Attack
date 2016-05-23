@@ -1,4 +1,4 @@
-//package src;
+package src;
 
 
 import java.awt.*;
@@ -25,8 +25,9 @@ public class VirusGroup{
         groupNum = n;
     }
 
-    public void addVirus(Virus v){
-        viruses.add(v);
+   public VirusGroup addVirusSet(VirusGroup v){
+        viruses.addAll(v.getViruses());
+        return this;
     }
 
 
@@ -57,9 +58,15 @@ public class VirusGroup{
         return viruses.get( i );
     }
 
+    public ArrayList<Virus> getViruses() {
+        return viruses;
+    }
 
     public Virus remove(int n){
         return viruses.remove(n);
     }
 
+    public void addVirus(Virus virus) {
+        viruses.add(virus);
+    }
 }

@@ -1,6 +1,6 @@
-//package src;
-import java.awt.event.*;
+package src;
 
+import java.awt.event.*;
 
 public class InputHandler implements MouseListener, MouseMotionListener, KeyListener{
 
@@ -48,6 +48,9 @@ public class InputHandler implements MouseListener, MouseMotionListener, KeyList
             if(vgm.groupNum() <= 6){
                 vgm.split();
             }
+        }
+        if(e.getKeyCode() == KeyEvent.VK_C){
+                vgm.combine();
         }
         //Different Groups
         if(e.getKeyCode() == KeyEvent.VK_1){

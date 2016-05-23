@@ -1,4 +1,5 @@
-//package src;
+package src;
+
 import java.awt.*;
 import java.awt.Canvas;
 import java.awt.Color;

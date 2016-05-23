@@ -1,7 +1,13 @@
-//package src;
+package src;
+
 
 
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
 
 
 public class SickCell extends Cell {
@@ -18,7 +24,7 @@ public class SickCell extends Cell {
         super(x, y, health);
         this.index = index;
         ticks = 0;
-        generateAt = 300;
+        generateAt = 500;
     }
 
 
@@ -31,10 +37,25 @@ public class SickCell extends Cell {
     @Override
     public void draw(Graphics g,int xOffset,int yOffset) {
     //    Graphics g = canvas.getGraphics();
-        g.setColor(new Color(5, 26, 41));
-        g.fillOval(getX() - xOffset, getY() - yOffset, 50, 50);
+        g.setColor(new Color(255, 0, 0));
+        //File img = new File("pixelred.png");
+        BufferedImage in;
+        try
+        {
+            in = ImageIO.read(new File("pixelsick.png"));
+            BufferedImage newImage = new BufferedImage(
+                in.getWidth(), in.getHeight(), BufferedImage.TYPE_INT_ARGB);
+            //Graphics2D g1 = newImage.createGraphics();
+            g.drawImage( in, getX() - xOffset, getY() - yOffset, null );
+          //  System.out.println( "hi" );
+        }
+        catch ( IOException e )
+        {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
         HealthBar healthBar = new HealthBar(this);
-        healthBar.draw(g,this, xOffset, yOffset);
+        healthBar.draw(g,this, xOffset, yOffset, (int)max());
 //        HealthBar healthBar = new HealthBar(this);
 //        healthBar.draw(canvas);
     }
