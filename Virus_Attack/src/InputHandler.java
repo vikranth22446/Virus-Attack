@@ -1,6 +1,7 @@
-package src;
+package Virus_Attack.src;
 
 import java.awt.event.*;
+
 
 public class InputHandler implements MouseListener, MouseMotionListener, KeyListener{
 
@@ -15,6 +16,8 @@ public class InputHandler implements MouseListener, MouseMotionListener, KeyList
     public static int allow;
 
     public int move;
+    
+    private boolean merge = false;
     
     public InputHandler(VirusGroupManager vgm){
         currentGroup = 1;
@@ -49,32 +52,68 @@ public class InputHandler implements MouseListener, MouseMotionListener, KeyList
                 vgm.split();
             }
         }
-        if(e.getKeyCode() == KeyEvent.VK_C){
-                vgm.combine();
+        if(e.getKeyCode() == KeyEvent.VK_A){
+        	merge = true;
         }
+        
         //Different Groups
         if(e.getKeyCode() == KeyEvent.VK_1){
-            vgm.changeCurrent(1);
+        	if(vgm.hasKey(1)){
+        		if(merge){
+        			vgm.merge(1);
+        			merge = false;
+        		}
+        		else vgm.changeCurrent(1);
+        	}
         }
         if(e.getKeyCode() == KeyEvent.VK_2){
-            vgm.changeCurrent(2);
+        	if(vgm.hasKey(2)){
+        		if(merge){
+        			vgm.merge(2);
+        			merge = false;
+        		}
+        		else vgm.changeCurrent(2);
+        	}
 
         }
         if(e.getKeyCode() == KeyEvent.VK_3){
-            vgm.changeCurrent(3);
+        	if(vgm.hasKey(3)){
+        		if(merge){
+        			vgm.merge(3);
+        			merge = false;
+        		}
+        		else vgm.changeCurrent(3);
+        	}
 
         }
         if(e.getKeyCode() == KeyEvent.VK_4){
-            vgm.changeCurrent(4);
+        	if(vgm.hasKey(3)){
+        		if(merge){
+        			vgm.merge(3);
+        			merge = false;
+        		}
+        		else vgm.changeCurrent(3);
+        	}
 
         }
         if(e.getKeyCode() == KeyEvent.VK_5){
-            vgm.changeCurrent(5);
+        	if(vgm.hasKey(5)){
+        		if(merge){
+        			vgm.merge(5);
+        			merge = false;
+        		}
+        		else vgm.changeCurrent(5);
+        	}
 
         }
         if(e.getKeyCode() == KeyEvent.VK_6){
-            vgm.changeCurrent(6);
-
+        	if(vgm.hasKey(6)){
+        		if(merge){
+        			vgm.merge(6);
+        			merge = false;
+        		}
+        		else vgm.changeCurrent(6);
+        	}
         }
     }
     

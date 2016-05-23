@@ -1,4 +1,4 @@
-package src;
+package Virus_Attack.src;
 
 import java.awt.*;
 import java.util.ArrayList;

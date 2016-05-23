@@ -1,10 +1,15 @@
-package src;
+package Virus_Attack.src;
+
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-
-
+/**
+ * Manages the virus groups, and handles which groups   
+ * 
+ * @author alexm
+ *
+ */
 public class VirusGroupManager {
 
     public static HashMap<Integer, VirusGroup> groups; //hashmap holding all the groups
@@ -57,7 +62,18 @@ public class VirusGroupManager {
         groups.put(groupNum, new VirusGroup(newGroup, groupNum));
         keys.add(groupNum);
     }
-
+    
+    public void merge(int n){
+    	for(int i=0; i<groups.get(n).size(); i++){
+    		groups.get(currentGroup).addVirus(groups.get(n).remove(i));
+    	}
+    	keys.remove(n);
+    	groupNum--;
+    }
+    
+    public boolean hasKey(int n){
+    	return keys.contains(n);
+    }
     public int groupNum(){
         return groupNum;
     }
@@ -71,8 +87,6 @@ public class VirusGroupManager {
     }
 
 
-    public void combine() {
 
-        //TODO IMPLEMENT IT
-    }
+
 }
