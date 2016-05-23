@@ -1,9 +1,14 @@
-
+package src;
 
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Map.Entry;
+
+import javax.imageio.ImageIO;
 
 
 public class WhiteCell extends Cell implements AI
@@ -26,13 +31,15 @@ public class WhiteCell extends Cell implements AI
 
     private int sightRadius = 300;
 
-    private int drift = 0;
+    private int drift = 50;
 
     private int attackRadius = 80;
 
     private int attack;
 
     public boolean beingAttacked = false;
+
+    public boolean tracking = false;
 
 
     public int getIndex()
@@ -51,6 +58,9 @@ public class WhiteCell extends Cell implements AI
         vy = 0;
         speed = 5;
         attack = 1;
+        attacking = false;
+        healing = false;
+        drift = 50;
     }
 
 
@@ -85,12 +95,23 @@ public class WhiteCell extends Cell implements AI
     public void draw( Graphics g, int xOffset, int yOffset )
     {
         // Graphics g = canvas.getGraphics();
-        g.setColor( Color.WHITE );
-        g.fillOval( getX() - xOffset, getY() - yOffset, 50, 50 );
-        g.setColor( Color.blue );
-        g.drawOval( getX() - xOffset, getY() - yOffset, 50, 50 );
-        HealthBar healthBar = new HealthBar(this);
-        healthBar.draw(g,this, xOffset, yOffset, (int)max());
+        g.setColor( new Color( 255, 0, 0 ) );
+        // File img = new File("pixelred.png");
+        BufferedImage in;
+        try
+        {
+            in = ImageIO.read( new File( "pixelwhite.png" ) );
+            BufferedImage newImage = new BufferedImage( in.getWidth(), in.getHeight(), BufferedImage.TYPE_INT_ARGB );
+            // Graphics2D g1 = newImage.createGraphics();
+            g.drawImage( in, getX() - xOffset, getY() - yOffset, null );
+        }
+        catch ( IOException e )
+        {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+        HealthBar healthBar = new HealthBar( this );
+        healthBar.draw( g, this, xOffset, yOffset, (int)max() );
 
     }
 
@@ -238,7 +259,7 @@ public class WhiteCell extends Cell implements AI
             for ( int j = 0; j < CellManager.sickValues.size(); j++ )
             {
                 Cell c = CellManager.sickValues.get( j );
-                System.out.println( c.getHealth() + "hhi" );
+                // System.out.println( c.getHealth() + "hhi" );
                 if ( getDistance( c ) <= sightRadius && getDistance( c ) < closestSick )
                 {
                     setCoord( c.getX(), c.getY() );
@@ -253,7 +274,7 @@ public class WhiteCell extends Cell implements AI
                         getY() + getRadius() / 2 - yOffset,
                         c.getX() + c.getRadius() - xOffset,
                         c.getY() + c.getRadius() / 2 - yOffset );
-                    System.out.println( c.getHealth() );
+                    // System.out.println( c.getHealth() );
                     if ( c.getHealth() >= 0 )
                     {
                         CellManager.convertSick( c );
@@ -261,74 +282,109 @@ public class WhiteCell extends Cell implements AI
                     }
                     break;
                 }
-                if ( !healing )
+
+                // healing = false;
+
+                if ( attacking )
                 {
-                    for ( int i = 0; i < pair.size(); i += add )
+                    // return;
+                }
+            }
+            if ( !healing )
+            {
+                for ( int i = 0; i < pair.size(); i += add )
+                {
+                    Virus v = pair.getVirus( i );
+                    add = 1;
+                    if ( getDistance( v ) <= sightRadius && getDistance( v ) < closest )
                     {
-                        Virus v = pair.getVirus( i );
-                        add = 1;
-                        if ( getDistance( v ) <= sightRadius && getDistance( v ) < closest )
+                        setCoord( v.getX(), v.getY() );
+                        tracking = true;
+                    }
+                    else
+                    {
+                        int chance = (int)( Math.random() * 1000 );
+
+                        if ( chance == 50 )
                         {
                             setCoord( v.getX(), v.getY() );
+                            tracking = true;
+                        }
+                    }
+
+                    if ( getDistance( v ) <= attackRadius && ( !healing || beingAttacked ) )
+                    {
+                        attacking = true;
+                        v.reduceHealth( attack );
+                        // g = canvas.getGraphics();
+                        g.setColor( Color.red );
+                        g.drawLine( getX() + getRadius() - xOffset,
+                            getY() + getRadius() / 2 - yOffset,
+                            v.getX() + v.getWidth() / 2 - xOffset,
+                            v.getY() + v.getHeight() / 2 - yOffset );
+                        if ( v.isDead() )
+                        {
+                            pair.remove( i );
+                            add = 0;
+                            attacking = false;
+                            tracking = false;
                         }
 
-                        if ( getDistance( v ) <= attackRadius && (!healing || beingAttacked))
+                    }
+                    boolean apple = true;
+                    if ( attacking || tracking )
+                    { // break;
+                        apple = false;
+                        if ( !attacking && tracking )
                         {
-                            attacking = true;
-                            v.reduceHealth( attack );
-                            // g = canvas.getGraphics();
-                            g.setColor( Color.red );
-                            g.drawLine( getX() + getRadius() - xOffset,
-                                getY() + getRadius() / 2 - yOffset,
-                                v.getX() + v.getWidth() / 2 - xOffset,
-                                v.getY() + v.getHeight() / 2 - yOffset );
-                            if ( v.isDead() )
-                            {
-                                pair.remove( i );
-                                add = 0;
-                            }
+                            int chance = (int)( Math.random() * 500 );
 
+                            if ( chance == 50 )
+                            {
+                                setCoord( v.getX(), v.getY() );
+
+                                tracking = false;
+                                apple = true;
+                            }
                         }
-                        if ( attacking )
-                            break;
-                        else
-                        {
-                            drift++;
-                            if ( drift > 200 )
-                            {
-                                System.out.println( "mew" );
-                                int moveX = (int)( Math.random() * 2 );
-                                if ( moveX == 0 )
-                                {
-                                    setCoord( getX() + 200, getY() + 200 );
-                                }
-                                else if ( moveX == 1 )
-                                {
-                                    setCoord( getX() + 200, getY() - 200 );
-                                }
-                                else if ( moveX == 2 )
-                                {
-                                    setCoord( getX() - 100, getY() - 200 );
-                                }
-                                else
-                                {
-                                    setCoord( getX() - 200, getY() + 200 );
-                                }
-                                drift = 0;
-                            }
 
+                    }
+                    else if ( apple )
+                    {
+                        drift++;
+                        if ( drift > 50 )
+                        {
+                            // System.out.println( "mew" );
+                            int moveX = (int)( Math.random() * 2 );
+                            if ( moveX == 0 )
+                            {
+                                setCoord( getX() + 50, getY() + 50 );
+                            }
+                            else if ( moveX == 1 )
+                            {
+                                setCoord( getX() + 50, getY() - 50 );
+                            }
+                            else if ( moveX == 2 )
+                            {
+                                setCoord( getX() - 50, getY() - 50 );
+                            }
+                            else
+                            {
+                                setCoord( getX() - 50, getY() + 50 );
+                            }
+                            drift = 0;
                         }
 
                     }
 
-                    // it.remove(); // avoids a ConcurrentModificationException
                 }
-                healing = false;
 
-                if ( attacking )
-                    return;
+                // it.remove(); // avoids a ConcurrentModificationException
             }
         }
+        // healing = false;
+        // attacking = false;
+        // tracking = false;
 
     }
 

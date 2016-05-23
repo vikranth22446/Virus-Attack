@@ -1,3 +1,4 @@
+package src;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -11,7 +12,7 @@ public class CellManager {
     ArrayList<Point> redPoints = new ArrayList<>();
 
     private int[][] sickPoints = {
-            {100, 300}, {500, 100}, {300, 600}
+         //   {100, 300}, {500, 100}, {300, 600}
     };
 
     // using id numbers as positions
@@ -34,7 +35,7 @@ public class CellManager {
         for (int i = 0; i < redPoints.size(); i++) {
 
             Point point = redPoints.get(i);
-            Cell cell = new RedCell(point.getX(),point.getY(), 100, i);
+            Cell cell = new RedCell(point.getX(),point.getY(), 200, i);
 
             addRedCell(cell);
         }
