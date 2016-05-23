@@ -1,4 +1,4 @@
-package src;
+package Virus_Attack.src;
 public interface AI {
     public void sendSignal();
   //  public void findVirus(Graphics g);
