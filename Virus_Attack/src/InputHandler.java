@@ -1,26 +1,51 @@
 
-
 import java.awt.event.*;
 
 
+/**
+ * Handles all the inputs, key inputs, mouse inputs, and mouse movement when shifting the screen.
+ * 
+ * @author alexm
+ *
+ */
 public class InputHandler implements MouseListener, MouseMotionListener, KeyListener{
 
-    private int currentGroup;
-
+    /**
+     * Holds the virus group manager object created on start 
+     */
     private VirusGroupManager vgm;
 
+    /**
+     * the portion of the map to render
+     */
     public static int xOffset, yOffset;
     
-    public static int xChange, yChange;
+    /**
+     * variable to hold the amount the screen shifted
+     */
+    private int xChange, yChange;
     
-    public static int allow;
+    /**
+     * portion of the screen that can be moved on to, in order to move the screen
+     */
+    private int allow;
 
-    public int move;
+    /**
+     * amount to move the screen by per tick, ticks 25 times per second
+     */
+    private int move;
     
+    /**
+     * whether the merge function is to be used
+     */
     private boolean merge = false;
     
+    /**
+     * creates all the variables
+     * 
+     * @param vgm from the world to access vgm actions
+     */
     public InputHandler(VirusGroupManager vgm){
-        currentGroup = 1;
         this.vgm = vgm;
         
         xOffset = 0;
@@ -30,28 +55,39 @@ public class InputHandler implements MouseListener, MouseMotionListener, KeyList
         yChange = 0;
         allow = 50;
 
-	move = 3;
+        move = 3;
     }
     
+    /**
+     * the getter method for the screen x offset
+     * 
+     * @return the x offset
+     */
     public static int getXOffset(){
     	return xOffset;
     }
+    
+    /**
+     * the getter method for the screen y offset
+     * 
+     * @return the y offset
+     */
     public static int getYOffset(){
     	return yOffset;
     }
     
 
+    /**
+     * @see java.awt.event.KeyListener#keyPressed(java.awt.event.KeyEvent)
+     */
     public void keyPressed(KeyEvent e) {
-        // 0 to create new virus at (300, 300)
-        if(e.getKeyCode() == KeyEvent.VK_0){
-            vgm.addVirus(200, 200);
-        }
         // S to split
         if(e.getKeyCode() == KeyEvent.VK_S){
             if(vgm.groupNum() <= 6){
                 vgm.split();
             }
         }
+        // A to Merge, the click group to merge
         if(e.getKeyCode() == KeyEvent.VK_A){
         	merge = true;
         }
@@ -119,13 +155,15 @@ public class InputHandler implements MouseListener, MouseMotionListener, KeyList
     
 
     
+	/**
+	 * moves the screen
+	 * 
+	 * @see java.awt.event.MouseMotionListener#mouseMoved(java.awt.event.MouseEvent)
+	 */
 	public void mouseMoved(MouseEvent e) {	
 		int x = e.getX() + xOffset;
 		int y = e.getY() + yOffset;
-		//System.out.println(xOffset + " " + yOffset);
-		
-		//System.out.println(x +  " " + y);
-		//System.out.println(World.getWidth + " " + World.getHeight);
+
 		if(x <= (xOffset + allow) && xOffset  > 0){
 			xChange -= move;
 		}
@@ -145,14 +183,19 @@ public class InputHandler implements MouseListener, MouseMotionListener, KeyList
 		yChange = 0;
 	}
 	
-	public void mouseDragged(MouseEvent e) {}
 
+    /**
+     * selects new location for viruses to move to
+     * 
+     * @see java.awt.event.MouseListener#mousePressed(java.awt.event.MouseEvent)
+     */
     public void mousePressed(MouseEvent e) {
         vgm.updateCoord(e.getX() + xOffset, e.getY() + yOffset);
 
     }
 
-
+    // not used
+	public void mouseDragged(MouseEvent e) {}
     public void mouseReleased(MouseEvent e) {}
     public void keyReleased(KeyEvent e) {}
     public void keyTyped(KeyEvent e) {}
