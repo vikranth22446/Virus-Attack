@@ -9,15 +9,20 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Map.Entry;
 
-
+/**
+ * An implementation of the abstract class cell. This class is controlled by an AI. It attacks
+ * all the sick cells. It also goes through mitosis, to make the game harder.
+ */
 public class WhiteCell extends Cell implements AI {
-    private static String stuff = "C:\\Users\\viks\\Documents\\APCS-Final-Project\\Virus_Attack";
-
+    //private static String stuff = "C:\\Users\\viks\\Documents\\APCS-Final-Project\\Virus_Attack";
+    /**
+     * The ticks used to keep track of time
+     */
     private int ticks;
-
+    /**
+     * The time at which the ticks generate
+     */
     private int generateAt;
-
-    private int index;
 
     private int splitTime;
 
@@ -25,7 +30,7 @@ public class WhiteCell extends Cell implements AI {
 
     private int vy, yL;
 
-    private boolean attacking, healing;
+    private boolean healing;
 
     private int speed;
 
@@ -44,14 +49,12 @@ public class WhiteCell extends Cell implements AI {
 
     public WhiteCell(int x, int y, int health, int index) {
         super(x, y, health);
-        this.index = index;
         ticks = 0;
         generateAt = 200;
         vx = 0;
         vy = 0;
         speed = 5;
         attack = 1;
-        attacking = false;
         healing = false;
         drift = 50;
     }
@@ -82,8 +85,8 @@ public class WhiteCell extends Cell implements AI {
         // File img = new File("pixelred.png");
         BufferedImage in;
         try {
-           in = ImageIO.read( new File(stuff + "\\pixelwhite.png") );
-    //        in = ImageIO.read(new File( "pixelwhite.png"));
+            //in = ImageIO.read(new File(stuff + "\\pixelwhite.png"));
+                    in = ImageIO.read(new File( "pixelwhite.png"));
             BufferedImage newImage = new BufferedImage(in.getWidth(), in.getHeight(), BufferedImage.TYPE_INT_ARGB);
             // Graphics2D g1 = newImage.createGraphics();
             g.drawImage(in, getX() - xOffset, getY() - yOffset, null);
@@ -155,24 +158,6 @@ public class WhiteCell extends Cell implements AI {
     public void move() {
         setX(getX() + vx);
         setY(getY() + vy);
-        // int moveX = (int) (Math.random() * 2);
-        // if (moveX == 1)
-        // {
-        // setX(getX()+5);
-        // }
-        // else
-        // {
-        // setX(getX()-5);
-        // }
-        // int moveY = (int) (Math.random() * 2);
-        // if (moveY == 1)
-        // {
-        // setY(getY()+5);
-        // }
-        // else
-        // {
-        // setY(getY()-5);
-        // }
     }
 
 

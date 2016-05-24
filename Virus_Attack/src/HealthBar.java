@@ -63,11 +63,12 @@ public class HealthBar {
      * The create variable remining where you subtract 100-cellHealth;
      * This represents the rest of the bar
      * The create a bar that has width remaining and height 10.
-     * @param g the graphics of the plane
-     * @param xOffset the xoffset of the window.This allows for window movement.
-     * @param yOffset the yoffset of the window.This allows for window movement.
+     *
+     * @param g          the graphics of the plane
+     * @param xOffset    the xoffset of the window.This allows for window movement.
+     * @param yOffset    the yoffset of the window.This allows for window movement.
      * @param cellHealth the width of first bar.
-     * @param color the opposite color of the color drawn.
+     * @param color      the opposite color of the color drawn.
      */
     public void drawOtherHalf(Graphics g, int xOffset, int yOffset, int cellHealth, Color color) {
         int remaining = 100 - cellHealth;

@@ -13,7 +13,7 @@ import java.io.IOException;
  * health slowly reduces.
  */
 public class SickCell extends Cell {
-   private static String stuff = "C:\\Users\\viks\\Documents\\APCS-Final-Project\\Virus_Attack";
+   //private static String stuff = "C:\\Users\\viks\\Documents\\APCS-Final-Project\\Virus_Attack";
     /**
      * The rate at which virus are produced
      */
@@ -56,8 +56,8 @@ public class SickCell extends Cell {
         g.setColor(new Color(255, 0, 0));
         BufferedImage in;
         try {
-            in = ImageIO.read(new File(stuff + "\\pixelsick.png"));
-      //        in = ImageIO.read(new File("pixelsick.png"));
+      //      in = ImageIO.read(new File(stuff + "\\pixelsick.png"));
+              in = ImageIO.read(new File("pixelsick.png"));
             g.drawImage(in, getX() - xOffset, getY() - yOffset, null);
         } catch (IOException e) {
             e.printStackTrace();

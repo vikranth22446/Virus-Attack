@@ -2,6 +2,9 @@
 import java.awt.*;
 import java.util.ArrayList;
 
+/**
+ *
+ */
 public class CellManager {
     public static ArrayList<Cell> redValues;
     public static ArrayList<Cell> whiteValues;
@@ -14,7 +17,9 @@ public class CellManager {
             {100, 300}, {500, 100}, {300, 600}
     };
 
-    // using id numbers as positions
+    /**
+     *
+     */
     public CellManager() {
         redValues = new ArrayList<>();
         whiteValues = new ArrayList<>();
@@ -22,6 +27,9 @@ public class CellManager {
 
     }
 
+    /**
+     *
+     */
     public void createCellsInPositions() {
         for (int i = 0; i < whitePoints.length; i++) {
             Cell cell;
@@ -44,6 +52,10 @@ public class CellManager {
             addSickCell(cell);
         }
     }
+
+    /**
+     *
+     */
     public void mitosis()
     {
      for (int i = 0 ; i < whiteValues.size(); i++)   
