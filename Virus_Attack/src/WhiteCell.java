@@ -11,7 +11,7 @@ import java.util.Map.Entry;
 
 
 public class WhiteCell extends Cell implements AI {
-  //  private static String stuff = "C:\\Users\\viks\\Documents\\APCS-Final-Project\\Virus_Attack";
+    private static String stuff = "C:\\Users\\viks\\Documents\\APCS-Final-Project\\Virus_Attack";
 
     private int ticks;
 
@@ -82,8 +82,8 @@ public class WhiteCell extends Cell implements AI {
         // File img = new File("pixelred.png");
         BufferedImage in;
         try {
-    //       in = ImageIO.read( new File(stuff + "\\pixelwhite.png") );
-            in = ImageIO.read(new File( "pixelwhite.png"));
+           in = ImageIO.read( new File(stuff + "\\pixelwhite.png") );
+    //        in = ImageIO.read(new File( "pixelwhite.png"));
             BufferedImage newImage = new BufferedImage(in.getWidth(), in.getHeight(), BufferedImage.TYPE_INT_ARGB);
             // Graphics2D g1 = newImage.createGraphics();
             g.drawImage(in, getX() - xOffset, getY() - yOffset, null);
