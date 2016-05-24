@@ -93,7 +93,6 @@ public class AntiVirus implements Locatable
         }
         else{
             currentFollowVirus.reduceHealth(attack);
-            System.out.println(currentFollowVirus.getHealth());
             setCoord(currentFollowVirus.getX(), currentFollowVirus.getY());
             follow(g,xOffset,yOffset);
         }
