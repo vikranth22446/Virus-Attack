@@ -9,7 +9,7 @@ import java.io.IOException;
 
 
 public class SickCell extends Cell {
-    //private static String stuff = "C:\\Users\\vikranth\\IdeaProjects\\APCS-Final-Project\\Virus_Attack";
+   // private static String stuff = "C:\\Users\\vikranth\\IdeaProjects\\APCS-Final-Project\\Virus_Attack";
     private int generateAt;
     private int ticks;
     private int index;
@@ -22,7 +22,7 @@ public class SickCell extends Cell {
         super(x, y, health);
         this.index = index;
         ticks = 0;
-        generateAt = 500;
+        generateAt = 200;
     }
 
 
@@ -40,8 +40,8 @@ public class SickCell extends Cell {
         BufferedImage in;
         try
         {
-//            in = ImageIO.read(new File(stuff+"\\pixelsick.png"));
-            in = ImageIO.read(new File("pixelsick.png"));
+      //      in = ImageIO.read(new File(stuff+"\\pixelsick.png"));
+           in = ImageIO.read(new File("pixelsick.png"));
             BufferedImage newImage = new BufferedImage(
                 in.getWidth(), in.getHeight(), BufferedImage.TYPE_INT_ARGB);
             //Graphics2D g1 = newImage.createGraphics();

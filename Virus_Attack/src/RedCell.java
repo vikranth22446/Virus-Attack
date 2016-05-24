@@ -41,7 +41,7 @@ public class RedCell extends Cell {
         //File img = new File("pixelred.png");
         BufferedImage in;
         try {
-//            in = ImageIO.read(new File(stuff+"\\pixelred.png"));
+      //      in = ImageIO.read(new File(stuff+"\\pixelred.png"));
             in = ImageIO.read(new File("pixelred.png"));
             BufferedImage newImage = new BufferedImage(
                     in.getWidth(), in.getHeight(), BufferedImage.TYPE_INT_ARGB);

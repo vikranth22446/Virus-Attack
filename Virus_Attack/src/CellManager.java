@@ -8,7 +8,7 @@ public class CellManager {
     public static ArrayList<Cell> sickValues;
 
     private int[][] whitePoints = {{1000, 400}, {900, 700},{400, 400}};
-    ArrayList<Point> redPoints = new ArrayList<>();
+    private ArrayList<Point> redPoints = new ArrayList<>();
 
     private int[][] sickPoints = {
             {100, 300}, {500, 100}, {300, 600}

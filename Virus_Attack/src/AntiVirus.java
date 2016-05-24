@@ -23,7 +23,11 @@ public class AntiVirus implements Locatable
 
     private int num;
 
+    private Virus currentFollowVirus;
+    private int positionOfVirus;
+
     private int attackRadius;
+    private boolean follow = false;
 
 
     // construct a virus
@@ -40,7 +44,7 @@ public class AntiVirus implements Locatable
         height = 15;
         move = true;
 
-        attackRadius = 20;
+        attackRadius = 100;
     }
 
 
@@ -57,76 +61,64 @@ public class AntiVirus implements Locatable
     }
 
 
-    public void stop()
-    {
-        move = false;
-    }
+   // public void stop()
+   // {
+   //     move = false;
+  //  }
 
 
-    public void start()
-    {
-        move = true;
-    }
+    //public void start()
+   // {
+   //     move = true;
+  //  }
 
 
     // update the status of the virus
 
     public void update( Graphics g, int xOffset, int yOffset )
     {
-        if ( !move )
-            return;
+        if(!follow) {
+            for (int i = 0; i < VirusGroupManager.groups.get(VirusGroupManager.currentGroup).size(); i++) {
+                Virus v = VirusGroupManager.groups.get(VirusGroupManager.currentGroup).getVirus(i);
+                if (getDistance(v) <= attackRadius) {
+                    v.reduceHealth(attack);
+                    // Graphics g = canvas.getGraphics();
+                    setCoord(v.getX(), v.getY());
+                    currentFollowVirus = v;
+                    positionOfVirus = i;
+                    follow(g,xOffset,yOffset);
+                }
+            }
+
+        }
+        else{
+            currentFollowVirus.reduceHealth(attack);
+            System.out.println(currentFollowVirus.getHealth());
+            setCoord(currentFollowVirus.getX(), currentFollowVirus.getY());
+            follow(g,xOffset,yOffset);
+        }
+    }
+
+    private void follow(Graphics g,int xOffset,int yOffset) {
         x += vx;
         y += vy;
-
-        boolean attacking = false;
-        for ( int i = 0; i < VirusGroupManager.groups.get( VirusGroupManager.currentGroup ).size(); i++ )
-        {
-            Virus v = VirusGroupManager.groups.get( VirusGroupManager.currentGroup ).getVirus( i );
-            if ( getDistance( v ) <= attackRadius )
-            {
-                v.reduceHealth( attack );
-                // Graphics g = canvas.getGraphics();
-                g.setColor( Color.green );
-                g.drawLine( ( x + width / 2 ) - xOffset,
-                    ( y + height / 2 ) - yOffset,
-                    ( v.getX() + v.getWidth() / 2 ) - xOffset,
-                    ( v.getY() + v.getHeight() / 2 ) - yOffset );
-                if ( v.isDead() )
-                    VirusGroupManager.groups.get( VirusGroupManager.currentGroup ).remove( i );
-                attacking = true;
-                break;
-            }
+        follow = true;
+        if(getDistance(currentFollowVirus)<=20){
+        g.setColor(Color.green);
+        g.drawLine((x + width / 2) - xOffset,
+                (y + height / 2) - yOffset,
+                (currentFollowVirus.getX() + currentFollowVirus.getWidth() / 2) - xOffset,
+                (currentFollowVirus.getY() + currentFollowVirus.getHeight() / 2) - yOffset);
         }
-        if ( attacking )
-            return;
-
-        for ( int i = 0; i < CellManager.sickValues.size(); i++ )
-        {
-            Cell c = CellManager.sickValues.get( i );
-          //  System.out.println( c.getHealth() + "hhi" );
-
-            if ( getDistance( c ) <= attackRadius )
-            {
-                c.increaseHealth( attack );
-                g.setColor( Color.green );
-                g.drawLine( ( x + width / 2 ) - xOffset,
-                    ( y + height / 2 ) - yOffset,
-                    ( c.getX() + c.getRadius() / 2 ) - xOffset,
-                    ( c.getY() + c.getRadius() / 2 ) - yOffset );
-             //   System.out.println( c.getHealth() );
-                if ( c.getHealth() >= 0 )
-                    CellManager.convertSick( c );
-                break;
-
-            }
+        if(currentFollowVirus.isDead()){
+            follow = false;
+            VirusGroupManager.groups.get(VirusGroupManager.currentGroup).remove(positionOfVirus);
         }
-
     }
 
 
     public void draw( Graphics g, int xOffset, int yOffset )
     {
-        // Graphics g = canvas.getGraphics();
         g.setColor( Color.blue );
         g.fillRect( x - xOffset, y - yOffset, width, height );
     }

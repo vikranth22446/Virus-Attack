@@ -26,8 +26,7 @@ public class HealthBar {
             // Graphics graph = canvas.getGraphics();
             graph.setColor(new Color(255, 26, 41));
             graph.fillRect(cell.getX() - 25 - xOffset, cell.getY() - 20 - yOffset, (int) (Math.abs(cell.getHealth() / cell.max()) * 100), 10);
-            System.out.println(Math.abs(cell.getHealth() / cell.max()));
-            drawOtherHalf(graph, xOffset, yOffset, fullPercent-(int) (Math.abs(cell.getHealth() / cell.max() * 100)),new Color(0, 255, 59));
+            drawOtherHalf(graph, xOffset, yOffset, fullPercent - (int) (Math.abs(cell.getHealth() / cell.max() * 100)), new Color(0, 255, 59));
 
         } else {
             // Graphics graph = canvas.getGraphics();
@@ -35,15 +34,15 @@ public class HealthBar {
             graph.setColor(new Color(0, 255, 59));
             graph.fillRect(cell.getX() - 25 - xOffset, cell.getY() - 20 - yOffset, (int) (Math.abs(cell.getHealth()) / cell.max() * 100), 10);
 
-             drawOtherHalf(graph, xOffset, yOffset, fullPercent-(int) (Math.abs(cell.getHealth()) / cell.max() * 100),new Color(255, 26, 41));
+            drawOtherHalf(graph, xOffset, yOffset, fullPercent - (int) (Math.abs(cell.getHealth()) / cell.max() * 100), new Color(255, 26, 41));
         }
     }
 
-    public void drawOtherHalf(Graphics g,int xOffset, int yOffset, int cellHealth,Color color) {
+    public void drawOtherHalf(Graphics g, int xOffset, int yOffset, int cellHealth, Color color) {
         // Graphics graph = canvas.getGraphics();
 
-         g.setColor(color);
-        g.fillRect((cell.getX() - 25) + (int) (Math.abs(cell.getHealth() / cell.max() * 100))- xOffset, cell.getY() - 20 - yOffset, cellHealth, 10);
+        g.setColor(color);
+        g.fillRect((cell.getX() - 25) + (int) (Math.abs(cell.getHealth() / cell.max() * 100)) - xOffset, cell.getY() - 20 - yOffset, cellHealth, 10);
     }
 
 

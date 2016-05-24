@@ -130,7 +130,7 @@ public class Virus implements Locatable{
         x += vx;
         y += vy;
 
-        boolean attacking = false;
+       boolean attacking = false;
         for (int i = 0; i < AntiVirusManager.anti.size(); i++) {
             AntiVirus av = AntiVirusManager.anti.get(i);
             if (getDistance(av) <= attackRadius) {
@@ -243,6 +243,10 @@ public class Virus implements Locatable{
      */
     public int getHeight() {
         return height;
+    }
+
+    public int getHealth() {
+        return health;
     }
 
     /**
