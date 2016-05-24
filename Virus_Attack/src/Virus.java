@@ -1,8 +1,7 @@
-package Virus_Attack.src;
+
 
 
 import java.awt.*;
-import java.util.ArrayList;
 
 /**
  * The Virus Class is the main unit that the player controls and uses it to conquor the enemy cells and antiviruses

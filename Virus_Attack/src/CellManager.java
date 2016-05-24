@@ -1,4 +1,3 @@
-package Virus_Attack.src;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -12,7 +11,7 @@ public class CellManager {
     ArrayList<Point> redPoints = new ArrayList<>();
 
     private int[][] sickPoints = {
-         //   {100, 300}, {500, 100}, {300, 600}
+            {100, 300}, {500, 100}, {300, 600}
     };
 
     // using id numbers as positions

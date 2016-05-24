@@ -1,15 +1,14 @@
-package Virus_Attack.src;
 
+
+import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.util.*;
-
-import javax.imageio.ImageIO;
 
 public class RedCell extends Cell {
     private int index;
+   //private static String stuff = "C:\\Users\\vikranth\\IdeaProjects\\APCS-Final-Project\\Virus_Attack";
 
     public int getIndex() {
         return index;
@@ -37,29 +36,28 @@ public class RedCell extends Cell {
     }
 
     public void draw(Graphics g, int xOffset, int yOffset) {
-      //  Graphics g = canvas.getGraphics();
+        //  Graphics g = canvas.getGraphics();
         g.setColor(new Color(255, 0, 0));
         //File img = new File("pixelred.png");
         BufferedImage in;
-        try
-        {
+        try {
+//            in = ImageIO.read(new File(stuff+"\\pixelred.png"));
             in = ImageIO.read(new File("pixelred.png"));
             BufferedImage newImage = new BufferedImage(
-                in.getWidth(), in.getHeight(), BufferedImage.TYPE_INT_ARGB);
+                    in.getWidth(), in.getHeight(), BufferedImage.TYPE_INT_ARGB);
             //Graphics2D g1 = newImage.createGraphics();
-            g.drawImage( in, getX() - xOffset, getY() - yOffset, null );
-          //  System.out.println( "hi" );
-        }
-        catch ( IOException e )
-        {
+            g.drawImage(in, getX() - xOffset, getY() - yOffset, null);
+            //  System.out.println( "hi" );
+
+        } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
         }
 
-        
-     //   g.fillOval(getX() - xOffset, getY() - yOffset, 50, 50);
+
+        //   g.fillOval(getX() - xOffset, getY() - yOffset, 50, 50);
         HealthBar healthBar = new HealthBar(this);
-        healthBar.draw(g,this, xOffset, yOffset, (int)max());
+        healthBar.draw(g, xOffset, yOffset);
     }
 
     public void updateViruses(VirusGroup group) {

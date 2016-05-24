@@ -1,17 +1,15 @@
-package Virus_Attack.src;
 
 
 
+import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
-import javax.imageio.ImageIO;
-
 
 public class SickCell extends Cell {
-
+    //private static String stuff = "C:\\Users\\vikranth\\IdeaProjects\\APCS-Final-Project\\Virus_Attack";
     private int generateAt;
     private int ticks;
     private int index;
@@ -42,6 +40,7 @@ public class SickCell extends Cell {
         BufferedImage in;
         try
         {
+//            in = ImageIO.read(new File(stuff+"\\pixelsick.png"));
             in = ImageIO.read(new File("pixelsick.png"));
             BufferedImage newImage = new BufferedImage(
                 in.getWidth(), in.getHeight(), BufferedImage.TYPE_INT_ARGB);
@@ -55,7 +54,7 @@ public class SickCell extends Cell {
             e.printStackTrace();
         }
         HealthBar healthBar = new HealthBar(this);
-        healthBar.draw(g,this, xOffset, yOffset, (int)max());
+        healthBar.draw(g, xOffset, yOffset);
 //        HealthBar healthBar = new HealthBar(this);
 //        healthBar.draw(canvas);
     }
