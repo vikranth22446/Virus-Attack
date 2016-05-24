@@ -11,7 +11,7 @@ import java.util.Map.Entry;
 
 
 public class WhiteCell extends Cell implements AI {
-    //private static String stuff = "C:\\Users\\vikranth\\IdeaProjects\\APCS-Final-Project\\Virus_Attack";
+  //  private static String stuff = "C:\\Users\\viks\\Documents\\APCS-Final-Project\\Virus_Attack";
 
     private int ticks;
 
@@ -42,11 +42,6 @@ public class WhiteCell extends Cell implements AI {
     public boolean tracking = false;
 
 
-    public int getIndex() {
-        return index;
-    }
-
-
     public WhiteCell(int x, int y, int health, int index) {
         super(x, y, health);
         this.index = index;
@@ -59,12 +54,6 @@ public class WhiteCell extends Cell implements AI {
         attacking = false;
         healing = false;
         drift = 50;
-    }
-
-
-    @Override
-    public void produceValues() {
-
     }
 
 
@@ -93,7 +82,7 @@ public class WhiteCell extends Cell implements AI {
         // File img = new File("pixelred.png");
         BufferedImage in;
         try {
-     //      in = ImageIO.read( new File(stuff + "\\pixelwhite.png") );
+    //       in = ImageIO.read( new File(stuff + "\\pixelwhite.png") );
             in = ImageIO.read(new File( "pixelwhite.png"));
             BufferedImage newImage = new BufferedImage(in.getWidth(), in.getHeight(), BufferedImage.TYPE_INT_ARGB);
             // Graphics2D g1 = newImage.createGraphics();
@@ -149,25 +138,6 @@ public class WhiteCell extends Cell implements AI {
     public void updateTime() {
         splitTime++;
         // System.out.println( splitTime );
-    }
-
-
-    public void updateViruses(VirusGroup group) {
-        // // TODO Auto-generated method stub
-        // for ( int i = 0; i < group.size(); i++ )
-        // {
-        // if (getDistance( group.getVirus( i ) ) <=
-        // group.getVirus(i).getAttackRadius())
-        // {
-        // setHealth( getHealth() - 1 );
-        // if (!getViruses().contains(group.getVirus( i )))
-        // {
-        // addVirus(group.getVirus( i ));
-        // }
-        //
-        // }
-        // }
-
     }
 
 

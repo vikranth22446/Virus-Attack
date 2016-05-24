@@ -87,11 +87,6 @@ public abstract class Cell implements Locatable
     }
 
 
-    public abstract void produceValues();
-    public abstract void updateViruses(VirusGroup group);
-
-
-
     public double getDistance( Locatable other )
     {
         double dist = Math.sqrt(
@@ -113,7 +108,6 @@ public abstract class Cell implements Locatable
 
     public abstract void increaseHealth( int up );
 
-    public abstract int getIndex();
     public double getHealth()
     {
         return health;

@@ -6,79 +6,76 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * An implementation of the abstract cell. This cell is neutral to the player. It starts out at a health of a 100.
+ * These cells are conquerable nodes by the player.
+ */
 public class RedCell extends Cell {
+    /**
+     * The index of the cell in cell Manager
+     */
     private int index;
-   //private static String stuff = "C:\\Users\\vikranth\\IdeaProjects\\APCS-Final-Project\\Virus_Attack";
+//    private static String stuff = "C:\\Users\\viks\\Documents\\APCS-Final-Project\\Virus_Attack";
 
-    public int getIndex() {
-        return index;
-    }
-
+    /**
+     * Constructs the cell by calling the super method and passing the current x, current y, and initial health.
+     * Then set the field index to the index varaible passed
+     * @param x  the current x position
+     * @param y  the current y position
+     * @param health the initial health of the cell
+     * @param index the index of the current cell
+     */
     public RedCell(int x, int y, int health, int index) {
         super(x, y, health);
         this.index = index;
     }
 
+    /**
+     * Decremenents the current health by the value passed. Used when viruses attack the cell
+     * @param decreaseBy the value to decrease by
+     */
     public void decrementHealth(int decreaseBy) {
         setHealth(getHealth() - decreaseBy);
 
     }
 
+    /**
+     * Increase the current health by the value passed. Not really used by has to be overrided because in base class
+     * @param increaseBy the value to increase by
+     */
     public void increaseHealth(int increaseBy) {
         setHealth(getHealth() + increaseBy);
 
     }
 
-    @Override
-    public void produceValues() {
-        // TODO Auto-generated method stub
-
-    }
-
+    /**
+     * Draws the cell by getting a buffered image from the file pixelred.png. Then draws the image at
+     *    ( getX() - xOffset, getY() - yOffset).
+     * @param g the grapghics to draw with. Passed by the world class
+     * @param xOffset the xOffset of the screen. This allows for screen movement.
+     * @param yOffset the yOffset of the screen. This allows for screen movement.
+     */
     public void draw(Graphics g, int xOffset, int yOffset) {
-        //  Graphics g = canvas.getGraphics();
         g.setColor(new Color(255, 0, 0));
-        //File img = new File("pixelred.png");
         BufferedImage in;
         try {
-      //      in = ImageIO.read(new File(stuff+"\\pixelred.png"));
-            in = ImageIO.read(new File("pixelred.png"));
-            BufferedImage newImage = new BufferedImage(
-                    in.getWidth(), in.getHeight(), BufferedImage.TYPE_INT_ARGB);
-            //Graphics2D g1 = newImage.createGraphics();
+      //      in = ImageIO.read(new File(stuff + "\\pixelred.png"));
+                   in = ImageIO.read(new File("pixelred.png"));
             g.drawImage(in, getX() - xOffset, getY() - yOffset, null);
-            //  System.out.println( "hi" );
 
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
 
 
-        //   g.fillOval(getX() - xOffset, getY() - yOffset, 50, 50);
         HealthBar healthBar = new HealthBar(this);
         healthBar.draw(g, xOffset, yOffset);
     }
 
-    public void updateViruses(VirusGroup group) {
-//        for ( int i = 0; i < group.size(); i++ )
-//        {
-//            if (getDistance( group.getVirus( i ) ) <= group.getVirus(i).getAttackRadius())
-//            {
-//                setHealth( getHealth() - 1 );
-//                if (!getViruses().contains(group.getVirus( i )))
-//                {
-//                    addVirus(group.getVirus( i ));
-//                }
-//
-//            }
-//        }
-
-    }
-
+    /**
+     * Does nothing. This has to be overided because the it is an abstract method in the cell class.
+     */
     @Override
     public void produceUnit() {
-        // TODO Auto-generated method stub
-
     }
 }
