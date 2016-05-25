@@ -8,6 +8,8 @@ import java.util.HashMap;
  * <p>
  * knows which group is to be updated, controls splitting and merging groups, keeps tracks ono all the groups in a
  * hash map and has another array list to access the keys
+ * 
+ * @author Alex M
  */
 public class VirusGroupManager {
 

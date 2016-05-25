@@ -8,6 +8,8 @@ import java.awt.*;
  * The virus class holds all of its own functions such as updating its location,
  * the coordinate it is headed to, drawing itself and getter methods. extends
  * locatable a interface
+ * 
+ * @author Alex M
  */
 public class Virus implements Locatable {
 

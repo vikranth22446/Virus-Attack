@@ -5,7 +5,7 @@ import java.awt.event.*;
 /**
  * Handles all the inputs, key inputs, mouse inputs, and mouse movement when shifting the screen.
  * 
- * @author alexm
+ * @author Alex M
  *
  */
 public class InputHandler implements MouseListener, MouseMotionListener, KeyListener{

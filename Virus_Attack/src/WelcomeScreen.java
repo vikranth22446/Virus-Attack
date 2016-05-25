@@ -11,7 +11,8 @@ public class WelcomeScreen extends JFrame {
         URL url = null;
         File directory = new File("Virus_Attack");
         try {
-            url = new URL("file:\\" + directory.getAbsolutePath() + "\\redBloodCellAnimation.gif");
+        	System.out.println(WelcomeScreen.class.getProtectionDomain().getCodeSource().getLocation().getPath());
+            url = new URL("file:\\C:\\eclipse_WS\\Virus_3\\redBloodCellAnimation.gif");
         } catch (MalformedURLException e) {
         }
         Icon icon = new ImageIcon(url);

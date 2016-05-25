@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * VirusGroup that holds its own viruses, it receives commands from the manager
  * and then delegates them to the viruses
  * 
- * @author alexm
+ * @author Alex M
  *
  */
 public class VirusGroup {
