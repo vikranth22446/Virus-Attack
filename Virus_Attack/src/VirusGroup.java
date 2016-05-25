@@ -23,11 +23,10 @@ public class VirusGroup {
 	/**
 	 * creates a virus group
 	 * 
-	 * @param v
-	 *            the starting virus
+	 * @param v the starting virus
 	 */
 	public VirusGroup(Virus v) {
-		viruses = new ArrayList<Virus>();
+		viruses = new ArrayList<>();
 		viruses.add(v);
 		viruses.add(new Virus(150, 200));
 
@@ -43,22 +42,11 @@ public class VirusGroup {
 	 *            the group number of this new group
 	 */
 	public VirusGroup(Virus[] toAdd, int n) {
-		viruses = new ArrayList<Virus>();
+		viruses = new ArrayList<>();
 		for (Virus v : toAdd) {
 			viruses.add(v);
 		}
 		groupNum = n;
-	}
-
-	/**
-	 * adds a virus group's viruses to this virus group
-	 * 
-	 * @param v
-	 * @return
-	 */
-	public VirusGroup addVirusSet(VirusGroup v) {
-		viruses.addAll(v.getViruses());
-		return this;
 	}
 
 	/**
@@ -116,15 +104,6 @@ public class VirusGroup {
 	 */
 	public Virus getVirus(int i) {
 		return viruses.get(i);
-	}
-
-	/**
-	 * returns the reference of the array list
-	 * 
-	 * @return the reference of the array list that holds all the viruses
-	 */
-	public ArrayList<Virus> getViruses() {
-		return viruses;
 	}
 
 	/**

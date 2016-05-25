@@ -112,17 +112,7 @@ public class InputHandler implements MouseListener, MouseMotionListener, KeyList
         	}
 
         }
-        if(e.getKeyCode() == KeyEvent.VK_3){
-        	if(vgm.hasKey(3)){
-        		if(merge){
-        			vgm.merge(3);
-        			merge = false;
-        		}
-        		else vgm.changeCurrent(3);
-        	}
-
-        }
-        if(e.getKeyCode() == KeyEvent.VK_4){
+        if(e.getKeyCode() == KeyEvent.VK_3||e.getKeyCode() == KeyEvent.VK_4){
         	if(vgm.hasKey(3)){
         		if(merge){
         			vgm.merge(3);
@@ -194,7 +184,7 @@ public class InputHandler implements MouseListener, MouseMotionListener, KeyList
 
     }
 
-    // not used
+
 	public void mouseDragged(MouseEvent e) {}
     public void mouseReleased(MouseEvent e) {}
     public void keyReleased(KeyEvent e) {}

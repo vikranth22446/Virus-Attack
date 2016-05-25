@@ -1,11 +1,15 @@
-
-
-
+/**
+ * Class with the main method that calls WelcomeScreen.createWelcomeScreen();
+ */
 public class VirusGame {
+    /**
+     * Constructs a WelcomeScreen. Also calls createWelcomeScreen().
+     *
+     * @param args command line argument not used.
+     */
     public static void main(String[] args) {
-          WelcomeScreen worldScreen = new WelcomeScreen();
-         //        worldScreen.start();
-        World world = new World();
-        world.start();
+        WelcomeScreen worldScreen = new WelcomeScreen();
+        worldScreen.createWelcomeScreen();
+
     }
 }

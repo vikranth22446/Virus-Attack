@@ -1,60 +1,55 @@
 
 
 import java.awt.*;
-import java.awt.Canvas;
-import java.awt.Color;
-import java.awt.Graphics;
 import java.util.ArrayList;
 
+/**
+ * Contains all the AntiViruses
+ */
 public class AntiVirusManager {
-
+    /**
+     * An arraylist of antiviruses
+     */
     public static ArrayList<AntiVirus> anti;
 
+    /**
+     * Constructs an ArrayList of AntiViruses
+     */
     public AntiVirusManager() {
-        anti = new ArrayList<AntiVirus>();
+        anti = new ArrayList<>();
     }
 
+    /**
+     * Calls the draw method of all the AntiViruses
+     * @param g the graphics of the Canvas
+     * @param xOffset the xOffset of the window. This allows window to move.
+     * @param yOffset the yOffset of the window. This allows window to move.
+     */
     public void draw(Graphics g, int xOffset, int yOffset) {
         for (AntiVirus n : anti) {
             n.draw(g, xOffset, yOffset);
         }
     }
 
+    /**
+     * Calls the update Location of all the antiViruses
+     * @param g the graphics of the Canvas
+     * @param xOffset the xOffset of the window. This allows window to move.
+     * @param yOffset the yOffset of the window. This allows window to move.
+     */
     public void updateLocation(Graphics g, int xOffset, int yOffset){
         for(AntiVirus av : anti){
             av.update(g, xOffset, yOffset);
         }
     }
 
-    public void updateCoord(int current, int newX, int newY) {
-        for (AntiVirus n : anti) {
-            n.setCoord(newX, newY);;
-        }
-    }
-
-    public void checkDead(Canvas canvas){
-        int add= 0;
-        for(int i = 0; i < anti.size(); i+=add){
-            add =1;
-            if(anti.get( i ).isDead()){
-                Graphics g = canvas.getGraphics();
-                Color c= World.BCOLOR ;
-                g.setColor(c);
-                AntiVirus v = anti.get( i );
-                g.fillRect( v.getX(), v.getY(), v.getWidth(), v.getHeight() );
-                anti.remove(v);
-                add =0;
-
-            }
-        }
-    }
-
+    /**
+     * Adds an antivirus to the antivirus arrayList
+     * @param x the x position of the antivirus to add.
+     * @param y the y position of the antivirus to add.
+     */
     public static void addAnti(int x, int y) {
         anti.add(new AntiVirus(x, y));
-    }
-
-    public ArrayList<AntiVirus> getAnti(){
-        return anti;
     }
 
 }

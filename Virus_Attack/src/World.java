@@ -72,7 +72,6 @@ public class World extends Canvas implements Runnable {
         while (true) {
             render();
             cellManager.produce();
-
             try {
                 Thread.sleep(40);
             } catch (InterruptedException e) {

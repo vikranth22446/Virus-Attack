@@ -13,22 +13,21 @@ import java.util.Map.Entry;
  * An implementation of the abstract class cell. This class is controlled by an AI. It attacks
  * all the sick cells. It also goes through mitosis, to make the game harder.
  */
-public class WhiteCell extends Cell implements AI {
-    //private static String stuff = "C:\\Users\\viks\\Documents\\APCS-Final-Project\\Virus_Attack";
+public class WhiteCell extends Cell {
     /**
      * The ticks used to keep track of time
      */
-    private int ticks;
+    private int ticks = 0;
     /**
      * The time at which the ticks generate
      */
-    private int generateAt;
+    private int generateAt = 200;
 
     private int splitTime;
 
-    private int vx, xL;
+    private int vx = 0, xL;
 
-    private int vy, yL;
+    private int vy = 0, yL;
 
     private boolean healing;
 
@@ -46,90 +45,63 @@ public class WhiteCell extends Cell implements AI {
 
     public boolean tracking = false;
 
-
-    public WhiteCell(int x, int y, int health, int index) {
+    /**
+     * Initializes the x coordinate, y coordinate, and health.
+     *
+     * @param x      the x coordinate
+     * @param y      the y coordinate
+     * @param health the initial health of the cell
+     */
+    public WhiteCell(int x, int y, int health) {
         super(x, y, health);
-        ticks = 0;
-        generateAt = 200;
-        vx = 0;
-        vy = 0;
+
         speed = 5;
         attack = 1;
         healing = false;
         drift = 50;
     }
 
-
-    public void die(Canvas canvas) {
-        Graphics g = canvas.getGraphics();
-        g.setColor(World.BCOLOR);
-        g.fillOval(getX(), getY(), 50, 50);
-        g.drawOval(getX(), getY(), 50, 50);
-
-    }
-
-
+    /**
+     * Creates 2 cells from the current x position.
+     * the both are positions at (int) (getX() + Math.random() * 67);
+     *
+     * @param w the arrayList of cells.
+     */
     public void split(ArrayList<Cell> w) {
         int t1 = (int) (getX() + Math.random() * 67);
         int t2 = (int) (getY() + Math.random() * 67);
 
-        w.add(new WhiteCell(t1, t2, 100, w.size()));
+        w.add(new WhiteCell(t1, t2, 100));
         splitTime = 0;
     }
 
 
     @Override
     public void draw(Graphics g, int xOffset, int yOffset) {
-        // Graphics g = canvas.getGraphics();
+        super.draw(g, xOffset, yOffset);
         g.setColor(new Color(255, 0, 0));
-        // File img = new File("pixelred.png");
         BufferedImage in;
         try {
-            //in = ImageIO.read(new File(stuff + "\\pixelwhite.png"));
-                    in = ImageIO.read(new File( "pixelwhite.png"));
-            BufferedImage newImage = new BufferedImage(in.getWidth(), in.getHeight(), BufferedImage.TYPE_INT_ARGB);
-            // Graphics2D g1 = newImage.createGraphics();
+            in = ImageIO.read(new File("pixelwhite.png"));
             g.drawImage(in, getX() - xOffset, getY() - yOffset, null);
         } catch (IOException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
-        HealthBar healthBar = new HealthBar(this);
-        healthBar.draw(g, xOffset, yOffset);
 
     }
 
-
-    public boolean beingAttacked() {
-        return beingAttacked;
+    @Override
+    public void produceUnit() {
+        if (ticks >= generateAt) {
+            AntiVirusManager.addAnti(getX() + getRadius(), getY() + getRadius());
+            ticks = 0;
+        }
+        ticks++;
     }
 
 
     public void setAttacked(boolean attacked) {
         beingAttacked = attacked;
-    }
-
-
-    public void decrementHealth(int decreaseBy) {
-        setHealth(getHealth() - decreaseBy);
-
-    }
-
-
-    public void increaseHealth(int increaseBy) {
-        setHealth(getHealth() + increaseBy);
-
-    }
-
-
-    public boolean canEnemyHurt(int enemyX, int enemyY, int ableRadius) {
-        double hyp = Math
-                .sqrt(Math.pow(Math.abs(getX() - enemyX), 2) + Math.pow(Math.abs(getY() - enemyY), 2));
-        if (ableRadius > hyp) {
-            return false;
-        }
-        return true;
-
     }
 
 
@@ -161,22 +133,6 @@ public class WhiteCell extends Cell implements AI {
     }
 
 
-    public void produceUnit() {
-        if (ticks >= generateAt) {
-            AntiVirusManager.addAnti(getX() + getRadius(), getY() + getRadius());
-            ticks = 0;
-        }
-        ticks++;
-    }
-
-
-    @Override
-    public void sendSignal() {
-        // TODO Auto-generated method stub
-
-    }
-
-
     // @Override
     public void findVirus(Graphics g, int xOffset, int yOffset) {
         // TODO Auto-generated method stub
@@ -204,7 +160,7 @@ public class WhiteCell extends Cell implements AI {
                             c.getY() + c.getRadius() / 2 - yOffset);
                     // System.out.println( c.getHealth() );
                     if (c.getHealth() >= 0) {
-                        CellManager.convertSick(c);
+                        CellManager.convertCell(c);
                         healing = false;
                     }
                     break;
@@ -287,31 +243,9 @@ public class WhiteCell extends Cell implements AI {
                 // it.remove(); // avoids a ConcurrentModificationException
             }
         }
-        // healing = false;
-        // attacking = false;
-        // tracking = false;
 
     }
 
 
-    @Override
-    public void callHelp() {
-        // TODO Auto-generated method stub
-
-    }
-
-
-    @Override
-    public boolean needHelp() {
-        // TODO Auto-generated method stub
-        return false;
-    }
-
-
-    @Override
-    public boolean canGiveHelp() {
-        // TODO Auto-generated method stub
-        return false;
-    }
 
 }

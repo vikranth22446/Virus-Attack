@@ -4,15 +4,13 @@ import java.awt.*;
 
 
 /**
- *
  * Abstract class which defines a cell. All cells can be attacked by Viruses,
  * but different cells have different functions. This class contains very basic
  * methods that pertain to all cells, as well as several abstract methods such
  * as update(), setHealth(), etc.
- **
+ * *
  */
-public abstract class Cell implements Locatable
-{
+public abstract class Cell implements Locatable {
     /**
      * The x-value on coordinate grid
      */
@@ -33,84 +31,139 @@ public abstract class Cell implements Locatable
      */
     private double health;
     /**
-     * Constructs a new cell object.
-     *
-     * @param x
-     * @param y
-     * @param health
+     * The initial maximum health of the cell.
      */
     private final double maxHealth;
-    public Cell( int x, int y, int health)
-    {
+
+    /**
+     * Initializes the x, and y cordinate. Then initializes the health.
+     * Also initializes maxHealth to health
+     *
+     * @param x      the x coordinate of the cell.
+     * @param y      the y coordinate of the cell.
+     * @param health the initial health of the cell.
+     */
+    public Cell(int x, int y, int health) {
         this.x = x;
         this.y = y;
         this.health = health;
-        radius = 50;
-        maxHealth = health;
+        this.maxHealth = health;
     }
-  public int getRadius()
-    {
+
+    /**
+     * Returns the radius of the cell.
+     *
+     * @return the radius of the cell.
+     */
+    public int getRadius() {
         return radius;
     }
-  public double max()
-  {
-      return maxHealth;
-  }
 
-    public int getX()
-    {
+    /**
+     * The initial health of the cell.
+     *
+     * @return the initial health of the cell
+     */
+    public double max() {
+        return maxHealth;
+    }
+
+    /**
+     * The x coordinate of the cell
+     *
+     * @return the x coordinate of the cell
+     */
+    public int getX() {
         return x;
     }
 
-
-    public int getY()
-    {
+    /**
+     * Returns the y coordinate of the cell
+     *
+     * @return the y coordinate of the cell
+     */
+    public int getY() {
         return y;
     }
 
-
-    public void setX( int x )
-    {
+    /**
+     * Sets the x coordinate of the cell
+     *
+     * @param x the x coordinate to set
+     */
+    public void setX(int x) {
         this.x = x;
     }
 
-
-    public void setY( int y )
-    {
+    /**
+     * Sets the y coordinate of the cell
+     *
+     * @param y the new y coordinate to set
+     */
+    public void setY(int y) {
         this.y = y;
     }
 
-
-    public void setHealth( double health )
-    {
+    /**
+     * Sets the health of the cell.
+     *
+     * @param health the health of the cell to set
+     */
+    public void setHealth(double health) {
         this.health = health;
     }
 
-
-    public double getDistance( Locatable other )
-    {
+    /**
+     * Returns the distance between the two locatables
+     *
+     * @param other the other locatable to find distance between
+     * @return the distance between the two locatable
+     */
+    public double getDistance(Locatable other) {
         double dist = Math.sqrt(
-                ( ( (x + radius/2)- other.getX() ) * ( x - other.getX() ) + ( y - other.getY() ) * ( y - other.getY() ) ) );
+                (((x + radius / 2) - other.getX()) * (x - other.getX()) + (y - other.getY()) * (y - other.getY())));
         return dist;
     }
 
+    /**
+     * Draw the cell on the graphics. Also initializes a health bar, and calls
+     * healthbar.draw();.
+     *
+     * @param g       the graphics of the canvas
+     * @param xOffset the xOffset of the window. This is used for movement.
+     * @param yOffset the yOffset of the window. This is used for movement.
+     */
+    public void draw(Graphics g, int xOffset, int yOffset){
+        HealthBar healthBar = new HealthBar(this);
+        healthBar.draw(g, xOffset, yOffset);
+    }
 
-    // public abstract boolean canEnemyHurt( int enemyX, int enemyY, int ableRadius );
+    /**
+     * Decrement health by a certain health.
+     *
+     * @param down the value to decrement by
+     */
+    public void decrementHealth(int down) {
+        setHealth(getHealth() - down);
+    }
 
+    /**
+     * Increments the health by a certain amount
+     *
+     * @param up the value to increment by.
+     */
+    public void increaseHealth(int up) {
+        setHealth(getHealth() + up);
+    }
 
-    public abstract void produceUnit();
-
-    public abstract void draw(Graphics g, int xOffset, int yOffset);
-
-
-    public abstract void decrementHealth( int down );
-
-
-    public abstract void increaseHealth( int up );
-
-    public double getHealth()
-    {
+    /**
+     * Returns the health of the cell
+     *
+     * @return the health field of the cell.
+     */
+    public double getHealth() {
         return health;
     }
 
+    public abstract void produceUnit();
 }
