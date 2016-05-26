@@ -16,9 +16,24 @@ public class WelcomeScreen extends JFrame {
         Icon icon = new ImageIcon(url);
         JLabel label = new JLabel(icon);
         label.setSize(World.WIDTH * 2 + 300, World.HEIGHT * 2 + 300);
+
+        JButton saveData = new JButton();
+        saveData.setSize(120, 30);
+        saveData.setLocation(World.WIDTH / 4 * World.SCALE, World.HEIGHT * World.SCALE / 4 +20);
+        saveData.setText("Log in");
+        saveData.setBackground(new Color(20, 99, 182));
+        saveData.setForeground(Color.WHITE);
+        saveData.setFocusPainted(false);
+        saveData.addActionListener(e -> loadDirections());
+        saveData.setFont(new Font("Tahoma", Font.BOLD, 12));
+
+
+
+
+
         JButton jButton = new JButton();
         jButton.setSize(120, 30);
-        jButton.setLocation(World.WIDTH / 4 * World.SCALE, World.HEIGHT * World.SCALE / 4 + 50);
+        jButton.setLocation(World.WIDTH / 4 * World.SCALE, World.HEIGHT * World.SCALE / 4 + 60);
         jButton.setText("Directions");
         jButton.setBackground(new Color(20, 99, 182));
         jButton.setForeground(Color.WHITE);
@@ -35,7 +50,7 @@ public class WelcomeScreen extends JFrame {
         Directions.setFocusPainted(false);
         Directions.addActionListener(e -> run());
 
-
+        add(saveData);
         add(jButton);
         add(Directions);
 
