@@ -1,6 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -9,18 +8,17 @@ public class WelcomeScreen extends JFrame {
 
     public void createWelcomeScreen() {
         URL url = null;
-        File directory = new File("Virus_Attack");
         try {
-        	System.out.println(WelcomeScreen.class.getProtectionDomain().getCodeSource().getLocation().getPath());
-            url = new URL("file:\\C:\\eclipse_WS\\Virus_3\\redBloodCellAnimation.gif");
+            System.out.println(WelcomeScreen.class.getProtectionDomain().getCodeSource().getLocation().getPath());
+            url = new URL("http://i.imgur.com/0JGPsWt.gif");
         } catch (MalformedURLException e) {
         }
         Icon icon = new ImageIcon(url);
         JLabel label = new JLabel(icon);
-
+        label.setSize(World.WIDTH * 2 + 300, World.HEIGHT * 2 + 300);
         JButton jButton = new JButton();
         jButton.setSize(120, 30);
-        jButton.setLocation(World.WIDTH / 4 * World.SCALE, World.HEIGHT * World.SCALE / 4 +50);
+        jButton.setLocation(World.WIDTH / 4 * World.SCALE, World.HEIGHT * World.SCALE / 4 + 50);
         jButton.setText("Directions");
         jButton.setBackground(new Color(20, 99, 182));
         jButton.setForeground(Color.WHITE);
@@ -41,12 +39,13 @@ public class WelcomeScreen extends JFrame {
         add(jButton);
         add(Directions);
 
-
+        setTitle("Virus Attack");
         getContentPane().add(label);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         pack();
         setLocationRelativeTo(null);
         setVisible(true);
+        setResizable(false);
 
     }
 

@@ -99,11 +99,9 @@ public class WhiteCell extends Cell {
         ticks++;
     }
 
-
     public void setAttacked(boolean attacked) {
         beingAttacked = attacked;
     }
-
 
     public int getTime() {
         return splitTime;
@@ -112,7 +110,6 @@ public class WhiteCell extends Cell {
 
     public void updateTime() {
         splitTime++;
-        // System.out.println( splitTime );
     }
 
 
@@ -222,7 +219,6 @@ public class WhiteCell extends Cell {
                     } else if (apple) {
                         drift++;
                         if (drift > 50) {
-                            // System.out.println( "mew" );
                             int moveX = (int) (Math.random() * 2);
                             if (moveX == 0) {
                                 setCoord(getX() + 50, getY() + 50);
@@ -240,12 +236,9 @@ public class WhiteCell extends Cell {
 
                 }
 
-                // it.remove(); // avoids a ConcurrentModificationException
             }
         }
 
     }
-
-
 
 }
