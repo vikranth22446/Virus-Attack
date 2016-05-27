@@ -132,7 +132,7 @@ public abstract class Cell implements Locatable {
      * @param xOffset the xOffset of the window. This is used for movement.
      * @param yOffset the yOffset of the window. This is used for movement.
      */
-    public void draw(Graphics g, int xOffset, int yOffset){
+    public void draw(Graphics g, int xOffset, int yOffset) {
         HealthBar healthBar = new HealthBar(this);
         healthBar.draw(g, xOffset, yOffset);
     }

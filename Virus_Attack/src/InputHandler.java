@@ -5,9 +5,8 @@ import java.awt.event.*;
  * Handles all the inputs, key inputs, mouse inputs, and mouse movement when shifting the screen.
  *
  * @author Alex M
- *
  */
-class InputHandler implements MouseListener, MouseMotionListener, KeyListener{
+class InputHandler implements MouseListener, MouseMotionListener, KeyListener {
 
     /**
      * Holds the virus group manager object created on start
@@ -44,7 +43,7 @@ class InputHandler implements MouseListener, MouseMotionListener, KeyListener{
      *
      * @param vgm from the world to access vgm actions
      */
-    InputHandler(VirusGroupManager vgm){
+    InputHandler(VirusGroupManager vgm) {
         this.vgm = vgm;
 
         xOffset = 0;
@@ -62,7 +61,7 @@ class InputHandler implements MouseListener, MouseMotionListener, KeyListener{
      *
      * @return the x offset
      */
-    static int getXOffset(){
+    static int getXOffset() {
         return xOffset;
     }
 
@@ -71,7 +70,7 @@ class InputHandler implements MouseListener, MouseMotionListener, KeyListener{
      *
      * @return the y offset
      */
-    static int getYOffset(){
+    static int getYOffset() {
         return yOffset;
     }
 
@@ -81,67 +80,61 @@ class InputHandler implements MouseListener, MouseMotionListener, KeyListener{
      */
     public void keyPressed(KeyEvent e) {
         // S to split
-        if(e.getKeyCode() == KeyEvent.VK_S){
-            if(vgm.groupNum() <= 6){
+        if (e.getKeyCode() == KeyEvent.VK_S) {
+            if (vgm.groupNum() <= 6) {
                 vgm.split();
             }
         }
         // A to Merge, the click group to merge
-        if(e.getKeyCode() == KeyEvent.VK_A){
+        if (e.getKeyCode() == KeyEvent.VK_A) {
             merge = true;
         }
 
         //Different Groups
-        if(e.getKeyCode() == KeyEvent.VK_1){
-            if(vgm.hasKey(1)){
-                if(merge){
+        if (e.getKeyCode() == KeyEvent.VK_1) {
+            if (vgm.hasKey(1)) {
+                if (merge) {
                     vgm.merge(1);
                     merge = false;
-                }
-                else vgm.changeCurrent(1);
+                } else vgm.changeCurrent(1);
             }
         }
-        if(e.getKeyCode() == KeyEvent.VK_2){
-            if(vgm.hasKey(2)){
-                if(merge){
+        if (e.getKeyCode() == KeyEvent.VK_2) {
+            if (vgm.hasKey(2)) {
+                if (merge) {
                     vgm.merge(2);
                     merge = false;
-                }
-                else vgm.changeCurrent(2);
+                } else vgm.changeCurrent(2);
             }
 
         }
-        if(e.getKeyCode() == KeyEvent.VK_3||e.getKeyCode() == KeyEvent.VK_4){
-            if(vgm.hasKey(3)){
-                if(merge){
+        if (e.getKeyCode() == KeyEvent.VK_3 || e.getKeyCode() == KeyEvent.VK_4) {
+            if (vgm.hasKey(3)) {
+                if (merge) {
                     vgm.merge(3);
                     merge = false;
-                }
-                else vgm.changeCurrent(3);
+                } else vgm.changeCurrent(3);
             }
 
         }
-        if(e.getKeyCode() == KeyEvent.VK_5){
-            if(vgm.hasKey(5)){
-                if(merge){
+        if (e.getKeyCode() == KeyEvent.VK_5) {
+            if (vgm.hasKey(5)) {
+                if (merge) {
                     vgm.merge(5);
                     merge = false;
-                }
-                else vgm.changeCurrent(5);
+                } else vgm.changeCurrent(5);
             }
 
         }
-        if(e.getKeyCode() == KeyEvent.VK_6){
-            if(vgm.hasKey(6)){
-                if(merge){
+        if (e.getKeyCode() == KeyEvent.VK_6) {
+            if (vgm.hasKey(6)) {
+                if (merge) {
                     vgm.merge(6);
                     merge = false;
-                }
-                else vgm.changeCurrent(6);
+                } else vgm.changeCurrent(6);
             }
         }
     }
-
 
 
     /**
@@ -153,16 +146,13 @@ class InputHandler implements MouseListener, MouseMotionListener, KeyListener{
         int x = e.getX() + xOffset;
         int y = e.getY() + yOffset;
 
-        if(x <= (xOffset + allow) && xOffset  > 0){
+        if (x <= (xOffset + allow) && xOffset > 0) {
             xChange -= move;
-        }
-        else if(x >= (xOffset + World.getWidth - allow) && xOffset < World.GAME_WIDTH){
+        } else if (x >= (xOffset + World.getWidth - allow) && xOffset < World.GAME_WIDTH) {
             xChange += move;
-        }
-        else if(y <= (yOffset + allow) && yOffset > 0){
+        } else if (y <= (yOffset + allow) && yOffset > 0) {
             yChange -= move;
-        }
-        else if(y >= (yOffset + World.getHeight - allow) && xOffset < World.GAME_HEIGHT){
+        } else if (y >= (yOffset + World.getHeight - allow) && xOffset < World.GAME_HEIGHT) {
             yChange += move;
         }
 
@@ -184,12 +174,25 @@ class InputHandler implements MouseListener, MouseMotionListener, KeyListener{
     }
 
 
-    public void mouseDragged(MouseEvent e) {}
-    public void mouseReleased(MouseEvent e) {}
-    public void keyReleased(KeyEvent e) {}
-    public void keyTyped(KeyEvent e) {}
-    public void mouseClicked(MouseEvent arg0) {}
-    public void mouseEntered(MouseEvent e) {}
-    public void mouseExited(MouseEvent e) {}
+    public void mouseDragged(MouseEvent e) {
+    }
+
+    public void mouseReleased(MouseEvent e) {
+    }
+
+    public void keyReleased(KeyEvent e) {
+    }
+
+    public void keyTyped(KeyEvent e) {
+    }
+
+    public void mouseClicked(MouseEvent arg0) {
+    }
+
+    public void mouseEntered(MouseEvent e) {
+    }
+
+    public void mouseExited(MouseEvent e) {
+    }
 
 }

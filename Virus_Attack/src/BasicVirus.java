@@ -1,18 +1,40 @@
-
-abstract class BasicVirus implements Locatable{
+/**
+ * Contains the basic methods that are shared by both AntiVirus and Virus Class
+ */
+abstract class BasicVirus implements Locatable {
     /**
      * The Current x and y location
      */
     private int x, y; // current loc
-    private final int speed;
+    /**
+     * The speed, attack, attack radius, height and width that is taken from the Constants class
+     */
+    private final int speed, attack, attackRadius, height, width;
+    /**
+     * The health of the basic Virus
+     */
     private int health;
-    private final int attack;
+    /**
+     * The x and y velocity
+     */
     private int vx, vy;
+    /**
+     * The new x and y Location
+     */
     private int xL, yL;
-    private final int attackRadius;
-    private final int height;
-    private final int width;
 
+    /**
+     * Constructs the fields of the BasicVirus Class
+     *
+     * @param x            the x position of the BasicVirus
+     * @param y            the y position of the BasicVirus
+     * @param speed        the speed of the BasicVirus
+     * @param health       the health of the BasicVirus
+     * @param attack       the attack of the BasicVirus
+     * @param attackRadius the attackRadius of the BasicVirus
+     * @param width        the width of the BasicVirus
+     * @param height       the height of the BasicVirus
+     */
     BasicVirus(int x, int y, int speed, int health, int attack, int attackRadius, int width, int height) {
         this.x = x;
         this.y = y;
@@ -23,6 +45,7 @@ abstract class BasicVirus implements Locatable{
         this.height = height;
         this.width = width;
     }
+
     /**
      * sets new coordinate for the virus to head to
      *
@@ -38,65 +61,146 @@ abstract class BasicVirus implements Locatable{
         vy = (int) ((yL - y) * scale);
     }
 
-    int getAttackRadius() {
-        return attackRadius;
-    }
-
-    public int getX() {
-        return x;
-    }
-
-    public int getY() {
-        return y;
-    }
-
-    private int getHealth() {
-        return health;
-    }
+    /**
+     * Reduces the Basic Virus's health
+     *
+     * @param reduce the basic Virus's health
+     */
     void reduceHealth(int reduce) {
         health -= reduce;
     }
 
-    void setX(int x) {
-        this.x = x;
+    /**
+     * Returns the attack Radius
+     *
+     * @return the attack radius
+     */
+    int getAttackRadius() {
+        return attackRadius;
     }
 
-    void setY(int y) {
-        this.y = y;
+    /**
+     * Returns the Basic Virus's x coordinate
+     *
+     * @return the x coordinate
+     */
+    public int getX() {
+        return x;
     }
 
+    /**
+     * Returns the Basic Virus's y coordinate
+     *
+     * @return the y coordinate
+     */
+    public int getY() {
+        return y;
+    }
+
+    /**
+     * Returns the Basic Virus's health
+     *
+     * @return the basic virus's health
+     */
+    private int getHealth() {
+        return health;
+    }
+
+    /**
+     * Gets the x Velocity of the Basic Virus
+     *
+     * @return the velocity of the Basic Virus
+     */
     int getVx() {
         return vx;
     }
 
+    /**
+     * Returns the y velocity of the Basic Virus
+     *
+     * @return the y velocity of the basic Virus
+     */
     int getVy() {
         return vy;
     }
 
+    /**
+     * Returns the attack of the Basic Virus
+     *
+     * @return the attack of the Basic virus
+     */
     int getAttack() {
         return attack;
     }
 
+    /**
+     * Returns the Height of the Basic Virus
+     *
+     * @return the height of the Basic Virus
+     */
     int getHeight() {
         return height;
     }
 
+    /**
+     * Returns the width of the Basic Virus
+     *
+     * @return the width of the Basic Virus
+     */
     int getWidth() {
         return width;
     }
 
+    /**
+     * Returns the new X Location
+     *
+     * @return the new X Location
+     */
     int getXL() {
         return xL;
     }
 
+    /**
+     * Returns the y Location
+     *
+     * @return the y Location
+     */
     int getYL() {
         return yL;
     }
 
+    /**
+     * Sets the x location of the Basic Virus
+     *
+     * @param x the x location of the Basic Virus
+     */
+    void setX(int x) {
+        this.x = x;
+    }
+
+    /**
+     * Sets the y location of Basic Virus
+     *
+     * @param y the y location of Basic Virus
+     */
+    void setY(int y) {
+        this.y = y;
+    }
+
+    /**
+     * Sets the x velocity of Basic Virus
+     *
+     * @param vx the x velocity of Basic Virus
+     */
     void setVx(int vx) {
         this.vx = vx;
     }
 
+    /**
+     * Sets the y velocity of the Basic Virus
+     *
+     * @param vy the y velocity of the Basic Virus
+     */
     void setVy(int vy) {
         this.vy = vy;
     }
@@ -122,6 +226,7 @@ abstract class BasicVirus implements Locatable{
         distance = Math.sqrt(distance);
         return distance;
     }
+
     /**
      * get distance method for when not using Locatable objects
      *

@@ -5,19 +5,14 @@ import java.awt.image.BufferStrategy;
 
 /**
  * The Game, the running thread that runs the game begins here
- * 
- * creates the all the graphics objects which are retrieved from the canvas, holds runnable to create a new 
+ * <p>
+ * creates the all the graphics objects which are retrieved from the canvas, holds runnable to create a new
  * thread to run the game functions
- * 
- * @author Alex M
  *
+ * @author Alex M
  */
 class World extends Canvas implements Runnable {
 
-    /**
-     * the color green
-     */
-    public static final Color GREEN = Color.green;
     /**
      * the partial width
      */
@@ -25,7 +20,7 @@ class World extends Canvas implements Runnable {
     /**
      * the partial height
      */
-    public static final int HEIGHT = WIDTH/12 * 9;
+    public static final int HEIGHT = WIDTH / 12 * 9;
     /**
      * the actual width of the game
      */
@@ -65,7 +60,7 @@ class World extends Canvas implements Runnable {
 
 
     /**
-     * creates all the objects, get the canvas, sets frame size, adds listening to input handler 
+     * creates all the objects, get the canvas, sets frame size, adds listening to input handler
      */
     World() {
         setMinimumSize(new Dimension(WIDTH * SCALE, HEIGHT * SCALE));
@@ -112,13 +107,12 @@ class World extends Canvas implements Runnable {
         addMouseListener(input);
         addMouseMotionListener(input);
         addKeyListener(input);
-        
+
         getWidth = getWidth();
         getHeight = getHeight();
     }
-    
 
-    
+
     /**
      * @see java.lang.Runnable#run()
      */
@@ -126,8 +120,8 @@ class World extends Canvas implements Runnable {
         while (true) {
             render();
             cellManager.produce();
-            
-            if(GAME_OVER) break;
+
+            if (GAME_OVER) break;
 
             try {
                 Thread.sleep(40);
@@ -140,9 +134,9 @@ class World extends Canvas implements Runnable {
     /**
      * double buffers
      */
-    private void render(){
+    private void render() {
         BufferStrategy bs = getBufferStrategy();
-        if(bs == null){
+        if (bs == null) {
             createBufferStrategy(3);
             return;
         }

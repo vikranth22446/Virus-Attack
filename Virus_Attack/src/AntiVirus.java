@@ -47,7 +47,7 @@ class AntiVirus extends BasicVirus {
      * reduced the health of the virus. Then moves the antivirus to the currentViruses position.
      * Then calls follow.
      *
-     * @param g the graphics of the window
+     * @param g       the graphics of the window
      * @param xOffset the xOffset of the window. Used to move the window around
      * @param yOffset the yOffset of the window. Used to move the window around
      */
@@ -75,7 +75,7 @@ class AntiVirus extends BasicVirus {
      * Moves the antivirus. Then if it really close draw a line. If the virus is dead
      * remove it from the VirusGroupManager. then set follow to false;
      *
-     * @param g the graphics of the window
+     * @param g       the graphics of the window
      * @param xOffset the xOffset of the window. Used to move the window around
      * @param yOffset the yOffset of the window. Used to move the window around
      */

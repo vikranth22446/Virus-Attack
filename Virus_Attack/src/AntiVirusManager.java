@@ -21,7 +21,8 @@ class AntiVirusManager {
 
     /**
      * Calls the draw method of all the AntiViruses
-     * @param g the graphics of the Canvas
+     *
+     * @param g       the graphics of the Canvas
      * @param xOffset the xOffset of the window. This allows window to move.
      * @param yOffset the yOffset of the window. This allows window to move.
      */
@@ -33,18 +34,20 @@ class AntiVirusManager {
 
     /**
      * Calls the update Location of all the antiViruses
-     * @param g the graphics of the Canvas
+     *
+     * @param g       the graphics of the Canvas
      * @param xOffset the xOffset of the window. This allows window to move.
      * @param yOffset the yOffset of the window. This allows window to move.
      */
-    public void updateLocation(Graphics g, int xOffset, int yOffset){
-        for(AntiVirus av : anti){
+    public void updateLocation(Graphics g, int xOffset, int yOffset) {
+        for (AntiVirus av : anti) {
             av.update(g, xOffset, yOffset);
         }
     }
 
     /**
      * Adds an antivirus to the antivirus arrayList
+     *
      * @param x the x position of the antivirus to add.
      * @param y the y position of the antivirus to add.
      */

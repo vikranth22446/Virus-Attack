@@ -180,8 +180,8 @@ class CellManager {
     /**
      * Checks if the values is within the world
      *
-     * @param x   the cell's x position
-     * @param y   the cell's y position
+     * @param x       the cell's x position
+     * @param y       the cell's y position
      * @param xOffset the xOffset of the window. This allows window to move.
      * @param yOffset the yOffset of the window. This allows window to move.
      * @return a boolean of if it is in range.

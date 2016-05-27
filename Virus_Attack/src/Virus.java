@@ -8,7 +8,7 @@ import java.awt.*;
  * The virus class holds all of its own functions such as updating its location,
  * the coordinate it is headed to, drawing itself and getter methods. extends
  * locatable a interface
- * 
+ *
  * @author Alex M
  */
 class Virus extends BasicVirus implements Locatable {
@@ -47,7 +47,7 @@ class Virus extends BasicVirus implements Locatable {
      */
     @Override
     public void setCoordinate(int nx, int ny) {
-        super.setCoordinate(nx,ny);
+        super.setCoordinate(nx, ny);
         move = true;
     }
 
@@ -62,11 +62,11 @@ class Virus extends BasicVirus implements Locatable {
         int range = CONSTANTS.VIRUS_IDLE_RANGE;
 
         if (getDistance(getXL(), getYL()) >= range) {
-            setVx(getVx()*-1);
-            setVy(getVy()*-1);
+            setVx(getVx() * -1);
+            setVy(getVy() * -1);
         }
-        setX(getX()+getVx());
-        setY(getY()+getVy());
+        setX(getX() + getVx());
+        setY(getY() + getVy());
     }
 
     /**
@@ -86,8 +86,8 @@ class Virus extends BasicVirus implements Locatable {
         if (!move) {
             idleMovement();
         } else {
-            setX(getX()+getVx());
-            setY(getY()+getVy());
+            setX(getX() + getVx());
+            setY(getY() + getVy());
         }
         boolean attacking = false;
         for (int i = 0; i < AntiVirusManager.anti.size(); i++) {
@@ -146,7 +146,8 @@ class Virus extends BasicVirus implements Locatable {
                 wc.setAttacked(true);
                 if (c.getHealth() <= 0) {
                     CellManager.removeCell(i);
-                }wc.setAttacked(false);
+                }
+                wc.setAttacked(false);
                 break;
             }
 
