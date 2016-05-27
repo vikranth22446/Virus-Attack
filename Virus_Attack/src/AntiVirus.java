@@ -109,5 +109,16 @@ class AntiVirus extends Attacker {
         g.fillRect(getX() - xOffset, getY() - yOffset, getWidth(), getHeight());
     }
 
-
+    /**
+     * Returns a string with all the fields of the class. Made for test purposes
+     * @return a string with all the fields of the class.
+     */
+    @Override
+    public String toString() {
+        return "AntiVirus{" +
+                "currentFollowVirus=" + currentFollowVirus +
+                ", positionOfVirus=" + positionOfVirus +
+                ", follow=" + follow +
+                '}';
+    }
 }
