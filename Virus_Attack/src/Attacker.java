@@ -1,7 +1,7 @@
 /**
  * Contains the basic methods that are shared by both AntiVirus and Virus Class
  */
-abstract class BasicVirus implements Locatable {
+abstract class Attacker implements Locatable {
     /**
      * The Current x and y location
      */
@@ -35,7 +35,7 @@ abstract class BasicVirus implements Locatable {
      * @param width        the width of the BasicVirus
      * @param height       the height of the BasicVirus
      */
-    BasicVirus(int x, int y, int speed, int health, int attack, int attackRadius, int width, int height) {
+    Attacker(int x, int y, int speed, int health, int attack, int attackRadius, int width, int height) {
         this.x = x;
         this.y = y;
         this.speed = speed;
@@ -102,7 +102,7 @@ abstract class BasicVirus implements Locatable {
      *
      * @return the basic virus's health
      */
-    private int getHealth() {
+    int getHealth() {
         return health;
     }
 
@@ -149,6 +149,10 @@ abstract class BasicVirus implements Locatable {
      */
     int getWidth() {
         return width;
+    }
+    
+    int getSpeed(){
+    	return speed;
     }
 
     /**

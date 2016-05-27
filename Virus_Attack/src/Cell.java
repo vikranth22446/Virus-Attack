@@ -24,7 +24,7 @@ public abstract class Cell implements Locatable {
     /**
      * Radius value for cell
      */
-    private final int radius = CONSTANTS.CELL_RADIUS;
+    private final int radius = Constants.CELL_RADIUS;
 
     /**
      * Health value for cell

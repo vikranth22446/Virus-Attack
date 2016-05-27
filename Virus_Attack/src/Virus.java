@@ -11,13 +11,15 @@ import java.awt.*;
  *
  * @author Alex M
  */
-class Virus extends BasicVirus implements Locatable {
+class Virus extends Attacker implements Locatable {
 
 
     /**
      * true if the object is moving, false if not
      */
     private boolean move = true;
+    
+    private boolean attacking = false;
 
     /**
      * constructor, takes in the initial x and y coordinate, and instantiates
@@ -29,12 +31,12 @@ class Virus extends BasicVirus implements Locatable {
     public Virus(int x, int y) {
         super(x,
                 y
-                , CONSTANTS.VIRUS_SPEED,
-                CONSTANTS.VIRUS_HEALTH,
-                CONSTANTS.VIRUS_ATTACK,
-                CONSTANTS.VIRUS_ATTACK_RADIUS,
-                CONSTANTS.VIRUS_WIDTH,
-                CONSTANTS.VIRUS_HEIGHT
+                , Constants.VIRUS_SPEED,
+                Constants.VIRUS_HEALTH,
+                Constants.VIRUS_ATTACK,
+                Constants.VIRUS_ATTACK_RADIUS,
+                Constants.VIRUS_WIDTH,
+                Constants.VIRUS_HEIGHT
 
         );
     }
@@ -59,7 +61,7 @@ class Virus extends BasicVirus implements Locatable {
         /*
       range of idle movement
      */
-        int range = CONSTANTS.VIRUS_IDLE_RANGE;
+        int range = Constants.VIRUS_IDLE_RANGE;
 
         if (getDistance(getXL(), getYL()) >= range) {
             setVx(getVx() * -1);
@@ -78,18 +80,9 @@ class Virus extends BasicVirus implements Locatable {
      *                the screen had shifted
      * @param yOffset same as above
      */
-    public void update(Graphics g, int xOffset, int yOffset) {
-        if ((getVx() < 0 && getX() < getXL()) || (getVy() < 0 && getY() < getYL()) || (getVy() > 0 && getY() > getYL())
-                || (getVx() > 0 && getX() > getXL())) {
-            move = false;
-        }
-        if (!move) {
-            idleMovement();
-        } else {
-            setX(getX() + getVx());
-            setY(getY() + getVy());
-        }
-        boolean attacking = false;
+    public void checkAttackRadius(Graphics g, int xOffset, int yOffset) {
+        
+        attacking = false;
         for (int i = 0; i < AntiVirusManager.anti.size(); i++) {
             AntiVirus av = AntiVirusManager.anti.get(i);
             if (getDistance(av) <= getAttackRadius()) {
@@ -153,6 +146,19 @@ class Virus extends BasicVirus implements Locatable {
 
         }
     }
+    
+    public void update(){
+    	if ((getVx() < 0 && getX() < getXL()) || (getVy() < 0 && getY() < getYL()) || (getVy() > 0 && getY() > getYL())
+                || (getVx() > 0 && getX() > getXL())) {
+            move = false;
+        }
+        if (!move) {
+            idleMovement();
+        } else {
+            setX(getX() + getVx());
+            setY(getY() + getVy());
+        }
+    }
 
     /**
      * draws the virus on the screen
@@ -170,5 +176,41 @@ class Virus extends BasicVirus implements Locatable {
                 getWidth() / 2, getHeight() / 2);
     }
 
+    /**
+     * for testing purposes
+     * 
+     * @see java.lang.Object#toString()
+     */
+    public String toString(){
+    	return "Virus[x:" + getX() + " y:" + getY() + " speed:" + getSpeed() + " attack:" + getAttack() +
+    			" height:" + getHeight() + " width:" + getWidth() + "]"; 
+    }
 
+    
+    /**
+     * testing purposes
+     * 
+     * @return true if moving, false if not
+     */
+    public boolean isMoving(){
+    	return move;
+    }
+    
+    /**
+     * Testing purposes
+     * 
+     * @return true is attacking, false if not
+     */
+    public boolean isAttacking(){
+    	return attacking;
+    }
+    
+    /**
+     * testing purposes
+     * 
+     * @return the current health
+     */
+    public int getCuurentHealth(){
+    	return getHealth();
+    }
 }

@@ -54,8 +54,8 @@ public class SickCell extends Cell {
      * Every certain seconds a virus is added at (-20 + getX(), getY())
      */
     public void produceUnit() {
-        if (ticks >= CONSTANTS.SICK_CELL_VIRUS_GENERATE_RATE) {
-            VirusGroupManager.addVirus(CONSTANTS.VIRUS_GENERATION_CORRECTION_FACTOR + getX(), getY());
+        if (ticks >= Constants.SICK_CELL_VIRUS_GENERATE_RATE) {
+            VirusGroupManager.addVirus(Constants.VIRUS_GENERATION_CORRECTION_FACTOR + getX(), getY());
             ticks = 0;
         }
         ticks++;

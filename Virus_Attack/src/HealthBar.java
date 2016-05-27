@@ -53,7 +53,7 @@ class HealthBar {
         }
         graph.setColor(currentColor);
         int width = (int) (Math.abs(cell.getHealth() / cell.max()) * 100);
-        graph.fillRect(cell.getX() - cell.getRadius() / 2 - xOffset, cell.getY() - cell.getRadius() / 2 - yOffset - CONSTANTS.HEIGHT_CORRECTION_FACTOR, width, CONSTANTS.HEALTH_BAR_HEIGHT);
+        graph.fillRect(cell.getX() - cell.getRadius() / 2 - xOffset, cell.getY() - cell.getRadius() / 2 - yOffset - Constants.HEIGHT_CORRECTION_FACTOR, width, Constants.HEALTH_BAR_HEIGHT);
         drawOtherHalf(graph, xOffset, yOffset, width, oppositeColor);
     }
 
@@ -73,7 +73,7 @@ class HealthBar {
     private void drawOtherHalf(Graphics g, int xOffset, int yOffset, int cellHealth, Color color) {
         int remaining = 100 - cellHealth;
         g.setColor(color);
-        g.fillRect((cell.getX() - cell.getRadius() / 2) + cellHealth - xOffset, cell.getY() - cell.getRadius() / 2 - yOffset - CONSTANTS.HEIGHT_CORRECTION_FACTOR, remaining, CONSTANTS.HEALTH_BAR_HEIGHT);
+        g.fillRect((cell.getX() - cell.getRadius() / 2) + cellHealth - xOffset, cell.getY() - cell.getRadius() / 2 - yOffset - Constants.HEIGHT_CORRECTION_FACTOR, remaining, Constants.HEALTH_BAR_HEIGHT);
     }
 
 

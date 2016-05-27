@@ -1,7 +1,12 @@
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
+
 import java.awt.*;
 import java.awt.image.BufferStrategy;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
 
 /**
  * The Game, the running thread that runs the game begins here
@@ -37,6 +42,8 @@ class World extends Canvas implements Runnable {
      * the name of the frame
      */
     private static final String NAME = "Virus";
+    
+    private BufferedImage bg;
     /**
      * the width and height of the screen
      */
@@ -57,6 +64,8 @@ class World extends Canvas implements Runnable {
      * the anti virus manager that holds the anti viruses
      */
     private final AntiVirusManager avm;
+    
+    private static InputHandler input;
 
 
     /**
@@ -88,6 +97,13 @@ class World extends Canvas implements Runnable {
         /*
       the graphics
      */
+        try{
+        	bg = ImageIO.read(new File("background.png"));
+        }
+        catch(IOException ioe){
+        	ioe.printStackTrace();
+        }
+        
         Graphics g = getGraphics();
         g.setColor(Color.white);
         setBackground(Color.WHITE);
@@ -103,7 +119,7 @@ class World extends Canvas implements Runnable {
         /*
       the object that handles all the inputs
      */
-        InputHandler input = new InputHandler(vgm);
+        input = new InputHandler(vgm);
         addMouseListener(input);
         addMouseMotionListener(input);
         addKeyListener(input);
@@ -142,16 +158,17 @@ class World extends Canvas implements Runnable {
         }
 
         Graphics g = bs.getDrawGraphics();
-        g.setColor(Color.white);
-        g.fillRect(0, 0, getWidth(), getHeight());
+        //g.setColor(Color.white);
+       // g.fillRect(0, 0, getWidth(), getHeight());
+        g.drawImage(bg, 0, 0, null);
 
-        vgm.draw(g, InputHandler.getXOffset(), InputHandler.getYOffset());
-        avm.draw(g, InputHandler.getXOffset(), InputHandler.getYOffset());
+        vgm.draw(g, input.getXOffset(), input.getYOffset());
+        avm.draw(g, input.getXOffset(), input.getYOffset());
 
-        cellManager.toDraw(InputHandler.getXOffset(), InputHandler.getYOffset(), g);
+        cellManager.toDraw(input.getXOffset(), input.getYOffset(), g);
 
-        vgm.updateLocation(g, InputHandler.getXOffset(), InputHandler.getYOffset());
-        avm.updateLocation(g, InputHandler.getXOffset(), InputHandler.getYOffset());
+        vgm.updateLocation(g, input.getXOffset(), input.getYOffset());
+        avm.updateLocation(g, input.getXOffset(), input.getYOffset());
 
         bs.show();
     }

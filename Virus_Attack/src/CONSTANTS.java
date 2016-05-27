@@ -1,5 +1,5 @@
 
-class CONSTANTS {
+class Constants {
     /**
      * Anti-Virus constants:
      * SPEED,HEALTH,ATTACK, WIDTH,HEIGHT,ATTACK_RADIUS

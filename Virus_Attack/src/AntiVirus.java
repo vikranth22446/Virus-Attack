@@ -4,7 +4,7 @@ import java.awt.*;
 /**
  * The AntiVirus class which is produced by the WhiteCell.
  */
-class AntiVirus extends BasicVirus {
+class AntiVirus extends Attacker {
     /**
      * The current virus to follow
      */
@@ -26,12 +26,12 @@ class AntiVirus extends BasicVirus {
      */
     public AntiVirus(int x, int y) {
         super(x, y,
-                CONSTANTS.ANTIVIRUS_SPEED,
-                CONSTANTS.ANTIVIRUS_HEALTH,
-                CONSTANTS.ANTIVIRUS_ATTACK,
-                CONSTANTS.ANTIVIRUS_ATTACK_RADIUS,
-                CONSTANTS.ANTIVIRUS_WIDTH,
-                CONSTANTS.ANTIVIRUS_HEIGHT
+                Constants.ANTIVIRUS_SPEED,
+                Constants.ANTIVIRUS_HEALTH,
+                Constants.ANTIVIRUS_ATTACK,
+                Constants.ANTIVIRUS_ATTACK_RADIUS,
+                Constants.ANTIVIRUS_WIDTH,
+                Constants.ANTIVIRUS_HEIGHT
         );
     }
 

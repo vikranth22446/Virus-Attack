@@ -61,7 +61,8 @@ class VirusGroup {
      */
     void update(Graphics g, int xOffset, int yOffset) {
         for (Virus v : viruses) {
-            v.update(g, xOffset, yOffset);
+            v.checkAttackRadius(g, xOffset, yOffset);
+            v.update();
         }
     }
 
@@ -114,4 +115,13 @@ class VirusGroup {
     void addVirus(Virus virus) {
         viruses.add(virus);
     }
+    
+    /**
+	 * Testing purposes
+	 * 
+	 * @see java.lang.Object#toString()
+	 */
+	public String toString(){
+		return "VirusGroup[" + "Viruses:" + viruses.size()+"]";
+	}
 }
