@@ -9,22 +9,15 @@ import java.io.IOException;
 
 /**
  * An Implementation of the Cell abstract class. The cells are infected and produce viruses.
- * These Cells Help the main player. They start at an inital health of  -100, and when attacked by white cells their
+ * These Cells Help the main player. They start at an initial health of  -100, and when attacked by white cells their
  * health slowly reduces.
  */
-public class SickCell extends Cell{
-    /**
-     * The rate at which virus are produced
-     */
-    private int generateAt = 200;
+public class SickCell extends Cell {
     /**
      * The current time used to determine if viruses are produced
      */
     private int ticks;
-    /**
-     * The position of the cell in the CellManager
-     */
-    private int index;
+
     /**
      * sets index field to the index, and the generateAt variable to 200. The the super method is called with the
      * rest of the fields to construct the other variables
@@ -47,8 +40,7 @@ public class SickCell extends Cell{
      */
     @Override
     public void draw(Graphics g, int xOffset, int yOffset) {
-        super.draw(g,xOffset,yOffset);
-        g.setColor(new Color(255, 0, 0));
+        super.draw(g, xOffset, yOffset);
         BufferedImage in;
         try {
             in = ImageIO.read(new File("pixelsick.png"));
@@ -62,11 +54,10 @@ public class SickCell extends Cell{
      * Every certain seconds a virus is added at (-20 + getX(), getY())
      */
     public void produceUnit() {
-        if (ticks >= generateAt) {
-            VirusGroupManager.addVirus(-20 + getX(), getY());
+        if (ticks >= CONSTANTS.SICK_CELL_VIRUS_GENERATE_RATE) {
+            VirusGroupManager.addVirus(CONSTANTS.VIRUS_GENERATION_CORRECTION_FACTOR + getX(), getY());
             ticks = 0;
         }
-
         ticks++;
     }
 

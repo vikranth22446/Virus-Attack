@@ -11,13 +11,8 @@ import java.awt.*;
  * 
  * @author Alex M
  */
-public class Virus extends BasicVirus implements Locatable {
+class Virus extends BasicVirus implements Locatable {
 
-
-    /**
-     * the group number
-     */
-    private int num;
 
     /**
      * true if the object is moving, false if not
@@ -25,39 +20,34 @@ public class Virus extends BasicVirus implements Locatable {
     private boolean move = true;
 
     /**
-     * range of idle movment
-     */
-    private int range = 50;
-
-    /**
-     * constructor, takes in the intial x and y coordinate, and instantiates
+     * constructor, takes in the initial x and y coordinate, and instantiates
      * variables
      *
-     * @param x x coord
-     * @param y y coord
+     * @param x the x coordinate
+     * @param y the y coordinate
      */
     public Virus(int x, int y) {
         super(x,
                 y
-                , APCS_CONSTANTS.VIRUS_SPEED,
-                APCS_CONSTANTS.VIRUS_HEALTH,
-                APCS_CONSTANTS.VIRUS_ATTACK,
-                APCS_CONSTANTS.ATTACK_RADIUS,
-                APCS_CONSTANTS.VIRUS_WIDTH,
-                APCS_CONSTANTS.VIRUS_HEIGHT
+                , CONSTANTS.VIRUS_SPEED,
+                CONSTANTS.VIRUS_HEALTH,
+                CONSTANTS.VIRUS_ATTACK,
+                CONSTANTS.VIRUS_ATTACK_RADIUS,
+                CONSTANTS.VIRUS_WIDTH,
+                CONSTANTS.VIRUS_HEIGHT
 
         );
     }
 
     /**
-     * sets new coordiate for the virus to head to
+     * sets new coordinate for the virus to head to
      *
      * @param nx the new x
      * @param ny the new y
      */
     @Override
-    public void setCoord(int nx, int ny) {
-        super.setCoord(nx,ny);
+    public void setCoordinate(int nx, int ny) {
+        super.setCoordinate(nx,ny);
         move = true;
     }
 
@@ -65,8 +55,13 @@ public class Virus extends BasicVirus implements Locatable {
      * when the virus reaches its assigned location this method makes the virus
      * move to prevent them from overlapping
      */
-    public void idleMovement() {
-        if (getDistance(getxL(), getyL()) >= range) {
+    private void idleMovement() {
+        /*
+      range of idle movement
+     */
+        int range = CONSTANTS.VIRUS_IDLE_RANGE;
+
+        if (getDistance(getXL(), getYL()) >= range) {
             setVx(getVx()*-1);
             setVy(getVy()*-1);
         }
@@ -84,8 +79,8 @@ public class Virus extends BasicVirus implements Locatable {
      * @param yOffset same as above
      */
     public void update(Graphics g, int xOffset, int yOffset) {
-        if ((getVx() < 0 && getX() < getxL()) || (getVy() < 0 && getY() < getyL()) || (getVy() > 0 && getY() > getyL())
-                || (getVx() > 0 && getX() > getxL())) {
+        if ((getVx() < 0 && getX() < getXL()) || (getVy() < 0 && getY() < getYL()) || (getVy() > 0 && getY() > getYL())
+                || (getVx() > 0 && getX() > getXL())) {
             move = false;
         }
         if (!move) {
@@ -169,7 +164,7 @@ public class Virus extends BasicVirus implements Locatable {
     public void draw(Graphics g, int xOffset, int yOffset) {
         g.setColor(new Color(122, 122, 0));
         g.fillRect(getX() - xOffset, getY() - yOffset, getWidth(), getHeight());
-        g.setColor(World.BCOLOR);
+        g.setColor(Color.green);
         g.drawRect((getX() + getWidth() / 4) - xOffset, (getY() + getHeight() / 4) - yOffset,
                 getWidth() / 2, getHeight() / 2);
     }

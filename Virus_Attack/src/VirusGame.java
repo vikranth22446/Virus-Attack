@@ -1,7 +1,7 @@
 /**
  * Class with the main method that calls WelcomeScreen.createWelcomeScreen();
  */
-public class VirusGame {
+class VirusGame {
     /**
      * Constructs a WelcomeScreen. Also calls createWelcomeScreen().
      *

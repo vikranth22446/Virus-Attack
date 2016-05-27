@@ -12,12 +12,12 @@ import java.awt.image.BufferStrategy;
  * @author Alex M
  *
  */
-public class World extends Canvas implements Runnable {
+class World extends Canvas implements Runnable {
 
     /**
      * the color green
      */
-    public static final Color BCOLOR = Color.green;
+    public static final Color GREEN = Color.green;
     /**
      * the partial width
      */
@@ -34,11 +34,6 @@ public class World extends Canvas implements Runnable {
      * the actual height of the game
      */
     public static final int GAME_HEIGHT = HEIGHT * 2 + 200;
-    
-    /**
-     * the width and height of the screen
-     */
-    public static int getWidth, getHeight;
     /**
      * the partial width and height scaled up by this value
      */
@@ -47,65 +42,58 @@ public class World extends Canvas implements Runnable {
      * the name of the frame
      */
     private static final String NAME = "Virus";
-    
+    /**
+     * the width and height of the screen
+     */
+    static int getWidth, getHeight;
     /**
      * game thread stops if true false if otherwise
      */
-    public static boolean GAME_OVER = false;
-
-    /**
-     * the Jframe
-     */
-    private JFrame frame;
-    /**
-     * the panel that contains the canvas
-     */
-    private JPanel panel;
-
-    /**
-     * the graphics
-     */
-    Graphics g;
-
-    /**
-     * the cell manager that holds the cells
-     */
-    private CellManager cellManager;
-    /**
-     * the anti virus manager that holds the anti viruses
-     */
-    private AntiVirusManager avm;
+    private static boolean GAME_OVER = false;
     /**
      * the virus group manager that holds he virus groups
      */
-    public VirusGroupManager vgm;
+    private final VirusGroupManager vgm;
     /**
-     * the object that handles all the inputs
+     * the cell manager that holds the cells
      */
-    public InputHandler input;
+    private final CellManager cellManager;
+    /**
+     * the anti virus manager that holds the anti viruses
+     */
+    private final AntiVirusManager avm;
 
 
     /**
      * creates all the objects, get the canvas, sets frame size, adds listening to input handler 
      */
-    public World() {
+    World() {
         setMinimumSize(new Dimension(WIDTH * SCALE, HEIGHT * SCALE));
         setMaximumSize(new Dimension(WIDTH * SCALE, HEIGHT * SCALE));
         setPreferredSize(new Dimension(WIDTH * SCALE, HEIGHT * SCALE));
 
-        frame = new JFrame(NAME);
+        /*
+      the JFrame
+     */
+        JFrame frame = new JFrame(NAME);
 
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setLayout(new BorderLayout());
 
         frame.add(this, BorderLayout.CENTER);
         frame.pack();
 
-        panel = new JPanel();
+        /*
+      the panel that contains the canvas
+     */
+        JPanel panel = new JPanel();
         Container c = frame.getContentPane();
         c.add(panel);
 
-        g = getGraphics();
+        /*
+      the graphics
+     */
+        Graphics g = getGraphics();
         g.setColor(Color.white);
         setBackground(Color.WHITE);
         frame.setResizable(false);
@@ -117,7 +105,10 @@ public class World extends Canvas implements Runnable {
         cellManager = new CellManager();
         cellManager.createCellsInPositions();
 
-        input = new InputHandler(vgm);
+        /*
+      the object that handles all the inputs
+     */
+        InputHandler input = new InputHandler(vgm);
         addMouseListener(input);
         addMouseMotionListener(input);
         addKeyListener(input);
@@ -149,7 +140,7 @@ public class World extends Canvas implements Runnable {
     /**
      * double buffers
      */
-    public void render(){
+    private void render(){
         BufferStrategy bs = getBufferStrategy();
         if(bs == null){
             createBufferStrategy(3);
@@ -160,13 +151,13 @@ public class World extends Canvas implements Runnable {
         g.setColor(Color.white);
         g.fillRect(0, 0, getWidth(), getHeight());
 
-        vgm.draw(g, input.getXOffset(), input.getYOffset());
-        avm.draw(g, input.getXOffset(), input.getYOffset());
-        //cellManager.draw(g);
-        cellManager.toDraw(input.getXOffset(), input.getYOffset(), g);
+        vgm.draw(g, InputHandler.getXOffset(), InputHandler.getYOffset());
+        avm.draw(g, InputHandler.getXOffset(), InputHandler.getYOffset());
 
-        vgm.updateLocation(g, input.getXOffset(), input.getYOffset());
-        avm.updateLocation(g, input.getXOffset(), input.getYOffset());
+        cellManager.toDraw(InputHandler.getXOffset(), InputHandler.getYOffset(), g);
+
+        vgm.updateLocation(g, InputHandler.getXOffset(), InputHandler.getYOffset());
+        avm.updateLocation(g, InputHandler.getXOffset(), InputHandler.getYOffset());
 
         bs.show();
     }
@@ -174,7 +165,7 @@ public class World extends Canvas implements Runnable {
     /**
      * the start method run from main
      */
-    public synchronized void start() {
+    synchronized void start() {
         new Thread(this).start();
     }
 

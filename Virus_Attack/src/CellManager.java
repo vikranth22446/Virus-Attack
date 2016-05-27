@@ -6,38 +6,41 @@ import java.util.stream.Collectors;
 /**
  * CellManager contains redValues,whiteValues, and sickValues.
  */
-public class CellManager {
+class CellManager {
     /**
      * An ArrayList of all the redCells
      */
-    public static ArrayList<Cell> redValues;
+    static ArrayList<Cell> redValues;
     /**
      * An ArrayList of the whiteCells.
      */
-    public static ArrayList<Cell> whiteValues;
+    static ArrayList<Cell> whiteValues;
     /**
      * An ArrayList of all the sickCells.
      */
-    public static ArrayList<Cell> sickValues;
+    static ArrayList<Cell> sickValues;
     /**
      * The list of white point used when constructing later.
      */
-    private int[][] whitePoints = {{1000, 400}, {900, 700}, {400, 400}};
+    private final int[][] whitePoints = {
+            {1000, 400},
+            {900, 700},
+            {400, 400}};
     /**
      * An ArrayList of redPoints. This is an empty aerialist to be added later
      */
-    private ArrayList<Point> redPoints = new ArrayList<>();
+    private final ArrayList<Point> redPoints = new ArrayList<>();
     /**
      * A set of sick points used to initialize later.
      */
-    private int[][] sickPoints = {
+    private final int[][] sickPoints = {
             {100, 300}, {500, 100}, {300, 600}
     };
 
     /**
-     * constructs the 3 arraylist: redValues,whiteValues, and SickValues.
+     * constructs the 3 ArrayList: redValues,whiteValues, and SickValues.
      */
-    public CellManager() {
+    CellManager() {
         redValues = new ArrayList<>();
         whiteValues = new ArrayList<>();
         sickValues = new ArrayList<>();
@@ -48,24 +51,23 @@ public class CellManager {
      * gets the value from whitePoints and redPoints and uses them to create red Cells
      * White Cells. Then randomly redCells are put all over the map.
      */
-    public void createCellsInPositions() {
-        for (int i = 0; i < whitePoints.length; i++) {
+    void createCellsInPositions() {
+        for (int[] whitePoint : whitePoints) {
             Cell cell;
-            cell = new WhiteCell(whitePoints[i][0], whitePoints[i][1], 500);
+            cell = new WhiteCell(whitePoint[0], whitePoint[1], 500);
             addWhiteCell(cell);
         }
         for (int i = 0; i < 15; i++) {
             redPoints.add(new Point((int) (Math.random() * 1000), (int) (Math.random() * 1000)));
         }
-        for (int i = 0; i < redPoints.size(); i++) {
+        for (Point point : redPoints) {
 
-            Point point = redPoints.get(i);
-            Cell cell = new RedCell(point.getX(), point.getY(), 200);
+            Cell cell = new RedCell((int) point.getX(), (int) point.getY(), 200);
 
             addRedCell(cell);
         }
-        for (int i = 0; i < sickPoints.length; i++) {
-            Cell cell = new SickCell(sickPoints[i][0], sickPoints[i][1], -100);
+        for (int[] sickPoint : sickPoints) {
+            Cell cell = new SickCell(sickPoint[0], sickPoint[1], -100);
 
             addSickCell(cell);
         }
@@ -74,7 +76,7 @@ public class CellManager {
     /**
      * Every certain seconds the white cells will split.
      */
-    public void mitosis() {
+    private void mitosis() {
         for (int i = 0; i < whiteValues.size(); i++) {
             WhiteCell w = (WhiteCell) whiteValues.get(i);
             w.updateTime();
@@ -98,7 +100,7 @@ public class CellManager {
      *
      * @param x the cell to add
      */
-    public void addRedCell(Cell x) {
+    private void addRedCell(Cell x) {
         redValues.add(x);
     }
 
@@ -107,7 +109,7 @@ public class CellManager {
      *
      * @param x the cell to add
      */
-    public void addWhiteCell(Cell x) {
+    private void addWhiteCell(Cell x) {
         whiteValues.add(x);
     }
 
@@ -115,14 +117,14 @@ public class CellManager {
      * Converts the cell depending on what type of cell it is
      * RedCell
      * -converts to sick
-     * WhiteValeus
+     * White Values
      * -removes
      * SickCell
      * -converts to red Cell
      *
      * @param c the cell to convert
      */
-    public static void convertCell(Cell c) {
+    static void convertCell(Cell c) {
         if (c instanceof RedCell) {
             redValues.remove(c);
             sickValues.add(new SickCell(c.getX(), c.getY(), -100));
@@ -140,7 +142,7 @@ public class CellManager {
      *
      * @param id the id to remove.
      */
-    public static void removeCell(int id) {
+    static void removeCell(int id) {
         whiteValues.remove(id);
     }
 
@@ -151,9 +153,9 @@ public class CellManager {
      * @param xOffset the xOffset of the window. This is used to move the Window,
      * @param yOffset the yOffset of the window. This is used to move the Window,
      */
-    public void moveWhiteCells(Graphics g, int xOffset, int yOffset) {
-        for (int i = 0; i < whiteValues.size(); i++) {
-            WhiteCell w = (WhiteCell) whiteValues.get(i);
+    private void moveWhiteCells(Graphics g, int xOffset, int yOffset) {
+        for (Cell whiteValue : whiteValues) {
+            WhiteCell w = (WhiteCell) whiteValue;
             w.findVirus(g, xOffset, yOffset);
             w.move();
         }
@@ -167,38 +169,37 @@ public class CellManager {
      * @param yOffset the yOffset of the window. This allows window to move.
      * @param g       the graphics of canvas
      */
-    public void toDraw(int xOffset, int yOffset, Graphics g) {
+    void toDraw(int xOffset, int yOffset, Graphics g) {
         ArrayList<Cell> toDraw = redValues.stream().filter(c -> inRange(c.getX(), c.getY(), xOffset, yOffset)).collect(Collectors.toCollection(ArrayList::new));
         toDraw.addAll(whiteValues.stream().filter(c -> inRange(c.getX(), c.getY(), xOffset, yOffset)).collect(Collectors.toList()));
         toDraw.addAll(sickValues.stream().filter(c -> inRange(c.getX(), c.getY(), xOffset, yOffset)).collect(Collectors.toList()));
 
         draw(g, toDraw, xOffset, yOffset);
-
     }
 
     /**
      * Checks if the values is within the world
      *
-     * @param Cellx   the cell's x position
-     * @param Celly   the cell's y position
+     * @param x   the cell's x position
+     * @param y   the cell's y position
      * @param xOffset the xOffset of the window. This allows window to move.
      * @param yOffset the yOffset of the window. This allows window to move.
      * @return a boolean of if it is in range.
      */
-    public boolean inRange(int Cellx, int Celly, int xOffset, int yOffset) {
-        return Cellx >= xOffset && Cellx <= xOffset + World.WIDTH * World.SCALE
-                && Celly >= yOffset && Celly <= yOffset + World.HEIGHT * World.SCALE;
+    private boolean inRange(int x, int y, int xOffset, int yOffset) {
+        return x >= xOffset && x <= xOffset + World.WIDTH * World.SCALE
+                && y >= yOffset && y <= yOffset + World.HEIGHT * World.SCALE;
     }
 
     /**
-     * Iteartes through the toDraw method and calls the draw method.
+     * Iterates through the toDraw method and calls the draw method.
      *
      * @param g       the graphics passed through the canvas
-     * @param toDraw  the arraylist of cells to draw.
+     * @param toDraw  the ArrayList of cells to draw.
      * @param xOffset the xOffset of the window. This allows window to move.
      * @param yOffset the yOffset of the window. This allows window to move.
      */
-    public void draw(Graphics g, ArrayList<Cell> toDraw, int xOffset, int yOffset) {
+    private void draw(Graphics g, ArrayList<Cell> toDraw, int xOffset, int yOffset) {
         mitosis();
         moveWhiteCells(g, xOffset, yOffset);
         for (Cell c : toDraw) {
@@ -209,7 +210,7 @@ public class CellManager {
     /**
      * Calls the produce for all the white Values and sick Values.
      */
-    public void produce() {
+    void produce() {
         whiteValues.forEach(Cell::produceUnit);
         sickValues.forEach(Cell::produceUnit);
     }

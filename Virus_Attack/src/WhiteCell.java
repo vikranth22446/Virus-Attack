@@ -6,7 +6,6 @@ import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.Map.Entry;
 
 /**
@@ -18,32 +17,24 @@ public class WhiteCell extends Cell {
      * The ticks used to keep track of time
      */
     private int ticks = 0;
-    /**
-     * The time at which the ticks generate
-     */
-    private int generateAt = 200;
 
     private int splitTime;
 
-    private int vx = 0, xL;
+    private int vx = 0;
 
-    private int vy = 0, yL;
+    private int vy = 0;
 
     private boolean healing;
 
-    private int speed;
-
-    private int sightRadius = 300;
+    private final int speed;
 
     private int drift = 50;
 
-    private int attackRadius = 80;
+    private final int attack;
 
-    private int attack;
+    private boolean beingAttacked = false;
 
-    public boolean beingAttacked = false;
-
-    public boolean tracking = false;
+    private boolean tracking = false;
 
     /**
      * Initializes the x coordinate, y coordinate, and health.
@@ -52,7 +43,7 @@ public class WhiteCell extends Cell {
      * @param y      the y coordinate
      * @param health the initial health of the cell
      */
-    public WhiteCell(int x, int y, int health) {
+    WhiteCell(int x, int y, int health) {
         super(x, y, health);
 
         speed = 5;
@@ -79,7 +70,6 @@ public class WhiteCell extends Cell {
     @Override
     public void draw(Graphics g, int xOffset, int yOffset) {
         super.draw(g, xOffset, yOffset);
-        g.setColor(new Color(255, 0, 0));
         BufferedImage in;
         try {
             in = ImageIO.read(new File("pixelwhite.png"));
@@ -92,6 +82,10 @@ public class WhiteCell extends Cell {
 
     @Override
     public void produceUnit() {
+        /*
+      The time at which the ticks generate
+     */
+        int generateAt = 200;
         if (ticks >= generateAt) {
             AntiVirusManager.addAnti(getX() + getRadius(), getY() + getRadius());
             ticks = 0;
@@ -113,14 +107,12 @@ public class WhiteCell extends Cell {
     }
 
 
-    public void setCoord(int nx, int ny) {
+    private void setCoordinate(int nx, int ny) {
 
-        xL = nx;
-        yL = ny;
-        double hyp = Math.sqrt((xL - getX()) * (xL - getX()) + (yL - getY()) * (yL - getY()));
+        double hyp = Math.sqrt((nx - getX()) * (nx - getX()) + (ny - getY()) * (ny - getY()));
         double scale = speed / hyp;
-        vx = (int) ((xL - getX()) * scale / 2.0);
-        vy = (int) ((yL - getY()) * scale / 2.0);
+        vx = (int) ((nx - getX()) * scale / 2.0);
+        vy = (int) ((ny - getY()) * scale / 2.0);
     }
 
 
@@ -131,20 +123,21 @@ public class WhiteCell extends Cell {
 
 
     // @Override
-    public void findVirus(Graphics g, int xOffset, int yOffset) {
+    void findVirus(Graphics g, int xOffset, int yOffset) {
         // TODO Auto-generated method stub
         boolean attacking = false;
         int closest = Integer.MAX_VALUE;
         int closestSick = Integer.MAX_VALUE;
-        Iterator<Entry<Integer, VirusGroup>> it = VirusGroupManager.virusGroupMap().entrySet().iterator();
-        while (it.hasNext()) {
-            VirusGroup pair = it.next().getValue();
-            int add = 0;
+        for (Entry<Integer, VirusGroup> integerVirusGroupEntry : VirusGroupManager.virusGroupMap().entrySet()) {
+            VirusGroup pair = integerVirusGroupEntry.getValue();
+            int add;
+            int sightRadius = 300;
+            int attackRadius = 80;
             for (int j = 0; j < CellManager.sickValues.size(); j++) {
                 Cell c = CellManager.sickValues.get(j);
                 // System.out.println( c.getHealth() + "hhi" );
                 if (getDistance(c) <= sightRadius && getDistance(c) < closestSick) {
-                    setCoord(c.getX(), c.getY());
+                    setCoordinate(c.getX(), c.getY());
                     healing = true;
 
                 }
@@ -162,25 +155,19 @@ public class WhiteCell extends Cell {
                     }
                     break;
                 }
-
-                // healing = false;
-
-                if (attacking) {
-                    // return;
-                }
             }
             if (!healing) {
                 for (int i = 0; i < pair.size(); i += add) {
                     Virus v = pair.getVirus(i);
                     add = 1;
                     if (getDistance(v) <= sightRadius && getDistance(v) < closest) {
-                        setCoord(v.getX(), v.getY());
+                        setCoordinate(v.getX(), v.getY());
                         tracking = true;
                     } else {
                         int chance = (int) (Math.random() * 1000);
 
                         if (chance == 50) {
-                            setCoord(v.getX(), v.getY());
+                            setCoordinate(v.getX(), v.getY());
                             tracking = true;
                         }
                     }
@@ -202,32 +189,29 @@ public class WhiteCell extends Cell {
                         }
 
                     }
-                    boolean apple = true;
                     if (attacking || tracking) { // break;
-                        apple = false;
                         if (!attacking && tracking) {
                             int chance = (int) (Math.random() * 500);
 
                             if (chance == 50) {
-                                setCoord(v.getX(), v.getY());
+                                setCoordinate(v.getX(), v.getY());
 
                                 tracking = false;
-                                apple = true;
                             }
                         }
 
-                    } else if (apple) {
+                    } else {
                         drift++;
                         if (drift > 50) {
                             int moveX = (int) (Math.random() * 2);
                             if (moveX == 0) {
-                                setCoord(getX() + 50, getY() + 50);
+                                setCoordinate(getX() + 50, getY() + 50);
                             } else if (moveX == 1) {
-                                setCoord(getX() + 50, getY() - 50);
+                                setCoordinate(getX() + 50, getY() - 50);
                             } else if (moveX == 2) {
-                                setCoord(getX() - 50, getY() - 50);
+                                setCoordinate(getX() - 50, getY() - 50);
                             } else {
-                                setCoord(getX() - 50, getY() + 50);
+                                setCoordinate(getX() - 50, getY() + 50);
                             }
                             drift = 0;
                         }

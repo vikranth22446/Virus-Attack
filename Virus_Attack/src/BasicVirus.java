@@ -1,18 +1,19 @@
-/**
- * Created by vikranth on 5/26/2016.
- */
-public abstract class BasicVirus implements Locatable{
+
+abstract class BasicVirus implements Locatable{
     /**
      * The Current x and y location
      */
     private int x, y; // current loc
-    private int speed, health, attack;
+    private final int speed;
+    private int health;
+    private final int attack;
     private int vx, vy;
     private int xL, yL;
-    private int attackRadius;
-    private int height, width;
+    private final int attackRadius;
+    private final int height;
+    private final int width;
 
-    public BasicVirus(int x, int y, int speed, int health, int attack, int attackRadius, int width, int height) {
+    BasicVirus(int x, int y, int speed, int health, int attack, int attackRadius, int width, int height) {
         this.x = x;
         this.y = y;
         this.speed = speed;
@@ -23,12 +24,12 @@ public abstract class BasicVirus implements Locatable{
         this.width = width;
     }
     /**
-     * sets new coordiate for the virus to head to
+     * sets new coordinate for the virus to head to
      *
      * @param nx the new x
      * @param ny the new y
      */
-    public void setCoord(int nx, int ny) {
+    void setCoordinate(int nx, int ny) {
         xL = nx;
         yL = ny;
         double hyp = Math.sqrt((xL - x) * (xL - x) + (yL - y) * (yL - y));
@@ -37,7 +38,7 @@ public abstract class BasicVirus implements Locatable{
         vy = (int) ((yL - y) * scale);
     }
 
-    public int getAttackRadius() {
+    int getAttackRadius() {
         return attackRadius;
     }
 
@@ -49,54 +50,54 @@ public abstract class BasicVirus implements Locatable{
         return y;
     }
 
-    public int getHealth() {
+    private int getHealth() {
         return health;
     }
-    public void reduceHealth(int reduce) {
+    void reduceHealth(int reduce) {
         health -= reduce;
     }
 
-    public void setX(int x) {
+    void setX(int x) {
         this.x = x;
     }
 
-    public void setY(int y) {
+    void setY(int y) {
         this.y = y;
     }
 
-    public int getVx() {
+    int getVx() {
         return vx;
     }
 
-    public int getVy() {
+    int getVy() {
         return vy;
     }
 
-    public int getAttack() {
+    int getAttack() {
         return attack;
     }
 
-    public int getHeight() {
+    int getHeight() {
         return height;
     }
 
-    public int getWidth() {
+    int getWidth() {
         return width;
     }
 
-    public int getxL() {
+    int getXL() {
         return xL;
     }
 
-    public int getyL() {
+    int getYL() {
         return yL;
     }
 
-    public void setVx(int vx) {
+    void setVx(int vx) {
         this.vx = vx;
     }
 
-    public void setVy(int vy) {
+    void setVy(int vy) {
         this.vy = vy;
     }
 
@@ -105,7 +106,7 @@ public abstract class BasicVirus implements Locatable{
      *
      * @return if health is less than 0 returns dead
      */
-    public boolean isDead() {
+    boolean isDead() {
         return getHealth() <= 0;
     }
 
@@ -124,11 +125,11 @@ public abstract class BasicVirus implements Locatable{
     /**
      * get distance method for when not using Locatable objects
      *
-     * @param xL x coord of other point
-     * @param yL y coord of other point
+     * @param xL x coordinate of other point
+     * @param yL y coordinate of other point
      * @return returns the distance between the two objects as a double
      */
-    public double getDistance(int xL, int yL) {
+    double getDistance(int xL, int yL) {
         double distance = (x - xL) * (x - xL) + (y - yL) * (y - yL);
         distance = Math.sqrt(distance);
         return distance;

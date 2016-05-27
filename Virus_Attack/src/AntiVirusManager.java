@@ -6,9 +6,9 @@ import java.util.ArrayList;
 /**
  * Contains all the AntiViruses
  */
-public class AntiVirusManager {
+class AntiVirusManager {
     /**
-     * An arraylist of antiviruses
+     * An ArrayList of AntiVirus
      */
     public static ArrayList<AntiVirus> anti;
 

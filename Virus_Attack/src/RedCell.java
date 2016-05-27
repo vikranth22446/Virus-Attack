@@ -14,7 +14,7 @@ public class RedCell extends Cell {
 
     /**
      * Constructs the cell by calling the super method and passing the current x, current y, and initial health.
-     * Then set the field index to the index varaible passed
+     * Then set the field index to the index variable passed
      *
      * @param x      the current x position
      * @param y      the current y position
@@ -24,19 +24,17 @@ public class RedCell extends Cell {
         super(x, y, health);
     }
 
-
     /**
      * Draws the cell by getting a buffered image from the file pixelred.png. Then draws the image at
      * ( getX() - xOffset, getY() - yOffset).
-     * Also calls super.draw to draw healthbar.
+     * Also calls super.draw to draw Health Bar.
      *
-     * @param g       the grapghics to draw with. Passed by the world class
+     * @param g       the graphics to draw with. Passed by the world class
      * @param xOffset the xOffset of the screen. This allows for screen movement.
      * @param yOffset the yOffset of the screen. This allows for screen movement.
      */
     public void draw(Graphics g, int xOffset, int yOffset) {
         super.draw(g, xOffset, yOffset);
-        g.setColor(new Color(255, 0, 0));
         BufferedImage in;
         try {
             in = ImageIO.read(new File("pixelred.png"));

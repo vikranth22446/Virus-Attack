@@ -24,7 +24,7 @@ public abstract class Cell implements Locatable {
     /**
      * Radius value for cell
      */
-    private int radius = 50;
+    private final int radius = CONSTANTS.CELL_RADIUS;
 
     /**
      * Health value for cell
@@ -36,14 +36,14 @@ public abstract class Cell implements Locatable {
     private final double maxHealth;
 
     /**
-     * Initializes the x, and y cordinate. Then initializes the health.
+     * Initializes the x, and y coordinate. Then initializes the health.
      * Also initializes maxHealth to health
      *
      * @param x      the x coordinate of the cell.
      * @param y      the y coordinate of the cell.
      * @param health the initial health of the cell.
      */
-    public Cell(int x, int y, int health) {
+    Cell(int x, int y, int health) {
         this.x = x;
         this.y = y;
         this.health = health;
@@ -55,7 +55,7 @@ public abstract class Cell implements Locatable {
      *
      * @return the radius of the cell.
      */
-    public int getRadius() {
+    int getRadius() {
         return radius;
     }
 
@@ -64,7 +64,7 @@ public abstract class Cell implements Locatable {
      *
      * @return the initial health of the cell
      */
-    public double max() {
+    double max() {
         return maxHealth;
     }
 
@@ -91,7 +91,7 @@ public abstract class Cell implements Locatable {
      *
      * @param x the x coordinate to set
      */
-    public void setX(int x) {
+    void setX(int x) {
         this.x = x;
     }
 
@@ -100,7 +100,7 @@ public abstract class Cell implements Locatable {
      *
      * @param y the new y coordinate to set
      */
-    public void setY(int y) {
+    void setY(int y) {
         this.y = y;
     }
 
@@ -109,25 +109,24 @@ public abstract class Cell implements Locatable {
      *
      * @param health the health of the cell to set
      */
-    public void setHealth(double health) {
+    private void setHealth(double health) {
         this.health = health;
     }
 
     /**
-     * Returns the distance between the two locatables
+     * Returns the distance between the two locatable
      *
      * @param other the other locatable to find distance between
      * @return the distance between the two locatable
      */
     public double getDistance(Locatable other) {
-        double dist = Math.sqrt(
+        return Math.sqrt(
                 (((x + radius / 2) - other.getX()) * (x - other.getX()) + (y - other.getY()) * (y - other.getY())));
-        return dist;
     }
 
     /**
      * Draw the cell on the graphics. Also initializes a health bar, and calls
-     * healthbar.draw();.
+     * health bar .draw();.
      *
      * @param g       the graphics of the canvas
      * @param xOffset the xOffset of the window. This is used for movement.
@@ -143,7 +142,7 @@ public abstract class Cell implements Locatable {
      *
      * @param down the value to decrement by
      */
-    public void decrementHealth(int down) {
+    void decrementHealth(int down) {
         setHealth(getHealth() - down);
     }
 
@@ -152,7 +151,7 @@ public abstract class Cell implements Locatable {
      *
      * @param up the value to increment by.
      */
-    public void increaseHealth(int up) {
+    void increaseHealth(int up) {
         setHealth(getHealth() + up);
     }
 
@@ -161,7 +160,7 @@ public abstract class Cell implements Locatable {
      *
      * @return the health field of the cell.
      */
-    public double getHealth() {
+    double getHealth() {
         return health;
     }
 

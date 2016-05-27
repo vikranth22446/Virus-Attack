@@ -1,6 +1,7 @@
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * VirusGroup that holds its own viruses, it receives commands from the manager
@@ -9,23 +10,19 @@ import java.util.ArrayList;
  * @author Alex M
  *
  */
-public class VirusGroup {
+class VirusGroup {
 
 	/**
 	 * Array List holding all the viruses
 	 */
-	ArrayList<Virus> viruses;
-	/**
-	 * its own group number
-	 */
-	private int groupNum;
+	private final ArrayList<Virus> viruses;
 
 	/**
 	 * creates a virus group
 	 * 
 	 * @param v the starting virus
 	 */
-	public VirusGroup(Virus v) {
+	VirusGroup(Virus v) {
 		viruses = new ArrayList<>();
 		viruses.add(v);
 		viruses.add(new Virus(150, 200));
@@ -38,15 +35,10 @@ public class VirusGroup {
 	 * 
 	 * @param toAdd
 	 *            array of viruses to add
-	 * @param n
-	 *            the group number of this new group
 	 */
-	public VirusGroup(Virus[] toAdd, int n) {
+	VirusGroup(Virus[] toAdd) {
 		viruses = new ArrayList<>();
-		for (Virus v : toAdd) {
-			viruses.add(v);
-		}
-		groupNum = n;
+		Collections.addAll(viruses, toAdd);
 	}
 
 	/**
@@ -69,7 +61,7 @@ public class VirusGroup {
 	 * @param xOffset the x offset
 	 * @param yOffset the y offset
 	 */
-	public void update(Graphics g, int xOffset, int yOffset) {
+	void update(Graphics g, int xOffset, int yOffset) {
 		for (Virus v : viruses) {
 			v.update(g, xOffset, yOffset);
 		}
@@ -81,9 +73,9 @@ public class VirusGroup {
 	 * @param x the new x coordinate
 	 * @param y the new y coordinate
 	 */
-	public void setCoord(int x, int y) {
+	void setCoordinate(int x, int y) {
 		for (Virus v : viruses) {
-			v.setCoord(x, y);
+			v.setCoordinate(x, y);
 		}
 	}
 
@@ -92,7 +84,7 @@ public class VirusGroup {
 	 * 
 	 * @return the size of the array list
 	 */
-	public int size() {
+	int size() {
 		return viruses.size();
 	}
 
@@ -102,7 +94,7 @@ public class VirusGroup {
 	 * @param i the index of the virus
 	 * @return returns the reference of the i-th virus
 	 */
-	public Virus getVirus(int i) {
+	Virus getVirus(int i) {
 		return viruses.get(i);
 	}
 
@@ -112,7 +104,7 @@ public class VirusGroup {
 	 * @param n index of virus
 	 * @return returns the removed virus
 	 */
-	public Virus remove(int n) {
+	Virus remove(int n) {
 		return viruses.remove(n);
 	}
 
@@ -121,7 +113,7 @@ public class VirusGroup {
 	 * 
 	 * @param virus hte virus to be added
 	 */
-	public void addVirus(Virus virus) {
+	void addVirus(Virus virus) {
 		viruses.add(virus);
 	}
 }

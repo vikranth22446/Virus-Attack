@@ -2,9 +2,9 @@
 import java.awt.*;
 
 /**
- * The AntivVirus class which is produced by the WhiteCell.
+ * The AntiVirus class which is produced by the WhiteCell.
  */
-public class AntiVirus extends BasicVirus {
+class AntiVirus extends BasicVirus {
     /**
      * The current virus to follow
      */
@@ -26,12 +26,12 @@ public class AntiVirus extends BasicVirus {
      */
     public AntiVirus(int x, int y) {
         super(x, y,
-                APCS_CONSTANTS.ANTIVURS_SPEED,
-                APCS_CONSTANTS.ANTIVIRUS_HEALTH,
-                APCS_CONSTANTS.ANTIVURS_ATTACK,
-                APCS_CONSTANTS.ATTACK_RADIUS,
-                APCS_CONSTANTS.ANTIVIRUS_WIDTH,
-                APCS_CONSTANTS.ANTIVIRUS_HEIGHT
+                CONSTANTS.ANTIVIRUS_SPEED,
+                CONSTANTS.ANTIVIRUS_HEALTH,
+                CONSTANTS.ANTIVIRUS_ATTACK,
+                CONSTANTS.ANTIVIRUS_ATTACK_RADIUS,
+                CONSTANTS.ANTIVIRUS_WIDTH,
+                CONSTANTS.ANTIVIRUS_HEIGHT
         );
     }
 
@@ -39,17 +39,17 @@ public class AntiVirus extends BasicVirus {
     /**
      * if the antivirus is following
      * Update the location of the AntiVirus. this is done by looping through
-     * all the virusgroup's viruses and if the virus is within  the acceptable range
+     * all the virus group's viruses and if the virus is within  the acceptable range
      * the virus follows the cell
-     * currentVirus is saved, and positionOfViruses that is being followed is aved
+     * currentVirus is saved, and positionOfViruses that is being followed is saved
      * calls the follow method
      * else
-     * reduced the health of the virus. Then moves the antivirus to the currenViruses position.
+     * reduced the health of the virus. Then moves the antivirus to the currentViruses position.
      * Then calls follow.
      *
-     * @param g
-     * @param xOffset
-     * @param yOffset
+     * @param g the graphics of the window
+     * @param xOffset the xOffset of the window. Used to move the window around
+     * @param yOffset the yOffset of the window. Used to move the window around
      */
     public void update(Graphics g, int xOffset, int yOffset) {
         if (!follow) {
@@ -57,7 +57,7 @@ public class AntiVirus extends BasicVirus {
                 Virus v = VirusGroupManager.groups.get(VirusGroupManager.currentGroup).getVirus(i);
                 if (getDistance(v) <= getAttackRadius()) {
                     v.reduceHealth(getAttack());
-                    setCoord(v.getX(), v.getY());
+                    setCoordinate(v.getX(), v.getY());
                     currentFollowVirus = v;
                     positionOfVirus = i;
                     follow(g, xOffset, yOffset);
@@ -66,7 +66,7 @@ public class AntiVirus extends BasicVirus {
 
         } else {
             currentFollowVirus.reduceHealth(getAttack());
-            setCoord(currentFollowVirus.getX(), currentFollowVirus.getY());
+            setCoordinate(currentFollowVirus.getX(), currentFollowVirus.getY());
             follow(g, xOffset, yOffset);
         }
     }
@@ -75,9 +75,9 @@ public class AntiVirus extends BasicVirus {
      * Moves the antivirus. Then if it really close draw a line. If the virus is dead
      * remove it from the VirusGroupManager. then set follow to false;
      *
-     * @param g
-     * @param xOffset
-     * @param yOffset
+     * @param g the graphics of the window
+     * @param xOffset the xOffset of the window. Used to move the window around
+     * @param yOffset the yOffset of the window. Used to move the window around
      */
     private void follow(Graphics g, int xOffset, int yOffset) {
         setX(getX() + getVx());
@@ -97,7 +97,7 @@ public class AntiVirus extends BasicVirus {
     }
 
     /**
-     * Draws the Antivirus at that postion
+     * Draws the Antivirus at that position
      *
      * @param g       draws the rectangle of the virus
      * @param xOffset the offset to render the object on the screen according to how
