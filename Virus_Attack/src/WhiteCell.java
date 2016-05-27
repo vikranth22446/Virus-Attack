@@ -1,4 +1,4 @@
-package RegularClasses;
+
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -43,7 +43,7 @@ public class WhiteCell extends Cell {
      * @param y      the y coordinate
      * @param health the initial health of the cell
      */
-    public WhiteCell(int x, int y, int health) {
+    WhiteCell(int x, int y, int health) {
         super(x, y, health);
 
         speed = 5;

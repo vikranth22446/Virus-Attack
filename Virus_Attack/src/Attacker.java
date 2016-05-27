@@ -1,19 +1,17 @@
-package RegularClasses;
-
 /**
- * Contains the basic methods that are shared by both RegularClasses.AntiVirus and RegularClasses.Virus Class
+ * Contains the basic methods that are shared by both AntiVirus and Virus Class
  */
-public abstract class Attacker implements Locatable {
+abstract class Attacker implements Locatable {
     /**
      * The Current x and y location
      */
     private int x, y; // current loc
     /**
-     * The speed, attack, attack radius, height and width that is taken from the RegularClasses.Constants class
+     * The speed, attack, attack radius, height and width that is taken from the Constants class
      */
     private final int speed, attack, attackRadius, height, width;
     /**
-     * The health of the basic RegularClasses.Virus
+     * The health of the basic Virus
      */
     private int health;
     /**
@@ -54,7 +52,7 @@ public abstract class Attacker implements Locatable {
      * @param nx the new x
      * @param ny the new y
      */
-    public void setCoordinate(int nx, int ny) {
+    void setCoordinate(int nx, int ny) {
         xL = nx;
         yL = ny;
         double hyp = Math.sqrt((xL - x) * (xL - x) + (yL - y) * (yL - y));
@@ -64,11 +62,11 @@ public abstract class Attacker implements Locatable {
     }
 
     /**
-     * Reduces the Basic RegularClasses.Virus's health
+     * Reduces the Basic Virus's health
      *
-     * @param reduce the basic RegularClasses.Virus's health
+     * @param reduce the basic Virus's health
      */
-    public void reduceHealth(int reduce) {
+    void reduceHealth(int reduce) {
         health -= reduce;
     }
 
@@ -77,12 +75,12 @@ public abstract class Attacker implements Locatable {
      *
      * @return the attack radius
      */
-    public int getAttackRadius() {
+    int getAttackRadius() {
         return attackRadius;
     }
 
     /**
-     * Returns the Basic RegularClasses.Virus's x coordinate
+     * Returns the Basic Virus's x coordinate
      *
      * @return the x coordinate
      */
@@ -91,7 +89,7 @@ public abstract class Attacker implements Locatable {
     }
 
     /**
-     * Returns the Basic RegularClasses.Virus's y coordinate
+     * Returns the Basic Virus's y coordinate
      *
      * @return the y coordinate
      */
@@ -100,66 +98,61 @@ public abstract class Attacker implements Locatable {
     }
 
     /**
-     * Returns the Basic RegularClasses.Virus's health
+     * Returns the Basic Virus's health
      *
      * @return the basic virus's health
      */
-    public int getHealth() {
+    int getHealth() {
         return health;
     }
 
     /**
-     * Gets the x Velocity of the Basic RegularClasses.Virus
+     * Gets the x Velocity of the Basic Virus
      *
-     * @return the velocity of the Basic RegularClasses.Virus
+     * @return the velocity of the Basic Virus
      */
-    public int getVx() {
+    int getVx() {
         return vx;
     }
 
     /**
-     * Returns the y velocity of the Basic RegularClasses.Virus
+     * Returns the y velocity of the Basic Virus
      *
-     * @return the y velocity of the basic RegularClasses.Virus
+     * @return the y velocity of the basic Virus
      */
-    public int getVy() {
+    int getVy() {
         return vy;
     }
 
     /**
-     * Returns the attack of the Basic RegularClasses.Virus
+     * Returns the attack of the Basic Virus
      *
      * @return the attack of the Basic virus
      */
-    public int getAttack() {
+    int getAttack() {
         return attack;
     }
 
     /**
-     * Returns the Height of the Basic RegularClasses.Virus
+     * Returns the Height of the Basic Virus
      *
-     * @return the height of the Basic RegularClasses.Virus
+     * @return the height of the Basic Virus
      */
-    public int getHeight() {
+    int getHeight() {
         return height;
     }
 
     /**
-     * Returns the width of the Basic RegularClasses.Virus
+     * Returns the width of the Basic Virus
      *
-     * @return the width of the Basic RegularClasses.Virus
+     * @return the width of the Basic Virus
      */
-    public int getWidth() {
+    int getWidth() {
         return width;
     }
-
-    /**
-     * Returns the speed of the Basic RegularClasses.Virus
-     *
-     * @return the speed of the Basic RegularClasses.Virus
-     */
-    public int getSpeed() {
-        return speed;
+    
+    int getSpeed(){
+    	return speed;
     }
 
     /**
@@ -167,7 +160,7 @@ public abstract class Attacker implements Locatable {
      *
      * @return the new X Location
      */
-    public int getXL() {
+    int getXL() {
         return xL;
     }
 
@@ -176,43 +169,43 @@ public abstract class Attacker implements Locatable {
      *
      * @return the y Location
      */
-    public int getYL() {
+    int getYL() {
         return yL;
     }
 
     /**
-     * Sets the x location of the Basic RegularClasses.Virus
+     * Sets the x location of the Basic Virus
      *
-     * @param x the x location of the Basic RegularClasses.Virus
+     * @param x the x location of the Basic Virus
      */
-    public void setX(int x) {
+    void setX(int x) {
         this.x = x;
     }
 
     /**
-     * Sets the y location of Basic RegularClasses.Virus
+     * Sets the y location of Basic Virus
      *
-     * @param y the y location of Basic RegularClasses.Virus
+     * @param y the y location of Basic Virus
      */
-    public void setY(int y) {
+    void setY(int y) {
         this.y = y;
     }
 
     /**
-     * Sets the x velocity of Basic RegularClasses.Virus
+     * Sets the x velocity of Basic Virus
      *
-     * @param vx the x velocity of Basic RegularClasses.Virus
+     * @param vx the x velocity of Basic Virus
      */
-    public void setVx(int vx) {
+    void setVx(int vx) {
         this.vx = vx;
     }
 
     /**
-     * Sets the y velocity of the Basic RegularClasses.Virus
+     * Sets the y velocity of the Basic Virus
      *
-     * @param vy the y velocity of the Basic RegularClasses.Virus
+     * @param vy the y velocity of the Basic Virus
      */
-    public void setVy(int vy) {
+    void setVy(int vy) {
         this.vy = vy;
     }
 
@@ -221,7 +214,7 @@ public abstract class Attacker implements Locatable {
      *
      * @return if health is less than 0 returns dead
      */
-    public boolean isDead() {
+    boolean isDead() {
         return getHealth() <= 0;
     }
 
@@ -239,7 +232,7 @@ public abstract class Attacker implements Locatable {
     }
 
     /**
-     * get distance method for when not using RegularClasses.Locatable objects
+     * get distance method for when not using Locatable objects
      *
      * @param xL x coordinate of other point
      * @param yL y coordinate of other point

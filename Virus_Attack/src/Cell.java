@@ -1,4 +1,4 @@
-package RegularClasses;
+
 
 import java.awt.*;
 
@@ -43,7 +43,7 @@ public abstract class Cell implements Locatable {
      * @param y      the y coordinate of the cell.
      * @param health the initial health of the cell.
      */
-    public Cell(int x, int y, int health) {
+    Cell(int x, int y, int health) {
         this.x = x;
         this.y = y;
         this.health = health;
@@ -55,7 +55,7 @@ public abstract class Cell implements Locatable {
      *
      * @return the radius of the cell.
      */
-    public int getRadius() {
+    int getRadius() {
         return radius;
     }
 
@@ -64,7 +64,7 @@ public abstract class Cell implements Locatable {
      *
      * @return the initial health of the cell
      */
-    public double max() {
+    double max() {
         return maxHealth;
     }
 
@@ -91,7 +91,7 @@ public abstract class Cell implements Locatable {
      *
      * @param x the x coordinate to set
      */
-    public void setX(int x) {
+    void setX(int x) {
         this.x = x;
     }
 
@@ -100,7 +100,7 @@ public abstract class Cell implements Locatable {
      *
      * @param y the new y coordinate to set
      */
-    public void setY(int y) {
+    void setY(int y) {
         this.y = y;
     }
 
@@ -142,7 +142,7 @@ public abstract class Cell implements Locatable {
      *
      * @param down the value to decrement by
      */
-    public void decrementHealth(int down) {
+    void decrementHealth(int down) {
         setHealth(getHealth() - down);
     }
 
@@ -151,7 +151,7 @@ public abstract class Cell implements Locatable {
      *
      * @param up the value to increment by.
      */
-    public void increaseHealth(int up) {
+    void increaseHealth(int up) {
         setHealth(getHealth() + up);
     }
 
@@ -160,7 +160,7 @@ public abstract class Cell implements Locatable {
      *
      * @return the health field of the cell.
      */
-    public double getHealth() {
+    double getHealth() {
         return health;
     }
 

@@ -1,4 +1,3 @@
-package RegularClasses;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -17,7 +16,7 @@ import java.io.IOException;
  *
  * @author Alex M
  */
-public class World extends Canvas implements Runnable {
+class World extends Canvas implements Runnable {
 
     /**
      * the partial width
@@ -42,7 +41,7 @@ public class World extends Canvas implements Runnable {
     /**
      * the name of the frame
      */
-    private static final String NAME = "RegularClasses.Virus";
+    private static final String NAME = "Virus";
     
     private BufferedImage bg;
     /**
@@ -72,7 +71,7 @@ public class World extends Canvas implements Runnable {
     /**
      * creates all the objects, get the canvas, sets frame size, adds listening to input handler
      */
-    public World() {
+    World() {
         setMinimumSize(new Dimension(WIDTH * SCALE, HEIGHT * SCALE));
         setMaximumSize(new Dimension(WIDTH * SCALE, HEIGHT * SCALE));
         setPreferredSize(new Dimension(WIDTH * SCALE, HEIGHT * SCALE));

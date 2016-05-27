@@ -1,4 +1,4 @@
-package RegularClasses;
+
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -8,7 +8,7 @@ import java.util.ArrayList;
  */
 class AntiVirusManager {
     /**
-     * An ArrayList of RegularClasses.AntiVirus
+     * An ArrayList of AntiVirus
      */
     public static ArrayList<AntiVirus> anti;
 

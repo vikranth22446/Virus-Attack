@@ -1,5 +1,3 @@
-package RegularClasses;
-
 import java.awt.event.*;
 
 
@@ -8,7 +6,7 @@ import java.awt.event.*;
  *
  * @author Alex M
  */
-public class InputHandler implements MouseListener, MouseMotionListener, KeyListener {
+class InputHandler implements MouseListener, MouseMotionListener, KeyListener {
 
     /**
      * Holds the virus group manager object created on start
@@ -45,7 +43,7 @@ public class InputHandler implements MouseListener, MouseMotionListener, KeyList
      *
      * @param vgm from the world to access vgm actions
      */
-    public InputHandler(VirusGroupManager vgm) {
+    InputHandler(VirusGroupManager vgm) {
         this.vgm = vgm;
 
         xOffset = 0;
@@ -63,7 +61,7 @@ public class InputHandler implements MouseListener, MouseMotionListener, KeyList
      *
      * @return the x offset
      */
-    public static int getXOffset() {
+    static int getXOffset() {
         return xOffset;
     }
 
@@ -72,7 +70,7 @@ public class InputHandler implements MouseListener, MouseMotionListener, KeyList
      *
      * @return the y offset
      */
-    public static int getYOffset() {
+    static int getYOffset() {
         return yOffset;
     }
 

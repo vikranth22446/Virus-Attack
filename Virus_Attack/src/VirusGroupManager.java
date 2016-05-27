@@ -1,4 +1,3 @@
-package RegularClasses;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -12,7 +11,7 @@ import java.util.HashMap;
  *
  * @author Alex M
  */
-public class VirusGroupManager {
+class VirusGroupManager {
 
     /**
      * HashMap holding all the virus groups
@@ -34,7 +33,7 @@ public class VirusGroupManager {
     /**
      * constructor for the manager, creates the first group, creates variables
      */
-    public VirusGroupManager() {
+    VirusGroupManager() {
         groups = new HashMap<>();
         groups.put(1, new VirusGroup(new Virus(100, 100)));
 
@@ -65,7 +64,7 @@ public class VirusGroupManager {
      * @param xOffset the x offset to draw at
      * @param yOffset the y offset to draw at
      */
-    public void updateLocation(Graphics g, int xOffset, int yOffset) {
+    void updateLocation(Graphics g, int xOffset, int yOffset) {
         for (int n : keys) {
             groups.get(n).update(g, xOffset, yOffset);
         }
@@ -76,7 +75,7 @@ public class VirusGroupManager {
      *
      * @param current the  group to switch to
      */
-    public void changeCurrent(int current) {
+    void changeCurrent(int current) {
         currentGroup = current;
     }
 
@@ -86,7 +85,7 @@ public class VirusGroupManager {
      * @param newX the new x coordinate
      * @param newY the new y coordinate
      */
-    public void updateCoordinate(int newX, int newY) {
+    void updateCoordinate(int newX, int newY) {
         groups.get(currentGroup).setCoordinate(newX, newY);
     }
 
@@ -96,7 +95,7 @@ public class VirusGroupManager {
      * @param x virus starts at x
      * @param y virus starts at y
      */
-    public static void addVirus(int x, int y) {
+    static void addVirus(int x, int y) {
         groups.get(currentGroup).addVirus(new Virus(x, y));
     }
 
@@ -132,7 +131,7 @@ public class VirusGroupManager {
      * @param n the key to be check for
      * @return true if does contain the key false if not
      */
-    public boolean hasKey(int n) {
+    boolean hasKey(int n) {
         return keys.contains(n);
     }
 
@@ -141,7 +140,7 @@ public class VirusGroupManager {
      *
      * @return the number of groups
      */
-    public int groupNum() {
+    int groupNum() {
         return groupNum;
     }
 
