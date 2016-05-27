@@ -1,4 +1,4 @@
-
+package RegularClasses;
 
 import javax.imageio.ImageIO;
 import java.awt.*;

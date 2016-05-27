@@ -1,6 +1,8 @@
+package RegularClasses;
+
 /**
- * Locatable used by almost ever where. For example in classes
- * like Virus, AntiVirus, and Cell.
+ * RegularClasses.Locatable used by almost ever where. For example in classes
+ * like RegularClasses.Virus, RegularClasses.AntiVirus, and RegularClasses.Cell.
  */
 interface Locatable {
     /**

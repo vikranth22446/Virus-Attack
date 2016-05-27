@@ -1,8 +1,9 @@
+package RegularClasses;
 
 import java.awt.*;
 
 /**
- * The Virus Class is the main unit that the player controls and uses it to
+ * The RegularClasses.Virus Class is the main unit that the player controls and uses it to
  * conquer the enemy cells and anti viruses
  * <p>
  * The virus class holds all of its own functions such as updating its location,
@@ -11,7 +12,7 @@ import java.awt.*;
  *
  * @author Alex M
  */
-class Virus extends Attacker implements Locatable {
+public class Virus extends Attacker implements Locatable {
 
 
     /**
@@ -182,7 +183,7 @@ class Virus extends Attacker implements Locatable {
      * @see java.lang.Object#toString()
      */
     public String toString(){
-    	return "Virus[x:" + getX() + " y:" + getY() + " speed:" + getSpeed() + " attack:" + getAttack() +
+    	return "RegularClasses.Virus[x:" + getX() + " y:" + getY() + " speed:" + getSpeed() + " attack:" + getAttack() +
     			" height:" + getHeight() + " width:" + getWidth() + "]"; 
     }
 

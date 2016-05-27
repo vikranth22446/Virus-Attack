@@ -1,8 +1,14 @@
-import static org.junit.Assert.*;
+package test;
 
-import java.awt.Graphics;
-
+import RegularClasses.Virus;
+import RegularClasses.VirusGroup;
+import RegularClasses.VirusGroupManager;
 import org.junit.Test;
+
+import java.awt.*;
+
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 
 public class JUnitVirusAttackTest {
@@ -15,13 +21,13 @@ public class JUnitVirusAttackTest {
 	private Graphics g;
 	
 	
-	//Virus
+	//RegularClasses.Virus
 	@Test
 	public void virusConstuctor(){
 		Virus v = new Virus(xCoord, yCoord);
 		String s = v.toString();
 		
-		assertTrue("<<Invalid Virus Constructor>>", s.contains("Virus[") && s.contains("x:123") && s.contains("y:123"));
+		assertTrue("<<Invalid RegularClasses.Virus Constructor>>", s.contains("RegularClasses.Virus[") && s.contains("x:123") && s.contains("y:123"));
 	}
 	
 	@Test
@@ -60,7 +66,7 @@ public class JUnitVirusAttackTest {
 		assertTrue("<<Idle not functioning>>", v.isMoving());
 	}
 	
-	//VirusGroup
+	//RegularClasses.VirusGroup
 	
 	@Test
 	public void virusGroupConstructor(){
@@ -107,7 +113,7 @@ public class JUnitVirusAttackTest {
 		assertTrue("<<Coord not set correctly>>", vg.getVirus(0).isMoving());
 	}
 	
-	//VirusGroupManager
+	//RegularClasses.VirusGroupManager
 	
 	@Test
 	public void virusGroupManagerConstructor(){

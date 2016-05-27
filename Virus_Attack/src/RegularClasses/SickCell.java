@@ -1,4 +1,4 @@
-
+package RegularClasses;
 
 
 import javax.imageio.ImageIO;
@@ -8,7 +8,7 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * An Implementation of the Cell abstract class. The cells are infected and produce viruses.
+ * An Implementation of the RegularClasses.Cell abstract class. The cells are infected and produce viruses.
  * These Cells Help the main player. They start at an initial health of  -100, and when attacked by white cells their
  * health slowly reduces.
  */

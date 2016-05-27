@@ -1,9 +1,11 @@
+package RegularClasses;
+
 /**
- * Class with the main method that calls WelcomeScreen.createWelcomeScreen();
+ * Class with the main method that calls RegularClasses.WelcomeScreen.createWelcomeScreen();
  */
-class VirusGame {
+public class VirusGame {
     /**
-     * Constructs a WelcomeScreen. Also calls createWelcomeScreen().
+     * Constructs a RegularClasses.WelcomeScreen. Also calls createWelcomeScreen().
      *
      * @param args command line argument not used.
      */

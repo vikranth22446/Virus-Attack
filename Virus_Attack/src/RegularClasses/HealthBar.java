@@ -1,4 +1,4 @@
-
+package RegularClasses;
 
 import java.awt.*;
 
@@ -8,7 +8,7 @@ import java.awt.*;
  * In the case of the Sick cell( which has a health of -100). A red bar
  * is drawn, and the green bar for the rest of the bar
  */
-class HealthBar {
+public class HealthBar {
     /**
      * The cell which the health bar is drawn on top of.
      */
@@ -19,7 +19,7 @@ class HealthBar {
      *
      * @param cell the cell that needs a health bar.
      */
-    HealthBar(Cell cell) {
+    public HealthBar(Cell cell) {
         this.cell = cell;
     }
 

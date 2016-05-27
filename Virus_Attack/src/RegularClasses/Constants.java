@@ -1,7 +1,8 @@
+package RegularClasses;
 
-class Constants {
+public class Constants {
     /**
-     * Anti-Virus constants:
+     * Anti-RegularClasses.Virus constants:
      * SPEED,HEALTH,ATTACK, WIDTH,HEIGHT,ATTACK_RADIUS
      */
     public static final int ANTIVIRUS_SPEED = 5;
@@ -12,7 +13,7 @@ class Constants {
     public static final int ANTIVIRUS_ATTACK_RADIUS = 100;
 
     /**
-     * Virus Constants:
+     * RegularClasses.Virus RegularClasses.Constants:
      * SPEED,HEALTH,ATTACK,ATTACK_RADIUS,WIDTH,HEIGHT,IDLE_RANGE
      */
     public static final int VIRUS_SPEED = 5;
@@ -23,18 +24,18 @@ class Constants {
     public static final int VIRUS_HEIGHT = 30;
     public static final int VIRUS_IDLE_RANGE = 50;
     /**
-     * Cell Constants:
+     * RegularClasses.Cell RegularClasses.Constants:
      * CELL_RADIUS
      */
     public static final int CELL_RADIUS = 50;
     /**
-     * Sick Cell Constants:
+     * Sick RegularClasses.Cell RegularClasses.Constants:
      * GENERATION_CORRECTION, GENERATION_RATE
      */
     public static final int VIRUS_GENERATION_CORRECTION_FACTOR = -20;
     public static final int SICK_CELL_VIRUS_GENERATE_RATE = 200;
     /**
-     * Health Bar Constants:
+     * Health Bar RegularClasses.Constants:
      * HEIGHT, CORRECTION_FACTOR
      */
     public static final int HEALTH_BAR_HEIGHT = 10;

@@ -1,8 +1,9 @@
+package RegularClasses;
 
 import java.awt.*;
 
 /**
- * The AntiVirus class which is produced by the WhiteCell.
+ * The RegularClasses.AntiVirus class which is produced by the RegularClasses.WhiteCell.
  */
 class AntiVirus extends Attacker {
     /**
@@ -38,7 +39,7 @@ class AntiVirus extends Attacker {
 
     /**
      * if the antivirus is following
-     * Update the location of the AntiVirus. this is done by looping through
+     * Update the location of the RegularClasses.AntiVirus. this is done by looping through
      * all the virus group's viruses and if the virus is within  the acceptable range
      * the virus follows the cell
      * currentVirus is saved, and positionOfViruses that is being followed is saved
@@ -73,7 +74,7 @@ class AntiVirus extends Attacker {
 
     /**
      * Moves the antivirus. Then if it really close draw a line. If the virus is dead
-     * remove it from the VirusGroupManager. then set follow to false;
+     * remove it from the RegularClasses.VirusGroupManager. then set follow to false;
      *
      * @param g       the graphics of the window
      * @param xOffset the xOffset of the window. Used to move the window around

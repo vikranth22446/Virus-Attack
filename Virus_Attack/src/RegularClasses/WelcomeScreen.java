@@ -1,12 +1,14 @@
+package RegularClasses;
+
 import javax.swing.*;
 import java.awt.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 
 
-class WelcomeScreen extends JFrame {
+public class WelcomeScreen extends JFrame {
 
-    void createWelcomeScreen() {
+    public void createWelcomeScreen() {
         URL url = null;
         try {
             url = new URL("http://i.imgur.com/0JGPsWt.gif");
@@ -52,7 +54,7 @@ class WelcomeScreen extends JFrame {
         add(jButton);
         add(Directions);
 
-        setTitle("Virus Attack");
+        setTitle("RegularClasses.Virus Attack");
         getContentPane().add(label);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         pack();
