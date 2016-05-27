@@ -11,37 +11,8 @@ import java.awt.*;
  * 
  * @author Alex M
  */
-public class Virus implements Locatable {
+public class Virus extends BasicVirus implements Locatable {
 
-    /**
-     * the current x,y of the virus
-     */
-    private int x, y;
-
-    /**
-     * virus stats
-     */
-    private int speed, attack, health;
-
-    /**
-     * x and y speed
-     */
-    private int vx, vy;
-
-    /**
-     * x, y location of the location it is headed to
-     */
-    private int xL, yL;
-
-    /**
-     * width and height of the object
-     */
-    private int width, height;
-
-    /**
-     * the radius range in which the virus will attack objects
-     */
-    private int attackRadius = 80;
 
     /**
      * the group number
@@ -66,15 +37,16 @@ public class Virus implements Locatable {
      * @param y y coord
      */
     public Virus(int x, int y) {
+        super(x,
+                y
+                , APCS_CONSTANTS.VIRUS_SPEED,
+                APCS_CONSTANTS.VIRUS_HEALTH,
+                APCS_CONSTANTS.VIRUS_ATTACK,
+                APCS_CONSTANTS.ATTACK_RADIUS,
+                APCS_CONSTANTS.VIRUS_WIDTH,
+                APCS_CONSTANTS.VIRUS_HEIGHT
 
-        this.x = x;
-        this.y = y;
-        speed = 5;
-        attack = 1;
-        health = 110;
-        width = 30;
-        height = 30;
-
+        );
     }
 
     /**
@@ -83,14 +55,9 @@ public class Virus implements Locatable {
      * @param nx the new x
      * @param ny the new y
      */
+    @Override
     public void setCoord(int nx, int ny) {
-
-        xL = nx;
-        yL = ny;
-        double hyp = Math.sqrt((xL - x) * (xL - x) + (yL - y) * (yL - y));
-        double scale = speed / hyp;
-        vx = (int) ((xL - x) * scale);
-        vy = (int) ((yL - y) * scale);
+        super.setCoord(nx,ny);
         move = true;
     }
 
@@ -99,12 +66,12 @@ public class Virus implements Locatable {
      * move to prevent them from overlapping
      */
     public void idleMovement() {
-        if (getDistance(xL, yL) >= range) {
-            vx = -vx;
-            vy = -vy;
+        if (getDistance(getxL(), getyL()) >= range) {
+            setVx(getVx()*-1);
+            setVy(getVy()*-1);
         }
-        x += vx;
-        y += vy;
+        setX(getX()+getVx());
+        setY(getY()+getVy());
     }
 
     /**
@@ -117,24 +84,24 @@ public class Virus implements Locatable {
      * @param yOffset same as above
      */
     public void update(Graphics g, int xOffset, int yOffset) {
-        if ((vx < 0 && x < xL) || (vy < 0 && y < yL) || (vy > 0 && y > yL)
-                || (vx > 0 && x > xL)) {
+        if ((getVx() < 0 && getX() < getxL()) || (getVy() < 0 && getY() < getyL()) || (getVy() > 0 && getY() > getyL())
+                || (getVx() > 0 && getX() > getxL())) {
             move = false;
         }
         if (!move) {
             idleMovement();
         } else {
-            x += vx;
-            y += vy;
+            setX(getX()+getVx());
+            setY(getY()+getVy());
         }
         boolean attacking = false;
         for (int i = 0; i < AntiVirusManager.anti.size(); i++) {
             AntiVirus av = AntiVirusManager.anti.get(i);
-            if (getDistance(av) <= attackRadius) {
-                av.reduceHealth(attack);
+            if (getDistance(av) <= getAttackRadius()) {
+                av.reduceHealth(getAttack());
                 // g = canvas.getGraphics();
                 g.setColor(Color.black);
-                g.drawLine(x + width / 2 - xOffset, y + height / 2 - yOffset,
+                g.drawLine(getX() + getWidth() / 2 - xOffset, getY() + getHeight() / 2 - yOffset,
                         av.getX() + av.getWidth() / 2 - xOffset,
                         av.getY() + av.getHeight() / 2 - yOffset);
                 if (av.isDead()) {
@@ -151,11 +118,11 @@ public class Virus implements Locatable {
 
         for (int i = 0; i < CellManager.redValues.size(); i++) {
             Cell c = CellManager.redValues.get(i);
-            if (getDistance(c) <= attackRadius && !(c instanceof SickCell)) {
-                c.decrementHealth(attack);
+            if (getDistance(c) <= getAttackRadius() && !(c instanceof SickCell)) {
+                c.decrementHealth(getAttack());
                 // g = canvas.getGraphics();
                 g.setColor(Color.black);
-                g.drawLine(x + width / 2 - xOffset, y + height / 2 - yOffset,
+                g.drawLine(getX() + getWidth() / 2 - xOffset, getY() + getHeight() / 2 - yOffset,
                         c.getX() + c.getRadius() / 2 - xOffset,
                         c.getY() + c.getRadius() / 2 - yOffset);
                 if (c.getHealth() <= 0) {
@@ -173,20 +140,18 @@ public class Virus implements Locatable {
 
         for (int i = 0; i < CellManager.whiteValues.size(); i++) {
             Cell c = CellManager.whiteValues.get(i);
-            if (getDistance(c) <= attackRadius) {
-                c.decrementHealth(attack);
+            if (getDistance(c) <= getAttackRadius()) {
+                c.decrementHealth(getAttack());
                 // g = canvas.getGraphics();
                 g.setColor(Color.black);
-                g.drawLine(x + width / 2 - xOffset, y + height / 2 - yOffset,
+                g.drawLine(getX() + getWidth() / 2 - xOffset, getY() + getHeight() / 2 - yOffset,
                         c.getX() + c.getRadius() / 2 - xOffset,
                         c.getY() + c.getRadius() / 2 - yOffset);
                 WhiteCell wc = (WhiteCell) c;
                 wc.setAttacked(true);
                 if (c.getHealth() <= 0) {
                     CellManager.removeCell(i);
-                }
-                attacking = true;
-                wc.setAttacked(false);
+                }wc.setAttacked(false);
                 break;
             }
 
@@ -203,83 +168,11 @@ public class Virus implements Locatable {
      */
     public void draw(Graphics g, int xOffset, int yOffset) {
         g.setColor(new Color(122, 122, 0));
-        g.fillRect(x - xOffset, y - yOffset, width, height);
+        g.fillRect(getX() - xOffset, getY() - yOffset, getWidth(), getHeight());
         g.setColor(World.BCOLOR);
-        g.drawRect((x + width / 4) - xOffset, (y + height / 4) - yOffset,
-                width / 2, height / 2);
+        g.drawRect((getX() + getWidth() / 4) - xOffset, (getY() + getHeight() / 4) - yOffset,
+                getWidth() / 2, getHeight() / 2);
     }
 
-    /**
-     * checks if the virus is dead or 0 hp
-     *
-     * @return true if health is 0 false otherwise
-     */
-    public boolean isDead() {
-        return health == 0;
-    }
-
-    /**
-     * reduces the current health by n
-     *
-     * @param n health to reduce by
-     */
-    public void reduceHealth(int n) {
-        health -= n;
-    }
-
-    /**
-     * getter method for width
-     *
-     * @return the width
-     */
-    public int getWidth() {
-        return width;
-    }
-
-    /**
-     * getter method for height
-     *
-     * @return the height
-     */
-    public int getHeight() {
-        return height;
-    }
-
-    /**
-     * @see Locatable#getX()
-     */
-    public int getX() {
-        return x;
-    }
-
-    /**
-     * @see Locatable#getY()
-     */
-    public int getY() {
-        return y;
-    }
-
-    /**
-     * @see Locatable#getDistance(Locatable)
-     */
-    public double getDistance(Locatable other) {
-        double distance = (x - other.getX()) * (x - other.getX())
-                + (y - other.getY()) * (y - other.getY());
-        distance = Math.sqrt(distance);
-        return distance;
-    }
-
-    /**
-     * get distance method for when not using Locatable objects
-     *
-     * @param xL x coord of other point
-     * @param yL y coord of other point
-     * @return returns the distance between the two objects as a double
-     */
-    public double getDistance(int xL, int yL) {
-        double distance = (x - xL) * (x - xL) + (y - yL) * (y - yL);
-        distance = Math.sqrt(distance);
-        return distance;
-    }
 
 }

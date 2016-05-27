@@ -4,27 +4,7 @@ import java.awt.*;
 /**
  * The AntivVirus class which is produced by the WhiteCell.
  */
-public class AntiVirus implements Locatable {
-    /**
-     * The Current x and y location
-     */
-    private int x, y; // current loc
-    /**
-     * The speed, attack, and health of the cell
-     */
-    private int speed = 5, attack = 1, health = 30; // stats
-    /**
-     * The velocity of x and y
-     */
-    private int vx, vy;
-    /**
-     * The x and y location that the cell is heading too
-     */
-    private int xL, yL; // location it is headed to
-    /**
-     * The width and height of the cell
-     */
-    private int width = 15, height = 15;
+public class AntiVirus extends BasicVirus {
     /**
      * The current virus to follow
      */
@@ -34,14 +14,9 @@ public class AntiVirus implements Locatable {
      */
     private int positionOfVirus;
     /**
-     * The attack radius of the antivirus
-     */
-    private int attackRadius = 100;
-    /**
      * Whether the values following an antivirus or not.
      */
     private boolean follow = false;
-
 
     /**
      * Initializes the x and y position of the antivirus
@@ -50,24 +25,14 @@ public class AntiVirus implements Locatable {
      * @param y the y position of the antivirus
      */
     public AntiVirus(int x, int y) {
-        this.x = x;
-        this.y = y;
-    }
-
-
-    /**
-     * sets new coordiate for the virus to head to
-     *
-     * @param nx the new x
-     * @param ny the new y
-     */
-    public void setCoord(int nx, int ny) {
-        xL = nx;
-        yL = ny;
-        double hyp = Math.sqrt((xL - x) * (xL - x) + (yL - y) * (yL - y));
-        double scale = speed / hyp;
-        vx = (int) ((xL - x) * scale);
-        vy = (int) ((yL - y) * scale);
+        super(x, y,
+                APCS_CONSTANTS.ANTIVURS_SPEED,
+                APCS_CONSTANTS.ANTIVIRUS_HEALTH,
+                APCS_CONSTANTS.ANTIVURS_ATTACK,
+                APCS_CONSTANTS.ATTACK_RADIUS,
+                APCS_CONSTANTS.ANTIVIRUS_WIDTH,
+                APCS_CONSTANTS.ANTIVIRUS_HEIGHT
+        );
     }
 
 
@@ -90,9 +55,8 @@ public class AntiVirus implements Locatable {
         if (!follow) {
             for (int i = 0; i < VirusGroupManager.groups.get(VirusGroupManager.currentGroup).size(); i++) {
                 Virus v = VirusGroupManager.groups.get(VirusGroupManager.currentGroup).getVirus(i);
-                if (getDistance(v) <= attackRadius) {
-                    v.reduceHealth(attack);
-                    // Graphics g = canvas.getGraphics();
+                if (getDistance(v) <= getAttackRadius()) {
+                    v.reduceHealth(getAttack());
                     setCoord(v.getX(), v.getY());
                     currentFollowVirus = v;
                     positionOfVirus = i;
@@ -101,7 +65,7 @@ public class AntiVirus implements Locatable {
             }
 
         } else {
-            currentFollowVirus.reduceHealth(attack);
+            currentFollowVirus.reduceHealth(getAttack());
             setCoord(currentFollowVirus.getX(), currentFollowVirus.getY());
             follow(g, xOffset, yOffset);
         }
@@ -116,13 +80,13 @@ public class AntiVirus implements Locatable {
      * @param yOffset
      */
     private void follow(Graphics g, int xOffset, int yOffset) {
-        x += vx;
-        y += vy;
+        setX(getX() + getVx());
+        setY(getY() + getVy());
         follow = true;
         if (getDistance(currentFollowVirus) <= 20) {
             g.setColor(Color.green);
-            g.drawLine((x + width / 2) - xOffset,
-                    (y + height / 2) - yOffset,
+            g.drawLine((getX() + getWidth() / 2) - xOffset,
+                    (getY() + getHeight() / 2) - yOffset,
                     (currentFollowVirus.getX() + currentFollowVirus.getWidth() / 2) - xOffset,
                     (currentFollowVirus.getY() + currentFollowVirus.getHeight() / 2) - yOffset);
         }
@@ -142,69 +106,8 @@ public class AntiVirus implements Locatable {
      */
     public void draw(Graphics g, int xOffset, int yOffset) {
         g.setColor(Color.blue);
-        g.fillRect(x - xOffset, y - yOffset, width, height);
+        g.fillRect(getX() - xOffset, getY() - yOffset, getWidth(), getHeight());
     }
 
 
-    public void reduceHealth(int reduce) {
-        health -= reduce;
-    }
-
-    /**
-     * Returns is health is less than 0
-     *
-     * @return if health is less than 0 returns dead
-     */
-    public boolean isDead() {
-        return health <= 0;
-    }
-
-    /**
-     * Returns the width field
-     *
-     * @return the width field
-     */
-    public int getWidth() {
-        return width;
-    }
-
-    /**
-     * Returns the height field
-     *
-     * @return the height field
-     */
-    public int getHeight() {
-        return height;
-    }
-
-    /**
-     * Returns the x postion of the field
-     *
-     * @return the x position of the field
-     */
-    public int getX() {
-        return x;
-    }
-
-    /**
-     * Returns the y position of the field
-     *
-     * @return the y position of the field
-     */
-    public int getY() {
-        return y;
-    }
-
-    /**
-     * Uses the distance formula to find the distance between to locatable
-     *
-     * @param other the other locatable to find distance between
-     * @return the distance between the 2 locatable.
-     */
-    @Override
-    public double getDistance(Locatable other) {
-        double distance = (x - other.getX()) * (x - other.getX()) + (y - other.getY()) * (y - other.getY());
-        distance = Math.sqrt(distance);
-        return distance;
-    }
 }
