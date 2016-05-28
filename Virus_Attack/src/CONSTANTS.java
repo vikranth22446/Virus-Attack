@@ -1,3 +1,4 @@
+package src;
 
 class Constants {
     /**
@@ -5,11 +6,11 @@ class Constants {
      * SPEED,HEALTH,ATTACK, WIDTH,HEIGHT,ATTACK_RADIUS
      */
     public static final int ANTIVIRUS_SPEED = 5;
-    public static final int ANTIVIRUS_HEALTH = 30;
+    public static final int ANTIVIRUS_HEALTH = 45;
     public static final int ANTIVIRUS_ATTACK = 1;
     public static final int ANTIVIRUS_WIDTH = 15;
     public static final int ANTIVIRUS_HEIGHT = 15;
-    public static final int ANTIVIRUS_ATTACK_RADIUS = 100;
+    public static final int ANTIVIRUS_ATTACK_RADIUS = 20;
 
     /**
      * Virus Constants:

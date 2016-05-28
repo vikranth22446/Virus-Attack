@@ -1,3 +1,4 @@
+package src;
 /**
  * Contains the basic methods that are shared by both AntiVirus and Virus Class
  */

@@ -1,3 +1,4 @@
+package src;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -156,7 +157,7 @@ class CellManager {
     private void moveWhiteCells(Graphics g, int xOffset, int yOffset) {
         for (Cell whiteValue : whiteValues) {
             WhiteCell w = (WhiteCell) whiteValue;
-            w.findVirus(g, xOffset, yOffset);
+            w.findElement(g, xOffset, yOffset);
             w.move();
         }
     }

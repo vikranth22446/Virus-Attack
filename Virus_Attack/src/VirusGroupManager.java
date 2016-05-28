@@ -1,7 +1,11 @@
+package src;
 
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
 
 /**
  * Manages the virus groups
@@ -53,6 +57,7 @@ class VirusGroupManager {
      */
     public void draw(Graphics g, int xOffset, int yOffset) {
         for (int n : keys) {
+            if (groups.get( n ) != null)
             groups.get(n).draw(g, xOffset, yOffset);
         }
     }
@@ -151,6 +156,21 @@ class VirusGroupManager {
      */
     static HashMap<Integer, VirusGroup> virusGroupMap() {
         return groups;
+    }
+    public static void remove(Virus v)
+    {            
+        Iterator<Map.Entry<Integer, VirusGroup>> iterator = groups.entrySet().iterator() ;
+
+        while(iterator.hasNext()){
+            VirusGroup vg = iterator.next().getValue();
+            if (vg.contains( v ))
+            {
+                vg.removeVirus( v );
+            }
+            //You can remove elements while iterating.
+          //  iterator.remove();
+        }            
+        
     }
 
 

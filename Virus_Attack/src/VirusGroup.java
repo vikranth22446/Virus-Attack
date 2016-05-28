@@ -1,3 +1,4 @@
+package src;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -123,5 +124,14 @@ class VirusGroup {
 	 */
 	public String toString(){
 		return "VirusGroup[" + "Viruses:" + viruses.size()+"]";
+	}
+	public boolean contains(Virus v)
+	{
+	    return viruses.contains( v );
+	}
+	public void removeVirus(Virus v)
+	{
+	    if (viruses.indexOf( v ) >=0)
+	    viruses.remove( viruses.indexOf( v ) );
 	}
 }

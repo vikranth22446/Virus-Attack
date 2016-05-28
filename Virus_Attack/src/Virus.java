@@ -1,3 +1,4 @@
+package src;
 
 import java.awt.*;
 
@@ -140,7 +141,7 @@ class Virus extends Attacker implements Locatable {
                 if (c.getHealth() <= 0) {
                     CellManager.removeCell(i);
                 }
-                wc.setAttacked(false);
+           //     wc.setAttacked(false);
                 break;
             }
 

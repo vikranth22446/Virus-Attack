@@ -1,3 +1,4 @@
+package src;
 import javax.swing.*;
 import java.awt.*;
 import java.net.MalformedURLException;
@@ -9,7 +10,7 @@ class WelcomeScreen extends JFrame {
     void createWelcomeScreen() {
         URL url = null;
         try {
-            url = new URL("http://i.imgur.com/0JGPsWt.gif");
+            url = new URL("file:giphy.gif");
         } catch (MalformedURLException e) {
             e.printStackTrace();
          }

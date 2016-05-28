@@ -1,3 +1,4 @@
+package src;
 /**
  * Locatable used by almost ever where. For example in classes
  * like Virus, AntiVirus, and Cell.

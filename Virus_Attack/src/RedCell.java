@@ -1,3 +1,4 @@
+package src;
 
 
 import javax.imageio.ImageIO;
