@@ -1,11 +1,9 @@
-package src;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-
-import javax.imageio.ImageIO;
 
 /**
  * The Virus Class is the main unit that the player controls and uses it to
@@ -179,10 +177,6 @@ class Virus extends Attacker implements Locatable {
      * @param yOffset same as above
      */
     public void draw(Graphics g, int xOffset, int yOffset) {
-        g.setColor(color);
-//  g.fillRect(getX() - xOffset, getY() - yOffset, getWidth(), getHeight());
-//        g.drawRect((getX() + getWidth() / 4) - xOffset, (getY() + getHeight() / 4) - yOffset,
-//                getWidth() / 2, getHeight() / 2);
         BufferedImage in;
         String s = "Virus" + number + ".png"; 
                         
@@ -195,7 +189,6 @@ class Virus extends Attacker implements Locatable {
         {
             e.printStackTrace();
         }
-       // g.drawString( Integer.toString( number ), getX() + (getWidth() / 4) - xOffset, (getY() + getHeight() / 4) - yOffset );
     }
 
     /**

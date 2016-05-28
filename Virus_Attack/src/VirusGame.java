@@ -1,4 +1,4 @@
-package src;
+
 /**
  * Class with the main method that calls WelcomeScreen.createWelcomeScreen();
  */
