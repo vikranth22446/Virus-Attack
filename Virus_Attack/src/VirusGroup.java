@@ -116,6 +116,18 @@ class VirusGroup {
     void addVirus(Virus virus) {
         viruses.add(virus);
     }
+    public void setColor(Color c) {
+        for (Virus v:viruses)
+        {
+            v.setColor( c );
+        }
+    }
+    public void setNum(int n) {
+        for (Virus v:viruses)
+        {
+            v.setNum( n );
+        }
+    }
     
     /**
 	 * Testing purposes

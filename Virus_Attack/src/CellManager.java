@@ -28,14 +28,14 @@ class CellManager {
             {900, 700},
             {400, 400}};
     /**
-     * An ArrayList of redPoints. This is an empty aerialist to be added later
+     * An ArrayList of redPoints. This is an empty arraylist to be added later
      */
     private final ArrayList<Point> redPoints = new ArrayList<>();
     /**
      * A set of sick points used to initialize later.
      */
     private final int[][] sickPoints = {
-            {100, 300}, {500, 100}, {300, 600}
+            {100, 300}, {500, 100}
     };
 
     /**
@@ -55,7 +55,7 @@ class CellManager {
     void createCellsInPositions() {
         for (int[] whitePoint : whitePoints) {
             Cell cell;
-            cell = new WhiteCell(whitePoint[0], whitePoint[1], 500);
+            cell = new WhiteCell(whitePoint[0], whitePoint[1], 1000);
             addWhiteCell(cell);
         }
         for (int i = 0; i < 15; i++) {

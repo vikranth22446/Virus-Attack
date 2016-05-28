@@ -1,6 +1,11 @@
 package src;
 
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
 
 /**
  * The Virus Class is the main unit that the player controls and uses it to
@@ -21,6 +26,10 @@ class Virus extends Attacker implements Locatable {
     private boolean move = true;
     
     private boolean attacking = false;
+    
+    private Color color =   new Color(122, 122, 0);
+    private int number =1;
+
 
     /**
      * constructor, takes in the initial x and y coordinate, and instantiates
@@ -170,11 +179,23 @@ class Virus extends Attacker implements Locatable {
      * @param yOffset same as above
      */
     public void draw(Graphics g, int xOffset, int yOffset) {
-        g.setColor(new Color(122, 122, 0));
-        g.fillRect(getX() - xOffset, getY() - yOffset, getWidth(), getHeight());
-        g.setColor(Color.green);
-        g.drawRect((getX() + getWidth() / 4) - xOffset, (getY() + getHeight() / 4) - yOffset,
-                getWidth() / 2, getHeight() / 2);
+        g.setColor(color);
+//  g.fillRect(getX() - xOffset, getY() - yOffset, getWidth(), getHeight());
+//        g.drawRect((getX() + getWidth() / 4) - xOffset, (getY() + getHeight() / 4) - yOffset,
+//                getWidth() / 2, getHeight() / 2);
+        BufferedImage in;
+        String s = "Virus" + number + ".png"; 
+                        
+        try
+        {
+            in = ImageIO.read( new File(s ) );
+            g.drawImage( in, getX() - xOffset, getY() - yOffset, null );
+        }
+        catch ( IOException e )
+        {
+            e.printStackTrace();
+        }
+       // g.drawString( Integer.toString( number ), getX() + (getWidth() / 4) - xOffset, (getY() + getHeight() / 4) - yOffset );
     }
 
     /**
@@ -213,5 +234,13 @@ class Virus extends Attacker implements Locatable {
      */
     public int getCuurentHealth(){
     	return getHealth();
+    }
+    public void setColor(Color c)
+    {
+        color = c;
+    }
+    public void setNum(int n)
+    {
+        number = n;
     }
 }
