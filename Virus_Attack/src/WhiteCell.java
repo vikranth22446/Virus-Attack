@@ -1,5 +1,5 @@
-package src;
 
+package src;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
