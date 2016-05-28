@@ -1,5 +1,6 @@
 package src;
 
+
 class Constants {
     /**
      * Anti-Virus constants:

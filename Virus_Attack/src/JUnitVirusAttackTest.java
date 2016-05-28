@@ -1,11 +1,13 @@
+
 package src;
 
-import static org.junit.Assert.*;
+import org.junit.Test;
 
-import java.awt.Graphics;
+import java.awt.*;
 import java.util.ArrayList;
 
-import org.junit.Test;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 
 public class JUnitVirusAttackTest

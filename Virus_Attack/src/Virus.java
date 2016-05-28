@@ -1,11 +1,10 @@
 package src;
 
+import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-
-import javax.imageio.ImageIO;
 
 /**
  * The Virus Class is the main unit that the player controls and uses it to
@@ -24,11 +23,11 @@ class Virus extends Attacker implements Locatable {
      * true if the object is moving, false if not
      */
     private boolean move = true;
-    
+
     private boolean attacking = false;
-    
-    private Color color =   new Color(122, 122, 0);
-    private int number =1;
+
+    private Color color = new Color(122, 122, 0);
+    private int number = 1;
 
 
     /**
@@ -91,13 +90,22 @@ class Virus extends Attacker implements Locatable {
      * @param yOffset same as above
      */
     public void checkAttackRadius(Graphics g, int xOffset, int yOffset) {
-        
+
         attacking = false;
+        attackAntiVirus(g, xOffset, yOffset);
+        if (attacking) return;
+        attackRedCells(g, xOffset, yOffset);
+        if (attacking) return;
+        attackWhiteCells(g, xOffset, yOffset);
+
+    }
+
+    private void attackAntiVirus(Graphics g, int xOffset, int yOffset) {
         for (int i = 0; i < AntiVirusManager.anti.size(); i++) {
             AntiVirus av = AntiVirusManager.anti.get(i);
             if (getDistance(av) <= getAttackRadius()) {
                 av.reduceHealth(getAttack());
-                // g = canvas.getGraphics();
+
                 g.setColor(Color.black);
                 g.drawLine(getX() + getWidth() / 2 - xOffset, getY() + getHeight() / 2 - yOffset,
                         av.getX() + av.getWidth() / 2 - xOffset,
@@ -110,10 +118,9 @@ class Virus extends Attacker implements Locatable {
             }
 
         }
+    }
 
-        if (attacking)
-            return;
-
+    private void attackRedCells(Graphics g, int xOffset, int yOffset) {
         for (int i = 0; i < CellManager.redValues.size(); i++) {
             Cell c = CellManager.redValues.get(i);
             if (getDistance(c) <= getAttackRadius() && !(c instanceof SickCell)) {
@@ -132,15 +139,13 @@ class Virus extends Attacker implements Locatable {
             }
 
         }
+    }
 
-        if (attacking)
-            return;
-
+    private void attackWhiteCells(Graphics g, int xOffset, int yOffset) {
         for (int i = 0; i < CellManager.whiteValues.size(); i++) {
             Cell c = CellManager.whiteValues.get(i);
             if (getDistance(c) <= getAttackRadius()) {
                 c.decrementHealth(getAttack());
-                // g = canvas.getGraphics();
                 g.setColor(Color.black);
                 g.drawLine(getX() + getWidth() / 2 - xOffset, getY() + getHeight() / 2 - yOffset,
                         c.getX() + c.getRadius() / 2 - xOffset,
@@ -150,16 +155,14 @@ class Virus extends Attacker implements Locatable {
                 if (c.getHealth() <= 0) {
                     CellManager.removeCell(i);
                 }
-           //     wc.setAttacked(false);
                 break;
             }
 
         }
     }
-    
-    public void update(){
-    	if ((getVx() < 0 && getX() < getXL()) || (getVy() < 0 && getY() < getYL()) || (getVy() > 0 && getY() > getYL())
-                || (getVx() > 0 && getX() > getXL())) {
+
+    public void update() {
+        if (isGoingToMove()) {
             move = false;
         }
         if (!move) {
@@ -168,6 +171,13 @@ class Virus extends Attacker implements Locatable {
             setX(getX() + getVx());
             setY(getY() + getVy());
         }
+    }
+
+    private boolean isGoingToMove() {
+        return (getVx() < 0 && getX() < getXL())
+                || (getVy() < 0 && getY() < getYL())
+                || (getVy() > 0 && getY() > getYL())
+                || (getVx() > 0 && getX() > getXL());
     }
 
     /**
@@ -179,68 +189,62 @@ class Virus extends Attacker implements Locatable {
      * @param yOffset same as above
      */
     public void draw(Graphics g, int xOffset, int yOffset) {
-        g.setColor(color);
-//  g.fillRect(getX() - xOffset, getY() - yOffset, getWidth(), getHeight());
-//        g.drawRect((getX() + getWidth() / 4) - xOffset, (getY() + getHeight() / 4) - yOffset,
-//                getWidth() / 2, getHeight() / 2);
         BufferedImage in;
-        String s = "Virus" + number + ".png"; 
-                        
-        try
-        {
-            in = ImageIO.read( new File(s ) );
-            g.drawImage( in, getX() - xOffset, getY() - yOffset, null );
-        }
-        catch ( IOException e )
-        {
+        String s = "Virus" + number + ".png";
+
+        try {
+            in = ImageIO.read(new File(s));
+            g.drawImage(in, getX() - xOffset, getY() - yOffset, null);
+        } catch (IOException e) {
             e.printStackTrace();
         }
-       // g.drawString( Integer.toString( number ), getX() + (getWidth() / 4) - xOffset, (getY() + getHeight() / 4) - yOffset );
     }
 
     /**
      * for testing purposes
-     * 
+     *
      * @see java.lang.Object#toString()
      */
-    public String toString(){
-    	return "Virus[x:" + getX() + " y:" + getY() + " speed:" + getSpeed() + " attack:" + getAttack() +
-    			" height:" + getHeight() + " width:" + getWidth() + "]"; 
+    public String toString() {
+        return "Virus[x:" + getX() + " y:" + getY() + " speed:" + getSpeed() + " attack:" + getAttack() +
+                " height:" + getHeight() + " width:" + getWidth() + "]";
     }
 
-    
+
     /**
      * testing purposes
-     * 
+     *
      * @return true if moving, false if not
      */
-    public boolean isMoving(){
-    	return move;
+    public boolean isMoving() {
+        return move;
     }
-    
+
     /**
      * Testing purposes
-     * 
+     *
      * @return true is attacking, false if not
      */
-    public boolean isAttacking(){
-    	return attacking;
+    public boolean isAttacking() {
+        return attacking;
     }
-    
+
     /**
      * testing purposes
-     * 
+     *
      * @return the current health
      */
-    public int getCuurentHealth(){
-    	return getHealth();
+    public int getCuurentHealth() {
+        return getHealth();
     }
-    public void setColor(Color c)
-    {
+
+    public void setColor(Color c) {
         color = c;
     }
-    public void setNum(int n)
-    {
+
+    public void setNum(int n) {
         number = n;
     }
+
+
 }
