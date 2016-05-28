@@ -161,7 +161,7 @@ class World extends Canvas implements Runnable {
         Graphics g = bs.getDrawGraphics();
         //g.setColor(Color.white);
        // g.fillRect(0, 0, getWidth(), getHeight());
-        g.drawImage(bg, -input.getXOffset(), -input.getYOffset(), null);
+        g.drawImage(bg, -input.getXOffset()/4, -input.getYOffset()/4, null);
 
         vgm.draw(g, input.getXOffset(), input.getYOffset());
         avm.draw(g, input.getXOffset(), input.getYOffset());
