@@ -153,7 +153,7 @@ class InputHandler implements MouseListener, MouseMotionListener, KeyListener {
             xChange += move;
         } else if (y <= (yOffset + allow) && yOffset > 0) {
             yChange -= move;
-        } else if (y >= (yOffset + World.getHeight - allow) && xOffset < World.GAME_HEIGHT) {
+        } else if (y >= (yOffset + World.getHeight - allow) && yOffset < World.GAME_HEIGHT) {
             yChange += move;
         }
 
