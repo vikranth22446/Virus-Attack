@@ -58,7 +58,7 @@ class CellManager {
     public void createCellsInPositions() {
         for (int[] whitePoint : whitePoints) {
             Cell cell;
-            cell = new WhiteCell(whitePoint[0], whitePoint[1], 1000);
+            cell = new WhiteCell(whitePoint[0], whitePoint[1], 200);
             addWhiteCell(cell);
         }
         for (int i = 0; i < 20; i++) {

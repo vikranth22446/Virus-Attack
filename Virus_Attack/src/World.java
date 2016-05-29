@@ -128,12 +128,13 @@ class World extends Canvas implements Runnable {
         getWidth = getWidth();
         getHeight = getHeight();
     }
-
+    ScoreBoard scoreBoard;
 
     /**
      * @see java.lang.Runnable#run()
      */
     public void run() {
+          scoreBoard = new ScoreBoard();
         while (true) {
             render();
             cellManager.produce();
@@ -170,6 +171,11 @@ class World extends Canvas implements Runnable {
 
         vgm.updateLocation(g, input.getXOffset(), input.getYOffset());
         avm.updateLocation(g, input.getXOffset(), input.getYOffset());
+        g.setColor(Color.black);
+
+        g.setFont(new Font("Tahoma", Font.BOLD, 19));
+        g.drawString("Score: "+3,WIDTH*12/8, HEIGHT/4-30);
+        g.drawString("Time: "+  scoreBoard.everTurn(),WIDTH*12/8, HEIGHT/4-10);
 
         bs.show();
     }
