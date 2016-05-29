@@ -237,6 +237,11 @@ class VirusGroupManager
     }
 
 
+    /**
+     * remove virus v from the selected virus group
+     * 
+     * @param v the virus to be removed
+     */
     public static void remove( Virus v )
     {
         Iterator<Map.Entry<Integer, VirusGroup>> iterator = groups.entrySet().iterator();
@@ -252,6 +257,10 @@ class VirusGroupManager
             // iterator.remove();
         }
 
+    }
+    
+    public String toString(){
+    	return "VirusGroupManager[numGroups:" + groupNum + " current group:" + currentGroup+"]";
     }
 
 }

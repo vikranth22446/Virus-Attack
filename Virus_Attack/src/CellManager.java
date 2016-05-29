@@ -215,8 +215,8 @@ class CellManager {
      * Calls the produce for all the white Values and sick Values.
      */
     public void produce() {
-        whiteValues.forEach(Cell::produceUnit);
-        sickValues.forEach(Cell::produceUnit);
+        //whiteValues.forEach(Cell::produceUnit);
+        //sickValues.forEach(Cell::produceUnit);
     }
     public String toString() {
         return "CellManager[redValues: " + redValues.toString() + " whiteValues: " + whiteValues.toString() + "radius: " 

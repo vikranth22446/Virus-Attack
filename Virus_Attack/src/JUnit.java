@@ -1,13 +1,10 @@
-import org.easymock.EasyMockSupport;
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.Assert.assertTrue;
 
-import java.awt.*;
+import java.awt.Graphics;
 import java.util.ArrayList;
 import java.util.Collection;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
+import org.junit.Test;
 
 /**
  * This class tests all the classes of the project.
@@ -17,7 +14,7 @@ import static org.junit.Assert.assertTrue;
  *
  * @author Vikrnath Srivatsa, Alex Minooka, Melissa Wei
  */
-public class JUnit extends EasyMockSupport {
+public class JUnit extends  EasyMockTest{
     /**
      * Virus JUnit Test Methods:
      * virusSetUp()
@@ -28,7 +25,7 @@ public class JUnit extends EasyMockSupport {
      * virusReduceHealth()
      * virusIdleMovement()
      *
-     * @author alex
+     * @author Alex M
      */
     private int xCoord;
 
@@ -106,7 +103,7 @@ public class JUnit extends EasyMockSupport {
      * virusGroupGetVirus()
      * virusGroupSetCoord()
      *
-     * @author alex
+     * @author Alex M
      */
 
     @Test
@@ -163,18 +160,51 @@ public class JUnit extends EasyMockSupport {
     /**
      * Virus Group Manager Tests:
      * virusGroupManagerConstructor()
+     * virusGroupManagerHasKey()
+     * virusGroupManagerAddVirus()
+     * virusGroupManagerRemove()
+     * virusGroupManagerSplit()
      * antiVirusManagerConstructor()
      * antiVirusToString()
      * antiVirusAddAnti()
      *
-     * @author alex
+     * @author Alex M
      */
 
     @Test
     public void virusGroupManagerConstructor() {
         VirusGroupManager vgm = new VirusGroupManager();
+        String s = vgm.toString();
+        assertTrue("<<Incorrect Constructor>>", s.contains("numGroups:1") && s.contains("current group:1"));
+        
+    }
+    
+    @Test
+    public void virusGroupManagerHasKey(){
+        VirusGroupManager vgm = new VirusGroupManager();
+        assertTrue("<<Doesn't Have Key>>", vgm.hasKey(1));
     }
 
+    @Test
+    public void virusGroupManagerAddVirus(){
+        VirusGroupManager vgm = new VirusGroupManager();
+        vgm.addVirus(0, 0);
+        assertTrue("<<Virus Not Added>>", vgm.groups.get(1).size() == 3);
+    }
+    
+    @Test
+    public void virusGroupManagerRemove(){
+    	VirusGroupManager vgm = new VirusGroupManager();
+        vgm.remove(vgm.groups.get(1).getVirus(0));
+        assertTrue("<<Virus not removed>>", vgm.groups.get(1).size() == 1);
+    }
+    
+    @Test
+    public void virusGroupManagerSplit(){
+        VirusGroupManager vgm = new VirusGroupManager();
+        vgm.split();
+        assertTrue("<<Did not Split>>", vgm.hasKey(1) && vgm.hasKey(2));
+    }
 
     @Test
     public void antiVirusManagerConstructor() {
