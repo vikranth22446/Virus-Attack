@@ -88,14 +88,14 @@ class Virus extends Attacker implements Locatable {
      *                the screen had shifted
      * @param yOffset same as above
      */
-    public void checkAttackRadius(Graphics g, int xOffset, int yOffset) {
+    public void checkAttackRadius(Graphics g, int xOffset, int yOffset,ScoreBoard scoreBoard) {
 
         attacking = false;
         attackAntiVirus(g, xOffset, yOffset);
         if (attacking) return;
-        attackRedCells(g, xOffset, yOffset);
+        attackRedCells(g, xOffset, yOffset,scoreBoard);
         if (attacking) return;
-        attackWhiteCells(g, xOffset, yOffset);
+        attackWhiteCells(g, xOffset, yOffset,scoreBoard);
 
     }
 
@@ -119,7 +119,7 @@ class Virus extends Attacker implements Locatable {
         }
     }
 
-    private void attackRedCells(Graphics g, int xOffset, int yOffset) {
+    private void attackRedCells(Graphics g, int xOffset, int yOffset,ScoreBoard scoreBoard) {
         for (int i = 0; i < CellManager.redValues.size(); i++) {
             Cell c = CellManager.redValues.get(i);
             if (getDistance(c) <= getAttackRadius() && !(c instanceof SickCell)) {
@@ -131,6 +131,7 @@ class Virus extends Attacker implements Locatable {
                         c.getY() + c.getRadius() / 2 - yOffset);
                 if (c.getHealth() <= 0) {
                     CellManager.convertCell(c);
+                    scoreBoard.increaseRedCellsDead();
                 }
                 attacking = true;
 
@@ -140,7 +141,7 @@ class Virus extends Attacker implements Locatable {
         }
     }
 
-    private void attackWhiteCells(Graphics g, int xOffset, int yOffset) {
+    private void attackWhiteCells(Graphics g, int xOffset, int yOffset,ScoreBoard scoreBoard) {
         for (int i = 0; i < CellManager.whiteValues.size(); i++) {
             Cell c = CellManager.whiteValues.get(i);
             if (getDistance(c) <= getAttackRadius()) {
@@ -153,6 +154,7 @@ class Virus extends Attacker implements Locatable {
                 wc.setAttacked(true);
                 if (c.getHealth() <= 0) {
                     CellManager.removeCell(i);
+                    scoreBoard.increaseWhiteDeaths();
                 }
                 break;
             }

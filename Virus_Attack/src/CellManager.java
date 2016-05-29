@@ -58,7 +58,7 @@ class CellManager {
     public void createCellsInPositions() {
         for (int[] whitePoint : whitePoints) {
             Cell cell;
-            cell = new WhiteCell(whitePoint[0], whitePoint[1], 200);
+            cell = new WhiteCell(whitePoint[0], whitePoint[1], 100);
             addWhiteCell(cell);
         }
         for (int i = 0; i < 20; i++) {
@@ -66,7 +66,7 @@ class CellManager {
         }
         for (Point point : redPoints) {
 
-            Cell cell = new RedCell((int) point.getX(), (int) point.getY(), 200);
+            Cell cell = new RedCell((int) point.getX(), (int) point.getY(), 100);
 
             addRedCell(cell);
         }
@@ -215,8 +215,15 @@ class CellManager {
      * Calls the produce for all the white Values and sick Values.
      */
     public void produce() {
-        //whiteValues.forEach(Cell::produceUnit);
+        whiteValues.forEach(Cell::produceUnit);
         //sickValues.forEach(Cell::produceUnit);
+    }
+    public ArrayList<Integer> returnSizes(){
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        arrayList.add(sickValues.size());
+        arrayList.add(redValues.size());
+        arrayList.add(whiteValues.size());
+        return arrayList;
     }
     public String toString() {
         return "CellManager[redValues: " + redValues.toString() + " whiteValues: " + whiteValues.toString() + "radius: " 

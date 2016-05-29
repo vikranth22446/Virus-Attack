@@ -43,7 +43,7 @@ class World extends Canvas implements Runnable {
      * the name of the frame
      */
     private static final String NAME = "Virus";
-    
+
     private BufferedImage bg;
     /**
      * the width and height of the screen
@@ -65,9 +65,9 @@ class World extends Canvas implements Runnable {
      * the anti virus manager that holds the anti viruses
      */
     private final AntiVirusManager avm;
-    
+    int time = 10;
     private static InputHandler input;
-
+    JFrame frame;
 
     /**
      * creates all the objects, get the canvas, sets frame size, adds listening to input handler
@@ -80,7 +80,7 @@ class World extends Canvas implements Runnable {
         /*
       the JFrame
      */
-        JFrame frame = new JFrame(NAME);
+        frame = new JFrame(NAME);
 
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setLayout(new BorderLayout());
@@ -98,13 +98,12 @@ class World extends Canvas implements Runnable {
         /*
       the graphics
      */
-        try{
-        	bg = ImageIO.read(new File("background.png"));
+        try {
+            bg = ImageIO.read(new File("background.png"));
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
         }
-        catch(IOException ioe){
-        	ioe.printStackTrace();
-        }
-        
+
         Graphics g = getGraphics();
         g.setColor(Color.white);
         setBackground(Color.WHITE);
@@ -128,18 +127,25 @@ class World extends Canvas implements Runnable {
         getWidth = getWidth();
         getHeight = getHeight();
     }
+
     ScoreBoard scoreBoard;
 
     /**
      * @see java.lang.Runnable#run()
      */
     public void run() {
-          scoreBoard = new ScoreBoard();
+        scoreBoard = new ScoreBoard();
         while (true) {
             render();
             cellManager.produce();
 
-            if (GAME_OVER) break;
+            if (GAME_OVER) {
+                render(time);
+                GameOverScreen gameOverScreen = new GameOverScreen();
+                gameOverScreen.createScreen(gameOver,scoreBoard);
+                frame.dispose();
+                break;
+            }
 
             try {
                 Thread.sleep(40);
@@ -149,10 +155,33 @@ class World extends Canvas implements Runnable {
         }
     }
 
+    private void render(int time) {
+        for (int i = time; time > 0; i--) {
+            render();
+            try {
+                Thread.sleep(60);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            if (i == 0) {
+                break;
+            }
+            System.out.println(i);
+        }
+    }
+
+    String gameOver;
+
     /**
      * double buffers
      */
     private void render() {
+        String value = scoreBoard.isGameOver(vgm, cellManager);
+        if (value.equalsIgnoreCase("lost") || value.equalsIgnoreCase("won")) {
+            gameOver = value;
+            GAME_OVER = true;
+            return;
+        }
         BufferStrategy bs = getBufferStrategy();
         if (bs == null) {
             createBufferStrategy(3);
@@ -161,21 +190,21 @@ class World extends Canvas implements Runnable {
 
         Graphics g = bs.getDrawGraphics();
         //g.setColor(Color.white);
-       // g.fillRect(0, 0, getWidth(), getHeight());
-        g.drawImage(bg, -input.getXOffset()/4, -input.getYOffset()/4, null);
+        // g.fillRect(0, 0, getWidth(), getHeight());
+        g.drawImage(bg, -input.getXOffset() / 4, -input.getYOffset() / 4, null);
 
         vgm.draw(g, input.getXOffset(), input.getYOffset());
         avm.draw(g, input.getXOffset(), input.getYOffset());
 
         cellManager.toDraw(input.getXOffset(), input.getYOffset(), g);
 
-        vgm.updateLocation(g, input.getXOffset(), input.getYOffset());
+        vgm.updateLocation(g, input.getXOffset(), input.getYOffset(), scoreBoard);
         avm.updateLocation(g, input.getXOffset(), input.getYOffset());
         g.setColor(Color.black);
-
         g.setFont(new Font("Tahoma", Font.BOLD, 19));
-        g.drawString("Score: "+3,WIDTH*12/8, HEIGHT/4-30);
-        g.drawString("Time: "+  scoreBoard.everTurn(),WIDTH*12/8, HEIGHT/4-10);
+        g.drawString("Score: " + scoreBoard.getTotalScore(), WIDTH * 12 / 8, HEIGHT / 4 - 30);
+        g.drawString("Time: " + scoreBoard.everTurn(), WIDTH * 12 / 8, HEIGHT / 4 - 10);
+
 
         bs.show();
     }

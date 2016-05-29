@@ -49,8 +49,8 @@ class VirusGroup {
      * @param yOffset the y offset
      */
     public void draw(Graphics g, int xOffset, int yOffset) {
-        for (int i = 0; i< viruses.size(); i++) {
-            viruses.get( i ).draw(g, xOffset, yOffset);
+        for (int i = 0; i < viruses.size(); i++) {
+            viruses.get(i).draw(g, xOffset, yOffset);
         }
     }
 
@@ -61,10 +61,10 @@ class VirusGroup {
      * @param xOffset the x offset
      * @param yOffset the y offset
      */
-    void update(Graphics g, int xOffset, int yOffset) {
-        for (int i = 0; i< viruses.size(); i++) {
-            viruses.get( i ).checkAttackRadius(g, xOffset, yOffset);
-            viruses.get( i ).update();
+    void update(Graphics g, int xOffset, int yOffset, ScoreBoard scoreboard) {
+        for (int i = 0; i < viruses.size(); i++) {
+            viruses.get(i).checkAttackRadius(g, xOffset, yOffset, scoreboard);
+            viruses.get(i).update();
         }
     }
 
@@ -117,34 +117,38 @@ class VirusGroup {
     void addVirus(Virus virus) {
         viruses.add(virus);
     }
+
     public void setColor(Color c) {
-        for (Virus v:viruses)
-        {
-            v.setColor( c );
+        for (Virus v : viruses) {
+            v.setColor(c);
         }
     }
+
     public void setNum(int n) {
-        for (Virus v:viruses)
-        {
-            v.setNum( n );
+        for (Virus v : viruses) {
+            v.setNum(n);
         }
     }
-    
+
     /**
-	 * Testing purposes
-	 * 
-	 * @see java.lang.Object#toString()
-	 */
-	public String toString(){
-		return "VirusGroup[" + "Viruses:" + viruses.size()+"]";
-	}
-	public boolean contains(Virus v)
-	{
-	    return viruses.contains( v );
-	}
-	public void removeVirus(Virus v)
-	{
-	    if (viruses.indexOf( v ) >=0)
-	    viruses.remove( viruses.indexOf( v ) );
-	}
+     * Testing purposes
+     *
+     * @see java.lang.Object#toString()
+     */
+    public String toString() {
+        return "VirusGroup[" + "Viruses:" + viruses.size() + "]";
+    }
+
+    public boolean contains(Virus v) {
+        return viruses.contains(v);
+    }
+
+    public ArrayList<Virus> getAllViruses() {
+        return viruses;
+    }
+
+    public void removeVirus(Virus v) {
+        if (viruses.indexOf(v) >= 0)
+            viruses.remove(viruses.indexOf(v));
+    }
 }

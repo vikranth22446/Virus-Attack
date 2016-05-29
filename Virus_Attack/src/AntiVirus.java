@@ -80,8 +80,8 @@ class AntiVirus extends Attacker implements Locatable {
             if (currentFollowVirus.isDead()) {
 
                 VirusGroupManager.remove(currentFollowVirus);
-                System.out.println("hi");
-                System.out.println(currentFollowVirus.getHealth());
+         //       System.out.println("hi");
+           //     System.out.println(currentFollowVirus.getHealth());
             }
             setCoordinate(currentFollowVirus.getX(), currentFollowVirus.getY());
             follow(g, xOffset, yOffset);
@@ -131,7 +131,7 @@ class AntiVirus extends Attacker implements Locatable {
             g.drawImage(in, getX() - xOffset, getY() - yOffset, null);
 
         } catch (IOException e) {
-            System.out.println("error in image");
+            //System.out.println("error in image");
         }
     }
 

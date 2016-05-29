@@ -41,7 +41,6 @@ class VirusGroupManager
      */
     private int groupNum;
 
-
     /**
      * constructor for the manager, creates the first group, creates variables
      */
@@ -55,6 +54,10 @@ class VirusGroupManager
 
         currentGroup = 1;
         groupNum = 1;
+    }
+
+    public HashMap<Integer, VirusGroup> getGroups() {
+        return groups;
     }
 
 
@@ -112,11 +115,11 @@ class VirusGroupManager
      * @param yOffset
      *            the y offset to draw at
      */
-    void updateLocation( Graphics g, int xOffset, int yOffset )
+    void updateLocation( Graphics g, int xOffset, int yOffset ,ScoreBoard scoreBoard)
     {
         for ( int n : keys )
         {
-            groups.get( n ).update( g, xOffset, yOffset );
+            groups.get( n ).update( g, xOffset, yOffset,scoreBoard );
         }
     }
 
@@ -258,7 +261,9 @@ class VirusGroupManager
         }
 
     }
-    
+    public ArrayList<Integer> getKeys(){
+        return keys;
+    }
     public String toString(){
     	return "VirusGroupManager[numGroups:" + groupNum + " current group:" + currentGroup+"]";
     }
