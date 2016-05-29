@@ -131,7 +131,7 @@ class AntiVirus extends Attacker implements Locatable {
             g.drawImage(in, getX() - xOffset, getY() - yOffset, null);
 
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("error in image");
         }
     }
 
