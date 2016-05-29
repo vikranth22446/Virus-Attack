@@ -97,7 +97,7 @@ public class WhiteCell extends Cell {
         attack = 1;
         healing = false;
         drift = 50;
-        sightRadius = 300;
+        sightRadius = 500;
         attackRadius = 80;
     }
 
@@ -271,7 +271,8 @@ public class WhiteCell extends Cell {
 
                             tracking = false;
                         }
-                    } else {
+                    } 
+                    else if (!attacking){
                         drift();
 
                     }
@@ -337,6 +338,27 @@ public class WhiteCell extends Cell {
             }
             drift = 0;
         }
+    }
+    //Testing purposes
+    public int vx()
+    {
+        return vx;
+    }
+    public int vy()
+    {
+        return vy;
+    }
+    public void setvx(int vx)
+    {
+        this.vx = vx;
+    }
+    public void setvy(int vy)
+    {
+        this.vy = vy;
+    }
+    public void setTicks(int ticks)
+    {
+        this.ticks = ticks;
     }
 
     public String toString() {

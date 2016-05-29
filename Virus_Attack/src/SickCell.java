@@ -1,9 +1,5 @@
 package src;
 
-
-
-
-
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -11,9 +7,17 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * An Implementation of the Cell abstract class. The cells are infected and produce viruses.
+ * 
+ * SickCell is child class (extends) Cell abstract class. The cells are infected and produce viruses.
  * These Cells Help the main player. They start at an initial health of  -100, and when attacked by white cells their
- * health slowly reduces.
+ * health slowly increases, and when it becomes high enough it is removed and a red cell is added when it dies.
+ *
+ *  @author  Melissa Wei
+ *  @version May 28, 2016
+ *  @author  Period: 6
+ *  @author  Assignment: APCS-Final-Project
+ *
+ *  @author  Sources: n/a
  */
 public class SickCell extends Cell {
     /**
@@ -63,5 +67,22 @@ public class SickCell extends Cell {
         }
         ticks++;
     }
+    
+    //Testing purposes
+    public int ticks()
+    {
+        return ticks;
+    }
+    public void setTicks(int ticks)
+    {
+        this.ticks = ticks;
+    }
+    public String toString()
+    {
+        
+        return "SickCell[x: " + getX() + " y: " + getY() + "radius: " + getRadius() + "health: " + getHealth() + "ticks: " +ticks+"]";
+        
+    }
+    
 
 }

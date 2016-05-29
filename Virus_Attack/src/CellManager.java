@@ -43,7 +43,7 @@ class CellManager {
     /**
      * constructs the 3 ArrayList: redValues,whiteValues, and SickValues.
      */
-    CellManager() {
+    public CellManager() {
         redValues = new ArrayList<>();
         whiteValues = new ArrayList<>();
         sickValues = new ArrayList<>();
@@ -54,14 +54,14 @@ class CellManager {
      * gets the value from whitePoints and redPoints and uses them to create red Cells
      * White Cells. Then randomly redCells are put all over the map.
      */
-    void createCellsInPositions() {
+    public void createCellsInPositions() {
         for (int[] whitePoint : whitePoints) {
             Cell cell;
             cell = new WhiteCell(whitePoint[0], whitePoint[1], 1000);
             addWhiteCell(cell);
         }
-        for (int i = 0; i < 15; i++) {
-            redPoints.add(new Point((int) (Math.random() * 1000), (int) (Math.random() * 1000)));
+        for (int i = 0; i < 20; i++) {
+            redPoints.add(new Point((int) (Math.random() * 1700)+50, (int) (Math.random() * 1300)+50));
         }
         for (Point point : redPoints) {
 
@@ -127,7 +127,7 @@ class CellManager {
      *
      * @param c the cell to convert
      */
-    static void convertCell(Cell c) {
+    public static void convertCell(Cell c) {
         if (c instanceof RedCell) {
             redValues.remove(c);
             sickValues.add(new SickCell(c.getX(), c.getY(), -100));
@@ -145,7 +145,7 @@ class CellManager {
      *
      * @param id the id to remove.
      */
-    static void removeCell(int id) {
+    public static void removeCell(int id) {
         whiteValues.remove(id);
     }
 
@@ -172,7 +172,7 @@ class CellManager {
      * @param yOffset the yOffset of the window. This allows window to move.
      * @param g       the graphics of canvas
      */
-    void toDraw(int xOffset, int yOffset, Graphics g) {
+    public void toDraw(int xOffset, int yOffset, Graphics g) {
         ArrayList<Cell> toDraw = redValues.stream().filter(c -> inRange(c.getX(), c.getY(), xOffset, yOffset)).collect(Collectors.toCollection(ArrayList::new));
         toDraw.addAll(whiteValues.stream().filter(c -> inRange(c.getX(), c.getY(), xOffset, yOffset)).collect(Collectors.toList()));
         toDraw.addAll(sickValues.stream().filter(c -> inRange(c.getX(), c.getY(), xOffset, yOffset)).collect(Collectors.toList()));
@@ -213,8 +213,13 @@ class CellManager {
     /**
      * Calls the produce for all the white Values and sick Values.
      */
-    void produce() {
+    public void produce() {
         whiteValues.forEach(Cell::produceUnit);
         sickValues.forEach(Cell::produceUnit);
+    }
+    public String toString() {
+        return "CellManager[redValues: " + redValues.toString() + " whiteValues: " + whiteValues.toString() + "radius: " 
+    + "sickValues: " + sickValues.toString() + "]";
+
     }
 }

@@ -50,8 +50,8 @@ class VirusGroup {
      * @param yOffset the y offset
      */
     public void draw(Graphics g, int xOffset, int yOffset) {
-        for (Virus v : viruses) {
-            v.draw(g, xOffset, yOffset);
+        for (int i = 0; i< viruses.size(); i++) {
+            viruses.get( i ).draw(g, xOffset, yOffset);
         }
     }
 
@@ -63,9 +63,9 @@ class VirusGroup {
      * @param yOffset the y offset
      */
     void update(Graphics g, int xOffset, int yOffset) {
-        for (Virus v : viruses) {
-            v.checkAttackRadius(g, xOffset, yOffset);
-            v.update();
+        for (int i = 0; i< viruses.size(); i++) {
+            viruses.get( i ).checkAttackRadius(g, xOffset, yOffset);
+            viruses.get( i ).update();
         }
     }
 

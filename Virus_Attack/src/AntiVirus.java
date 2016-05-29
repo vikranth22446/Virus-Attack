@@ -2,6 +2,11 @@
 
 package src;
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.File;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
 
 
 /**
@@ -162,7 +167,14 @@ class AntiVirus extends Attacker implements Locatable
     public void draw( Graphics g, int xOffset, int yOffset )
     {
         g.setColor( Color.blue );
-        g.fillRect( getX() - xOffset, getY() - yOffset, getWidth(), getHeight() );
+        BufferedImage in;
+        try {
+            in = ImageIO.read(new File("antibody.png"));
+            g.drawImage(in, getX() - xOffset, getY() - yOffset, null);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 

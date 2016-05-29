@@ -3,13 +3,11 @@ package src;
 
 import org.junit.Test;
 
-
-
 import org.junit.Test;
-
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Collection;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
@@ -154,6 +152,32 @@ public class JUnitVirusAttackTest
     }
 
 
+    // AntiVirusManager -Melissa
+    @Test
+    public void antiVirusManagerConstructor()
+    {
+        AntiVirusManager avm = new AntiVirusManager();
+        String s = avm.toString();
+        assertTrue( "<<Invalid AntiVirusManager constructor>>",
+            s.contains( "AntiVirusManager[" ) && s.contains( "anti: " + AntiVirusManager.anti.toString() ) );
+    }
+    @Test
+    public void antiVirusToString()
+    {
+        AntiVirusManager avm = new AntiVirusManager();
+        String s = avm.toString();
+        assertNotNull(s);        
+    }
+    @Test 
+    public void antiVirusAddAnti()
+    {
+        AntiVirusManager.addAnti( 0, 0 );
+        assertTrue( "<<AntiVirus not added to anti>>",AntiVirusManager.anti.size() != 0);
+        
+
+    }
+
+
     // Cell - Melissa
     @Test
     public void cellToString()
@@ -161,8 +185,154 @@ public class JUnitVirusAttackTest
         Cell wc = new WhiteCell( 0, 0, 100 );
         assertNotNull( wc.toString() );
     }
+
+
+    @Test
+    public void cellConstructor()
+    {
+        Cell wc = new RedCell( 0, 0, 100 );
+        String s = wc.toString();
+        assertTrue( "<<Invalid Cell Constructor>>",
+            s.contains( "RedCell[" ) && s.contains( "x: 0" ) && s.contains( "y: 0" )
+                && s.contains( "health: " + 100 ) );
+    }
+
+
+    @Test
+    public void cellMax()
+    {
+        Cell wc = new RedCell( 0, 0, 100 );
+        assertTrue( "<<No Max Variable Stored>>", wc.max() == 100 );
+
+    }
+
+
+    @Test
+    public void cellGetX()
+    {
+        Cell wc = new RedCell( 0, 0, 100 );
+        assertTrue( "<<No X Variable Stored>>", wc.getX() == 0 );
+    }
+
+
+    @Test
+    public void cellGetY()
+    {
+        Cell wc = new RedCell( 0, 0, 100 );
+        assertTrue( "<<No Y Variable Stored>>", wc.getY() == 0 );
+    }
+
+
+    @Test
+    public void cellSetX()
+    {
+        Cell wc = new RedCell( 0, 0, 100 );
+        wc.setX( 10 );
+        assertTrue( "<<No X Variable Changed>>", wc.getX() == 10 );
+    }
+
+
+    @Test
+    public void cellSetY()
+    {
+        Cell wc = new RedCell( 0, 0, 100 );
+        wc.setY( 10 );
+        assertTrue( "<<No Y Variable Changed>>", wc.getY() == 10 );
+    }
+
+
+    @Test
+    public void cellGetDistance()
+    {
+        Cell wc = new RedCell( 0, 0, 100 );
+        Cell wc1 = new RedCell( 24, 7, 100 );
+        assertTrue( "<<Distance incorrect>>", wc.getDistance( wc1 ) == 5 );
+
+    }
+
+
+    @Test
+    public void cellDecrementHealth()
+    {
+        Cell wc = new RedCell( 0, 0, 100 );
+        wc.decrementHealth( 20 );
+        assertTrue( "<<Health decremented incorrectly>>", wc.getHealth() == 80 );
+
+    }
+
+
+    @Test
+    public void cellIncreaseHealth()
+    {
+        Cell wc = new RedCell( 0, 0, 100 );
+        wc.increaseHealth( 20 );
+        assertTrue( "<<Health increased incorrectly>>", wc.getHealth() == 120 );
+    }
+
+
     // RedCell - Melissa
+    @Test
+    public void redCellConstructor()
+    {
+        RedCell wc = new RedCell( 0, 0, 100 );
+        String s = wc.toString();
+        assertTrue( "<<Invalid Cell Constructor>>",
+            s.contains( "RedCell[" ) && s.contains( "x: 0" ) && s.contains( "y: 0" )
+                && s.contains( "health: " + 100 ) );
+    }
+
+
+    @Test
+    public void redCellToString()
+    {
+        RedCell wc = new RedCell( 0, 0, 100 );
+        assertNotNull( wc.toString() );
+    }
+
+
     // SickCell - Melissa
+    @Test
+    public void SickCellConstructor()
+    {
+        SickCell wc = new SickCell( 0, 0, 100 );
+        String s = wc.toString();
+        assertTrue( "<<Invalid Cell Constructor>>",
+            s.contains( "SickCell[" ) && s.contains( "x: 0" ) && s.contains( "y: 0" ) && s.contains( "health: " + 100 )
+                && s.contains( "ticks: " + 0 ) );
+    }
+
+
+    @Test
+    public void sickCellToString()
+    {
+        SickCell wc = new SickCell( 0, 0, 100 );
+        assertNotNull( wc.toString() );
+    }
+
+
+    @Test
+    public void sickCellProduceUnit()
+    {
+        SickCell wc = new SickCell( 0, 0, 100 );
+        VirusGroupManager vgm = new VirusGroupManager();
+        Collection<VirusGroup> al = VirusGroupManager.groups.values();
+        int a = 0;
+        for ( VirusGroup vg : al )
+        {
+            a += vg.size();
+        }
+        int b = 0;
+
+        wc.setTicks( 300 );
+        wc.produceUnit();
+        for ( VirusGroup vg : al )
+        {
+            b += vg.size();
+        }
+
+        assertTrue( "<<AntiVirus Production error from Sick Cells>>", a + 1 == b );
+
+    }
 
 
     // WhiteCell - Melissa
@@ -183,6 +353,8 @@ public class JUnitVirusAttackTest
         WhiteCell wc = new WhiteCell( 0, 0, 100 );
         assertNotNull( wc.toString() );
     }
+
+
     @Test
     public void WhiteCellSplit()
     {
@@ -190,8 +362,10 @@ public class JUnitVirusAttackTest
         WhiteCell wc = new WhiteCell( 0, 0, 100 );
         w.add( wc );
         wc.split( w );
-        assertTrue( "<<Cells not Spliting>>", w.size() == 2);
+        assertTrue( "<<Cells not Spliting>>", w.size() == 2 );
     }
+
+
     @Test
     public void WhiteCellProduceUnit()
     {
@@ -200,11 +374,113 @@ public class JUnitVirusAttackTest
         assertNotNull( wc );
 
     }
+
+
     @Test
     public void WhiteCellSetAttacked()
     {
-        
+        WhiteCell wc = new WhiteCell( 0, 0, 100 );
+        wc.setAttacked( true );
+        assertTrue( "<<White Cell Attack not set>>", wc.isAttacked() );
     }
+
+
+    @Test
+    public void WhiteCellIsAttacked()
+    {
+        WhiteCell wc = new WhiteCell( 0, 0, 100 );
+        wc.setAttacked( true );
+        assertTrue( "<<White Cell Attack not set>>", wc.isAttacked() );
+    }
+
+
+    @Test
+    public void WhiteCellGetTime()
+    {
+        WhiteCell wc = new WhiteCell( 0, 0, 100 );
+        assertTrue( "<<White Cell Time not set>>", wc.getTime() == 0 );
+    }
+
+
+    @Test
+    public void WhiteCellUpdateTime()
+    {
+        WhiteCell wc = new WhiteCell( 0, 0, 100 );
+        wc.updateTime();
+        wc.updateTime();
+        assertTrue( "<<White Cell Time not set>>", wc.getTime() == 2 );
+    }
+
+
+    @Test
+    public void WhiteCellMove()
+    {
+        WhiteCell wc = new WhiteCell( 0, 0, 100 );
+        wc.setvx( 5 );
+        wc.setvy( 6 );
+        wc.move();
+        wc.updateTime();
+        assertTrue( "<<White Cell not Moving>>", wc.vx() == 5 && wc.vy() == 6 );
+    }
+
+
     // CellManager - Melissa
+    @Test
+    public void CellManagerConstructor()
+    {
+        CellManager cm = new CellManager();
+        String s = cm.toString();
+        assertTrue( "<<Invalid CellManager Constructor>>",
+            s.contains( "CellManager[" ) && s.contains( "whiteValues: " + CellManager.whiteValues.toString() )
+                && s.contains( "redValues: " + CellManager.redValues.toString() )
+                && s.contains( "sickValues: " + CellManager.sickValues.toString() ) );
+    }
+
+
+    @Test
+    public void CellManagerCreateCellsInPositions()
+    {
+        CellManager cm = new CellManager();
+        cm.createCellsInPositions();
+
+        assertTrue( "<<Cells not Created>>",
+            CellManager.whiteValues.size() == 3 && CellManager.sickValues.size() == 2
+                && CellManager.redValues.size() == 20 );
+    }
+
+
+    @Test
+    public void CellManagerConvertSick()
+    {
+        CellManager cm = new CellManager();
+        CellManager.redValues.clear();
+        CellManager.sickValues.clear();
+        Cell c = new RedCell( 0, 0, 100 );
+        CellManager.redValues.add( c );
+        CellManager.convertCell( c );
+        assertTrue( "<<Cell did not convert to Sick>>",
+            CellManager.redValues.size() == 0 && CellManager.sickValues.size() == 1 );
+
+    }
+
+
+    @Test
+    public void CellManagerRemoveCell()
+    {
+        CellManager cm = new CellManager();
+        CellManager.whiteValues.clear();
+        CellManager.whiteValues.add( new WhiteCell( 0, 0, 200 ) );
+        CellManager.removeCell( 0 );
+        assertTrue( "<<Cell did not get removed>>", CellManager.whiteValues.isEmpty() );
+
+    }
+
+
+    @Test
+    public void cellManagerToString()
+    {
+        CellManager cm = new CellManager();
+        assertNotNull( cm.toString() );
+    }
 
 }

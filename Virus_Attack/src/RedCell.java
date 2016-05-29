@@ -9,8 +9,16 @@ import java.io.File;
 import java.io.IOException;
 
 /**
+ * 
  * An implementation of the abstract cell. This cell is neutral to the player. It starts out at a health of a 100.
  * These cells are conquerable nodes by the player.
+ *
+ *  @author  Melissa Wei
+ *  @version May 28, 2016
+ *  @author  Period: 6
+ *  @author  Assignment: APCS-Final-Project
+ *
+ *  @author  Sources: n/a
  */
 public class RedCell extends Cell {
 
@@ -51,6 +59,13 @@ public class RedCell extends Cell {
     @Override
     public void produceUnit() {
 
+    }
+    //Testing purposes
+    public String toString()
+    {
+        
+        return "RedCell[x: " + getX() + " y: " + getY() + "radius: " + getRadius() + "health: " + getHealth() + "]";
+        
     }
 
 }
