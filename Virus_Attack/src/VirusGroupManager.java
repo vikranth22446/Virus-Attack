@@ -1,4 +1,4 @@
-package src;
+
 
 
 
@@ -160,7 +160,15 @@ class VirusGroupManager
         groups.get( currentGroup ).addVirus( new Virus( x, y ) );
     }
 
-
+    /**
+     * adds a virus to the current group given a virus
+     *
+     * @param virus the passed virus
+     */
+    void addVirus(Virus virus )
+    {
+        groups.get( currentGroup ).addVirus( virus );
+    }
     /**
      * splits the current group into 2 new groups
      */

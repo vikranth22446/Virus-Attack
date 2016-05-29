@@ -1,5 +1,4 @@
 
-package src;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -132,7 +131,7 @@ public class WhiteCell extends Cell {
             in = ImageIO.read(new File("pixelwhite.png"));
             g.drawImage(in, getX() - xOffset, getY() - yOffset, null);
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Cannot Read Image for whiteImage");
         }
 
     }
@@ -271,8 +270,7 @@ public class WhiteCell extends Cell {
 
                             tracking = false;
                         }
-                    } 
-                    else if (!attacking){
+                    } else if (!attacking) {
                         drift();
 
                     }
@@ -339,25 +337,25 @@ public class WhiteCell extends Cell {
             drift = 0;
         }
     }
+
     //Testing purposes
-    public int vx()
-    {
+    public int vx() {
         return vx;
     }
-    public int vy()
-    {
+
+    public int vy() {
         return vy;
     }
-    public void setvx(int vx)
-    {
+
+    public void setvx(int vx) {
         this.vx = vx;
     }
-    public void setvy(int vy)
-    {
+
+    public void setvy(int vy) {
         this.vy = vy;
     }
-    public void setTicks(int ticks)
-    {
+
+    public void setTicks(int ticks) {
         this.ticks = ticks;
     }
 

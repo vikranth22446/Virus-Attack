@@ -1,4 +1,4 @@
-package src;
+
 
 
 import javax.swing.*;
@@ -12,7 +12,7 @@ class WelcomeScreen extends JFrame {
     void createWelcomeScreen() {
         URL url = null;
         try {
-            url = new URL("file:redbloodanimation.gif");
+            url = new URL("file:giphy.gif");
         } catch (MalformedURLException e) {
             e.printStackTrace();
          }

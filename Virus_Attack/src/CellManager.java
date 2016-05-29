@@ -1,5 +1,4 @@
 
-package src;
 
 
 import java.awt.*;
@@ -8,6 +7,8 @@ import java.util.stream.Collectors;
 
 /**
  * CellManager contains redValues,whiteValues, and sickValues.
+ *
+ * @author Melissa Wei
  */
 class CellManager {
     /**

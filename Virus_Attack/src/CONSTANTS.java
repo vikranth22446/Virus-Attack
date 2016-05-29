@@ -1,6 +1,8 @@
-package src;
-
-
+/**
+ * A List of Constants used thought the classes
+ *
+ * @author Vikranth Srivatsa
+ */
 class Constants {
     /**
      * Anti-Virus constants:

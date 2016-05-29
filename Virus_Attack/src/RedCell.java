@@ -1,4 +1,3 @@
-package src;
 
 
 
@@ -51,7 +50,7 @@ public class RedCell extends Cell {
             g.drawImage(in, getX() - xOffset, getY() - yOffset, null);
 
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Cannot Read Image for redImage");
         }
 
     }

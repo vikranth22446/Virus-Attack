@@ -1,4 +1,4 @@
-package src;
+
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -53,7 +53,7 @@ public class SickCell extends Cell {
             in = ImageIO.read(new File("pixelsick.png"));
             g.drawImage(in, getX() - xOffset, getY() - yOffset, null);
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Cannot Read Image for sickImage");
         }
     }
 

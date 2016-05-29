@@ -1,8 +1,10 @@
-package src;
+
 
 
 /**
  * Class with the main method that calls WelcomeScreen.createWelcomeScreen();
+ *
+ * @author Vikranth Srivatsa
  */
 class VirusGame {
     /**
@@ -13,6 +15,5 @@ class VirusGame {
     public static void main(String[] args) {
         WelcomeScreen worldScreen = new WelcomeScreen();
         worldScreen.createWelcomeScreen();
-
     }
 }

@@ -1,8 +1,10 @@
-package src;
+
 
 
 /**
  * Contains the basic methods that are shared by both AntiVirus and Virus Class
+ *
+ * @author Vikranth Srivatsa
  */
 abstract class Attacker implements Locatable {
     /**
@@ -12,7 +14,7 @@ abstract class Attacker implements Locatable {
     /**
      * The speed, attack, attack radius, height and width that is taken from the Constants class
      */
-    private final int speed, attack, attackRadius, height, width;
+    private int speed, attack, attackRadius, height, width;
     /**
      * The health of the basic Virus
      */
@@ -153,9 +155,14 @@ abstract class Attacker implements Locatable {
     int getWidth() {
         return width;
     }
-    
-    int getSpeed(){
-    	return speed;
+
+    /**
+     * Returns the speed of the Basic Virus
+     *
+     * @return the speed of the Basic Virus
+     */
+    int getSpeed() {
+        return speed;
     }
 
     /**
@@ -230,8 +237,7 @@ abstract class Attacker implements Locatable {
     @Override
     public double getDistance(Locatable other) {
         double distance = (x - other.getX()) * (x - other.getX()) + (y - other.getY()) * (y - other.getY());
-        distance = Math.sqrt(distance);
-        return distance;
+        return Math.sqrt(distance);
     }
 
     /**
@@ -245,5 +251,23 @@ abstract class Attacker implements Locatable {
         double distance = (x - xL) * (x - xL) + (y - yL) * (y - yL);
         distance = Math.sqrt(distance);
         return distance;
+    }
+
+    @Override
+    public String toString() {
+        return "Attacker{" +
+                "x=" + x +
+                ", y=" + y +
+                ", speed=" + speed +
+                ", attack=" + attack +
+                ", attackRadius=" + attackRadius +
+                ", height=" + height +
+                ", width=" + width +
+                ", health=" + health +
+                ", vx=" + vx +
+                ", vy=" + vy +
+                ", xL=" + xL +
+                ", yL=" + yL +
+                '}';
     }
 }

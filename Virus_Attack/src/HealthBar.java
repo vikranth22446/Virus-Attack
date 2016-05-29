@@ -1,4 +1,3 @@
-package src;
 
 
 
@@ -9,6 +8,8 @@ import java.awt.*;
  * A green color is used to show health, while red is used to the show the rest.
  * In the case of the Sick cell( which has a health of -100). A red bar
  * is drawn, and the green bar for the rest of the bar
+ *
+ * @author Vikranth Srivatsa
  */
 class HealthBar {
     /**
@@ -78,5 +79,15 @@ class HealthBar {
         g.fillRect((cell.getX() - cell.getRadius() / 2) + cellHealth - xOffset, cell.getY() - cell.getRadius() / 2 - yOffset - Constants.HEIGHT_CORRECTION_FACTOR, remaining, Constants.HEALTH_BAR_HEIGHT);
     }
 
-
+    /**
+     * Returns a string with the cell
+     *
+     * @return a string with the cell
+     */
+    @Override
+    public String toString() {
+        return "HealthBar{" +
+                "cell=" + cell +
+                '}';
+    }
 }
