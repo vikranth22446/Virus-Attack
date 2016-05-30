@@ -20,7 +20,7 @@ class Constants {
      * SPEED,HEALTH,ATTACK,ATTACK_RADIUS,WIDTH,HEIGHT,IDLE_RANGE
      */
     public static final int VIRUS_SPEED = 5;
-    public static final int VIRUS_HEALTH = 10;
+    public static final int VIRUS_HEALTH = 60;
     public static final int VIRUS_ATTACK = 1;
     public static final int VIRUS_ATTACK_RADIUS = 80;
     public static final int VIRUS_WIDTH = 30;
