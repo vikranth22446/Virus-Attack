@@ -757,7 +757,7 @@ public class JUnit {
     public void healthBarConctructor() {
         HealthBar healthBar = new HealthBar(new WhiteCell(30, 30, 30));
         System.out.println(healthBar.toString());
-        String test = "HealthBar{cell=EasyMock for class Cell}";
+        String test = "HealthBar{cell=WhiteCell[x: 30 y: 30radius: 50health: 30.0speed: 5attack: 1]}";
         assertTrue("<<The Cell is contructed wrong>>", test.equalsIgnoreCase(healthBar.toString()));
     }
 

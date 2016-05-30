@@ -7,8 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db7114d6-e625-4df5-b478-8fc896f80992" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/Virus_Attack_jar.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Virus_Attack/src/JUnit.java" afterPath="$PROJECT_DIR$/Virus_Attack/src/JUnit.java" />
     </list>
     <ignored path="Virus Attack.iws" />
@@ -75,8 +73,8 @@
       <file leaf-file-name="JUnit.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Virus_Attack/src/JUnit.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="811" column="70" selection-start-line="811" selection-start-column="70" selection-end-line="811" selection-end-column="70" />
+            <state relative-caret-position="190">
+              <caret line="759" column="100" selection-start-line="759" selection-start-column="100" selection-end-line="759" selection-end-column="100" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#12784#12790#0" expanded="true" />
@@ -366,7 +364,7 @@
       <recent name="C:\Users\vikranth\IdeaProjects\APCS-Final-Project\Virus_Attack" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.VirusGame">
+  <component name="RunManager" selected="JUnit.JUnit">
     <configuration default="false" name="JUnit.attackerGetDistance" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="Virus Attack" />
@@ -956,8 +954,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.VirusGame" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.JUnit" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.JUnit" />
+        <item index="1" class="java.lang.String" itemvalue="Application.VirusGame" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.JUnit.everyTurnTest" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.JUnit.healthBarConctructor" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.JUnit.attackerGetDistance" />
@@ -1021,14 +1019,11 @@
       <workItem from="1464587642095" duration="1885000" />
       <workItem from="1464589787620" duration="1238000" />
       <workItem from="1464623769146" duration="5597000" />
-      <workItem from="1464630597584" duration="2856000" />
+      <workItem from="1464630597584" duration="3234000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="JUnit - 2016.05.30 at 09h 39m 48s.xml">
-      <configuration name="JUnit" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="JUnit - 2016.05.30 at 09h 40m 32s.xml">
       <configuration name="JUnit" configurationId="JUnit" />
     </history-entry>
@@ -1053,12 +1048,15 @@
     <history-entry file="JUnit - 2016.05.30 at 10h 25m 57s.xml">
       <configuration name="JUnit" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="JUnit - 2016.05.30 at 11h 43m 38s.xml">
+      <configuration name="JUnit" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="JUnit_everyTurnTest - 2016.05.30 at 10h 18m 24s.xml">
       <configuration name="JUnit.everyTurnTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78066000" />
+    <option name="totallyTimeSpent" value="78444000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1080,11 +1078,11 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="DBHelper" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38183808" sideWeight="0.4201313" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38183808" sideWeight="0.4201313" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32822758" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28993437" sideWeight="0.49562362" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38183808" sideWeight="0.57986873" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28993437" sideWeight="0.49562362" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38183808" sideWeight="0.57986873" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23194748" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1118,7 +1116,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="15" />
+      <option name="time" value="16" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1548,8 +1546,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Virus_Attack/src/JUnit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="811" column="70" selection-start-line="811" selection-start-column="70" selection-end-line="811" selection-end-column="70" />
+        <state relative-caret-position="190">
+          <caret line="759" column="100" selection-start-line="759" selection-start-column="100" selection-end-line="759" selection-end-column="100" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#12784#12790#0" expanded="true" />
