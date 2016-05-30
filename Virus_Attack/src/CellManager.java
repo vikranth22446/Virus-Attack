@@ -216,7 +216,7 @@ class CellManager {
      */
     public void produce() {
         whiteValues.forEach(Cell::produceUnit);
-        //sickValues.forEach(Cell::produceUnit);
+        sickValues.forEach(Cell::produceUnit);
     }
     public ArrayList<Integer> returnSizes(){
         ArrayList<Integer> arrayList = new ArrayList<>();

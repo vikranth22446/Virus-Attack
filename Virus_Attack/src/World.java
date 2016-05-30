@@ -128,6 +128,8 @@ class World extends Canvas implements Runnable {
 
         getWidth = getWidth();
         getHeight = getHeight();
+        GAME_OVER = false;
+        gameOver = "";
     }
 
     ScoreBoard scoreBoard;
@@ -149,7 +151,7 @@ class World extends Canvas implements Runnable {
             if (GAME_OVER) {
                 render(time);
                 GameOverScreen gameOverScreen = new GameOverScreen();
-                gameOverScreen.createScreen(gameOver,scoreBoard);
+                gameOverScreen.createScreen(gameOver, scoreBoard);
                 frame.dispose();
                 break;
             }
