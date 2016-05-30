@@ -6,12 +6,25 @@ import java.awt.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-
+/**
+ * Creates a Welcome screen for user to click to start Game. If they click
+ * directions a set of pop ups will appear explaining the game
+ *
+ * @author Vikranth Srivatsa
+ */
 class WelcomeScreen extends JFrame {
+    /**
+     * The background gif.
+     */
     JLabel backgroundGif;
-    private JButton firstButton;
-    private JButton secondButton;
 
+    /**
+     * calls createBackgroundGif();
+     * Also calls Create Buttons 40 y from each other with titles directions and start game
+     * initializes the frame by setting title adding gif, packing,setting it visible, and making sure it is also not resiable.
+     * <p>
+     * It also adds backgroundGif to the plane
+     */
     void createWelcomeScreen() {
 
         createBackgroundGif();
@@ -30,10 +43,20 @@ class WelcomeScreen extends JFrame {
 
     }
 
-    private void createButtons(int width, int height, String title) {
+    /**
+     * Create a button of a certian title,width and height. size 120.30
+     * Set the background to a shade of blue and text to white. Add a action listener to run if the title is start game
+     * or else call loadDirections
+     * Then add the button
+     *
+     * @param x     the width to set
+     * @param y     the height to set
+     * @param title the titile to set
+     */
+    private void createButtons(int x, int y, String title) {
         JButton jButton = new JButton();
         jButton.setSize(120, 30);
-        jButton.setLocation(width, height);
+        jButton.setLocation(x, y);
         jButton.setText(title);
         jButton.setBackground(new Color(20, 99, 182));
         jButton.setForeground(Color.WHITE);
@@ -41,14 +64,16 @@ class WelcomeScreen extends JFrame {
         jButton.setFont(new Font("Tahoma", Font.BOLD, 12));
         if (title.equalsIgnoreCase("Start Game")) {
             jButton.addActionListener(e -> run());
-            firstButton = jButton;
         } else {
             jButton.addActionListener(e -> loadDirections());
-            secondButton = jButton;
         }
         add(jButton);
     }
 
+    /**
+     * This get's the url from the file giphy.gif. Then it puts that into a JLabel
+     * of size World.WIDTH * 2 + 300, World.HEIGHT * 2 + 300
+     */
     public void createBackgroundGif() {
         URL url = null;
         try {
@@ -62,6 +87,9 @@ class WelcomeScreen extends JFrame {
         backgroundGif.setSize(World.WIDTH * 2 + 300, World.HEIGHT * 2 + 300);
     }
 
+    /**
+     * Calls the list of directions
+     */
     private void loadDirections() {
         createFirstMessage();
         createSickAndVirusMessage();
@@ -71,6 +99,9 @@ class WelcomeScreen extends JFrame {
         createPointsSetUP();
     }
 
+    /**
+     * uses JOptionPane to give info on RedCell
+     */
     private void createRedCellMessage() {
         String pt1 = "<html><body width='";
         String pt2 =
@@ -88,6 +119,9 @@ class WelcomeScreen extends JFrame {
         JOptionPane.showMessageDialog(null, s);
     }
 
+    /**
+     * uses JOptionPane to give info on Map
+     */
     private void createMapMessage() {
         String pt1 = "<html><body width='";
         String pt2 =
@@ -109,6 +143,10 @@ class WelcomeScreen extends JFrame {
 
         JOptionPane.showMessageDialog(null, s);
     }
+
+    /**
+     * uses JOptionPane to give info on the Point System
+     */
     private void createPointsSetUP() {
         String pt1 = "<html><body width='";
         String pt2 =
@@ -131,6 +169,10 @@ class WelcomeScreen extends JFrame {
 
         JOptionPane.showMessageDialog(null, s);
     }
+
+    /**
+     * uses JOptionPane to give info on WhiteCell and AntiViruses
+     */
     private void createWhiteAndAntiVirusMessage() {
         String pt1 = "<html><body width='";
         String pt2 =
@@ -156,6 +198,9 @@ class WelcomeScreen extends JFrame {
         JOptionPane.showMessageDialog(null, s);
     }
 
+    /**
+     * uses JOptionPane to give info on Sick Cell and Viruses
+     */
     private void createSickAndVirusMessage() {
         String pt1 = "<html><body width='";
         String pt2 =
@@ -184,6 +229,9 @@ class WelcomeScreen extends JFrame {
         JOptionPane.showMessageDialog(null, s);
     }
 
+    /**
+     * uses JOptionPane to give info on the preview of the game
+     */
     private void createFirstMessage() {
         String pt1 = "<html><body width='";
         String pt2 =
@@ -207,6 +255,9 @@ class WelcomeScreen extends JFrame {
         JOptionPane.showMessageDialog(null, s);
     }
 
+    /**
+     * This is called by the start game button. It starts a new screen called world that runs the game.
+     */
     private void run() {
         World world = new World();
         world.start();

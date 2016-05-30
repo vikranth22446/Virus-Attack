@@ -69,8 +69,6 @@ class World extends Canvas implements Runnable {
     private static InputHandler input;
     JFrame frame;
 
-    
-    private Thread thread;
     /**
      * creates all the objects, get the canvas, sets frame size, adds listening to input handler
      */
@@ -153,6 +151,7 @@ class World extends Canvas implements Runnable {
                 GameOverScreen gameOverScreen = new GameOverScreen();
                 gameOverScreen.createScreen(gameOver, scoreBoard);
                 frame.dispose();
+
                 break;
             }
 
@@ -225,13 +224,15 @@ class World extends Canvas implements Runnable {
     	}
     	return "neither";
     }
-
+    private Thread thread;
     /**
      * the start method run from main
      */
     synchronized void start() {
-        new Thread(this).start();
+        thread = new Thread(this);
+        thread.start();
     }
+
 
 
 }
