@@ -1,7 +1,6 @@
 import org.junit.Before;
 import org.junit.Test;
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -19,13 +18,13 @@ import static org.junit.Assert.assertTrue;
 public class JUnit {
     /**
      * Virus JUnit Test Methods:
-     * virusSetUp()
-     * virusConstructor()
-     * virusToString()
-     * virusMoving()
-     * virusUpdate()
-     * virusReduceHealth()
-     * virusIdleMovement()
+     * virusSetUp(): sets a coordinate to 123 and 123
+     * virusConstructor(): checks if the x and y coordinates are in the right spot for the toString
+     * virusToString(): checks if toString is not null
+     * virusMoving(): Checks if virus is moving
+     * virusUpdate(): Checks if the virus has moved
+     * virusReduceHealth(): Checks if the virus has reduced health
+     * virusIdleMovement(): checks if the virus goes through idle movement routine
      *
      * @author Alex M
      */
@@ -33,15 +32,10 @@ public class JUnit {
 
     private int yCoord;
 
-    private int groupNum = 3;
-
-    private Graphics g;
-
     @Before
     public void virusSetUp() {
         xCoord = 123;
         yCoord = 123;
-        groupNum = 3;
     }
 
     @Test
@@ -98,12 +92,12 @@ public class JUnit {
 
     /**
      * Virus Group Tests:
-     * virusGroupConstructor()
-     * virusGroupOtherConstructor()
-     * virusGroupAddVirus()
-     * virusGroupRemove()
-     * virusGroupGetVirus()
-     * virusGroupSetCoord()
+     * virusGroupConstructor(): Checks if virus group constructor is right
+     * virusGroupOtherConstructor(): Checks overload constructor
+     * virusGroupAddVirus(): Checks if virus is added
+     * virusGroupRemove(): Checks if viruses is removed
+     * virusGroupGetVirus(): checks if the right virus is returned when you call getVirus
+     * virusGroupSetCoord() sets the coordinates of the viruses
      *
      * @author Alex M
      */
@@ -161,14 +155,11 @@ public class JUnit {
 
     /**
      * Virus Group Manager Tests:
-     * virusGroupManagerConstructor()
-     * virusGroupManagerHasKey()
-     * virusGroupManagerAddVirus()
-     * virusGroupManagerRemove()
-     * virusGroupManagerSplit()
-     * antiVirusManagerConstructor()
-     * antiVirusToString()
-     * antiVirusAddAnti()
+     * virusGroupManagerConstructor(): Checks if groups are set correctly
+     * virusGroupManagerHasKey(): Checks if key = 1 exsits
+     * virusGroupManagerAddVirus(): Checks if there 3 viruses
+     * virusGroupManagerRemove(): Checks if 1 virus will remain after remove()
+     * virusGroupManagerSplit(): Checks if the groups will split right
      *
      * @author Alex M
      */
@@ -208,6 +199,14 @@ public class JUnit {
         assertTrue("<<Did not Split>>", vgm.hasKey(1) && vgm.hasKey(2));
     }
 
+    /**
+     * antiVirusManagerConstructor(): Checks if the antiVirus returns the right string
+     * antiVirusToString(): Checks if toString is not null
+     * antiVirusAddAnti(): Checks if an antiVirus is added
+     * antiVirusManagerDraw()
+     *
+     * @author Melissa Wei
+     */
     @Test
     public void antiVirusManagerConstructor() {
         AntiVirusManager avm = new AntiVirusManager();
@@ -231,49 +230,18 @@ public class JUnit {
 
     }
 
-//    @Test
-//    public void antiVirusManagerDraw() {
-//        Graphics graphics = createMock(Graphics.class);
-//
-//        AntiVirusManager antiVirusManager = new AntiVirusManager();
-//        antiVirusManager.addAnti(30, 20);
-//        boolean causesError = true;
-//        try {
-//            antiVirusManager.draw(graphics, 20, 20);
-//        } catch (Exception e) {
-//            causesError = false;
-//        }
-//        assertTrue("<<There is an error with the Draw method>>", causesError);
-//
-//    }
-//
-//    @Test
-//    public void updateLocationAntiVirus() {
-//        Graphics graphics = createMock(Graphics.class);
-//
-//        AntiVirusManager antiVirusManager = new AntiVirusManager();
-//        antiVirusManager.addAnti(30, 20);
-//        boolean causesError = true;
-//        try {
-//            antiVirusManager.updateLocation(graphics, 20, 20);
-//        } catch (Exception e) {
-//            causesError = false;
-//        }
-//        assertTrue("<<There is an error with the updateMethod method>>", causesError);
-//    }
-
     /**
      * Cell Tests:
-     * cellToString()
-     * cellConstructor()
-     * cellMax()
-     * cellGetX()
-     * cellGetY()
-     * cellSetX()
-     * cellSetY()
-     * cellGetDistance()
-     * cellDecrementHealth()
-     * cellIncreaseHealth()
+     * cellToString(): Checks if the toString is not null
+     * cellConstructor(): Checks if the to string contains the right fields
+     * cellMax(): Checks if the initial health is right
+     * cellGetX(): checks if the x value is returned right
+     * cellGetY(): checks if the y value is returned  right
+     * cellSetX(): checks if the x value is set right
+     * cellSetY(): checks if the y value is set right
+     * cellGetDistance(): Returns the distance between cells
+     * cellDecrementHealth(): Checks if the cell is decremented cell is right
+     * cellIncreaseHealth(): Checks if the cell is incremented cell is right
      *
      * @author Melissa
      */
@@ -360,8 +328,8 @@ public class JUnit {
 
     /**
      * Red Cell Tests:
-     * redCellConstructor()
-     * redCellToString()
+     * redCellConstructor(): Checks if the constructor is right using toString
+     * redCellToString(): Checks if the toString is not null
      *
      * @author Melissa
      */
@@ -384,9 +352,9 @@ public class JUnit {
 
     /**
      * Sick Cell Tests:
-     * sickCellConstructor()
-     * sickCellToString()
-     * sickCellProduceUnit()
+     * sickCellConstructor(): Checks if the Sick Cell has the right fields
+     * sickCellToString(): Checks if the toString is not null
+     * sickCellProduceUnit(): Checks if Cell produce viruses
      *
      * @author Melissa
      */
@@ -431,15 +399,15 @@ public class JUnit {
 
     /**
      * White Cell Tests:
-     * whiteCellConstructor()
-     * whiteCellToString()
-     * whiteCellSplit()
-     * whiteCellProduceUnit()
-     * whiteCellSetAttacked()
-     * whiteCellIsAttacked()
-     * whiteCellGetTime()
-     * whiteCellUpdateTime()
-     * whiteCellMove()
+     * whiteCellConstructor(): Checks if to String has the right fields
+     * whiteCellToString(): Checks if toString is not Null
+     * whiteCellSplit(): Checks if White Cell Splits
+     * whiteCellProduceUnit(): Checks if white Cells produce AntiViruses
+     * whiteCellSetAttacked(): Checks if white cell is attacking
+     * whiteCellIsAttacked(): Checks if white Cell is attacked
+     * whiteCellGetTime(): Checks if the current time is right
+     * whiteCellUpdateTime(): Checks if time is updated for whiteCell
+     * whiteCellMove(): Checks if white Cell moves
      *
      * @author Melissa
      */
@@ -525,11 +493,11 @@ public class JUnit {
 
     /**
      * Cell Manager Tests:
-     * cellManagerConstructor()
-     * cellManagerCreateCellsInPositions()
-     * cellManagerConvertSick()
-     * cellManagerRemoveCell()
-     * cellManagerToString()
+     * cellManagerConstructor(): Checks if cellManager is initialized right
+     * cellManagerCreateCellsInPositions(): Checks if the cells in CellManager is in the right cell
+     * cellManagerConvertSick(): Checks if the red cell gets convert to sick
+     * cellManagerRemoveCell(): Checks if cell is removed
+     * cellManagerToString(): Checks if toString is right
      *
      * @author Melissa
      */
@@ -588,10 +556,8 @@ public class JUnit {
 
     /**
      * AntiVirus Test Classes
-     * antiVirusConstructor()
-     * antiVirusUpdate()
-     * antiVirusDraw()
-     * antiVirusToString()
+     * antiVirusConstructor(): Checks if the antiVirus constructor is right
+     * antiVirusToString(): Checks if the toString is null
      *
      * @author Vikranth Srivatsa
      */
@@ -602,30 +568,6 @@ public class JUnit {
         assertTrue("<<Invalid Construction Of objects>>", test.equals("AntiVirus{currentFollowVirus=null, positionOfVirus=0, follow=false}"));
     }
 
-//    @Test
-//    public void antiVirusUpdate() {
-//        Graphics graphics = createMock(Graphics.class);
-//        VirusGroupManager virusGroupManager = new VirusGroupManager();
-//        Virus virus = new Virus(30, 30);
-//        virusGroupManager.addVirus(virus);
-//        AntiVirus antiVirus = new AntiVirus(20, 30);
-//        antiVirus.update(graphics, 20, 20);
-//        assertTrue("<<AntiVirus Did not Attack Correctly>>", 59 == virus.getHealth());
-//    }
-//
-//    @Test
-//    public void antiVirusDraw() {
-//        Graphics graphics = createMock(Graphics.class);
-//
-//        AntiVirus antiVirus = new AntiVirus(20, 30);
-//        boolean causesError = true;
-//        try {
-//            antiVirus.draw(graphics, 20, 20);
-//        } catch (Exception e) {
-//            causesError = false;
-//        }
-//        assertTrue("<<There is an error with the Draw method>>", causesError);
-//    }
 
     @Test
     public void antiVirusToString() {
@@ -635,27 +577,27 @@ public class JUnit {
 
     /**
      * Attacker Test:
-     * attackerConstructor()
-     * attackerSetCoordinate()
-     * attackerreduceHealth()
-     * attackerGetAttackRadius()
-     * attackerGetX()
-     * attackerGetY()
-     * attackerHealth()
-     * attackerVelocityX()
-     * attackerVelocityY()
-     * attackerHeight()
-     * attackerWidth()
-     * attackerSpeed()
-     * attackerXLocation()
-     * attackerYLocation()
-     * attackerSetX()
-     * attackerSetY()
-     * attackerSetVx()
-     * attackerSetVy()
-     * attackerIsDead()
-     * attackerGetDistanceWithoutLocatable()
-     * attackerToString();
+     * attackerConstructor(): Checks if the attacker is the right constructor
+     * attackerSetCoordinate(): Checks if the coordinate is set rght
+     * attackerreduceHealth(): Checks if health is reduced
+     * attackerGetAttackRadius(): Checks if attack radius is returned right
+     * attackerGetX(): Checks if right x is returned
+     * attackerGetY(): Checks if right y is returned
+     * attackerHealth(): Checks if right health is returned
+     * attackerVelocityX(): Checks if right velocity x is returned
+     * attackerVelocityY(): Checks if right velocity y is returned
+     * attackerHeight(): Checks if right height is returned
+     * attackerWidth(): Checks if width height is returned
+     * attackerSpeed(): Checks if speed height is returned
+     * attackerXLocation(): Checks if x location is returned
+     * attackerYLocation(): : Checks if y location is returned
+     * attackerSetX(): Checks if x is set
+     * attackerSetY(): Checks if y is set
+     * attackerSetVx(): Checks if Vx is set
+     * attackerSetVy(): Checks if Vy is set
+     * attackerIsDead(): Checks if the attacker is dead
+     * attackerGetDistanceWithoutLocatable(): Checks if the right distance is returned
+     * attackerToString(); checks if the string is not null
      *
      * @author Vikranth Srivatsa
      */
@@ -807,86 +749,74 @@ public class JUnit {
 
     /**
      * Health Bar tests:
-     * healthBarConctructor()
-     * healthBarDraw()
+     * healthBarConctructor(): Checks if the health bar has the right cell
      *
      * @author Vikranth Srivatsa
      */
-//    @Test
-//    public void healthBarConctructor() {
-//        HealthBar healthBar = new HealthBar(createMock(Cell.class));
-//        String test = "HealthBar{cell=EasyMock for class Cell}";
-//        assertTrue("<<The Cell is contructed wrong>>", test.equalsIgnoreCase(healthBar.toString()));
-//    }
-//
-//    @Test
-//    public void healthBarDraw() {
-//        Graphics graphics = createMock(Graphics.class);
-//        HealthBar healthBar = new HealthBar(new WhiteCell(39, 39, 199));
-//        boolean test = true;
-//        try {
-//            healthBar.draw(graphics, 20, 20);
-//        } catch (Exception e) {
-//            test = false;
-//            e.printStackTrace();
-//        }
-//        assertTrue("<<There is an error with the draw method>>", test);
-//    }
+    @Test
+    public void healthBarConctructor() {
+        HealthBar healthBar = new HealthBar(new WhiteCell(30, 30, 30));
+        System.out.println(healthBar.toString());
+        String test = "HealthBar{cell=EasyMock for class Cell}";
+        assertTrue("<<The Cell is contructed wrong>>", test.equalsIgnoreCase(healthBar.toString()));
+    }
+
 
     /**
      * Locatable Tests:
-     * locatableGetX()
-     * locatableDistance();
+     * locatableGetX(): Returns the x coordinate of the virus
+     * locatableGetY(): Returns the y coordinate of the virus
+     * locatableDistance(): Returns the distance between the two viruses
      *
      * @author Vikranth Srivatsa
      */
-//    @Test
-//    public void locatableGetX() {
-//        Locatable locatable = createMock(Locatable.class);
-//        boolean test = true;
-//        try {
-//            locatable.getX();
-//        } catch (Exception e) {
-//            test = false;
-//        }
-//        assertTrue("<<Locatable is not working>>", test);
-//    }
-//
-//    @Test
-//    public void locatableGetY() {
-//        Locatable locatable = createMock(Locatable.class);
-//        boolean test = true;
-//        try {
-//            locatable.getX();
-//        } catch (Exception e) {
-//            test = false;
-//        }
-//        assertTrue("<<Locatable is not working>>", test);
-//    }
-//
-//    @Test
-//    public void locatableDistance() {
-//        Locatable locatable = createMock(Locatable.class);
-//        boolean test = true;
-//        try {
-//            locatable.getDistance(new Virus(30, 39));
-//        } catch (Exception e) {
-//            test = false;
-//        }
-//        assertTrue("<<Locatable is not working>>", test);
-//    }
+    @Test
+    public void locatableGetX() {
+        Locatable locatable = new Virus(30, 30);
+        boolean test = true;
+        try {
+            locatable.getX();
+        } catch (Exception e) {
+            test = false;
+        }
+        assertTrue("<<Locatable is not working>>", test);
+    }
+
+    @Test
+    public void locatableGetY() {
+        Locatable locatable = new Virus(30, 30);
+        boolean test = true;
+        try {
+            locatable.getX();
+        } catch (Exception e) {
+            test = false;
+        }
+        assertTrue("<<Locatable is not working>>", test);
+    }
+
+    @Test
+    public void locatableDistance() {
+        Locatable locatable = new Virus(30, 30);
+        boolean test = true;
+        try {
+            locatable.getDistance(new Virus(30, 39));
+        } catch (Exception e) {
+            test = false;
+        }
+        assertTrue("<<Locatable is not working>>", test);
+    }
 
     /**
      * ScoreBoard Tests:
-     * scoreBoardtoStringTest()
-     * scoreBoardContructorTest()
-     * everyTurnTest()
-     * increaseWhiteDeaths()
-     * increaseRedCellsDead()
-     * getSeconds()
-     * getWhiteCellsKilled()
-     * getRedCellsConquered()
-     * getTotalScore();
+     * scoreBoardtoStringTest(): Checks if the toString is Not null
+     * scoreBoardContructorTest(): Checks if the Constructor is right
+     * everyTurnTest(): Checks if the right string is returned every turn
+     * increaseWhiteDeaths(): Checks if the whiteCellDeath is increased
+     * increaseRedCellsDead(): Checks if the redCellConquered is increased
+     * getSeconds(): Checks if the right seconds is returned
+     * getWhiteCellsKilled(): Checks if the right whiteCellsKilled is returned
+     * getRedCellsConquered(): Checks if the right RedCellsConquered is returned
+     * getTotalScore(): Checks if the right totalScore is returned
      *
      * @author Vikranth Srivatsa
      */
