@@ -32,25 +32,6 @@ public class ScoreBoard {
         else return minutes + ":" + time;
     }
 
-    public String isGameOver(VirusGroupManager virusGroupManager,CellManager cellManager) {
-        ArrayList<Integer> sizes = cellManager.returnSizes();
-        int size = 0;
-          for (int n:virusGroupManager.getKeys()){
-              size+=virusGroupManager.getGroups().get(n).getAllViruses().size();
-          }
-        if(size==0){
-            return "lost";
-        }
-        //No Sick Cells Left
-        if(sizes.get(0)==0){
-            return "lost";
-        }
-        //No Red Cells or White Cells Left
-        else if(sizes.get(1)==0 || sizes.get(2)==0){
-            return "won";
-        }
-        return "Neither";
-    }
 
     public void increaseWhiteDeaths() {
         whiteCellsKilled++;

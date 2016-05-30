@@ -69,6 +69,8 @@ class World extends Canvas implements Runnable {
     private static InputHandler input;
     JFrame frame;
 
+    
+    private Thread thread;
     /**
      * creates all the objects, get the canvas, sets frame size, adds listening to input handler
      */
@@ -138,7 +140,12 @@ class World extends Canvas implements Runnable {
         while (true) {
             render();
             cellManager.produce();
-
+            String val = isGameOver();
+            if(val.equals("win") || val.equals("lost")){
+            	gameOver = val;
+            	GAME_OVER = true;
+            }
+            
             if (GAME_OVER) {
                 render(time);
                 GameOverScreen gameOverScreen = new GameOverScreen();
@@ -166,7 +173,6 @@ class World extends Canvas implements Runnable {
             if (i == 0) {
                 break;
             }
-            System.out.println(i);
         }
     }
 
@@ -176,12 +182,7 @@ class World extends Canvas implements Runnable {
      * double buffers
      */
     private void render() {
-        String value = scoreBoard.isGameOver(vgm, cellManager);
-        if (value.equalsIgnoreCase("lost") || value.equalsIgnoreCase("won")) {
-            gameOver = value;
-            GAME_OVER = true;
-            return;
-        }
+
         BufferStrategy bs = getBufferStrategy();
         if (bs == null) {
             createBufferStrategy(3);
@@ -189,8 +190,7 @@ class World extends Canvas implements Runnable {
         }
 
         Graphics g = bs.getDrawGraphics();
-        //g.setColor(Color.white);
-        // g.fillRect(0, 0, getWidth(), getHeight());
+
         g.drawImage(bg, -input.getXOffset() / 4, -input.getYOffset() / 4, null);
 
         vgm.draw(g, input.getXOffset(), input.getYOffset());
@@ -207,6 +207,21 @@ class World extends Canvas implements Runnable {
 
 
         bs.show();
+    }
+    
+    public String isGameOver(){
+    	if(cellManager.whiteValues.size() == 0){
+    		return "win";
+    	}
+    	else if(cellManager.sickValues.size() == 0 ){
+    		for(int n : vgm.getKeys()){
+    			if(vgm.groups.get(n).size() != 0){
+    				return "neither";
+    			}
+    		}
+    		return "lost";
+    	}
+    	return "neither";
     }
 
     /**

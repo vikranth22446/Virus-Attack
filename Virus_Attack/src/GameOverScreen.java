@@ -39,7 +39,7 @@ public class GameOverScreen extends JFrame {
         jButton.setForeground(Color.WHITE);
         jButton.setFocusPainted(false);
         jButton.setFont(new Font("Tahoma", Font.BOLD, 12));
-        jButton.addActionListener(e -> newGame());
+        jButton.addActionListener(e -> run());
         add(jButton);
     }
 
@@ -52,7 +52,7 @@ public class GameOverScreen extends JFrame {
     public void createBackgroundGif(String title) {
         URL url = null;
         try {
-            if (title.equalsIgnoreCase("lost")) {
+            if (title.equals("lost")) {
                 url = new URL("file:LostGif.gif");
             } else {
                 url = new URL("file:WonGif.gif");
@@ -69,7 +69,7 @@ public class GameOverScreen extends JFrame {
 
     private void run() {
         World world = new World();
-        world.start();
+        world.run();
         dispose();
     }
 }
