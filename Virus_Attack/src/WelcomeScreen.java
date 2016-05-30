@@ -68,6 +68,7 @@ class WelcomeScreen extends JFrame {
         createWhiteAndAntiVirusMessage();
         createRedCellMessage();
         createMapMessage();
+        createPointsSetUP();
     }
 
     private void createRedCellMessage() {
@@ -86,6 +87,7 @@ class WelcomeScreen extends JFrame {
 
         JOptionPane.showMessageDialog(null, s);
     }
+
     private void createMapMessage() {
         String pt1 = "<html><body width='";
         String pt2 =
@@ -99,14 +101,36 @@ class WelcomeScreen extends JFrame {
                         "<br />" + "" +
                         "To Defeat all the White Cells" +
                         "<br /> or <br />" +
-                        "Conquer all the redCells"+
-                        "<h2>Have Fun!!!</h2>";
+                        "Conquer all the redCells<br />" +
+                        "<h2>Also Get the Highest Points!!!</h2>" +
+                        "<h2>How do points work?</h2>";
         int width = 400;
         String s = pt1 + width + pt2;
 
         JOptionPane.showMessageDialog(null, s);
     }
+    private void createPointsSetUP() {
+        String pt1 = "<html><body width='";
+        String pt2 =
+                "'><h1>Instructions</h1>" +
+                        "<h2>Points</h2>" +
+                        "<br />" + "" +
+                        "If you kill a white Cell you gain 10 points" +
+                        "<br />If you convert a red cell to sick you gain 5 points <br />" +
+                        " " +
+                        "Every 30 seconds you will loose 1 point"
+                        + "<h2>Score Board</h2>" +
+                        "<br />" + "" +
+                        "The ScoreBroad displays the time" +
+                        "<br />" +
+                        "and The Total Points" +
+                        "<h2>Have Fun!!!</h2>" +
+                        "<br /> <h2>Get the Most Points!!!</h2>";
+        int width = 400;
+        String s = pt1 + width + pt2;
 
+        JOptionPane.showMessageDialog(null, s);
+    }
     private void createWhiteAndAntiVirusMessage() {
         String pt1 = "<html><body width='";
         String pt2 =

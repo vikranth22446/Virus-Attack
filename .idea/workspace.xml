@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="db7114d6-e625-4df5-b478-8fc896f80992" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Virus_Attack/src/ScoreBoard.java" afterPath="$PROJECT_DIR$/Virus_Attack/src/ScoreBoard.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Virus_Attack/src/WelcomeScreen.java" afterPath="$PROJECT_DIR$/Virus_Attack/src/WelcomeScreen.java" />
     </list>
     <ignored path="Virus Attack.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WelcomeScreen.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="WelcomeScreen.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Virus_Attack/src/WelcomeScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
+            <state relative-caret-position="232">
+              <caret line="103" column="54" selection-start-line="103" selection-start-column="54" selection-end-line="103" selection-end-column="54" />
               <folding />
             </state>
           </provider>
@@ -103,11 +103,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScoreBoard.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ScoreBoard.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Virus_Attack/src/ScoreBoard.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+            <state relative-caret-position="170">
+              <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -116,7 +116,7 @@
       <file leaf-file-name="GameOverScreen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Virus_Attack/src/GameOverScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
+            <state relative-caret-position="104">
               <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
               <folding />
             </state>
@@ -191,7 +191,6 @@
         <option value="$PROJECT_DIR$/Virus_Attack/src/SickCell.java" />
         <option value="$PROJECT_DIR$/Virus_Attack/src/WhiteCell.java" />
         <option value="$PROJECT_DIR$/Virus_Attack/src/HealthBar.java" />
-        <option value="$PROJECT_DIR$/Virus_Attack/src/WelcomeScreen.java" />
         <option value="$PROJECT_DIR$/Virus_Attack/src/CONSTANTS.java" />
         <option value="$PROJECT_DIR$/Virus_Attack/src/Virus.java" />
         <option value="$PROJECT_DIR$/Virus_Attack/src/VirusGroupManager.java" />
@@ -205,6 +204,7 @@
         <option value="$PROJECT_DIR$/Virus_Attack/src/World.java" />
         <option value="$PROJECT_DIR$/Virus_Attack/src/CellManager.java" />
         <option value="$PROJECT_DIR$/Virus_Attack/src/ScoreBoard.java" />
+        <option value="$PROJECT_DIR$/Virus_Attack/src/WelcomeScreen.java" />
       </list>
     </option>
   </component>
@@ -1010,7 +1010,7 @@
       <workItem from="1464584749142" duration="336000" />
       <workItem from="1464586925198" duration="63000" />
       <workItem from="1464587642095" duration="1885000" />
-      <workItem from="1464589787620" duration="777000" />
+      <workItem from="1464589787620" duration="1238000" />
     </task>
     <servers />
   </component>
@@ -1047,7 +1047,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69152000" />
+    <option name="totallyTimeSpent" value="69613000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1060,7 +1060,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1022" y="0" width="905" height="1047" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1072,8 +1072,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33479214" sideWeight="0.50437635" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32822758" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26258206" sideWeight="0.49562362" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3107221" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26258206" sideWeight="0.49562362" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3107221" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3443787" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1408,14 +1408,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Virus_Attack/src/GameOverScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Virus_Attack/src/VirusGame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1436,14 +1428,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
           <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Virus_Attack/src/WelcomeScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -1479,8 +1463,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Virus_Attack/src/ScoreBoard.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="31" column="27" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
+        <state relative-caret-position="170">
+          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Virus_Attack/src/GameOverScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="47" column="29" selection-start-line="47" selection-start-column="29" selection-end-line="47" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Virus_Attack/src/WelcomeScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="103" column="54" selection-start-line="103" selection-start-column="54" selection-end-line="103" selection-end-column="54" />
           <folding />
         </state>
       </provider>
