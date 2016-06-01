@@ -7,53 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db7114d6-e625-4df5-b478-8fc896f80992" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\LostGif.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack\LostGif.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack\Virus1.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack\Virus1.sai" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack\Virus2.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack\Virus2.sai" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack\Virus3.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack\Virus3.sai" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack\Virus4.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack\Virus4.sai" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack\Virus5.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack\Virus5.sai" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack\Virus6.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack\Virus6.sai" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack\WonGif.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack\antibody.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack\background.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack\giphy.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack\influenza.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack\pixelred.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack\pixelsick.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack\pixelsick.sai" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack\pixelwhite.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack\redbloodanimation.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack\src\WonGif.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack\src\giphy.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack\src\images\Desigein Diagram.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack\src\images\LostGif.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack\src\images\antibody.sai" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack\src\images\background.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack\src\images\giphy.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack\src\images\giphyWithNoBackground.gif" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack\src\images\pixelred.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack\src\images\pixelred.sai" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack\src\images\pixelsick.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack\src\images\pixelsick.sai" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack\src\images\pixelwhite.png" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack\src\images\pixelwhite.sai" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Virus_Attack/src/AntiVirus.java" afterPath="$PROJECT_DIR$/Virus_Attack/src/AntiVirus.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Virus_Attack/src/RedCell.java" afterPath="$PROJECT_DIR$/Virus_Attack/src/RedCell.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Virus_Attack/src/SickCell.java" afterPath="$PROJECT_DIR$/Virus_Attack/src/SickCell.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Virus_Attack/Virus Attack.iml" afterPath="$PROJECT_DIR$/Virus_Attack/Virus Attack.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Virus_Attack/src/Virus.java" afterPath="$PROJECT_DIR$/Virus_Attack/src/Virus.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Virus_Attack/src/WelcomeScreen.java" afterPath="$PROJECT_DIR$/Virus_Attack/src/WelcomeScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Virus_Attack/src/WhiteCell.java" afterPath="$PROJECT_DIR$/Virus_Attack/src/WhiteCell.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Virus_Attack/src/World.java" afterPath="$PROJECT_DIR$/Virus_Attack/src/World.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Virus_Attack/.gitignore" />
+      <change type="DELETED" beforePath="C:\Users\viks\Documents\APCS-Final-Project\.project" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
     </list>
     <ignored path="Virus Attack.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -106,8 +62,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Virus Attack/src/VirusGroupManager.java" />
-        <option value="$PROJECT_DIR$/Virus Attack/src/CellManager.java" />
         <option value="$PROJECT_DIR$/Virus Attack/src/WhiteCell.java" />
         <option value="$PROJECT_DIR$/Virus Attack/src/AntiVirus.java" />
         <option value="$PROJECT_DIR$/Virus Attack/src/AntiVirusManager.java" />
@@ -157,6 +111,8 @@
         <option value="$PROJECT_DIR$/Virus_Attack/src/World.java" />
         <option value="$PROJECT_DIR$/Virus_Attack/src/Virus.java" />
         <option value="$PROJECT_DIR$/Virus_Attack/src/AntiVirus.java" />
+        <option value="$PROJECT_DIR$/Virus_Attack/.gitignore" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -253,20 +209,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="APCS-Final-Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Virus_Attack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -304,6 +246,7 @@
       <recent name="C:\Users\vikranth\IdeaProjects\APCS-Final-Project\Virus_Attack\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack" />
       <recent name="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack\src\images" />
       <recent name="C:\Users\vikranth\IdeaProjects\APCS-Final-Project\Virus_Attack\src" />
       <recent name="C:\Users\vikranth\IdeaProjects\APCS-Final-Project\Virus_Attack" />
@@ -886,13 +829,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Virus_Attack/.settings/org.eclipse.jdt.core.prefs">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -908,13 +844,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Virus_Attack/.project">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.project">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1104,6 +1033,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14782609">
           <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4973913">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Virus_Attack/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6770073">
+          <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
           <folding />
         </state>
       </provider>
