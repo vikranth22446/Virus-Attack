@@ -19,7 +19,7 @@ public class GameOverScreen extends JFrame {
      * Then adds the backgroundGif
      * Then initializes the parts of the screen
      *
-     * @param title      the title of the screen
+     * @param title      the title of the current screen. Either you loose or you win
      * @param scoreBoard the scoreboard used to get stats
      */
     void createScreen(String title, ScoreBoard scoreBoard) {
