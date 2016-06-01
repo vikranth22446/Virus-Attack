@@ -46,7 +46,9 @@ public class RedCell extends Cell {
         super.draw(g, xOffset, yOffset);
         BufferedImage in;
         try {
-            in = ImageIO.read(new File("images/pixelred.png"));
+            String currentString = WelcomeScreen.class.getProtectionDomain().getCodeSource().getLocation().getPath();
+            currentString = currentString.substring(1,currentString.indexOf("/out"))+"/Virus_Attack/src/images/pixelred.png";
+            in = ImageIO.read(new File(currentString));
             g.drawImage(in, getX() - xOffset, getY() - yOffset, null);
 
         } catch (IOException e) {

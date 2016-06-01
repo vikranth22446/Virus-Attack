@@ -3,6 +3,7 @@
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -77,7 +78,10 @@ class WelcomeScreen extends JFrame {
     public void createBackgroundGif() {
         URL url = null;
         try {
-            url = new URL("file:images/giphy.gif");
+            String currentString = WelcomeScreen.class.getProtectionDomain().getCodeSource().getLocation().getPath();
+            currentString = currentString.substring(1,currentString.indexOf("/out"))+"/Virus_Attack/src/images/giphy.gif";
+            File file = new File(currentString);
+            url = file.toURI().toURL();
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
@@ -104,6 +108,8 @@ class WelcomeScreen extends JFrame {
      */
     private void createRedCellMessage() {
         String pt1 = "<html><body width='";
+        String currentString = WelcomeScreen.class.getProtectionDomain().getCodeSource().getLocation().getPath();
+        currentString = currentString.substring(1,currentString.indexOf("/out"))+"/Virus_Attack/images/pixelred.png";
         String pt2 =
                 "'><h1>Instructions</h1>" +
                         "<h2>Red Cell</h2>" +

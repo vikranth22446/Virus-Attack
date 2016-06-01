@@ -218,13 +218,7 @@ class CellManager {
         whiteValues.forEach(Cell::produceUnit);
         sickValues.forEach(Cell::produceUnit);
     }
-    public ArrayList<Integer> returnSizes(){
-        ArrayList<Integer> arrayList = new ArrayList<>();
-        arrayList.add(sickValues.size());
-        arrayList.add(redValues.size());
-        arrayList.add(whiteValues.size());
-        return arrayList;
-    }
+
     public String toString() {
         return "CellManager[redValues: " + redValues.toString() + " whiteValues: " + whiteValues.toString() + "radius: " 
     + "sickValues: " + sickValues.toString() + "]";

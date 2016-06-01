@@ -25,7 +25,6 @@ class Virus extends Attacker implements Locatable {
 
     private boolean attacking = false;
 
-    private Color color = new Color(122, 122, 0);
     private int number = 1;
 
 
@@ -191,10 +190,10 @@ class Virus extends Attacker implements Locatable {
      */
     public void draw(Graphics g, int xOffset, int yOffset) {
         BufferedImage in;
-        String s = "images/Virus" + number + ".png";
-
+        String currentString = WelcomeScreen.class.getProtectionDomain().getCodeSource().getLocation().getPath();
+        currentString = currentString.substring(1,currentString.indexOf("/out"))+"/Virus_Attack/src/images/Virus"+number+".png";
         try {
-            in = ImageIO.read(new File(s));
+            in = ImageIO.read(new File(currentString));
             g.drawImage(in, getX() - xOffset, getY() - yOffset, null);
         } catch (IOException e) {
             e.printStackTrace();
@@ -240,7 +239,6 @@ class Virus extends Attacker implements Locatable {
     }
 
     public void setColor(Color c) {
-        color = c;
     }
 
     public void setNum(int n) {

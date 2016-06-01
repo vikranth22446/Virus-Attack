@@ -99,7 +99,9 @@ class World extends Canvas implements Runnable {
       the graphics
      */
         try {
-            bg = ImageIO.read(new File("images/background.png"));
+            String currentString = WelcomeScreen.class.getProtectionDomain().getCodeSource().getLocation().getPath();
+            currentString = currentString.substring(1,currentString.indexOf("/out"))+"/Virus_Attack/src/images/background.png";
+            bg = ImageIO.read(new File(currentString));
         } catch (IOException ioe) {
             ioe.printStackTrace();
         }
@@ -192,15 +194,15 @@ class World extends Canvas implements Runnable {
 
         Graphics g = bs.getDrawGraphics();
 
-        g.drawImage(bg, -input.getXOffset() / 4, -input.getYOffset() / 4, null);
+        g.drawImage(bg, -InputHandler.getXOffset() / 4, -InputHandler.getYOffset() / 4, null);
 
-        vgm.draw(g, input.getXOffset(), input.getYOffset());
-        avm.draw(g, input.getXOffset(), input.getYOffset());
+        vgm.draw(g, InputHandler.getXOffset(), InputHandler.getYOffset());
+        avm.draw(g, InputHandler.getXOffset(), InputHandler.getYOffset());
 
-        cellManager.toDraw(input.getXOffset(), input.getYOffset(), g);
+        cellManager.toDraw(InputHandler.getXOffset(), InputHandler.getYOffset(), g);
 
-        vgm.updateLocation(g, input.getXOffset(), input.getYOffset(), scoreBoard);
-        avm.updateLocation(g, input.getXOffset(), input.getYOffset());
+        vgm.updateLocation(g, InputHandler.getXOffset(), InputHandler.getYOffset(), scoreBoard);
+        avm.updateLocation(g, InputHandler.getXOffset(), InputHandler.getYOffset());
         g.setColor(Color.black);
         g.setFont(new Font("Tahoma", Font.BOLD, 19));
         g.drawString("Score: " + scoreBoard.getTotalScore(), WIDTH * 12 / 8, HEIGHT / 4 - 30);
@@ -211,12 +213,12 @@ class World extends Canvas implements Runnable {
     }
     
     public String isGameOver(){
-    	if(cellManager.whiteValues.size() == 0){
+    	if(CellManager.whiteValues.size() == 0){
     		return "win";
     	}
-    	else if(cellManager.sickValues.size() == 0 ){
+    	else if(CellManager.sickValues.size() == 0 ){
     		for(int n : vgm.getKeys()){
-    			if(vgm.groups.get(n).size() != 0){
+    			if(VirusGroupManager.groups.get(n).size() != 0){
     				return "neither";
     			}
     		}
