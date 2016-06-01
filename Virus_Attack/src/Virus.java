@@ -191,7 +191,7 @@ class Virus extends Attacker implements Locatable {
      */
     public void draw(Graphics g, int xOffset, int yOffset) {
         BufferedImage in;
-        String s = "Virus" + number + ".png";
+        String s = "images/Virus" + number + ".png";
 
         try {
             in = ImageIO.read(new File(s));

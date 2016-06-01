@@ -77,7 +77,7 @@ class WelcomeScreen extends JFrame {
     public void createBackgroundGif() {
         URL url = null;
         try {
-            url = new URL("file:giphy.gif");
+            url = new URL("file:images/giphy.gif");
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }

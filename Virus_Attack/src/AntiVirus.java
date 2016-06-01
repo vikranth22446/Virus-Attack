@@ -160,13 +160,12 @@ class AntiVirus extends Attacker implements Locatable
         BufferedImage in;
         try
         {
-            in = ImageIO.read( new File( "antibody.png" ) );
+            in = ImageIO.read( new File( "images/antibody.png" ) );
             g.drawImage( in, getX() - xOffset, getY() - yOffset, null );
 
         }
         catch ( IOException e )
         {
-            // System.out.println("error in image");
         }
     }
 

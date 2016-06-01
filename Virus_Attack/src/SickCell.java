@@ -50,7 +50,7 @@ public class SickCell extends Cell {
         super.draw(g, xOffset, yOffset);
         BufferedImage in;
         try {
-            in = ImageIO.read(new File("pixelsick.png"));
+            in = ImageIO.read(new File("images/pixelsick.png"));
             g.drawImage(in, getX() - xOffset, getY() - yOffset, null);
         } catch (IOException e) {
             System.out.println("Cannot Read Image for sickImage");

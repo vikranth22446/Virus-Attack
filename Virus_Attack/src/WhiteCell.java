@@ -128,7 +128,7 @@ public class WhiteCell extends Cell {
         super.draw(g, xOffset, yOffset);
         BufferedImage in;
         try {
-            in = ImageIO.read(new File("pixelwhite.png"));
+            in = ImageIO.read(new File("images/pixelwhite.png"));
             g.drawImage(in, getX() - xOffset, getY() - yOffset, null);
         } catch (IOException e) {
             System.out.println("Cannot Read Image for whiteImage");

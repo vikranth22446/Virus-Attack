@@ -46,7 +46,7 @@ public class RedCell extends Cell {
         super.draw(g, xOffset, yOffset);
         BufferedImage in;
         try {
-            in = ImageIO.read(new File("pixelred.png"));
+            in = ImageIO.read(new File("images/pixelred.png"));
             g.drawImage(in, getX() - xOffset, getY() - yOffset, null);
 
         } catch (IOException e) {

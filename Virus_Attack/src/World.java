@@ -99,7 +99,7 @@ class World extends Canvas implements Runnable {
       the graphics
      */
         try {
-            bg = ImageIO.read(new File("background.png"));
+            bg = ImageIO.read(new File("images/background.png"));
         } catch (IOException ioe) {
             ioe.printStackTrace();
         }
