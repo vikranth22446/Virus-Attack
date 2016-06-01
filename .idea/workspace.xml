@@ -6,12 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db7114d6-e625-4df5-b478-8fc896f80992" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/images/giphyWithNoBackground.gif" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Virus_Attack/src/images/Desigein Diagram.png" afterPath="$PROJECT_DIR$/Virus_Attack/Desigein Diagram.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Virus_Attack/src/images/README.md" afterPath="$PROJECT_DIR$/Virus_Attack/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="db7114d6-e625-4df5-b478-8fc896f80992" name="Default" comment="" />
     <ignored path="Virus Attack.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -110,8 +105,8 @@
         <entry file="file://$PROJECT_DIR$/Virus_Attack/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="153">
-                <caret line="9" column="89" selection-start-line="9" selection-start-column="85" selection-end-line="9" selection-end-column="89" />
+              <first_editor relative-caret-position="170">
+                <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -215,9 +210,8 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="1105" />
-    <option name="y" value="595" />
     <option name="width" value="822" />
-    <option name="height" value="452" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -997,7 +991,7 @@
       <workItem from="1464630597584" duration="3234000" />
       <workItem from="1464634080104" duration="492000" />
       <workItem from="1464645570898" duration="1841000" />
-      <workItem from="1464759682349" duration="476000" />
+      <workItem from="1464759682349" duration="569000" />
     </task>
     <servers />
   </component>
@@ -1034,7 +1028,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81253000" />
+    <option name="totallyTimeSpent" value="81346000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1046,7 +1040,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1105" y="595" width="822" height="452" extended-state="0" />
+    <frame x="1105" y="0" width="822" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1059,8 +1053,8 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38183808" sideWeight="0.4201313" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32822758" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.8213166" sideWeight="0.49562362" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2546448" sideWeight="0.57986873" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2866521" sideWeight="0.49562362" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25382933" sideWeight="0.57986873" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16666667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1475,8 +1469,8 @@
     <entry file="file://$PROJECT_DIR$/Virus_Attack/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="153">
-            <caret line="9" column="89" selection-start-line="9" selection-start-column="85" selection-end-line="9" selection-end-column="89" />
+          <first_editor relative-caret-position="170">
+            <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
