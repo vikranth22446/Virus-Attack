@@ -7,4 +7,4 @@ This project was created in APCS Lynbrook HighSchool Class.
     <ul><li>Nicely Abstracted and  Java doced</li></ul>
     <ul><li>Junit Testing all the methods</li></ul>
 Our Class diagram:
-![alt tag](https://raw.githubusercontent.com/vikranth22446/APCS-Final-Project/master/path/to/img.png)
+![alt tag](https://raw.githubusercontent.com/vikranth22446/APCS-Final-Project/master/Virus_Attack/Desigein Diagram.png)
