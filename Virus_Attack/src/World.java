@@ -1,13 +1,12 @@
-
-
 import javax.imageio.ImageIO;
 import javax.swing.*;
-
 import java.awt.*;
 import java.awt.image.BufferStrategy;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.net.URISyntaxException;
+import java.net.URL;
 
 /**
  * The Game, the running thread that runs the game begins here
@@ -99,9 +98,14 @@ class World extends Canvas implements Runnable {
       the graphics
      */
         try {
-            String currentString = WelcomeScreen.class.getProtectionDomain().getCodeSource().getLocation().getPath();
-            currentString = currentString.substring(1,currentString.indexOf("/out"))+"/Virus_Attack/src/images/background.png";
-            bg = ImageIO.read(new File(currentString));
+            URL url = getClass().getResource("images/background.png");
+            File f;
+            try {
+                f = new File(url.toURI());
+            } catch(URISyntaxException e) {
+                f = new File(url.getPath());
+            }
+            bg = ImageIO.read(f);
         } catch (IOException ioe) {
             ioe.printStackTrace();
         }

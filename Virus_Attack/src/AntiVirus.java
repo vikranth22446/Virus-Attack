@@ -5,6 +5,8 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.net.URISyntaxException;
+import java.net.URL;
 
 
 /**
@@ -12,8 +14,7 @@ import java.io.IOException;
  *
  * @author Vikranth Srivatsa
  */
-class AntiVirus extends Attacker implements Locatable
-{
+class AntiVirus extends Attacker implements Locatable {
     /**
      * The current virus to follow
      */
@@ -33,21 +34,18 @@ class AntiVirus extends Attacker implements Locatable
     /**
      * Initializes the x and y position of the antivirus
      *
-     * @param x
-     *            the x position of the antivirus
-     * @param y
-     *            the y position of the antivirus
+     * @param x the x position of the antivirus
+     * @param y the y position of the antivirus
      */
-    public AntiVirus( int x, int y )
-    {
-        super( x,
-            y,
-            Constants.ANTIVIRUS_SPEED,
-            Constants.ANTIVIRUS_HEALTH,
-            Constants.ANTIVIRUS_ATTACK,
-            Constants.ANTIVIRUS_ATTACK_RADIUS,
-            Constants.ANTIVIRUS_WIDTH,
-            Constants.ANTIVIRUS_HEIGHT );
+    public AntiVirus(int x, int y) {
+        super(x,
+                y,
+                Constants.ANTIVIRUS_SPEED,
+                Constants.ANTIVIRUS_HEALTH,
+                Constants.ANTIVIRUS_ATTACK,
+                Constants.ANTIVIRUS_ATTACK_RADIUS,
+                Constants.ANTIVIRUS_WIDTH,
+                Constants.ANTIVIRUS_HEIGHT);
     }
 
 
@@ -59,54 +57,41 @@ class AntiVirus extends Attacker implements Locatable
      * follow method else reduced the health of the virus. Then moves the
      * antivirus to the currentViruses position. Then calls follow.
      *
-     * @param g
-     *            the graphics of the window
-     * @param xOffset
-     *            the xOffset of the window. Used to move the window around
-     * @param yOffset
-     *            the yOffset of the window. Used to move the window around
+     * @param g       the graphics of the window
+     * @param xOffset the xOffset of the window. Used to move the window around
+     * @param yOffset the yOffset of the window. Used to move the window around
      */
-    public void update( Graphics g, int xOffset, int yOffset )
-    {
-        if ( !follow )
-        {
-            for ( int i = 0; i < VirusGroupManager.groups.get( VirusGroupManager.currentGroup ).size(); i++ )
-            {
-                Virus v = VirusGroupManager.groups.get( VirusGroupManager.currentGroup ).getVirus( i );
-                if ( getDistance( v ) <= 300 )
-                {
-                    if ( getDistance( v ) <= getAttackRadius() )
-                    {
-                        v.reduceHealth( getAttack() );
-                        if ( v.isDead() )
-                        {
-                            VirusGroupManager.remove( v );
+    public void update(Graphics g, int xOffset, int yOffset) {
+        if (!follow) {
+            for (int i = 0; i < VirusGroupManager.groups.get(VirusGroupManager.currentGroup).size(); i++) {
+                Virus v = VirusGroupManager.groups.get(VirusGroupManager.currentGroup).getVirus(i);
+                if (getDistance(v) <= 300) {
+                    if (getDistance(v) <= getAttackRadius()) {
+                        v.reduceHealth(getAttack());
+                        if (v.isDead()) {
+                            VirusGroupManager.remove(v);
                         }
-                        
+
                     }
-                    setCoordinate( v.getX(), v.getY() );
+                    setCoordinate(v.getX(), v.getY());
                     currentFollowVirus = v;
                     positionOfVirus = i;
-                    follow( g, xOffset, yOffset );
+                    follow(g, xOffset, yOffset);
                 }
             }
 
-        }
-        else
-        {
-            if ( getDistance( currentFollowVirus ) < 20 )
-            {
-                currentFollowVirus.reduceHealth( getAttack() );
+        } else {
+            if (getDistance(currentFollowVirus) < 20) {
+                currentFollowVirus.reduceHealth(getAttack());
             }
-            if ( currentFollowVirus.isDead() )
-            {
+            if (currentFollowVirus.isDead()) {
 
-                VirusGroupManager.remove( currentFollowVirus );
+                VirusGroupManager.remove(currentFollowVirus);
                 // System.out.println("hi");
                 // System.out.println(currentFollowVirus.getHealth());
             }
-            setCoordinate( currentFollowVirus.getX(), currentFollowVirus.getY() );
-            follow( g, xOffset, yOffset );
+            setCoordinate(currentFollowVirus.getX(), currentFollowVirus.getY());
+            follow(g, xOffset, yOffset);
         }
     }
 
@@ -115,30 +100,24 @@ class AntiVirus extends Attacker implements Locatable
      * Moves the antivirus. Then if it really close draw a line. If the virus is
      * dead remove it from the VirusGroupManager. then set follow to false;
      *
-     * @param g
-     *            the graphics of the window
-     * @param xOffset
-     *            the xOffset of the window. Used to move the window around
-     * @param yOffset
-     *            the yOffset of the window. Used to move the window around
+     * @param g       the graphics of the window
+     * @param xOffset the xOffset of the window. Used to move the window around
+     * @param yOffset the yOffset of the window. Used to move the window around
      */
-    private void follow( Graphics g, int xOffset, int yOffset )
-    {
-        setX( getX() + getVx() );
-        setY( getY() + getVy() );
+    private void follow(Graphics g, int xOffset, int yOffset) {
+        setX(getX() + getVx());
+        setY(getY() + getVy());
         follow = true;
-        if ( getDistance( currentFollowVirus ) <= 20 )
-        {
-            g.setColor( Color.green );
-            g.drawLine( ( getX() + getWidth() / 2 ) - xOffset,
-                ( getY() + getHeight() / 2 ) - yOffset,
-                ( currentFollowVirus.getX() + currentFollowVirus.getWidth() / 2 ) - xOffset,
-                ( currentFollowVirus.getY() + currentFollowVirus.getHeight() / 2 ) - yOffset );
+        if (getDistance(currentFollowVirus) <= 20) {
+            g.setColor(Color.green);
+            g.drawLine((getX() + getWidth() / 2) - xOffset,
+                    (getY() + getHeight() / 2) - yOffset,
+                    (currentFollowVirus.getX() + currentFollowVirus.getWidth() / 2) - xOffset,
+                    (currentFollowVirus.getY() + currentFollowVirus.getHeight() / 2) - yOffset);
         }
-        if ( currentFollowVirus.isDead() )
-        {
+        if (currentFollowVirus.isDead()) {
             follow = false;
-            VirusGroupManager.remove( currentFollowVirus );
+            VirusGroupManager.remove(currentFollowVirus);
         }
     }
 
@@ -146,28 +125,26 @@ class AntiVirus extends Attacker implements Locatable
     /**
      * Draws the Antivirus at that position
      *
-     * @param g
-     *            draws the rectangle of the virus
-     * @param xOffset
-     *            the offset to render the object on the screen according to how
-     *            the screen had shifted
-     * @param yOffset
-     *            same as above
+     * @param g       draws the rectangle of the virus
+     * @param xOffset the offset to render the object on the screen according to how
+     *                the screen had shifted
+     * @param yOffset same as above
      */
-    public void draw( Graphics g, int xOffset, int yOffset )
-    {
-        g.setColor( Color.blue );
+    public void draw(Graphics g, int xOffset, int yOffset) {
+        g.setColor(Color.blue);
         BufferedImage in;
-        try
-        {
-            String currentString = WelcomeScreen.class.getProtectionDomain().getCodeSource().getLocation().getPath();
-            currentString = currentString.substring(1,currentString.indexOf("/out"))+"/Virus_Attack/src/images/antibody.png";
-            in = ImageIO.read( new File(currentString) );
-            g.drawImage( in, getX() - xOffset, getY() - yOffset, null );
+        try {
+            URL url = getClass().getResource("images/antibody.png");
+            File f;
+            try {
+                f = new File(url.toURI());
+            } catch (URISyntaxException e) {
+                f = new File(url.getPath());
+            }
+            in = ImageIO.read(f);
+            g.drawImage(in, getX() - xOffset, getY() - yOffset, null);
 
-        }
-        catch ( IOException e )
-        {
+        } catch (IOException e) {
         }
     }
 
@@ -178,9 +155,8 @@ class AntiVirus extends Attacker implements Locatable
      * @return a string with all the fields of the class.
      */
     @Override
-    public String toString()
-    {
+    public String toString() {
         return "AntiVirus{" + "currentFollowVirus=" + currentFollowVirus + ", positionOfVirus=" + positionOfVirus
-            + ", follow=" + follow + '}';
+                + ", follow=" + follow + '}';
     }
 }

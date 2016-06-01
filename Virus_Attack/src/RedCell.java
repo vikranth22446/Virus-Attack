@@ -6,6 +6,8 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.net.URISyntaxException;
+import java.net.URL;
 
 /**
  * 
@@ -46,9 +48,14 @@ public class RedCell extends Cell {
         super.draw(g, xOffset, yOffset);
         BufferedImage in;
         try {
-            String currentString = WelcomeScreen.class.getProtectionDomain().getCodeSource().getLocation().getPath();
-            currentString = currentString.substring(1,currentString.indexOf("/out"))+"/Virus_Attack/src/images/pixelred.png";
-            in = ImageIO.read(new File(currentString));
+            URL url = getClass().getResource("images/pixelred.png");
+            File f;
+            try {
+                f = new File(url.toURI());
+            } catch (URISyntaxException e) {
+                f = new File(url.getPath());
+            }
+            in = ImageIO.read(f);
             g.drawImage(in, getX() - xOffset, getY() - yOffset, null);
 
         } catch (IOException e) {

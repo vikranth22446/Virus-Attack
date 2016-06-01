@@ -4,6 +4,8 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.net.URISyntaxException;
+import java.net.URL;
 
 /**
  * The Virus Class is the main unit that the player controls and uses it to
@@ -87,14 +89,14 @@ class Virus extends Attacker implements Locatable {
      *                the screen had shifted
      * @param yOffset same as above
      */
-    public void checkAttackRadius(Graphics g, int xOffset, int yOffset,ScoreBoard scoreBoard) {
+    public void checkAttackRadius(Graphics g, int xOffset, int yOffset, ScoreBoard scoreBoard) {
 
         attacking = false;
         attackAntiVirus(g, xOffset, yOffset);
         if (attacking) return;
-        attackRedCells(g, xOffset, yOffset,scoreBoard);
+        attackRedCells(g, xOffset, yOffset, scoreBoard);
         if (attacking) return;
-        attackWhiteCells(g, xOffset, yOffset,scoreBoard);
+        attackWhiteCells(g, xOffset, yOffset, scoreBoard);
 
     }
 
@@ -118,7 +120,7 @@ class Virus extends Attacker implements Locatable {
         }
     }
 
-    private void attackRedCells(Graphics g, int xOffset, int yOffset,ScoreBoard scoreBoard) {
+    private void attackRedCells(Graphics g, int xOffset, int yOffset, ScoreBoard scoreBoard) {
         for (int i = 0; i < CellManager.redValues.size(); i++) {
             Cell c = CellManager.redValues.get(i);
             if (getDistance(c) <= getAttackRadius() && !(c instanceof SickCell)) {
@@ -140,7 +142,7 @@ class Virus extends Attacker implements Locatable {
         }
     }
 
-    private void attackWhiteCells(Graphics g, int xOffset, int yOffset,ScoreBoard scoreBoard) {
+    private void attackWhiteCells(Graphics g, int xOffset, int yOffset, ScoreBoard scoreBoard) {
         for (int i = 0; i < CellManager.whiteValues.size(); i++) {
             Cell c = CellManager.whiteValues.get(i);
             if (getDistance(c) <= getAttackRadius()) {
@@ -190,10 +192,15 @@ class Virus extends Attacker implements Locatable {
      */
     public void draw(Graphics g, int xOffset, int yOffset) {
         BufferedImage in;
-        String currentString = WelcomeScreen.class.getProtectionDomain().getCodeSource().getLocation().getPath();
-        currentString = currentString.substring(1,currentString.indexOf("/out"))+"/Virus_Attack/src/images/Virus"+number+".png";
+        URL url = getClass().getResource("images/Virus" + number + ".png");
+        File f;
         try {
-            in = ImageIO.read(new File(currentString));
+            f = new File(url.toURI());
+        } catch (URISyntaxException e) {
+            f = new File(url.getPath());
+        }
+        try {
+            in = ImageIO.read(f);
             g.drawImage(in, getX() - xOffset, getY() - yOffset, null);
         } catch (IOException e) {
             e.printStackTrace();
