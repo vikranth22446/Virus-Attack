@@ -1,12 +1,7 @@
 
 
-import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import java.net.URISyntaxException;
-import java.net.URL;
 
 
 /**
@@ -133,19 +128,19 @@ class AntiVirus extends Attacker implements Locatable {
     public void draw(Graphics g, int xOffset, int yOffset) {
         g.setColor(Color.blue);
         BufferedImage in;
-        try {
-            URL url = getClass().getResource("images/antibody.png");
-            File f;
-            try {
-                f = new File(url.toURI());
-            } catch (URISyntaxException e) {
-                f = new File(url.getPath());
-            }
-            in = ImageIO.read(f);
-            g.drawImage(in, getX() - xOffset, getY() - yOffset, null);
-
-        } catch (IOException e) {
-        }
+//        try {
+////            URL url = getClass().getResource("images/antibody.png");
+////            File f;
+////            try {
+////                f = new File(url.toURI());
+////            } catch (URISyntaxException e) {
+////                f = new File(url.getPath());
+////            }
+////            in = ImageIO.read(f);
+////            g.drawImage(in, getX() - xOffset, getY() - yOffset, null);
+//
+//        } catch (IOException e) {
+//        }
     }
 
 

@@ -16,7 +16,7 @@ import java.net.URL;
  *
  * @author Alex M
  */
-class World extends Canvas implements Runnable {
+class World implements Runnable {
 
     /**
      * the partial width
@@ -72,19 +72,17 @@ class World extends Canvas implements Runnable {
      * creates all the objects, get the canvas, sets frame size, adds listening to input handler
      */
     World() {
-        setMinimumSize(new Dimension(WIDTH * SCALE, HEIGHT * SCALE));
-        setMaximumSize(new Dimension(WIDTH * SCALE, HEIGHT * SCALE));
-        setPreferredSize(new Dimension(WIDTH * SCALE, HEIGHT * SCALE));
 
         /*
       the JFrame
      */
         frame = new JFrame(NAME);
+        frame.setMinimumSize(new Dimension(WIDTH * SCALE, HEIGHT * SCALE));
+        frame.setMaximumSize(new Dimension(WIDTH * SCALE, HEIGHT * SCALE));
+        frame.setPreferredSize(new Dimension(WIDTH * SCALE, HEIGHT * SCALE));
 
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setLayout(new BorderLayout());
-
-        frame.add(this, BorderLayout.CENTER);
         frame.pack();
 
         /*
@@ -110,9 +108,9 @@ class World extends Canvas implements Runnable {
             ioe.printStackTrace();
         }
 
-        Graphics g = getGraphics();
+        Graphics g = frame.getGraphics();
         g.setColor(Color.white);
-        setBackground(Color.WHITE);
+        frame.setBackground(Color.WHITE);
         frame.setResizable(false);
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
@@ -126,12 +124,12 @@ class World extends Canvas implements Runnable {
       the object that handles all the inputs
      */
         input = new InputHandler(vgm);
-        addMouseListener(input);
-        addMouseMotionListener(input);
-        addKeyListener(input);
+        frame.addMouseListener(input);
+        frame.addMouseMotionListener(input);
+        frame.addKeyListener(input);
 
-        getWidth = getWidth();
-        getHeight = getHeight();
+        getWidth = frame.getWidth();
+        getHeight = frame.getHeight();
         GAME_OVER = false;
         gameOver = "";
     }
@@ -190,9 +188,9 @@ class World extends Canvas implements Runnable {
      */
     private void render() {
 
-        BufferStrategy bs = getBufferStrategy();
+        BufferStrategy bs = frame.getBufferStrategy();
         if (bs == null) {
-            createBufferStrategy(3);
+            frame.createBufferStrategy(3);
             return;
         }
 
