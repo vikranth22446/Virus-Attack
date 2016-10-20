@@ -96,7 +96,7 @@ class World implements Runnable {
       the graphics
      */
         try {
-            URL url = getClass().getResource("images/background.png");
+            URL url = getClass().getResource("images/background/background.png");
             File f;
             try {
                 f = new File(url.toURI());

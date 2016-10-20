@@ -74,7 +74,7 @@ class WelcomeScreen extends JFrame {
      * of size World.WIDTH * 2 + 300, World.HEIGHT * 2 + 300
      */
     public void createBackgroundGif() {
-        URL url = getClass().getResource("images/giphy.gif");
+        URL url = getClass().getResource("images/background/giphy.gif");
         assert url != null;
         Icon icon = new ImageIcon(url);
         backgroundGif = new JLabel(icon);

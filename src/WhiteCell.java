@@ -130,7 +130,7 @@ public class WhiteCell extends Cell {
         super.draw(g, xOffset, yOffset);
         BufferedImage in;
         try {
-            URL url = getClass().getResource("images/pixelwhite.png");
+            URL url = getClass().getResource("images/cells/pixelwhite.png");
             File f;
             try {
                 f = new File(url.toURI());

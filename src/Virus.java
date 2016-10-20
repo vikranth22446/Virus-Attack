@@ -17,7 +17,7 @@ import java.net.URL;
  *
  * @author Alex M
  */
-class Virus extends Attacker implements Locatable {
+public class Virus extends Attacker implements Locatable {
 
 
     /**

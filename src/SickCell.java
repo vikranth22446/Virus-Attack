@@ -52,7 +52,7 @@ public class SickCell extends Cell {
         super.draw(g, xOffset, yOffset);
         BufferedImage in;
         try {
-            URL url = getClass().getResource("images/pixelsick.png");
+            URL url = getClass().getResource("images/cells/pixelsick.png");
             File f;
             try {
                 f = new File(url.toURI());

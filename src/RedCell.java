@@ -48,7 +48,7 @@ public class RedCell extends Cell {
         super.draw(g, xOffset, yOffset);
         BufferedImage in;
         try {
-            URL url = getClass().getResource("images/pixelred.png");
+            URL url = getClass().getResource("images/cells/pixelred.png");
             File f;
             try {
                 f = new File(url.toURI());
