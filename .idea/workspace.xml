@@ -7,183 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db7114d6-e625-4df5-b478-8fc896f80992" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/AntiVirus.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/AntiVirusManager.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/Attacker.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/Cell.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/CellManager.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/Constants.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/GameOverScreen.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/HealthBar.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/InputHandler.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/JUnit.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/Locatable.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/RedCell.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/ScoreBoard.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/SickCell.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/Virus.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/VirusGame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/VirusGroup.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/VirusGroupManager.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/WelcomeScreen.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/WhiteCell.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/World.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/allclasses-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/allclasses-noframe.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/constant-values.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/deprecated-list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/help-doc.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/index-1.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/index-10.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/index-11.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/index-12.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/index-13.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/index-14.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/index-15.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/index-16.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/index-17.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/index-18.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/index-19.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/index-2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/index-20.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/index-21.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/index-22.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/index-23.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/index-3.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/index-4.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/index-5.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/index-6.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/index-7.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/index-8.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/index-9.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/overview-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/package-frame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/package-list" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/package-summary.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/package-tree.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/script.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/serialized-form.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/docs/stylesheet.css" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/AntiVirus.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/AntiVirusManager.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/Attacker.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/Cell.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/CellManager.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/Constants.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/GameOverScreen.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/HealthBar.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/InputHandler.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/JUnit.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/Locatable.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/RedCell.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/ScoreBoard.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/SickCell.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/Virus.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/VirusGame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/VirusGroup.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/VirusGroupManager.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/WelcomeScreen.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/WhiteCell.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/World.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/allclasses-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/allclasses-noframe.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/constant-values.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/deprecated-list.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/help-doc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/index-1.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/index-10.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/index-11.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/index-12.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/index-13.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/index-14.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/index-15.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/index-16.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/index-17.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/index-18.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/index-19.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/index-2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/index-20.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/index-21.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/index-22.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/index-23.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/index-3.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/index-4.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/index-5.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/index-6.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/index-7.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/index-8.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/index-9.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/overview-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/package-frame.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/package-list" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/package-summary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/package-tree.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/script.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/serialized-form.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Javadocing/stylesheet.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus Attack/.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/.classpath" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/.idea/compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/.idea/copyright/profiles_settings.xml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Virus-Attack.iml" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/.project" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/.settings/org.eclipse.jdt.core.prefs" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/Thumbs.db" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/Virus Attack.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/AntiVirus.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/AntiVirusManager.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/Attacker.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/Cell.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/CellManager.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/Constants.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/GameOverScreen.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/HealthBar.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/InputHandler.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/JUnit.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/Locatable.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/RedCell.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/ScoreBoard.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/SickCell.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/Virus.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/VirusGame.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/VirusGroup.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/VirusGroupManager.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/WelcomeScreen.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/WhiteCell.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/World.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/images/LostGif.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/images/Thumbs.db" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/images/Virus1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/images/Virus1.sai" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/images/Virus2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/images/Virus2.sai" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/images/Virus3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/images/Virus3.sai" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/images/Virus4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/images/Virus4.sai" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/images/Virus5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/images/Virus5.sai" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/images/Virus6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/images/Virus6.sai" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/images/WonGif.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/images/antibody.sai" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/images/background.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/images/giphy.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/images/pixelred.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/images/pixelred.sai" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/images/pixelsick.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/images/pixelsick.sai" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/images/pixelwhite.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Virus_Attack/src/images/pixelwhite.sai" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/php/Thumbs.db" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/php/composer.phar" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Virus_Attack/Desigein Diagram.png" afterPath="$PROJECT_DIR$/Desigein Diagram.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Virus_Attack_jar.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Virus_Attack_jar.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -216,7 +42,18 @@
     <favorites_list name="Virus Attack" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="Virus-Attack.iml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Virus-Attack.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -237,10 +74,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Virus Attack/src/AntiVirusManager.java" />
-        <option value="$PROJECT_DIR$/Virus Attack/src/VirusGroup.java" />
-        <option value="$PROJECT_DIR$/Virus Attack/src/RedCell.java" />
-        <option value="$PROJECT_DIR$/Virus Attack/src/SickCell.java" />
         <option value="$PROJECT_DIR$/Virus Attack/src/Cell.java" />
         <option value="$PROJECT_DIR$/Virus Attack/src/HealthBar.java" />
         <option value="$PROJECT_DIR$/Virus Attack/src/Virus.java" />
@@ -275,7 +108,6 @@
         <option value="$PROJECT_DIR$/Virus_Attack/src/ScoreBoard.java" />
         <option value="$PROJECT_DIR$/Virus_Attack/src/JUnit.java" />
         <option value="$PROJECT_DIR$/Virus_Attack/.gitignore" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/Virus_Attack/src/CellManager.java" />
         <option value="$PROJECT_DIR$/Virus_Attack/src/GameOverScreen.java" />
         <option value="$PROJECT_DIR$/Virus_Attack/README.md" />
@@ -288,6 +120,11 @@
         <option value="$PROJECT_DIR$/Virus_Attack/src/VirusGame.java" />
         <option value="$PROJECT_DIR$/Virus_Attack/src/World.java" />
         <option value="$PROJECT_DIR$/Virus_Attack/src/AntiVirus.java" />
+        <option value="$PROJECT_DIR$/Virus Attack.iml" />
+        <option value="$PROJECT_DIR$/Virus-Attacks/Virus-Attacks.iml" />
+        <option value="$PROJECT_DIR$/Virus-Attack/Virus-Attack.iml" />
+        <option value="$PROJECT_DIR$/Virus-Attack.iml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -312,7 +149,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="953" />
+    <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1041" />
   </component>
@@ -363,6 +200,20 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="Virus_Attack">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -397,6 +248,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -411,21 +263,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="Virus_Attack">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1150,6 +987,16 @@
       <workItem from="1476924584942" duration="10000" />
       <workItem from="1476924605155" duration="59000" />
       <workItem from="1476924667917" duration="324000" />
+      <workItem from="1476925154302" duration="15000" />
+      <workItem from="1476925172809" duration="102000" />
+      <workItem from="1476925277071" duration="16000" />
+      <workItem from="1476925295805" duration="221000" />
+      <workItem from="1476925519303" duration="19000" />
+      <workItem from="1476925540991" duration="98000" />
+      <workItem from="1476925641546" duration="44000" />
+      <workItem from="1476925688337" duration="174000" />
+      <workItem from="1476925873638" duration="81000" />
+      <workItem from="1476925957370" duration="81000" />
     </task>
     <servers />
   </component>
@@ -1186,7 +1033,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86446000" />
+    <option name="totallyTimeSpent" value="87297000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1198,23 +1045,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1041" extended-state="0" />
-    <editor active="false" />
+    <frame x="-7" y="0" width="974" height="1041" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32822758" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3252149" sideWeight="0.49562362" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38183808" sideWeight="0.4201313" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.280837" sideWeight="0.49562362" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2803437" sideWeight="0.49562362" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32822758" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33524355" sideWeight="0.57986873" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40700218" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2308534" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12248804" sideWeight="0.49429038" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1227,6 +1073,7 @@
       <window_info id="DBHelper" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3252149" sideWeight="0.49562362" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39934355" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.50570965" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32006633" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1287,20 +1134,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Virus_Attack/.settings/org.eclipse.jdt.core.prefs" />
-    <entry file="file://$PROJECT_DIR$/Virus_Attack/.project" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/awt/Container.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/awt/image/BufferedImage.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/java/net/URL.java" />
     <entry file="file://$PROJECT_DIR$/Virus_Attack/src/VirusGroupManager.java" />
     <entry file="file://$PROJECT_DIR$/Virus_Attack/src/VirusGroup.java" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Virus_Attack/.gitignore" />
     <entry file="file://$PROJECT_DIR$/Virus_Attack/src/ScoreBoard.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_60/src.zip!/javax/imageio/ImageIO.java" />
@@ -1352,30 +1188,8 @@
     <entry file="file://$PROJECT_DIR$/Virus_Attack/src/VirusGame.java" />
     <entry file="file://$PROJECT_DIR$/Virus_Attack/src/World.java" />
     <entry file="file://$PROJECT_DIR$/Virus_Attack/src/AntiVirus.java" />
-    <entry file="file://$PROJECT_DIR$/Virus_Attack/.classpath">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Virus-Attatck/Virus-Attack.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Virus-Attack.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Virus_Attack/.classpath" />
+    <entry file="file://$PROJECT_DIR$/Virus-Attatck/Virus-Attack.iml" />
     <entry file="file://$PROJECT_DIR$/.idea/APCS-Final-Project.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1409,6 +1223,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Virus Attack.iml" />
+    <entry file="file://$PROJECT_DIR$/Virus_Attack/Virus-Attack.iml" />
+    <entry file="file://$PROJECT_DIR$/Virus-Attack.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Virus-Attacks.iml" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Virus-Attack.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
           <folding />
         </state>
       </provider>
