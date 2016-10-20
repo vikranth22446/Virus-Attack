@@ -2,7 +2,6 @@
   <artifact type="jar" build-on-make="true" name="Virus Attack:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/Virus_Attack_jar</output-path>
     <root id="archive" name="Virus Attack.jar">
-      <element id="module-output" name="Virus Attack" />
       <element id="extracted-dir" path="$APPLICATION_HOME_DIR$/lib/junit-4.12.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$APPLICATION_HOME_DIR$/lib/hamcrest-core-1.3.jar" path-in-jar="/" />
     </root>
