@@ -32,7 +32,7 @@ public class WelcomeScreen extends JFrame {
         createButtons(World.WIDTH / 4 * World.SCALE, World.HEIGHT * World.SCALE / 4 + 60, "Directions");
 
 
-        setTitle("main.virus.Virus Attack");
+        setTitle("Virus Attack");
         getContentPane().add(backgroundGif);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         pack();

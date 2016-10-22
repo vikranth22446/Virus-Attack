@@ -135,7 +135,7 @@ public class AntiVirus extends Attacker implements Locatable {
         g.setColor(Color.blue);
         BufferedImage in;
 //        try {
-////            URL url = getClass().getResource("images/antibody.png");
+////            URL url = getClass().getResource("main.cell.images/antibody.png");
 ////            File f;
 ////            try {
 ////                f = new File(url.toURI());

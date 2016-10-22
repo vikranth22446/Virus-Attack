@@ -161,7 +161,7 @@
   <path id="virus-attack.module.sourcepath">
     <dirset dir="${module.virus-attack.basedir}">
       <include name="src"/>
-      <include name="src/images"/>
+      <include name="src/main.cell.images"/>
     </dirset>
   </path>
   
@@ -189,7 +189,7 @@
         <patternset refid="compiler.resources"/>
         <type type="file"/>
       </fileset>
-      <fileset dir="${module.virus-attack.basedir}/src/images">
+      <fileset dir="/main/cell/images">
         <patternset refid="compiler.resources"/>
         <type type="file"/>
       </fileset>

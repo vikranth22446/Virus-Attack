@@ -204,7 +204,7 @@ public class Virus extends Attacker implements Locatable {
      */
     public void draw(Graphics g, int xOffset, int yOffset) {
         BufferedImage in;
-        URL url = getClass().getResource("images/main.virus.Virus" + number + ".png");
+        URL url = getClass().getResource("images/viruses/Virus" + number + ".png");
         File f;
         try {
             f = new File(url.toURI());
