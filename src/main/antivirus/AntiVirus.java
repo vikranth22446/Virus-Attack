@@ -1,7 +1,7 @@
 package main.antivirus;
 
 import main.helper.Attacker;
-import main.Constants;
+import main.helper.Constants;
 import main.helper.Locatable;
 import main.virus.Virus;
 import main.virus.VirusGroupManager;

@@ -1,6 +1,5 @@
 package main.virus;
 
-import main.*;
 import main.antivirus.AntiVirus;
 import main.antivirus.AntiVirusManager;
 import main.cell.Cell;
@@ -8,6 +7,7 @@ import main.cell.CellManager;
 import main.cell.SickCell;
 import main.cell.WhiteCell;
 import main.helper.Attacker;
+import main.helper.Constants;
 import main.helper.Locatable;
 import main.helper.ScoreBoard;
 

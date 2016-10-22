@@ -31,6 +31,8 @@ import test.virus.*;
         WhiteCellTests.class
 })
 
-// the actual class is empty
+/**
+ * This Class runs all the Tests
+ */
 public class JUnit {
 }

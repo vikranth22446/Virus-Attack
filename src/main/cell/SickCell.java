@@ -1,6 +1,6 @@
 package main.cell;
 
-import main.Constants;
+import main.helper.Constants;
 import main.virus.VirusGroupManager;
 
 import javax.imageio.ImageIO;

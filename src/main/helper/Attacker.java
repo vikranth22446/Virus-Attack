@@ -12,7 +12,7 @@ public abstract class Attacker implements Locatable {
      */
     private int x, y; // current loc
     /**
-     * The speed, attack, attack radius, height and width that is taken from the main.Constants class
+     * The speed, attack, attack radius, height and width that is taken from the main.helper.Constants class
      */
     private int speed, attack, attackRadius, height, width;
     /**

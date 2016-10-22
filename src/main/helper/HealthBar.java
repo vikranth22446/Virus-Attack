@@ -1,7 +1,6 @@
 package main.helper;
 
 
-import main.Constants;
 import main.cell.Cell;
 import main.cell.SickCell;
 

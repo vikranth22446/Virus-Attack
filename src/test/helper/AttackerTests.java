@@ -2,7 +2,7 @@ package test.helper;
 
 import main.antivirus.AntiVirus;
 import main.helper.Attacker;
-import main.Constants;
+import main.helper.Constants;
 import main.virus.Virus;
 import org.junit.Test;
 
