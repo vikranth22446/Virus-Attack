@@ -1,4 +1,4 @@
-package test.cell;
+package tests.cell;
 
 import main.cell.SickCell;
 import main.virus.VirusGroup;

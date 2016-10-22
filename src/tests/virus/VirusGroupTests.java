@@ -1,4 +1,4 @@
-package test.virus;
+package tests.virus;
 
 import main.virus.Virus;
 import main.virus.VirusGroup;
