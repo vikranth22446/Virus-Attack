@@ -10,21 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db7114d6-e625-4df5-b478-8fc896f80992" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/JUnit.java" afterPath="$PROJECT_DIR$/test/JUnit.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/cell/CellManagerTests.java" afterPath="$PROJECT_DIR$/test/cell/CellManagerTests.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/cell/CellTests.java" afterPath="$PROJECT_DIR$/test/cell/CellTests.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/cell/RedCellTests.java" afterPath="$PROJECT_DIR$/test/cell/RedCellTests.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/cell/SickCellTests.java" afterPath="$PROJECT_DIR$/test/cell/SickCellTests.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/cell/WhiteCellTests.java" afterPath="$PROJECT_DIR$/test/cell/WhiteCellTests.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/helper/AttackerTests.java" afterPath="$PROJECT_DIR$/test/helper/AttackerTests.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/helper/HealthBarTests.java" afterPath="$PROJECT_DIR$/test/helper/HealthBarTests.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/helper/LocatableTests.java" afterPath="$PROJECT_DIR$/test/helper/LocatableTests.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/helper/ScoreBoardTests.java" afterPath="$PROJECT_DIR$/test/helper/ScoreBoardTests.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/virus/AntiVirusManagerTests.java" afterPath="$PROJECT_DIR$/test/virus/AntiVirusManagerTests.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/virus/AntiVirusTests.java" afterPath="$PROJECT_DIR$/test/virus/AntiVirusTests.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/virus/VirusGroupManagerTests.java" afterPath="$PROJECT_DIR$/test/virus/VirusGroupManagerTests.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/virus/VirusGroupTests.java" afterPath="$PROJECT_DIR$/test/virus/VirusGroupTests.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/virus/VirusTests.java" afterPath="$PROJECT_DIR$/test/virus/VirusTests.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Virus Attack.iws" />
@@ -970,7 +955,7 @@
       <workItem from="1477108002472" duration="2342000" />
       <workItem from="1477111054046" duration="281000" />
       <workItem from="1477111611899" duration="878000" />
-      <workItem from="1477171406106" duration="250000" />
+      <workItem from="1477171406106" duration="314000" />
     </task>
     <servers />
   </component>
@@ -1007,7 +992,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93900000" />
+    <option name="totallyTimeSpent" value="93964000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1019,7 +1004,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="974" height="1041" extended-state="0" />
+    <frame x="-7" y="0" width="974" height="1041" extended-state="1" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
