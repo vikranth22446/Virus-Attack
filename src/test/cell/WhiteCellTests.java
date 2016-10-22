@@ -1,7 +1,7 @@
 package test.cell;
 
-import main.Cell;
-import main.WhiteCell;
+import main.cell.Cell;
+import main.cell.WhiteCell;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -14,16 +14,16 @@ import static org.junit.Assert.assertTrue;
  */
 public class WhiteCellTests {
     /**
-     * White main.Cell Tests:
+     * White main.cell.Cell Tests:
      * whiteCellConstructor(): Checks if to String has the right fields
      * whiteCellToString(): Checks if toString is not Null
-     * whiteCellSplit(): Checks if White main.Cell Splits
+     * whiteCellSplit(): Checks if White main.cell.Cell Splits
      * whiteCellProduceUnit(): Checks if white Cells produce AntiViruses
      * whiteCellSetAttacked(): Checks if white cell is attacking
-     * whiteCellIsAttacked(): Checks if white main.Cell is attacked
+     * whiteCellIsAttacked(): Checks if white main.cell.Cell is attacked
      * whiteCellGetTime(): Checks if the current time is right
      * whiteCellUpdateTime(): Checks if time is updated for whiteCell
-     * whiteCellMove(): Checks if white main.Cell moves
+     * whiteCellMove(): Checks if white main.cell.Cell moves
      *
      * @author Melissa
      */
@@ -31,8 +31,8 @@ public class WhiteCellTests {
     public void whiteCellConstructor() {
         WhiteCell wc = new WhiteCell(0, 0, 100);
         String s = wc.toString();
-        assertTrue("<<Invalid main.WhiteCell Constructor>>",
-                s.contains("main.WhiteCell[") && s.contains("x: 0") && s.contains("y: 0")
+        assertTrue("<<Invalid main.cell.WhiteCell Constructor>>",
+                s.contains("main.cell.WhiteCell[") && s.contains("x: 0") && s.contains("y: 0")
                         && s.contains("health: " + 100));
     }
 
@@ -66,7 +66,7 @@ public class WhiteCellTests {
     public void whiteCellSetAttacked() {
         WhiteCell wc = new WhiteCell(0, 0, 100);
         wc.setAttacked(true);
-        assertTrue("<<White main.Cell Attack not set>>", wc.isAttacked());
+        assertTrue("<<White main.cell.Cell Attack not set>>", wc.isAttacked());
     }
 
 
@@ -74,7 +74,7 @@ public class WhiteCellTests {
     public void whiteCellIsAttacked() {
         WhiteCell wc = new WhiteCell(0, 0, 100);
         wc.setAttacked(true);
-        assertTrue("<<White main.Cell Attack not set>>", wc.isAttacked());
+        assertTrue("<<White main.cell.Cell Attack not set>>", wc.isAttacked());
     }
 
 
@@ -82,7 +82,7 @@ public class WhiteCellTests {
     public void whiteCellGetTime() {
         WhiteCell wc = new WhiteCell(0, 0, 100);
         System.out.println(wc.getTime());
-        assertTrue("<<White main.Cell Time not set>>", wc.getTime() == 0);
+        assertTrue("<<White main.cell.Cell Time not set>>", wc.getTime() == 0);
     }
 
 
@@ -91,7 +91,7 @@ public class WhiteCellTests {
         WhiteCell wc = new WhiteCell(0, 0, 100);
         wc.updateTime();
         wc.updateTime();
-        assertTrue("<<White main.Cell Time not set>>", wc.getTime() == 2);
+        assertTrue("<<White main.cell.Cell Time not set>>", wc.getTime() == 2);
     }
 
 
@@ -102,6 +102,6 @@ public class WhiteCellTests {
         wc.setvy(6);
         wc.move();
         wc.updateTime();
-        assertTrue("<<White main.Cell not Moving>>", wc.vx() == 5 && wc.vy() == 6);
+        assertTrue("<<White main.cell.Cell not Moving>>", wc.vx() == 5 && wc.vy() == 6);
     }
 }

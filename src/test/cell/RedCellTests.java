@@ -1,6 +1,6 @@
 package test.cell;
 
-import main.RedCell;
+import main.cell.RedCell;
 import org.junit.Test;
 
 import static org.junit.Assert.assertNotNull;
@@ -11,7 +11,7 @@ import static org.junit.Assert.assertTrue;
  */
 public class RedCellTests {
     /**
-     * Red main.Cell Tests:
+     * Red main.cell.Cell Tests:
      * redCellConstructor(): Checks if the constructor is right using toString
      * redCellToString(): Checks if the toString is not null
      *
@@ -21,8 +21,8 @@ public class RedCellTests {
     public void redCellConstructor() {
         RedCell wc = new RedCell(0, 0, 100);
         String s = wc.toString();
-        assertTrue("<<Invalid main.Cell Constructor>>",
-                s.contains("main.RedCell[") && s.contains("x: 0") && s.contains("y: 0")
+        assertTrue("<<Invalid main.cell.Cell Constructor>>",
+                s.contains("main.cell.RedCell[") && s.contains("x: 0") && s.contains("y: 0")
                         && s.contains("health: " + 100));
     }
 

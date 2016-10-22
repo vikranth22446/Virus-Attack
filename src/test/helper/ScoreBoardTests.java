@@ -1,6 +1,6 @@
 package test.helper;
 
-import main.ScoreBoard;
+import main.helper.ScoreBoard;
 import org.junit.Test;
 
 import static org.junit.Assert.assertNotNull;
@@ -11,7 +11,7 @@ import static org.junit.Assert.assertTrue;
  */
 public class ScoreBoardTests {
     /**
-     * main.ScoreBoard Tests:
+     * main.helper.ScoreBoard Tests:
      * scoreBoardtoStringTest(): Checks if the toString is Not null
      * scoreBoardContructorTest(): Checks if the Constructor is right
      * everyTurnTest(): Checks if the right string is returned every turn

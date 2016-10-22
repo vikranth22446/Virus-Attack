@@ -1,6 +1,6 @@
 package test.virus;
 
-import main.AntiVirusManager;
+import main.antivirus.AntiVirusManager;
 import org.junit.Test;
 
 import static org.junit.Assert.assertNotNull;
@@ -29,7 +29,7 @@ public class AntiVirusManagerTests {
     @Test
     public void antiVirusManagerAddAnti() {
         AntiVirusManager.addAnti(0, 0);
-        assertTrue("<<main.AntiVirus not added to anti>>", AntiVirusManager.anti.size() != 0);
+        assertTrue("<<main.antivirus.AntiVirus not added to anti>>", AntiVirusManager.anti.size() != 0);
 
 
     }

@@ -1,9 +1,9 @@
 package test.cell;
 
-import main.Cell;
-import main.CellManager;
-import main.RedCell;
-import main.WhiteCell;
+import main.cell.Cell;
+import main.cell.CellManager;
+import main.cell.RedCell;
+import main.cell.WhiteCell;
 import org.junit.Test;
 
 import static org.junit.Assert.assertNotNull;
@@ -14,9 +14,9 @@ import static org.junit.Assert.assertTrue;
  */
 public class CellManagerTests {
     /**
-     * main.Cell Manager Tests:
+     * main.cell.Cell Manager Tests:
      * cellManagerConstructor(): Checks if cellManager is initialized right
-     * cellManagerCreateCellsInPositions(): Checks if the cells in main.CellManager is in the right cell
+     * cellManagerCreateCellsInPositions(): Checks if the cells in main.cell.CellManager is in the right cell
      * cellManagerConvertSick(): Checks if the red cell gets convert to sick
      * cellManagerRemoveCell(): Checks if cell is removed
      * cellManagerToString(): Checks if toString is right
@@ -27,8 +27,8 @@ public class CellManagerTests {
     public void cellManagerConstructor() {
         CellManager cm = new CellManager();
         String s = cm.toString();
-        assertTrue("<<Invalid main.CellManager Constructor>>",
-                s.contains("main.CellManager[") && s.contains("whiteValues: " + CellManager.whiteValues.toString())
+        assertTrue("<<Invalid main.cell.CellManager Constructor>>",
+                s.contains("main.cell.CellManager[") && s.contains("whiteValues: " + CellManager.whiteValues.toString())
                         && s.contains("redValues: " + CellManager.redValues.toString())
                         && s.contains("sickValues: " + CellManager.sickValues.toString()));
     }
@@ -53,7 +53,7 @@ public class CellManagerTests {
         Cell c = new RedCell(0, 0, 100);
         CellManager.redValues.add(c);
         CellManager.convertCell(c);
-        assertTrue("<<main.Cell did not convert to Sick>>",
+        assertTrue("<<main.cell.Cell did not convert to Sick>>",
                 CellManager.redValues.size() == 0 && CellManager.sickValues.size() == 1);
 
     }
@@ -65,7 +65,7 @@ public class CellManagerTests {
         CellManager.whiteValues.clear();
         CellManager.whiteValues.add(new WhiteCell(0, 0, 200));
         CellManager.removeCell(0);
-        assertTrue("<<main.Cell did not get removed>>", CellManager.whiteValues.isEmpty());
+        assertTrue("<<main.cell.Cell did not get removed>>", CellManager.whiteValues.isEmpty());
 
     }
 

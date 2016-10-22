@@ -1,7 +1,7 @@
 package test.helper;
 
-import main.HealthBar;
-import main.WhiteCell;
+import main.helper.HealthBar;
+import main.cell.WhiteCell;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
@@ -20,7 +20,7 @@ public class HealthBarTests {
     public void healthBarConctructor() {
         HealthBar healthBar = new HealthBar(new WhiteCell(30, 30, 30));
         System.out.println(healthBar.toString());
-        String test = "main.HealthBar{cell=main.WhiteCell[x: 30 y: 30radius: 50health: 30.0speed: 5attack: 1]}";
-        assertTrue("<<The main.Cell is contructed wrong>>", test.equalsIgnoreCase(healthBar.toString()));
+        String test = "main.helper.HealthBar{cell=main.cell.WhiteCell[x: 30 y: 30radius: 50health: 30.0speed: 5attack: 1]}";
+        assertTrue("<<The main.cell.Cell is contructed wrong>>", test.equalsIgnoreCase(healthBar.toString()));
     }
 }

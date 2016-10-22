@@ -1,6 +1,6 @@
 package test.virus;
 
-import main.AntiVirus;
+import main.antivirus.AntiVirus;
 import org.junit.Test;
 
 import static org.junit.Assert.assertNotNull;
@@ -11,7 +11,7 @@ import static org.junit.Assert.assertTrue;
  */
 public class AntiVirusTests {
     /**
-     * main.AntiVirus Test Classes
+     * main.antivirus.AntiVirus Test Classes
      * antiVirusConstructor(): Checks if the antiVirus constructor is right
      * antiVirusToString(): Checks if the toString is null
      *
@@ -21,7 +21,7 @@ public class AntiVirusTests {
     public void antiVirusConstructor() {
         AntiVirus antiVirus = new AntiVirus(20, 30);
         String test = antiVirus.toString();
-        assertTrue("<<Invalid Construction Of objects>>", test.equals("main.AntiVirus{currentFollowVirus=null, positionOfVirus=0, follow=false}"));
+        assertTrue("<<Invalid Construction Of objects>>", test.equals("main.antivirus.AntiVirus{currentFollowVirus=null, positionOfVirus=0, follow=false}"));
     }
 
 

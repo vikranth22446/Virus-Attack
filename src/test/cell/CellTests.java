@@ -1,15 +1,15 @@
 package test.cell;
 
-import main.Cell;
-import main.RedCell;
-import main.WhiteCell;
+import main.cell.Cell;
+import main.cell.RedCell;
+import main.cell.WhiteCell;
 import org.junit.Test;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 /**
- * main.Cell Tests:
+ * main.cell.Cell Tests:
  * cellToString(): Checks if the toString is not null
  * cellConstructor(): Checks if the to string contains the right fields
  * cellMax(): Checks if the initial health is right
@@ -36,8 +36,8 @@ public class CellTests {
     public void cellConstructor() {
         Cell wc = new RedCell(0, 0, 100);
         String s = wc.toString();
-        assertTrue("<<Invalid main.Cell Constructor>>",
-                s.contains("main.RedCell[") && s.contains("x: 0") && s.contains("y: 0")
+        assertTrue("<<Invalid main.cell.Cell Constructor>>",
+                s.contains("main.cell.RedCell[") && s.contains("x: 0") && s.contains("y: 0")
                         && s.contains("health: " + 100));
     }
 
