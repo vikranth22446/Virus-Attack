@@ -1,5 +1,9 @@
-package main;
+package main.helper;
 
+
+import main.Constants;
+import main.cell.Cell;
+import main.cell.SickCell;
 
 import java.awt.*;
 
@@ -86,7 +90,7 @@ public class HealthBar {
      */
     @Override
     public String toString() {
-        return "main.HealthBar{" +
+        return "main.helper.HealthBar{" +
                 "cell=" + cell +
                 '}';
     }

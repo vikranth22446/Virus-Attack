@@ -1,4 +1,7 @@
-package main;
+package main.helper;
+
+import main.gui.World;
+import main.virus.VirusGroupManager;
 
 import java.awt.event.*;
 
@@ -8,7 +11,7 @@ import java.awt.event.*;
  *
  * @author Alex M
  */
-class InputHandler implements MouseListener, MouseMotionListener, KeyListener {
+public class InputHandler implements MouseListener, MouseMotionListener, KeyListener {
 
     /**
      * Holds the virus group manager object created on start
@@ -45,7 +48,7 @@ class InputHandler implements MouseListener, MouseMotionListener, KeyListener {
      *
      * @param vgm from the world to access vgm actions
      */
-    InputHandler(VirusGroupManager vgm) {
+    public InputHandler(VirusGroupManager vgm) {
         this.vgm = vgm;
 
         xOffset = 0;
@@ -63,7 +66,7 @@ class InputHandler implements MouseListener, MouseMotionListener, KeyListener {
      *
      * @return the x offset
      */
-    static int getXOffset() {
+    public static int getXOffset() {
         return xOffset;
     }
 
@@ -72,7 +75,7 @@ class InputHandler implements MouseListener, MouseMotionListener, KeyListener {
      *
      * @return the y offset
      */
-    static int getYOffset() {
+    public static int getYOffset() {
         return yOffset;
     }
 

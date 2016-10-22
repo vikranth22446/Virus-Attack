@@ -1,12 +1,14 @@
-package main;
+package main.virus;
 
+
+import main.helper.ScoreBoard;
 
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Collections;
 
 /**
- * main.VirusGroup that holds its own viruses, it receives commands from the manager
+ * main.virus.VirusGroup that holds its own viruses, it receives commands from the manager
  * and then delegates them to the viruses
  *
  * @author Alex M
@@ -136,7 +138,7 @@ public class VirusGroup {
      * @see java.lang.Object#toString()
      */
     public String toString() {
-        return "main.VirusGroup[" + "Viruses:" + viruses.size() + "]";
+        return "main.virus.VirusGroup[" + "Viruses:" + viruses.size() + "]";
     }
 
     public boolean contains(Virus v) {

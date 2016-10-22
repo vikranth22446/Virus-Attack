@@ -1,4 +1,15 @@
-package main;
+package main.virus;
+
+import main.*;
+import main.antivirus.AntiVirus;
+import main.antivirus.AntiVirusManager;
+import main.cell.Cell;
+import main.cell.CellManager;
+import main.cell.SickCell;
+import main.cell.WhiteCell;
+import main.helper.Attacker;
+import main.helper.Locatable;
+import main.helper.ScoreBoard;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -9,7 +20,7 @@ import java.net.URISyntaxException;
 import java.net.URL;
 
 /**
- * The main.Virus Class is the main unit that the player controls and uses it to
+ * The main.virus.Virus Class is the main unit that the player controls and uses it to
  * conquer the enemy cells and anti viruses
  * <p>
  * The virus class holds all of its own functions such as updating its location,
@@ -193,7 +204,7 @@ public class Virus extends Attacker implements Locatable {
      */
     public void draw(Graphics g, int xOffset, int yOffset) {
         BufferedImage in;
-        URL url = getClass().getResource("images/main.Virus" + number + ".png");
+        URL url = getClass().getResource("images/main.virus.Virus" + number + ".png");
         File f;
         try {
             f = new File(url.toURI());
@@ -214,7 +225,7 @@ public class Virus extends Attacker implements Locatable {
      * @see java.lang.Object#toString()
      */
     public String toString() {
-        return "main.Virus[x:" + getX() + " y:" + getY() + " speed:" + getSpeed() + " attack:" + getAttack() +
+        return "main.virus.Virus[x:" + getX() + " y:" + getY() + " speed:" + getSpeed() + " attack:" + getAttack() +
                 " height:" + getHeight() + " width:" + getWidth() + "]";
     }
 

@@ -1,14 +1,14 @@
 package test.virus;
 
-import main.Virus;
-import main.VirusGroup;
+import main.virus.Virus;
+import main.virus.VirusGroup;
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
 
 /**
- * main.Virus Group Tests:
+ * main.virus.Virus Group Tests:
  * virusGroupConstructor(): Checks if virus group constructor is right
  * virusGroupOtherConstructor(): Checks overload constructor
  * virusGroupAddVirus(): Checks if virus is added

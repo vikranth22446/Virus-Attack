@@ -1,4 +1,8 @@
-package main;
+package main.cell;
+
+import main.Constants;
+import main.helper.HealthBar;
+import main.helper.Locatable;
 
 import java.awt.*;
 
@@ -70,7 +74,7 @@ public abstract class Cell implements Locatable
      *
      * @return the radius of the cell.
      */
-    int getRadius()
+    public int getRadius()
     {
         return radius;
     }
@@ -220,6 +224,6 @@ public abstract class Cell implements Locatable
     public abstract void produceUnit();
     
     public String toString(){
-        return "main.Cell[x:" + getX() + " y:" + getY() + "radius: "+ radius + "health: "+ health+ "maxHealth: " + maxHealth +"]";
+        return "main.cell.Cell[x:" + getX() + " y:" + getY() + "radius: "+ radius + "health: "+ health+ "maxHealth: " + maxHealth +"]";
     }
 }

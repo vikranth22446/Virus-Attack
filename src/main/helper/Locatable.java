@@ -1,8 +1,8 @@
-package main;
+package main.helper;
 
 /**
- * main.Locatable used by almost ever where. For example in classes
- * like main.Virus, main.AntiVirus, and main.Cell.
+ * main.helper.Locatable used by almost ever where. For example in classes
+ * like main.virus.Virus, main.antivirus.AntiVirus, and main.cell.Cell.
  *
  * @author Vikranth Srivatsa
  */

@@ -1,4 +1,4 @@
-package main;
+package main.helper;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -171,7 +171,7 @@ public class ScoreBoard {
      */
     @Override
     public String toString() {
-        return "main.ScoreBoard{" +
+        return "main.helper.ScoreBoard{" +
                 "totalScore=" + totalScore +
                 ", seconds=" + seconds +
                 ", minutes=" + minutes +

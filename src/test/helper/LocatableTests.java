@@ -1,7 +1,7 @@
 package test.helper;
 
-import main.Locatable;
-import main.Virus;
+import main.helper.Locatable;
+import main.virus.Virus;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
@@ -11,7 +11,7 @@ import static org.junit.Assert.assertTrue;
  */
 public class LocatableTests {
     /**
-     * main.Locatable Tests:
+     * main.helper.Locatable Tests:
      * locatableGetX(): Returns the x coordinate of the virus
      * locatableGetY(): Returns the y coordinate of the virus
      * locatableDistance(): Returns the distance between the two viruses
@@ -27,7 +27,7 @@ public class LocatableTests {
         } catch (Exception e) {
             test = false;
         }
-        assertTrue("<<main.Locatable is not working>>", test);
+        assertTrue("<<main.helper.Locatable is not working>>", test);
     }
 
     @Test
@@ -39,7 +39,7 @@ public class LocatableTests {
         } catch (Exception e) {
             test = false;
         }
-        assertTrue("<<main.Locatable is not working>>", test);
+        assertTrue("<<main.helper.Locatable is not working>>", test);
     }
 
     @Test
@@ -51,6 +51,6 @@ public class LocatableTests {
         } catch (Exception e) {
             test = false;
         }
-        assertTrue("<<main.Locatable is not working>>", test);
+        assertTrue("<<main.helper.Locatable is not working>>", test);
     }
 }

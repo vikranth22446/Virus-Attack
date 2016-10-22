@@ -1,4 +1,9 @@
-package main;
+package main.cell;
+
+import main.antivirus.AntiVirusManager;
+import main.virus.Virus;
+import main.virus.VirusGroup;
+import main.virus.VirusGroupManager;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -69,7 +74,7 @@ public class WhiteCell extends Cell {
     private boolean beingAttacked = false;
 
     /**
-     * True if cell is following a main.Virus
+     * True if cell is following a main.virus.Virus
      */
     private boolean tracking = false;
 
@@ -369,7 +374,7 @@ public class WhiteCell extends Cell {
     }
 
     public String toString() {
-        return "main.WhiteCell[x: " + getX() + " y: " + getY() + "radius: " + getRadius() + "health: " + getHealth() + "speed: " + speed
+        return "main.cell.WhiteCell[x: " + getX() + " y: " + getY() + "radius: " + getRadius() + "health: " + getHealth() + "speed: " + speed
                 + "attack: " + attack + "]";
 
     }

@@ -1,12 +1,14 @@
-package main;
+package main.cell;
 
+
+import main.gui.World;
 
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 
 /**
- * main.CellManager contains redValues,whiteValues, and sickValues.
+ * main.cell.CellManager contains redValues,whiteValues, and sickValues.
  *
  * @author Melissa Wei
  */
@@ -119,12 +121,12 @@ public class CellManager {
 
     /**
      * Converts the cell depending on what type of cell it is
-     * main.RedCell
+     * main.cell.RedCell
      * -converts to sick
      * White Values
      * -removes
-     * main.SickCell
-     * -converts to red main.Cell
+     * main.cell.SickCell
+     * -converts to red main.cell.Cell
      *
      * @param c the cell to convert
      */
@@ -220,7 +222,7 @@ public class CellManager {
     }
 
     public String toString() {
-        return "main.CellManager[redValues: " + redValues.toString() + " whiteValues: " + whiteValues.toString() + "radius: "
+        return "main.cell.CellManager[redValues: " + redValues.toString() + " whiteValues: " + whiteValues.toString() + "radius: "
     + "sickValues: " + sickValues.toString() + "]";
 
     }

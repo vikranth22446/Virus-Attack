@@ -1,9 +1,9 @@
 package test.helper;
 
-import main.AntiVirus;
-import main.Attacker;
+import main.antivirus.AntiVirus;
+import main.helper.Attacker;
 import main.Constants;
-import main.Virus;
+import main.virus.Virus;
 import org.junit.Test;
 
 import static org.junit.Assert.assertNotNull;
@@ -14,7 +14,7 @@ import static org.junit.Assert.assertTrue;
  */
 public class AttackerTests {
     /**
-     * main.Attacker Test:
+     * main.helper.Attacker Test:
      * attackerConstructor(): Checks if the attacker is the right constructor
      * attackerSetCoordinate(): Checks if the coordinate is set rght
      * attackerreduceHealth(): Checks if health is reduced
@@ -42,7 +42,7 @@ public class AttackerTests {
     @Test
     public void attackerConstructor() {
         Attacker attacker = new Virus(30, 30);
-        String testString = "main.Virus[x:30 y:30 speed:5 attack:1 height:30 width:30]";
+        String testString = "main.virus.Virus[x:30 y:30 speed:5 attack:1 height:30 width:30]";
         assertTrue("<<attacker to String is wrong>>", testString.equalsIgnoreCase(attacker.toString()));
     }
 

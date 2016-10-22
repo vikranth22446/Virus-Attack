@@ -1,5 +1,7 @@
-package main;
+package main.virus;
 
+
+import main.helper.ScoreBoard;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -233,7 +235,7 @@ public class VirusGroupManager {
     }
 
     public String toString() {
-        return "main.VirusGroupManager[numGroups:" + groupNum + " current group:" + currentGroup + "]";
+        return "main.virus.VirusGroupManager[numGroups:" + groupNum + " current group:" + currentGroup + "]";
     }
 
 }

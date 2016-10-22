@@ -7,7 +7,7 @@ package main;
  */
 public class Constants {
     /**
-     * Anti-main.Virus constants:
+     * Anti-main.virus.Virus constants:
      * SPEED,HEALTH,ATTACK, WIDTH,HEIGHT,ATTACK_RADIUS
      */
     public static final int ANTIVIRUS_SPEED = 5;
@@ -18,7 +18,7 @@ public class Constants {
     public static final int ANTIVIRUS_ATTACK_RADIUS = 20;
 
     /**
-     * main.Virus main.Constants:
+     * main.virus.Virus main.Constants:
      * SPEED,HEALTH,ATTACK,ATTACK_RADIUS,WIDTH,HEIGHT,IDLE_RANGE
      */
     public static final int VIRUS_SPEED = 5;
@@ -29,12 +29,12 @@ public class Constants {
     public static final int VIRUS_HEIGHT = 30;
     public static final int VIRUS_IDLE_RANGE = 50;
     /**
-     * main.Cell main.Constants:
+     * main.cell.Cell main.Constants:
      * CELL_RADIUS
      */
     public static final int CELL_RADIUS = 50;
     /**
-     * Sick main.Cell main.Constants:
+     * Sick main.cell.Cell main.Constants:
      * GENERATION_CORRECTION, GENERATION_RATE
      */
     public static final int VIRUS_GENERATION_CORRECTION_FACTOR = -20;

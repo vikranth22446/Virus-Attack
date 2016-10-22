@@ -1,6 +1,6 @@
 package test.virus;
 
-import main.Virus;
+import main.virus.Virus;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -8,7 +8,7 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 /**
- * main.Virus test.JUnit Test Methods:
+ * main.virus.Virus test.JUnit Test Methods:
  * virusSetUp(): sets a coordinate to 123 and 123
  * virusConstructor(): checks if the x and y coordinates are in the right spot for the toString
  * virusToString(): checks if toString is not null
@@ -35,8 +35,8 @@ public class VirusTests {
         Virus v = new Virus(xCoord, yCoord);
         String s = v.toString();
 
-        assertTrue("<<Invalid main.Virus Constructor>>",
-                s.contains("main.Virus[") && s.contains("x:123") && s.contains("y:123"));
+        assertTrue("<<Invalid main.virus.Virus Constructor>>",
+                s.contains("main.virus.Virus[") && s.contains("x:123") && s.contains("y:123"));
     }
 
 

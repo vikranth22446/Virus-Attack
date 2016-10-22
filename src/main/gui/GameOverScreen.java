@@ -1,4 +1,6 @@
-package main;
+package main.gui;
+
+import main.helper.ScoreBoard;
 
 import javax.swing.*;
 import java.awt.*;
@@ -24,7 +26,7 @@ public class GameOverScreen extends JFrame {
      * @param title      the title of the current screen. Either you loose or you win
      * @param scoreBoard the scoreboard used to get stats
      */
-    void createScreen(String title, ScoreBoard scoreBoard) {
+    public void createScreen(String title, ScoreBoard scoreBoard) {
 
         createBackgroundGif(title);
 
@@ -35,7 +37,7 @@ public class GameOverScreen extends JFrame {
                         + "Total Score: " + scoreBoard.getTotalScore();
         createButtons(120, 30, World.WIDTH / 4 * World.SCALE, World.HEIGHT * World.SCALE / 4 + 130, "Try Again");
         createButtons(320, 130, World.WIDTH / 4 * World.SCALE - 100, World.HEIGHT * World.SCALE / 4 - 20, "<html>" + buttonToDisplay.replaceAll("\\n", "<br>") + "</html>");
-        setTitle("main.Virus Attack");
+        setTitle("main.virus.Virus Attack");
         getContentPane().add(backgroundGif);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         pack();
@@ -70,7 +72,7 @@ public class GameOverScreen extends JFrame {
     }
 
     /**
-     * Creates a new game by calling main.WelcomeScreen again
+     * Creates a new game by calling main.gui.WelcomeScreen again
      */
     private void newGame() {
         WelcomeScreen welcomeScreen = new WelcomeScreen();
@@ -80,7 +82,7 @@ public class GameOverScreen extends JFrame {
 
     /**
      * Uses the title to get the lost or won Gif. Then puts that url in a JLabel. The sets the size to
-     * (main.World.WIDTH * 2 + 300, main.World.HEIGHT * 2 + 300);
+     * (main.gui.World.WIDTH * 2 + 300, main.gui.World.HEIGHT * 2 + 300);
      *
      * @param title the title to set
      */

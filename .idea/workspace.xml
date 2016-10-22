@@ -7,41 +7,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db7114d6-e625-4df5-b478-8fc896f80992" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/cell/CellManagerTests.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/cell/CellTests.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/cell/RedCellTests.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/cell/SickCellTests.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/cell/WhiteCellTests.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/helper/AttackerTests.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/helper/HealthBarTests.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/helper/LocatableTests.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/helper/ScoreBoardTests.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/virus/AntiVirusManagerTests.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/virus/AntiVirusTests.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/virus/VirusGroupManagerTests.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/virus/VirusGroupTests.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/virus/VirusTests.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AntiVirus.java" afterPath="$PROJECT_DIR$/src/main/AntiVirus.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/AntiVirusManager.java" afterPath="$PROJECT_DIR$/src/main/AntiVirusManager.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Attacker.java" afterPath="$PROJECT_DIR$/src/main/Attacker.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Cell.java" afterPath="$PROJECT_DIR$/src/main/Cell.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/CellManager.java" afterPath="$PROJECT_DIR$/src/main/CellManager.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Constants.java" afterPath="$PROJECT_DIR$/src/main/Constants.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/GameOverScreen.java" afterPath="$PROJECT_DIR$/src/main/GameOverScreen.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/HealthBar.java" afterPath="$PROJECT_DIR$/src/main/HealthBar.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/InputHandler.java" afterPath="$PROJECT_DIR$/src/main/InputHandler.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/JUnit.java" afterPath="$PROJECT_DIR$/src/test/JUnit.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Locatable.java" afterPath="$PROJECT_DIR$/src/main/Locatable.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/RedCell.java" afterPath="$PROJECT_DIR$/src/main/RedCell.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/ScoreBoard.java" afterPath="$PROJECT_DIR$/src/main/ScoreBoard.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/SickCell.java" afterPath="$PROJECT_DIR$/src/main/SickCell.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Virus.java" afterPath="$PROJECT_DIR$/src/main/Virus.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/VirusGame.java" afterPath="$PROJECT_DIR$/src/main/VirusGame.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/VirusGroup.java" afterPath="$PROJECT_DIR$/src/main/VirusGroup.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/VirusGroupManager.java" afterPath="$PROJECT_DIR$/src/main/VirusGroupManager.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/WelcomeScreen.java" afterPath="$PROJECT_DIR$/src/main/WelcomeScreen.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/WhiteCell.java" afterPath="$PROJECT_DIR$/src/main/WhiteCell.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/World.java" afterPath="$PROJECT_DIR$/src/main/World.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/AntiVirus.java" afterPath="$PROJECT_DIR$/src/main/antivirus/AntiVirus.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/AntiVirusManager.java" afterPath="$PROJECT_DIR$/src/main/antivirus/AntiVirusManager.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/Attacker.java" afterPath="$PROJECT_DIR$/src/main/helper/Attacker.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/Cell.java" afterPath="$PROJECT_DIR$/src/main/cell/Cell.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/CellManager.java" afterPath="$PROJECT_DIR$/src/main/cell/CellManager.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/GameOverScreen.java" afterPath="$PROJECT_DIR$/src/main/gui/GameOverScreen.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/HealthBar.java" afterPath="$PROJECT_DIR$/src/main/helper/HealthBar.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/InputHandler.java" afterPath="$PROJECT_DIR$/src/main/helper/InputHandler.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/Locatable.java" afterPath="$PROJECT_DIR$/src/main/helper/Locatable.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/RedCell.java" afterPath="$PROJECT_DIR$/src/main/cell/RedCell.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/ScoreBoard.java" afterPath="$PROJECT_DIR$/src/main/helper/ScoreBoard.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/SickCell.java" afterPath="$PROJECT_DIR$/src/main/cell/SickCell.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/Virus.java" afterPath="$PROJECT_DIR$/src/main/virus/Virus.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/VirusGroup.java" afterPath="$PROJECT_DIR$/src/main/virus/VirusGroup.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/VirusGroupManager.java" afterPath="$PROJECT_DIR$/src/main/virus/VirusGroupManager.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/WelcomeScreen.java" afterPath="$PROJECT_DIR$/src/main/gui/WelcomeScreen.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/WhiteCell.java" afterPath="$PROJECT_DIR$/src/main/cell/WhiteCell.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/World.java" afterPath="$PROJECT_DIR$/src/main/gui/World.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/AntiVirus.html" afterPath="$PROJECT_DIR$/docs/AntiVirus.html" />
@@ -49,7 +32,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/Attacker.html" afterPath="$PROJECT_DIR$/docs/Attacker.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/Cell.html" afterPath="$PROJECT_DIR$/docs/Cell.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/CellManager.html" afterPath="$PROJECT_DIR$/docs/CellManager.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/Constants.html" afterPath="$PROJECT_DIR$/docs/Constants.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/GameOverScreen.html" afterPath="$PROJECT_DIR$/docs/GameOverScreen.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/HealthBar.html" afterPath="$PROJECT_DIR$/docs/HealthBar.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/InputHandler.html" afterPath="$PROJECT_DIR$/docs/InputHandler.html" />
@@ -59,7 +41,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/ScoreBoard.html" afterPath="$PROJECT_DIR$/docs/ScoreBoard.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/SickCell.html" afterPath="$PROJECT_DIR$/docs/SickCell.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/Virus.html" afterPath="$PROJECT_DIR$/docs/Virus.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/VirusGame.html" afterPath="$PROJECT_DIR$/docs/VirusGame.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/VirusGroup.html" afterPath="$PROJECT_DIR$/docs/VirusGroup.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/VirusGroupManager.html" afterPath="$PROJECT_DIR$/docs/VirusGroupManager.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/WelcomeScreen.html" afterPath="$PROJECT_DIR$/docs/WelcomeScreen.html" />
@@ -69,7 +50,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/allclasses-noframe.html" afterPath="$PROJECT_DIR$/docs/allclasses-noframe.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/constant-values.html" afterPath="$PROJECT_DIR$/docs/constant-values.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index-1.html" afterPath="$PROJECT_DIR$/docs/index-1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index-10.html" afterPath="$PROJECT_DIR$/docs/index-10.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index-11.html" afterPath="$PROJECT_DIR$/docs/index-11.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index-12.html" afterPath="$PROJECT_DIR$/docs/index-12.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/index-13.html" afterPath="$PROJECT_DIR$/docs/index-13.html" />
@@ -96,7 +76,22 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/package-summary.html" afterPath="$PROJECT_DIR$/docs/package-summary.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/package-tree.html" afterPath="$PROJECT_DIR$/docs/package-tree.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/docs/serialized-form.html" afterPath="$PROJECT_DIR$/docs/serialized-form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Constants.java" afterPath="$PROJECT_DIR$/src/main/Constants.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/VirusGame.java" afterPath="$PROJECT_DIR$/src/main/VirusGame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/cell/CellManagerTests.java" afterPath="$PROJECT_DIR$/src/test/cell/CellManagerTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/cell/CellTests.java" afterPath="$PROJECT_DIR$/src/test/cell/CellTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/cell/RedCellTests.java" afterPath="$PROJECT_DIR$/src/test/cell/RedCellTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/cell/SickCellTests.java" afterPath="$PROJECT_DIR$/src/test/cell/SickCellTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/cell/WhiteCellTests.java" afterPath="$PROJECT_DIR$/src/test/cell/WhiteCellTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/helper/AttackerTests.java" afterPath="$PROJECT_DIR$/src/test/helper/AttackerTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/helper/HealthBarTests.java" afterPath="$PROJECT_DIR$/src/test/helper/HealthBarTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/helper/LocatableTests.java" afterPath="$PROJECT_DIR$/src/test/helper/LocatableTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/helper/ScoreBoardTests.java" afterPath="$PROJECT_DIR$/src/test/helper/ScoreBoardTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/virus/AntiVirusManagerTests.java" afterPath="$PROJECT_DIR$/src/test/virus/AntiVirusManagerTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/virus/AntiVirusTests.java" afterPath="$PROJECT_DIR$/src/test/virus/AntiVirusTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/virus/VirusGroupManagerTests.java" afterPath="$PROJECT_DIR$/src/test/virus/VirusGroupManagerTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/virus/VirusGroupTests.java" afterPath="$PROJECT_DIR$/src/test/virus/VirusGroupTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/virus/VirusTests.java" afterPath="$PROJECT_DIR$/src/test/virus/VirusTests.java" />
     </list>
     <ignored path="Virus Attack.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -127,20 +122,7 @@
     <favorites_list name="Virus Attack" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="JUnit.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/JUnit.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="19" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -161,20 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Virus_Attack/src/AntiVirus.java" />
-        <option value="$PROJECT_DIR$/Virus Attack.iml" />
-        <option value="$PROJECT_DIR$/Virus-Attacks/Virus-Attacks.iml" />
-        <option value="$PROJECT_DIR$/Virus-Attack/Virus-Attack.iml" />
-        <option value="$PROJECT_DIR$/Virus-Attack.iml" />
-        <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/RedCell.java" />
-        <option value="$PROJECT_DIR$/src/main/JUnit.java" />
-        <option value="$PROJECT_DIR$/src/JUnit.java" />
-        <option value="$PROJECT_DIR$/src/Virus.java" />
-        <option value="$PROJECT_DIR$/src/AntiVirus.java" />
-        <option value="$PROJECT_DIR$/src/AntiVirusManager.java" />
-        <option value="$PROJECT_DIR$/src/Attacker.java" />
-        <option value="$PROJECT_DIR$/src/CellManager.java" />
         <option value="$PROJECT_DIR$/src/Constants.java" />
         <option value="$PROJECT_DIR$/src/HealthBar.java" />
         <option value="$PROJECT_DIR$/src/Locatable.java" />
@@ -212,6 +180,20 @@
         <option value="$PROJECT_DIR$/src/test/helper/LocatableTests.java" />
         <option value="$PROJECT_DIR$/src/test/helper/ScoreBoardTests.java" />
         <option value="$PROJECT_DIR$/src/test/virus/AntiVirusTests.java" />
+        <option value="$PROJECT_DIR$/src/main/WelcomeScreen.java" />
+        <option value="$PROJECT_DIR$/src/main/World.java" />
+        <option value="$PROJECT_DIR$/src/main/gui/WelcomeScreen.java" />
+        <option value="$PROJECT_DIR$/src/main/gui/World.java" />
+        <option value="$PROJECT_DIR$/src/main/virus/Virus.java" />
+        <option value="$PROJECT_DIR$/src/main/virus/VirusGroupManager.java" />
+        <option value="$PROJECT_DIR$/src/main/cell/CellManager.java" />
+        <option value="$PROJECT_DIR$/src/main/cell/RedCell.java" />
+        <option value="$PROJECT_DIR$/src/main/cell/SickCell.java" />
+        <option value="$PROJECT_DIR$/src/main/cell/WhiteCell.java" />
+        <option value="$PROJECT_DIR$/src/main/antivirus/AntiVirusManager.java" />
+        <option value="$PROJECT_DIR$/src/main/helper/Attacker.java" />
+        <option value="$PROJECT_DIR$/src/main/gui/GameOverScreen.java" />
+        <option value="$PROJECT_DIR$/src/main/helper/ScoreBoard.java" />
       </list>
     </option>
   </component>
@@ -238,7 +220,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="953" />
     <option name="width" value="974" />
-    <option name="height" value="524" />
+    <option name="height" value="1041" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -287,20 +269,21 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
           <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="APCS-Final-Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Virus Attack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            <PATH_ELEMENT USER_OBJECT="Virus_Attack">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -332,60 +315,23 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane">
+        <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="APCS-Final-Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Virus-Attack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="APCS-Final-Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Virus-Attack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="Virus Attack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="Virus_Attack">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -421,16 +367,16 @@
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack" />
+      <recent name="C:\Users\vikranth\IdeaProjects\APCS-Final-Project\Virus_Attack\src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\vikranth\Documents\GitHub\Virus-Attack\src\images\backgrounds" />
       <recent name="C:\Users\vikranth\Documents\GitHub\Virus-Attack\src\images\cellTypes" />
       <recent name="C:\Users\vikranth\Documents\GitHub\Virus-Attack\src\images\virusTypes" />
       <recent name="C:\Users\vikranth\Documents\GitHub\Virus-Attack" />
       <recent name="C:\Users\vikranth\IdeaProjects\APCS-Final-Project\Virus_Attack" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\viks\Documents\APCS-Final-Project\Virus_Attack" />
-      <recent name="C:\Users\vikranth\IdeaProjects\APCS-Final-Project\Virus_Attack\src" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.JUnit">
@@ -510,27 +456,6 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="Virus-Attack" />
       <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="JUnit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="Virus-Attack" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.JUnit" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <envs />
-      <patterns />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -1027,12 +952,11 @@
       <envs />
       <method />
     </configuration>
-    <list size="5">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="JUnit.JUnit" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.JUnit.healthBarConctructor" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.JUnit.everyTurnTest" />
       <item index="3" class="java.lang.String" itemvalue="Application.VirusGame" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.JUnit" />
     </list>
     <recent_temporary>
       <list size="5">
@@ -1121,7 +1045,8 @@
       <workItem from="1476925873638" duration="81000" />
       <workItem from="1476925957370" duration="81000" />
       <workItem from="1476926218932" duration="728000" />
-      <workItem from="1477105869826" duration="1986000" />
+      <workItem from="1477105869826" duration="2124000" />
+      <workItem from="1477108002472" duration="391000" />
     </task>
     <servers />
   </component>
@@ -1158,7 +1083,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90011000" />
+    <option name="totallyTimeSpent" value="90540000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1170,19 +1095,18 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="524" extended-state="0" />
+    <frame x="953" y="0" width="974" height="1041" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32822758" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3252149" sideWeight="0.49562362" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38183808" sideWeight="0.4201313" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.099744245" sideWeight="0.49562362" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32822758" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.099744245" sideWeight="0.49562362" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33524355" sideWeight="0.57986873" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1200,6 +1124,7 @@
       <window_info id="DBHelper" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3252149" sideWeight="0.49562362" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39934355" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.50570965" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="DBOutput" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896176" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1259,35 +1184,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Virus_Attack/.classpath" />
-    <entry file="file://$PROJECT_DIR$/Virus-Attatck/Virus-Attack.iml" />
-    <entry file="file://$PROJECT_DIR$/.idea/APCS-Final-Project.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/.name">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Desigein Diagram.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/VirusGame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Virus Attack.iml" />
     <entry file="file://$PROJECT_DIR$/Virus_Attack/Virus-Attack.iml" />
     <entry file="file://$PROJECT_DIR$/Virus-Attack.iml">
@@ -1333,14 +1229,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/RedCell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="42" column="8" selection-start-line="42" selection-start-column="8" selection-end-line="42" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/images/viruses/Virus1.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -1366,117 +1254,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Virus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="214" column="18" selection-start-line="214" selection-start-column="18" selection-end-line="214" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Attacker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/GameOverScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/InputHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Locatable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Constants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Cell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/CellManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/VirusGroupManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/HealthBar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="24" column="11" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
-          <folding>
-            <element signature="e#643#644#0" expanded="true" />
-            <element signature="e#675#676#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/WhiteCell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="93" column="11" selection-start-line="93" selection-start-column="11" selection-end-line="93" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/VirusGroup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/AntiVirus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1003">
-          <caret line="60" column="44" selection-start-line="60" selection-start-column="44" selection-end-line="60" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/AntiVirusManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1496,7 +1277,7 @@
         <state relative-caret-position="408">
           <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1547,7 +1328,7 @@
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1520#1526#0" expanded="true" />
+            <element signature="e#1560#1566#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1567,7 +1348,7 @@
         <state relative-caret-position="0">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1624,11 +1405,172 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/JUnit.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/gui/WelcomeScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3481">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/cell/Cell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="23" column="22" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/cell/CellManager.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="19" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <caret line="17" column="26" selection-start-line="17" selection-start-column="26" selection-end-line="17" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/gui/World.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="205" column="0" selection-start-line="205" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/VirusGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/virus/Virus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="135" column="45" selection-start-line="135" selection-start-column="45" selection-end-line="135" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/virus/VirusGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/virus/VirusGroupManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/cell/RedCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/helper/InputHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="159" column="41" selection-start-line="159" selection-start-column="41" selection-end-line="159" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/helper/HealthBar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/gui/GameOverScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/cell/WhiteCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/cell/SickCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/helper/Attacker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/antivirus/AntiVirus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/antivirus/AntiVirusManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/helper/Locatable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/helper/ScoreBoard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

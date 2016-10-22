@@ -1,8 +1,8 @@
 package test.cell;
 
-import main.SickCell;
-import main.VirusGroup;
-import main.VirusGroupManager;
+import main.cell.SickCell;
+import main.virus.VirusGroup;
+import main.virus.VirusGroupManager;
 import org.junit.Test;
 
 import java.util.Collection;
@@ -15,10 +15,10 @@ import static org.junit.Assert.assertTrue;
  */
 public class SickCellTests {
     /**
-     * Sick main.Cell Tests:
-     * sickCellConstructor(): Checks if the Sick main.Cell has the right fields
+     * Sick main.cell.Cell Tests:
+     * sickCellConstructor(): Checks if the Sick main.cell.Cell has the right fields
      * sickCellToString(): Checks if the toString is not null
-     * sickCellProduceUnit(): Checks if main.Cell produce viruses
+     * sickCellProduceUnit(): Checks if main.cell.Cell produce viruses
      *
      * @author Melissa
      */
@@ -26,8 +26,8 @@ public class SickCellTests {
     public void sickCellConstructor() {
         SickCell wc = new SickCell(0, 0, 100);
         String s = wc.toString();
-        assertTrue("<<Invalid main.Cell Constructor>>",
-                s.contains("main.SickCell[") && s.contains("x: 0") && s.contains("y: 0") && s.contains("health: " + 100)
+        assertTrue("<<Invalid main.cell.Cell Constructor>>",
+                s.contains("main.cell.SickCell[") && s.contains("x: 0") && s.contains("y: 0") && s.contains("health: " + 100)
                         && s.contains("ticks: " + 0));
     }
 
@@ -56,7 +56,7 @@ public class SickCellTests {
             b += vg.size();
         }
 
-        assertTrue("<<main.AntiVirus Production error from Sick Cells>>", a + 1 == b);
+        assertTrue("<<main.antivirus.AntiVirus Production error from Sick Cells>>", a + 1 == b);
 
     }
 

@@ -1,8 +1,8 @@
-package main;
+package main.helper;
 
 
 /**
- * Contains the basic methods that are shared by both main.AntiVirus and main.Virus Class
+ * Contains the basic methods that are shared by both main.antivirus.AntiVirus and main.virus.Virus Class
  *
  * @author Vikranth Srivatsa
  */
@@ -16,7 +16,7 @@ public abstract class Attacker implements Locatable {
      */
     private int speed, attack, attackRadius, height, width;
     /**
-     * The health of the basic main.Virus
+     * The health of the basic main.virus.Virus
      */
     private int health;
     /**
@@ -67,9 +67,9 @@ public abstract class Attacker implements Locatable {
     }
 
     /**
-     * Reduces the Basic main.Virus's health
+     * Reduces the Basic main.virus.Virus's health
      *
-     * @param reduce the basic main.Virus's health
+     * @param reduce the basic main.virus.Virus's health
      */
     public void reduceHealth(int reduce) {
         health -= reduce;
@@ -85,7 +85,7 @@ public abstract class Attacker implements Locatable {
     }
 
     /**
-     * Returns the Basic main.Virus's x coordinate
+     * Returns the Basic main.virus.Virus's x coordinate
      *
      * @return the x coordinate
      */
@@ -94,7 +94,7 @@ public abstract class Attacker implements Locatable {
     }
 
     /**
-     * Returns the Basic main.Virus's y coordinate
+     * Returns the Basic main.virus.Virus's y coordinate
      *
      * @return the y coordinate
      */
@@ -103,7 +103,7 @@ public abstract class Attacker implements Locatable {
     }
 
     /**
-     * Returns the Basic main.Virus's health
+     * Returns the Basic main.virus.Virus's health
      *
      * @return the basic virus's health
      */
@@ -112,25 +112,25 @@ public abstract class Attacker implements Locatable {
     }
 
     /**
-     * Gets the x Velocity of the Basic main.Virus
+     * Gets the x Velocity of the Basic main.virus.Virus
      *
-     * @return the velocity of the Basic main.Virus
+     * @return the velocity of the Basic main.virus.Virus
      */
     public int getVx() {
         return vx;
     }
 
     /**
-     * Returns the y velocity of the Basic main.Virus
+     * Returns the y velocity of the Basic main.virus.Virus
      *
-     * @return the y velocity of the basic main.Virus
+     * @return the y velocity of the basic main.virus.Virus
      */
     public int getVy() {
         return vy;
     }
 
     /**
-     * Returns the attack of the Basic main.Virus
+     * Returns the attack of the Basic main.virus.Virus
      *
      * @return the attack of the Basic virus
      */
@@ -139,27 +139,27 @@ public abstract class Attacker implements Locatable {
     }
 
     /**
-     * Returns the Height of the Basic main.Virus
+     * Returns the Height of the Basic main.virus.Virus
      *
-     * @return the height of the Basic main.Virus
+     * @return the height of the Basic main.virus.Virus
      */
     public int getHeight() {
         return height;
     }
 
     /**
-     * Returns the width of the Basic main.Virus
+     * Returns the width of the Basic main.virus.Virus
      *
-     * @return the width of the Basic main.Virus
+     * @return the width of the Basic main.virus.Virus
      */
     public int getWidth() {
         return width;
     }
 
     /**
-     * Returns the speed of the Basic main.Virus
+     * Returns the speed of the Basic main.virus.Virus
      *
-     * @return the speed of the Basic main.Virus
+     * @return the speed of the Basic main.virus.Virus
      */
     public int getSpeed() {
         return speed;
@@ -184,36 +184,36 @@ public abstract class Attacker implements Locatable {
     }
 
     /**
-     * Sets the x location of the Basic main.Virus
+     * Sets the x location of the Basic main.virus.Virus
      *
-     * @param x the x location of the Basic main.Virus
+     * @param x the x location of the Basic main.virus.Virus
      */
     public void setX(int x) {
         this.x = x;
     }
 
     /**
-     * Sets the y location of Basic main.Virus
+     * Sets the y location of Basic main.virus.Virus
      *
-     * @param y the y location of Basic main.Virus
+     * @param y the y location of Basic main.virus.Virus
      */
     public void setY(int y) {
         this.y = y;
     }
 
     /**
-     * Sets the x velocity of Basic main.Virus
+     * Sets the x velocity of Basic main.virus.Virus
      *
-     * @param vx the x velocity of Basic main.Virus
+     * @param vx the x velocity of Basic main.virus.Virus
      */
     public void setVx(int vx) {
         this.vx = vx;
     }
 
     /**
-     * Sets the y velocity of the Basic main.Virus
+     * Sets the y velocity of the Basic main.virus.Virus
      *
-     * @param vy the y velocity of the Basic main.Virus
+     * @param vy the y velocity of the Basic main.virus.Virus
      */
     public void setVy(int vy) {
         this.vy = vy;
@@ -241,7 +241,7 @@ public abstract class Attacker implements Locatable {
     }
 
     /**
-     * get distance method for when not using main.Locatable objects
+     * get distance method for when not using main.helper.Locatable objects
      *
      * @param xL x coordinate of other point
      * @param yL y coordinate of other point
@@ -255,7 +255,7 @@ public abstract class Attacker implements Locatable {
 
     @Override
     public String toString() {
-        return "main.Attacker{" +
+        return "main.helper.Attacker{" +
                 "x=" + x +
                 ", y=" + y +
                 ", speed=" + speed +

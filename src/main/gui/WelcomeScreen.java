@@ -1,4 +1,4 @@
-package main;
+package main.gui;
 
 
 import javax.swing.*;
@@ -11,7 +11,7 @@ import java.net.URL;
  *
  * @author Vikranth Srivatsa
  */
-class WelcomeScreen extends JFrame {
+public class WelcomeScreen extends JFrame {
     /**
      * The background gif.
      */
@@ -24,7 +24,7 @@ class WelcomeScreen extends JFrame {
      * <p>
      * It also adds backgroundGif to the plane
      */
-    void createWelcomeScreen() {
+    public void createWelcomeScreen() {
 
         createBackgroundGif();
 
@@ -32,7 +32,7 @@ class WelcomeScreen extends JFrame {
         createButtons(World.WIDTH / 4 * World.SCALE, World.HEIGHT * World.SCALE / 4 + 60, "Directions");
 
 
-        setTitle("main.Virus Attack");
+        setTitle("main.virus.Virus Attack");
         getContentPane().add(backgroundGif);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         pack();
@@ -71,7 +71,7 @@ class WelcomeScreen extends JFrame {
 
     /**
      * This get's the url from the file giphy.gif. Then it puts that into a JLabel
-     * of size main.World.WIDTH * 2 + 300, main.World.HEIGHT * 2 + 300
+     * of size main.gui.World.WIDTH * 2 + 300, main.gui.World.HEIGHT * 2 + 300
      */
     public void createBackgroundGif() {
         URL url = getClass().getResource("images/background/giphy.gif");
@@ -94,19 +94,19 @@ class WelcomeScreen extends JFrame {
     }
 
     /**
-     * uses JOptionPane to give info on main.RedCell
+     * uses JOptionPane to give info on main.cell.RedCell
      */
     private void createRedCellMessage() {
         String pt1 = "<html><body width='";
         String pt2 =
                 "'><h1>Instructions</h1>" +
-                        "<h2>Red main.Cell</h2>" +
+                        "<h2>Red main.cell.Cell</h2>" +
                         "<img  height='50' width='50'" +
                         "src='https://goo.gl/nYI0cS' />" +
                         "<br />" + "" +
                         "These are the Cells you want to Conquer" +
-                        "<br />When Viruses attack this main.Cell it looses health<br />" +
-                        " When health becomes 0 it turns into a Sick main.Cell ";
+                        "<br />When Viruses attack this main.cell.Cell it looses health<br />" +
+                        " When health becomes 0 it turns into a Sick main.cell.Cell ";
         int width = 400;
         String s = pt1 + width + pt2;
 
@@ -147,7 +147,7 @@ class WelcomeScreen extends JFrame {
                 "'><h1>Instructions</h1>" +
                         "<h2>Points</h2>" +
                         "<br />" + "" +
-                        "If you kill a white main.Cell you gain 10 points" +
+                        "If you kill a white main.cell.Cell you gain 10 points" +
                         "<br />If you convert a red cell to sick you gain 5 points <br />" +
                         " " +
                         "Every 30 seconds you will loose 1 point"
@@ -165,23 +165,23 @@ class WelcomeScreen extends JFrame {
     }
 
     /**
-     * uses JOptionPane to give info on main.WhiteCell and AntiViruses
+     * uses JOptionPane to give info on main.cell.WhiteCell and AntiViruses
      */
     private void createWhiteAndAntiVirusMessage() {
         String pt1 = "<html><body width='";
         String pt2 =
                 "'><h1>Instructions</h1>" +
-                        "<h2>White main.Cell</h2>" +
+                        "<h2>White main.cell.Cell</h2>" +
                         "<img  height='50' width='50'" +
                         "src='https://goo.gl/G3tSWo' />" +
                         "<br />" + "" +
                         "These are the main opponents of the game." +
-                        "<br /> The can Move around and attack main.Virus.<br />" +
+                        "<br /> The can Move around and attack main.virus.Virus.<br />" +
                         " They can also heal sick cells to become Red Cells " +
                         "<br />When they go to 0 health they die" +
                         "<br />They have this special ability of going through mitosis and splitting<br />" +
                         "<em><strong>The Cells Produce AntiViruses</strong></em>" +
-                        "<h2>main.AntiVirus</h2><br /> " +
+                        "<h2>main.antivirus.AntiVirus</h2><br /> " +
                         "<br />" +
                         "AntiViruses slow down and damage the viruses "
                         + "<br /> They stay in one spot till a virus comes in their range and then attacks" +
@@ -193,13 +193,13 @@ class WelcomeScreen extends JFrame {
     }
 
     /**
-     * uses JOptionPane to give info on Sick main.Cell and Viruses
+     * uses JOptionPane to give info on Sick main.cell.Cell and Viruses
      */
     private void createSickAndVirusMessage() {
         String pt1 = "<html><body width='";
         String pt2 =
                 "'><h1>Instructions</h1>" +
-                        "<h2>Sick main.Cell</h2>" +
+                        "<h2>Sick main.cell.Cell</h2>" +
                         "<img  height='50' width='50'" +
                         "src='https://goo.gl/t5l0Si' />" +
                         "<br />" + "" +
@@ -213,9 +213,9 @@ class WelcomeScreen extends JFrame {
                         "Without viruses you cannot win the game. "
                         + "<br />These Viruses can move around and attack your opponents" +
                         "<ul>" +
-                        "<li>White main.Cell</li>" +
-                        "<li>Red main.Cell</li>" +
-                        "<li>main.AntiVirus</li>" +
+                        "<li>White main.cell.Cell</li>" +
+                        "<li>Red main.cell.Cell</li>" +
+                        "<li>main.antivirus.AntiVirus</li>" +
                         "</ul>";
         int width = 400;
         String s = pt1 + width + pt2;
@@ -234,11 +234,11 @@ class WelcomeScreen extends JFrame {
                         "This Game Contains 5 main game peices" +
                         "<br/>" +
                         "<ul>" +
-                        "<li>Sick main.Cell</li>" +
-                        "<li>Red main.Cell</li>" +
-                        "<li>White main.Cell</li>" +
-                        "<li>main.Virus</li>" +
-                        "<li>main.AntiVirus</li>" +
+                        "<li>Sick main.cell.Cell</li>" +
+                        "<li>Red main.cell.Cell</li>" +
+                        "<li>White main.cell.Cell</li>" +
+                        "<li>main.virus.Virus</li>" +
+                        "<li>main.antivirus.AntiVirus</li>" +
                         "</ul>" +
                         "<h3>What do these pieces do?<h3>" +
                         "";

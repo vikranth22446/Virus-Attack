@@ -1,4 +1,10 @@
-package main;
+package main.gui;
+
+import main.antivirus.AntiVirusManager;
+import main.cell.CellManager;
+import main.helper.InputHandler;
+import main.helper.ScoreBoard;
+import main.virus.VirusGroupManager;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -18,7 +24,7 @@ import java.net.URL;
  *
  * @author Alex M
  */
-class World implements Runnable {
+public class World implements Runnable {
 
     /**
      * the partial width
@@ -43,13 +49,14 @@ class World implements Runnable {
     /**
      * the name of the frame
      */
-    private static final String NAME = "main.Virus";
+    private static final String NAME = "main.virus.Virus";
 
     private BufferedImage bg;
     /**
      * the width and height of the screen
      */
-    static int getWidth, getHeight;
+    public static int getWidth;
+    public static int getHeight;
     /**
      * game thread stops if true false if otherwise
      */
@@ -234,7 +241,7 @@ class World implements Runnable {
     /**
      * the start method run from main
      */
-    synchronized void start() {
+    public synchronized void start() {
         thread = new Thread(this);
         thread.start();
     }

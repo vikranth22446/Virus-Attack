@@ -1,11 +1,17 @@
-package main;
+package main.antivirus;
+
+import main.helper.Attacker;
+import main.Constants;
+import main.helper.Locatable;
+import main.virus.Virus;
+import main.virus.VirusGroupManager;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
 
 /**
- * The main.AntiVirus class which is produced by the main.WhiteCell.
+ * The main.antivirus.AntiVirus class which is produced by the main.cell.WhiteCell.
  *
  * @author Vikranth Srivatsa
  */
@@ -45,7 +51,7 @@ public class AntiVirus extends Attacker implements Locatable {
 
 
     /**
-     * if the antivirus is following Update the location of the main.AntiVirus. this
+     * if the antivirus is following Update the location of the main.antivirus.AntiVirus. this
      * is done by looping through all the virus group's viruses and if the virus
      * is within the acceptable range the virus follows the cell currentVirus is
      * saved, and positionOfViruses that is being followed is saved calls the
@@ -93,7 +99,7 @@ public class AntiVirus extends Attacker implements Locatable {
 
     /**
      * Moves the antivirus. Then if it really close draw a line. If the virus is
-     * dead remove it from the main.VirusGroupManager. then set follow to false;
+     * dead remove it from the main.virus.VirusGroupManager. then set follow to false;
      *
      * @param g       the graphics of the window
      * @param xOffset the xOffset of the window. Used to move the window around
@@ -151,7 +157,7 @@ public class AntiVirus extends Attacker implements Locatable {
      */
     @Override
     public String toString() {
-        return "main.AntiVirus{" + "currentFollowVirus=" + currentFollowVirus + ", positionOfVirus=" + positionOfVirus
+        return "main.antivirus.AntiVirus{" + "currentFollowVirus=" + currentFollowVirus + ", positionOfVirus=" + positionOfVirus
                 + ", follow=" + follow + '}';
     }
 }

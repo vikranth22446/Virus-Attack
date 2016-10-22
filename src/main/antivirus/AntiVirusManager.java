@@ -1,4 +1,4 @@
-package main;
+package main.antivirus;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -15,7 +15,7 @@ import java.util.ArrayList;
  */
 public class AntiVirusManager {
     /**
-     * An ArrayList of main.AntiVirus
+     * An ArrayList of main.antivirus.AntiVirus
      */
     public static ArrayList<AntiVirus> anti;
 
@@ -69,7 +69,7 @@ public class AntiVirusManager {
     /**
      * Returns a string with the antiVirus ArrayList
      *
-     * @return a string with an main.AntiVirus ArrayList
+     * @return a string with an main.antivirus.AntiVirus ArrayList
      */
     public String toString() {
         return "main.AntiVirusManagerTests[anti: " + anti.toString() + "]";

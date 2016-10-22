@@ -1,6 +1,6 @@
 package test.virus;
 
-import main.VirusGroupManager;
+import main.virus.VirusGroupManager;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
@@ -10,7 +10,7 @@ import static org.junit.Assert.assertTrue;
  */
 public class VirusGroupManagerTests {
     /**
-     * main.Virus Group Manager Tests:
+     * main.virus.Virus Group Manager Tests:
      * virusGroupManagerConstructor(): Checks if groups are set correctly
      * virusGroupManagerHasKey(): Checks if key = 1 exsits
      * virusGroupManagerAddVirus(): Checks if there 3 viruses
@@ -38,14 +38,14 @@ public class VirusGroupManagerTests {
     public void virusGroupManagerAddVirus() {
         VirusGroupManager vgm = new VirusGroupManager();
         vgm.addVirus(0, 0);
-        assertTrue("<<main.Virus Not Added>>", vgm.groups.get(1).size() == 3);
+        assertTrue("<<main.virus.Virus Not Added>>", vgm.groups.get(1).size() == 3);
     }
 
     @Test
     public void virusGroupManagerRemove() {
         VirusGroupManager vgm = new VirusGroupManager();
         vgm.remove(vgm.groups.get(1).getVirus(0));
-        assertTrue("<<main.Virus not removed>>", vgm.groups.get(1).size() == 1);
+        assertTrue("<<main.virus.Virus not removed>>", vgm.groups.get(1).size() == 1);
     }
 
     @Test

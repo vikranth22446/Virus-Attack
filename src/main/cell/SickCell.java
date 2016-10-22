@@ -1,4 +1,7 @@
-package main;
+package main.cell;
+
+import main.Constants;
+import main.virus.VirusGroupManager;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -10,7 +13,7 @@ import java.net.URL;
 
 /**
  * 
- * main.SickCell is child class (extends) main.Cell abstract class. The cells are infected and produce viruses.
+ * main.cell.SickCell is child class (extends) main.cell.Cell abstract class. The cells are infected and produce viruses.
  * These Cells Help the main player. They start at an initial health of  -100, and when attacked by white cells their
  * health slowly increases, and when it becomes high enough it is removed and a red cell is added when it dies.
  *
@@ -89,7 +92,7 @@ public class SickCell extends Cell {
     public String toString()
     {
         
-        return "main.SickCell[x: " + getX() + " y: " + getY() + "radius: " + getRadius() + "health: " + getHealth() + "ticks: " +ticks+"]";
+        return "main.cell.SickCell[x: " + getX() + " y: " + getY() + "radius: " + getRadius() + "health: " + getHealth() + "ticks: " +ticks+"]";
         
     }
     
