@@ -1,4 +1,4 @@
-package tests.helper;
+package test.helper;
 
 import main.antivirus.AntiVirus;
 import main.helper.Attacker;

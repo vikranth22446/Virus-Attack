@@ -1,4 +1,4 @@
-package tests.cell;
+package test.cell;
 
 import main.cell.Cell;
 import main.cell.CellManager;

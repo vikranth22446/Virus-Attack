@@ -1,4 +1,4 @@
-package tests.helper;
+package test.helper;
 
 import main.helper.Locatable;
 import main.virus.Virus;

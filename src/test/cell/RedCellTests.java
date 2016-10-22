@@ -1,4 +1,4 @@
-package tests.cell;
+package test.cell;
 
 import main.cell.RedCell;
 import org.junit.Test;

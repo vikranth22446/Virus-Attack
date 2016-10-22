@@ -1,4 +1,4 @@
-package tests.virus;
+package test.virus;
 
 import main.virus.Virus;
 import org.junit.Before;

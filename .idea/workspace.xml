@@ -10,23 +10,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db7114d6-e625-4df5-b478-8fc896f80992" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/build.properties" afterPath="$PROJECT_DIR$/src/build.properties" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/src/build.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/JUnit.java" afterPath="$PROJECT_DIR$/src/tests/JUnit.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/cell/CellManagerTests.java" afterPath="$PROJECT_DIR$/src/tests/cell/CellManagerTests.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/cell/CellTests.java" afterPath="$PROJECT_DIR$/src/tests/cell/CellTests.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/cell/RedCellTests.java" afterPath="$PROJECT_DIR$/src/tests/cell/RedCellTests.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/cell/SickCellTests.java" afterPath="$PROJECT_DIR$/src/tests/cell/SickCellTests.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/cell/WhiteCellTests.java" afterPath="$PROJECT_DIR$/src/tests/cell/WhiteCellTests.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/helper/AttackerTests.java" afterPath="$PROJECT_DIR$/src/tests/helper/AttackerTests.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/helper/HealthBarTests.java" afterPath="$PROJECT_DIR$/src/tests/helper/HealthBarTests.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/helper/LocatableTests.java" afterPath="$PROJECT_DIR$/src/tests/helper/LocatableTests.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/helper/ScoreBoardTests.java" afterPath="$PROJECT_DIR$/src/tests/helper/ScoreBoardTests.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/virus/AntiVirusManagerTests.java" afterPath="$PROJECT_DIR$/src/tests/virus/AntiVirusManagerTests.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/virus/AntiVirusTests.java" afterPath="$PROJECT_DIR$/src/tests/virus/AntiVirusTests.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/virus/VirusGroupManagerTests.java" afterPath="$PROJECT_DIR$/src/tests/virus/VirusGroupManagerTests.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/virus/VirusGroupTests.java" afterPath="$PROJECT_DIR$/src/tests/virus/VirusGroupTests.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/virus/VirusTests.java" afterPath="$PROJECT_DIR$/src/tests/virus/VirusTests.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tests/JUnit.java" afterPath="$PROJECT_DIR$/src/test/JUnit.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tests/cell/CellManagerTests.java" afterPath="$PROJECT_DIR$/src/test/cell/CellManagerTests.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tests/cell/CellTests.java" afterPath="$PROJECT_DIR$/src/test/cell/CellTests.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tests/cell/RedCellTests.java" afterPath="$PROJECT_DIR$/src/test/cell/RedCellTests.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tests/cell/SickCellTests.java" afterPath="$PROJECT_DIR$/src/test/cell/SickCellTests.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tests/cell/WhiteCellTests.java" afterPath="$PROJECT_DIR$/src/test/cell/WhiteCellTests.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tests/helper/AttackerTests.java" afterPath="$PROJECT_DIR$/src/test/helper/AttackerTests.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tests/helper/HealthBarTests.java" afterPath="$PROJECT_DIR$/src/test/helper/HealthBarTests.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tests/helper/LocatableTests.java" afterPath="$PROJECT_DIR$/src/test/helper/LocatableTests.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tests/helper/ScoreBoardTests.java" afterPath="$PROJECT_DIR$/src/test/helper/ScoreBoardTests.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tests/virus/AntiVirusManagerTests.java" afterPath="$PROJECT_DIR$/src/test/virus/AntiVirusManagerTests.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tests/virus/AntiVirusTests.java" afterPath="$PROJECT_DIR$/src/test/virus/AntiVirusTests.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tests/virus/VirusGroupManagerTests.java" afterPath="$PROJECT_DIR$/src/test/virus/VirusGroupManagerTests.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tests/virus/VirusGroupTests.java" afterPath="$PROJECT_DIR$/src/test/virus/VirusGroupTests.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tests/virus/VirusTests.java" afterPath="$PROJECT_DIR$/src/test/virus/VirusTests.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Virus Attack.iws" />
@@ -58,28 +56,7 @@
     <favorites_list name="Virus Attack" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="build.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/build.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="91" column="30" selection-start-line="91" selection-start-column="30" selection-end-line="91" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.travis.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -100,7 +77,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/VirusGroupManager.java" />
         <option value="$PROJECT_DIR$/src/main/Locatable.java" />
         <option value="$PROJECT_DIR$/src/main/VirusGroupManager.java" />
         <option value="$PROJECT_DIR$/src/main/VirusGroup.java" />
@@ -151,6 +127,7 @@
         <option value="$PROJECT_DIR$/src/main/runner/VirusGame.java" />
         <option value="$PROJECT_DIR$/src/main/VirusGame.java" />
         <option value="$PROJECT_DIR$/src/test/JUnit.java" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
       </list>
     </option>
   </component>
@@ -175,9 +152,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="953" />
+    <option name="x" value="-7" />
+    <option name="y" value="517" />
     <option name="width" value="974" />
-    <option name="height" value="1041" />
+    <option name="height" value="524" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -255,24 +233,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="APCS-Final-Project" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Virus-Attack" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -361,8 +321,8 @@
       <module name="Virus-Attack" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.JUnit" />
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.JUnit" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -382,8 +342,8 @@
       <module name="Virus-Attack" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.JUnit" />
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.JUnit" />
       <option name="METHOD_NAME" value="healthBarConctructor" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -403,8 +363,8 @@
       <module name="Virus-Attack" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.JUnit" />
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.JUnit" />
       <option name="METHOD_NAME" value="everyTurnTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -1024,7 +984,7 @@
       <workItem from="1477105869826" duration="2124000" />
       <workItem from="1477108002472" duration="2342000" />
       <workItem from="1477111054046" duration="281000" />
-      <workItem from="1477111611899" duration="74000" />
+      <workItem from="1477111611899" duration="278000" />
     </task>
     <servers />
   </component>
@@ -1061,7 +1021,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="92846000" />
+    <option name="totallyTimeSpent" value="93050000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1073,7 +1033,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1041" extended-state="0" />
+    <frame x="-7" y="517" width="974" height="524" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1085,7 +1045,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09911894" sideWeight="0.49562362" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32822758" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33480176" sideWeight="0.57986873" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.06393862" sideWeight="0.57986873" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3402626" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1177,7 +1137,7 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/cell/CellManagerTests.java">
+    <entry file="file://$PROJECT_DIR$/src/test/cell/CellManagerTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
@@ -1187,7 +1147,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/cell/CellTests.java">
+    <entry file="file://$PROJECT_DIR$/src/test/cell/CellTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
@@ -1197,7 +1157,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/cell/RedCellTests.java">
+    <entry file="file://$PROJECT_DIR$/src/test/cell/RedCellTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
@@ -1207,7 +1167,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/cell/SickCellTests.java">
+    <entry file="file://$PROJECT_DIR$/src/test/cell/SickCellTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
@@ -1217,7 +1177,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/virus/VirusGroupManagerTests.java">
+    <entry file="file://$PROJECT_DIR$/src/test/virus/VirusGroupManagerTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
@@ -1227,7 +1187,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/helper/AttackerTests.java">
+    <entry file="file://$PROJECT_DIR$/src/test/helper/AttackerTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
@@ -1237,7 +1197,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/cell/WhiteCellTests.java">
+    <entry file="file://$PROJECT_DIR$/src/test/cell/WhiteCellTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
@@ -1247,7 +1207,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/helper/ScoreBoardTests.java">
+    <entry file="file://$PROJECT_DIR$/src/test/helper/ScoreBoardTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
@@ -1257,7 +1217,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/virus/AntiVirusManagerTests.java">
+    <entry file="file://$PROJECT_DIR$/src/test/virus/AntiVirusManagerTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
@@ -1267,7 +1227,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/virus/AntiVirusTests.java">
+    <entry file="file://$PROJECT_DIR$/src/test/virus/AntiVirusTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
@@ -1277,7 +1237,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/helper/LocatableTests.java">
+    <entry file="file://$PROJECT_DIR$/src/test/helper/LocatableTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
@@ -1287,7 +1247,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/helper/HealthBarTests.java">
+    <entry file="file://$PROJECT_DIR$/src/test/helper/HealthBarTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
@@ -1297,7 +1257,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/virus/VirusTests.java">
+    <entry file="file://$PROJECT_DIR$/src/test/virus/VirusTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
@@ -1307,7 +1267,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/virus/VirusGroupTests.java">
+    <entry file="file://$PROJECT_DIR$/src/test/virus/VirusGroupTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
@@ -1483,7 +1443,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/JUnit.java">
+    <entry file="file://$PROJECT_DIR$/src/test/JUnit.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
@@ -1533,7 +1493,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/build.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="1547">
           <caret line="91" column="30" selection-start-line="91" selection-start-column="30" selection-end-line="91" selection-end-column="30" />
           <folding />
         </state>
@@ -1541,8 +1501,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="102">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
         </state>
       </provider>
