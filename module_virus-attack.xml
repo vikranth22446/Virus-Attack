@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_virus-attack" default="compile.module.virus-attack">
+  <dirname property="module.virus-attack.basedir" file="${ant.file.module_virus-attack}"/>
+  
+  <property name="module.jdk.home.virus-attack" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.virus-attack" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.virus-attack" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.virus-attack" value="-encoding UTF-8 -source 8 -target 1.8 ${compiler.args}"/>
+  
+  <property name="virus-attack.output.dir" value="${module.virus-attack.basedir}/out/production/Virus-Attack"/>
+  <property name="virus-attack.testoutput.dir" value="${module.virus-attack.basedir}/out/test/Virus-Attack"/>
+  
+  <path id="virus-attack.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="virus-attack.module.production.classpath">
+    <path refid="${module.jdk.classpath.virus-attack}"/>
+    <pathelement location="${idea.home}/lib/hamcrest-core-1.3.jar"/>
+    <pathelement location="${idea.home}/lib/junit-4.12.jar"/>
+  </path>
+  
+  <path id="virus-attack.runtime.production.module.classpath">
+    <pathelement location="${virus-attack.output.dir}"/>
+    <pathelement location="${idea.home}/lib/hamcrest-core-1.3.jar"/>
+    <pathelement location="${idea.home}/lib/junit-4.12.jar"/>
+  </path>
+  
+  <path id="virus-attack.module.classpath">
+    <path refid="${module.jdk.classpath.virus-attack}"/>
+    <pathelement location="${virus-attack.output.dir}"/>
+    <pathelement location="${idea.home}/lib/hamcrest-core-1.3.jar"/>
+    <pathelement location="${idea.home}/lib/junit-4.12.jar"/>
+  </path>
+  
+  <path id="virus-attack.runtime.module.classpath">
+    <pathelement location="${virus-attack.testoutput.dir}"/>
+    <pathelement location="${virus-attack.output.dir}"/>
+    <pathelement location="${idea.home}/lib/hamcrest-core-1.3.jar"/>
+    <pathelement location="${idea.home}/lib/junit-4.12.jar"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.virus-attack">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.virus-attack">
+    <patternset refid="excluded.from.module.virus-attack"/>
+  </patternset>
+  
+  <path id="virus-attack.module.sourcepath">
+    <dirset dir="${module.virus-attack.basedir}">
+      <include name="src"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.virus-attack" depends="compile.module.virus-attack.production,compile.module.virus-attack.tests" description="Compile module Virus-Attack"/>
+  
+  <target name="compile.module.virus-attack.production" depends="register.custom.compilers" description="Compile module Virus-Attack; production classes">
+    <mkdir dir="${virus-attack.output.dir}"/>
+    <javac2 destdir="${virus-attack.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.virus-attack}/javac">
+      <compilerarg line="${compiler.args.virus-attack}"/>
+      <bootclasspath refid="virus-attack.module.bootclasspath"/>
+      <classpath refid="virus-attack.module.production.classpath"/>
+      <src refid="virus-attack.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.virus-attack"/>
+    </javac2>
+    
+    <copy todir="${virus-attack.output.dir}">
+      <fileset dir="${module.virus-attack.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.virus-attack.tests" depends="register.custom.compilers,compile.module.virus-attack.production" description="compile module Virus-Attack; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.virus-attack" description="cleanup module">
+    <delete dir="${virus-attack.output.dir}"/>
+    <delete dir="${virus-attack.testoutput.dir}"/>
+  </target>
+</project>
