@@ -1,4 +1,4 @@
-
+package main;
 
 
 import javax.imageio.ImageIO;
@@ -72,7 +72,7 @@ public class RedCell extends Cell {
     public String toString()
     {
         
-        return "RedCell[x: " + getX() + " y: " + getY() + "radius: " + getRadius() + "health: " + getHealth() + "]";
+        return "main.RedCell[x: " + getX() + " y: " + getY() + "radius: " + getRadius() + "health: " + getHealth() + "]";
         
     }
 

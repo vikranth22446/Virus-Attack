@@ -1,4 +1,4 @@
-
+package main;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -69,7 +69,7 @@ public class WhiteCell extends Cell {
     private boolean beingAttacked = false;
 
     /**
-     * True if cell is following a Virus
+     * True if cell is following a main.Virus
      */
     private boolean tracking = false;
 
@@ -91,7 +91,7 @@ public class WhiteCell extends Cell {
      * @param y      the y coordinate
      * @param health the initial health of the cell
      */
-    WhiteCell(int x, int y, int health) {
+    public WhiteCell(int x, int y, int health) {
         super(x, y, health);
 
         speed = 5;
@@ -369,7 +369,7 @@ public class WhiteCell extends Cell {
     }
 
     public String toString() {
-        return "WhiteCell[x: " + getX() + " y: " + getY() + "radius: " + getRadius() + "health: " + getHealth() + "speed: " + speed
+        return "main.WhiteCell[x: " + getX() + " y: " + getY() + "radius: " + getRadius() + "health: " + getHealth() + "speed: " + speed
                 + "attack: " + attack + "]";
 
     }

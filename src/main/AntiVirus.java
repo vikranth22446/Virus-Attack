@@ -1,15 +1,15 @@
-
+package main;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
 
 
 /**
- * The AntiVirus class which is produced by the WhiteCell.
+ * The main.AntiVirus class which is produced by the main.WhiteCell.
  *
  * @author Vikranth Srivatsa
  */
-class AntiVirus extends Attacker implements Locatable {
+public class AntiVirus extends Attacker implements Locatable {
     /**
      * The current virus to follow
      */
@@ -45,7 +45,7 @@ class AntiVirus extends Attacker implements Locatable {
 
 
     /**
-     * if the antivirus is following Update the location of the AntiVirus. this
+     * if the antivirus is following Update the location of the main.AntiVirus. this
      * is done by looping through all the virus group's viruses and if the virus
      * is within the acceptable range the virus follows the cell currentVirus is
      * saved, and positionOfViruses that is being followed is saved calls the
@@ -93,7 +93,7 @@ class AntiVirus extends Attacker implements Locatable {
 
     /**
      * Moves the antivirus. Then if it really close draw a line. If the virus is
-     * dead remove it from the VirusGroupManager. then set follow to false;
+     * dead remove it from the main.VirusGroupManager. then set follow to false;
      *
      * @param g       the graphics of the window
      * @param xOffset the xOffset of the window. Used to move the window around
@@ -151,7 +151,7 @@ class AntiVirus extends Attacker implements Locatable {
      */
     @Override
     public String toString() {
-        return "AntiVirus{" + "currentFollowVirus=" + currentFollowVirus + ", positionOfVirus=" + positionOfVirus
+        return "main.AntiVirus{" + "currentFollowVirus=" + currentFollowVirus + ", positionOfVirus=" + positionOfVirus
                 + ", follow=" + follow + '}';
     }
 }

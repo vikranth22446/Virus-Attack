@@ -1,3 +1,5 @@
+package main;
+
 import javax.swing.*;
 import java.awt.*;
 import java.net.MalformedURLException;
@@ -33,7 +35,7 @@ public class GameOverScreen extends JFrame {
                         + "Total Score: " + scoreBoard.getTotalScore();
         createButtons(120, 30, World.WIDTH / 4 * World.SCALE, World.HEIGHT * World.SCALE / 4 + 130, "Try Again");
         createButtons(320, 130, World.WIDTH / 4 * World.SCALE - 100, World.HEIGHT * World.SCALE / 4 - 20, "<html>" + buttonToDisplay.replaceAll("\\n", "<br>") + "</html>");
-        setTitle("Virus Attack");
+        setTitle("main.Virus Attack");
         getContentPane().add(backgroundGif);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         pack();
@@ -68,7 +70,7 @@ public class GameOverScreen extends JFrame {
     }
 
     /**
-     * Creates a new game by calling WelcomeScreen again
+     * Creates a new game by calling main.WelcomeScreen again
      */
     private void newGame() {
         WelcomeScreen welcomeScreen = new WelcomeScreen();
@@ -78,7 +80,7 @@ public class GameOverScreen extends JFrame {
 
     /**
      * Uses the title to get the lost or won Gif. Then puts that url in a JLabel. The sets the size to
-     * (World.WIDTH * 2 + 300, World.HEIGHT * 2 + 300);
+     * (main.World.WIDTH * 2 + 300, main.World.HEIGHT * 2 + 300);
      *
      * @param title the title to set
      */

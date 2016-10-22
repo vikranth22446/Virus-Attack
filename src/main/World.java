@@ -1,3 +1,5 @@
+package main;
+
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
@@ -41,7 +43,7 @@ class World implements Runnable {
     /**
      * the name of the frame
      */
-    private static final String NAME = "Virus";
+    private static final String NAME = "main.Virus";
 
     private BufferedImage bg;
     /**

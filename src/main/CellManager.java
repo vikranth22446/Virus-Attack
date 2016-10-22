@@ -1,4 +1,4 @@
-
+package main;
 
 
 import java.awt.*;
@@ -6,23 +6,23 @@ import java.util.ArrayList;
 import java.util.stream.Collectors;
 
 /**
- * CellManager contains redValues,whiteValues, and sickValues.
+ * main.CellManager contains redValues,whiteValues, and sickValues.
  *
  * @author Melissa Wei
  */
-class CellManager {
+public class CellManager {
     /**
      * An ArrayList of all the redCells
      */
-    static ArrayList<Cell> redValues;
+    public static ArrayList<Cell> redValues;
     /**
      * An ArrayList of the whiteCells.
      */
-    static ArrayList<Cell> whiteValues;
+    public static ArrayList<Cell> whiteValues;
     /**
      * An ArrayList of all the sickCells.
      */
-    static ArrayList<Cell> sickValues;
+    public static ArrayList<Cell> sickValues;
     /**
      * The list of white point used when constructing later.
      */
@@ -119,12 +119,12 @@ class CellManager {
 
     /**
      * Converts the cell depending on what type of cell it is
-     * RedCell
+     * main.RedCell
      * -converts to sick
      * White Values
      * -removes
-     * SickCell
-     * -converts to red Cell
+     * main.SickCell
+     * -converts to red main.Cell
      *
      * @param c the cell to convert
      */
@@ -220,7 +220,7 @@ class CellManager {
     }
 
     public String toString() {
-        return "CellManager[redValues: " + redValues.toString() + " whiteValues: " + whiteValues.toString() + "radius: " 
+        return "main.CellManager[redValues: " + redValues.toString() + " whiteValues: " + whiteValues.toString() + "radius: "
     + "sickValues: " + sickValues.toString() + "]";
 
     }

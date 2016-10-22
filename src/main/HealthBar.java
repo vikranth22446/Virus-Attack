@@ -1,4 +1,4 @@
-
+package main;
 
 
 import java.awt.*;
@@ -11,7 +11,7 @@ import java.awt.*;
  *
  * @author Vikranth Srivatsa
  */
-class HealthBar {
+public class HealthBar {
     /**
      * The cell which the health bar is drawn on top of.
      */
@@ -22,7 +22,7 @@ class HealthBar {
      *
      * @param cell the cell that needs a health bar.
      */
-    HealthBar(Cell cell) {
+    public HealthBar(Cell cell) {
         this.cell = cell;
     }
 
@@ -86,7 +86,7 @@ class HealthBar {
      */
     @Override
     public String toString() {
-        return "HealthBar{" +
+        return "main.HealthBar{" +
                 "cell=" + cell +
                 '}';
     }

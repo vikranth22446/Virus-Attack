@@ -1,4 +1,4 @@
-
+package main;
 
 import java.awt.*;
 
@@ -220,6 +220,6 @@ public abstract class Cell implements Locatable
     public abstract void produceUnit();
     
     public String toString(){
-        return "Cell[x:" + getX() + " y:" + getY() + "radius: "+ radius + "health: "+ health+ "maxHealth: " + maxHealth +"]"; 
+        return "main.Cell[x:" + getX() + " y:" + getY() + "radius: "+ radius + "health: "+ health+ "maxHealth: " + maxHealth +"]";
     }
 }

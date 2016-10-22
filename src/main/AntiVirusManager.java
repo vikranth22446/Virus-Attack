@@ -1,4 +1,4 @@
-
+package main;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -13,9 +13,9 @@ import java.util.ArrayList;
  * @author Sources: n/a
  * @version May 28, 2016
  */
-class AntiVirusManager {
+public class AntiVirusManager {
     /**
-     * An ArrayList of AntiVirus
+     * An ArrayList of main.AntiVirus
      */
     public static ArrayList<AntiVirus> anti;
 
@@ -69,10 +69,10 @@ class AntiVirusManager {
     /**
      * Returns a string with the antiVirus ArrayList
      *
-     * @return a string with an AntiVirus ArrayList
+     * @return a string with an main.AntiVirus ArrayList
      */
     public String toString() {
-        return "AntiVirusManager[anti: " + anti.toString() + "]";
+        return "main.AntiVirusManagerTests[anti: " + anti.toString() + "]";
 
     }
 

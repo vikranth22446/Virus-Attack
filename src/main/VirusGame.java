@@ -1,14 +1,14 @@
-
+package main;
 
 
 /**
- * Class with the main method that calls WelcomeScreen.createScreen();
+ * Class with the main method that calls main.WelcomeScreen.createScreen();
  *
  * @author Vikranth Srivatsa
  */
 class VirusGame {
     /**
-     * Constructs a WelcomeScreen. Also calls createScreen().
+     * Constructs a main.WelcomeScreen. Also calls createScreen().
      *
      * @param args command line argument not used.
      */
