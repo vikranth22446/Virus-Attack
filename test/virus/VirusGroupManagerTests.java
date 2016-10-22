@@ -1,4 +1,4 @@
-package test.virus;
+package virus;
 
 import main.virus.VirusGroupManager;
 import org.junit.Test;

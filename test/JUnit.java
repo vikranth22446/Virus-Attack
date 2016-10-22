@@ -1,13 +1,8 @@
-package test;
-
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
-import test.cell.*;
-import test.helper.AttackerTests;
-import test.helper.HealthBarTests;
-import test.helper.LocatableTests;
-import test.helper.ScoreBoardTests;
-import test.virus.*;
+import cell.*;
+import helper.*;
+import virus.*;
 // by FYICenter.com
 
 // specify a runner class: Suite.class

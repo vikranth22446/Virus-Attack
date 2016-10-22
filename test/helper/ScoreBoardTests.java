@@ -1,4 +1,4 @@
-package test.helper;
+package helper;
 
 import main.helper.ScoreBoard;
 import org.junit.Test;

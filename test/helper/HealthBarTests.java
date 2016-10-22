@@ -1,4 +1,4 @@
-package test.helper;
+package helper;
 
 import main.helper.HealthBar;
 import main.cell.WhiteCell;
