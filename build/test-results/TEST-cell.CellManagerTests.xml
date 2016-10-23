@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="cell.CellManagerTests" tests="10" skipped="0" failures="0" errors="0" timestamp="2016-10-23T01:46:01" hostname="Vikranth-desk" time="0.115">
+<testsuite name="cell.CellManagerTests" tests="10" skipped="0" failures="0" errors="0" timestamp="2016-10-23T02:15:11" hostname="Vikranth-desk" time="0.391">
   <properties/>
-  <testcase name="cellManagerConstructor" classname="cell.CellManagerTests" time="0.003"/>
+  <testcase name="cellManagerConstructor" classname="cell.CellManagerTests" time="0.002"/>
   <testcase name="cellManagerConvertSick" classname="cell.CellManagerTests" time="0.002"/>
-  <testcase name="cellManagerRemoveCell" classname="cell.CellManagerTests" time="0.0"/>
-  <testcase name="cellManagerToString" classname="cell.CellManagerTests" time="0.001"/>
+  <testcase name="cellManagerRemoveCell" classname="cell.CellManagerTests" time="0.001"/>
+  <testcase name="cellManagerToString" classname="cell.CellManagerTests" time="0.0"/>
   <testcase name="cellManagerCreateCellsInPositions" classname="cell.CellManagerTests" time="0.001"/>
-  <testcase name="cellManagerConstructor" classname="cell.CellManagerTests" time="0.0"/>
-  <testcase name="cellManagerConvertSick" classname="cell.CellManagerTests" time="0.001"/>
+  <testcase name="cellManagerConstructor" classname="cell.CellManagerTests" time="0.001"/>
+  <testcase name="cellManagerConvertSick" classname="cell.CellManagerTests" time="0.0"/>
   <testcase name="cellManagerRemoveCell" classname="cell.CellManagerTests" time="0.0"/>
   <testcase name="cellManagerToString" classname="cell.CellManagerTests" time="0.0"/>
-  <testcase name="cellManagerCreateCellsInPositions" classname="cell.CellManagerTests" time="0.0"/>
+  <testcase name="cellManagerCreateCellsInPositions" classname="cell.CellManagerTests" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

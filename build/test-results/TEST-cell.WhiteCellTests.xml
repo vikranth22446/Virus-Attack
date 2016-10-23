@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="cell.WhiteCellTests" tests="18" skipped="0" failures="0" errors="0" timestamp="2016-10-23T01:46:01" hostname="Vikranth-desk" time="0.129">
+<testsuite name="cell.WhiteCellTests" tests="18" skipped="0" failures="0" errors="0" timestamp="2016-10-23T02:15:11" hostname="Vikranth-desk" time="0.392">
   <properties/>
+  <testcase name="whiteCellSplit" classname="cell.WhiteCellTests" time="0.0"/>
+  <testcase name="whiteCellSetAttacked" classname="cell.WhiteCellTests" time="0.0"/>
+  <testcase name="whiteCellUpdateTime" classname="cell.WhiteCellTests" time="0.0"/>
+  <testcase name="whiteCellIsAttacked" classname="cell.WhiteCellTests" time="0.0"/>
+  <testcase name="whiteCellConstructor" classname="cell.WhiteCellTests" time="0.0"/>
+  <testcase name="whiteCellProduceUnit" classname="cell.WhiteCellTests" time="0.001"/>
+  <testcase name="whiteCellMove" classname="cell.WhiteCellTests" time="0.0"/>
+  <testcase name="whiteCellGetTime" classname="cell.WhiteCellTests" time="0.001"/>
+  <testcase name="whiteCellToString" classname="cell.WhiteCellTests" time="0.0"/>
   <testcase name="whiteCellSplit" classname="cell.WhiteCellTests" time="0.0"/>
   <testcase name="whiteCellSetAttacked" classname="cell.WhiteCellTests" time="0.0"/>
   <testcase name="whiteCellUpdateTime" classname="cell.WhiteCellTests" time="0.0"/>
@@ -8,17 +17,8 @@
   <testcase name="whiteCellConstructor" classname="cell.WhiteCellTests" time="0.0"/>
   <testcase name="whiteCellProduceUnit" classname="cell.WhiteCellTests" time="0.0"/>
   <testcase name="whiteCellMove" classname="cell.WhiteCellTests" time="0.0"/>
-  <testcase name="whiteCellGetTime" classname="cell.WhiteCellTests" time="0.001"/>
+  <testcase name="whiteCellGetTime" classname="cell.WhiteCellTests" time="0.0"/>
   <testcase name="whiteCellToString" classname="cell.WhiteCellTests" time="0.0"/>
-  <testcase name="whiteCellSplit" classname="cell.WhiteCellTests" time="0.0"/>
-  <testcase name="whiteCellSetAttacked" classname="cell.WhiteCellTests" time="0.0"/>
-  <testcase name="whiteCellUpdateTime" classname="cell.WhiteCellTests" time="0.0"/>
-  <testcase name="whiteCellIsAttacked" classname="cell.WhiteCellTests" time="0.001"/>
-  <testcase name="whiteCellConstructor" classname="cell.WhiteCellTests" time="0.0"/>
-  <testcase name="whiteCellProduceUnit" classname="cell.WhiteCellTests" time="0.001"/>
-  <testcase name="whiteCellMove" classname="cell.WhiteCellTests" time="0.0"/>
-  <testcase name="whiteCellGetTime" classname="cell.WhiteCellTests" time="0.001"/>
-  <testcase name="whiteCellToString" classname="cell.WhiteCellTests" time="0.001"/>
   <system-out><![CDATA[0
 0
 ]]></system-out>

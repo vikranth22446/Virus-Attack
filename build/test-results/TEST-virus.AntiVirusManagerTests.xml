@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="virus.AntiVirusManagerTests" tests="6" skipped="0" failures="0" errors="0" timestamp="2016-10-23T01:46:02" hostname="Vikranth-desk" time="0.072">
+<testsuite name="virus.AntiVirusManagerTests" tests="6" skipped="0" failures="0" errors="0" timestamp="2016-10-23T02:15:11" hostname="Vikranth-desk" time="0.174">
   <properties/>
-  <testcase name="antiVirusManagerConstructor" classname="virus.AntiVirusManagerTests" time="0.001"/>
+  <testcase name="antiVirusManagerConstructor" classname="virus.AntiVirusManagerTests" time="0.0"/>
   <testcase name="antiVirusManagerAddAnti" classname="virus.AntiVirusManagerTests" time="0.0"/>
   <testcase name="antiVirusManagerToString" classname="virus.AntiVirusManagerTests" time="0.0"/>
   <testcase name="antiVirusManagerConstructor" classname="virus.AntiVirusManagerTests" time="0.0"/>

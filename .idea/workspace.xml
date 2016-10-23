@@ -2,7 +2,96 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d35cb49-1c5a-449d-9711-4146df15f456" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/allclasses-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/allclasses-noframe.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/antivirus/AntiVirus.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/antivirus/AntiVirusManager.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/antivirus/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/antivirus/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/antivirus/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/cell/Cell.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/cell/CellManager.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/cell/RedCell.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/cell/SickCell.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/cell/WhiteCell.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/cell/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/cell/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/cell/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/constant-values.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/deprecated-list.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/gui/GameOverScreen.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/gui/WelcomeScreen.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/gui/World.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/gui/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/gui/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/gui/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/help-doc.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/helper/Attacker.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/helper/Constants.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/helper/HealthBar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/helper/InputHandler.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/helper/Locatable.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/helper/ScoreBoard.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/helper/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/helper/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/helper/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/index-all.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/overview-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/overview-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/overview-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/package-list" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/script.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/serialized-form.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/stylesheet.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/virus/Virus.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/virus/VirusGroup.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/virus/VirusGroupManager.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/virus/package-frame.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/virus/package-summary.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/docs/javadoc/virus/package-tree.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/libs/APCS-Final-Project-1.0-SNAPSHOT.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/tmp/javadoc/javadoc.options" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/binary/test/results.bin" afterPath="$PROJECT_DIR$/build/test-results/binary/test/results.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/classes/cell.CellManagerTests.html" afterPath="$PROJECT_DIR$/build/reports/tests/classes/cell.CellManagerTests.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/classes/cell.CellTests.html" afterPath="$PROJECT_DIR$/build/reports/tests/classes/cell.CellTests.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/classes/cell.RedCellTests.html" afterPath="$PROJECT_DIR$/build/reports/tests/classes/cell.RedCellTests.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/classes/cell.SickCellTests.html" afterPath="$PROJECT_DIR$/build/reports/tests/classes/cell.SickCellTests.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/classes/cell.WhiteCellTests.html" afterPath="$PROJECT_DIR$/build/reports/tests/classes/cell.WhiteCellTests.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/classes/helper.AttackerTests.html" afterPath="$PROJECT_DIR$/build/reports/tests/classes/helper.AttackerTests.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/classes/helper.HealthBarTests.html" afterPath="$PROJECT_DIR$/build/reports/tests/classes/helper.HealthBarTests.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/classes/helper.LocatableTests.html" afterPath="$PROJECT_DIR$/build/reports/tests/classes/helper.LocatableTests.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/classes/helper.ScoreBoardTests.html" afterPath="$PROJECT_DIR$/build/reports/tests/classes/helper.ScoreBoardTests.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/classes/virus.AntiVirusManagerTests.html" afterPath="$PROJECT_DIR$/build/reports/tests/classes/virus.AntiVirusManagerTests.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/classes/virus.AntiVirusTests.html" afterPath="$PROJECT_DIR$/build/reports/tests/classes/virus.AntiVirusTests.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/classes/virus.VirusGroupManagerTests.html" afterPath="$PROJECT_DIR$/build/reports/tests/classes/virus.VirusGroupManagerTests.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/classes/virus.VirusGroupTests.html" afterPath="$PROJECT_DIR$/build/reports/tests/classes/virus.VirusGroupTests.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/classes/virus.VirusTests.html" afterPath="$PROJECT_DIR$/build/reports/tests/classes/virus.VirusTests.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/index.html" afterPath="$PROJECT_DIR$/build/reports/tests/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/packages/cell.html" afterPath="$PROJECT_DIR$/build/reports/tests/packages/cell.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/packages/helper.html" afterPath="$PROJECT_DIR$/build/reports/tests/packages/helper.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/packages/virus.html" afterPath="$PROJECT_DIR$/build/reports/tests/packages/virus.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/TEST-cell.CellManagerTests.xml" afterPath="$PROJECT_DIR$/build/test-results/TEST-cell.CellManagerTests.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/TEST-cell.CellTests.xml" afterPath="$PROJECT_DIR$/build/test-results/TEST-cell.CellTests.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/TEST-cell.RedCellTests.xml" afterPath="$PROJECT_DIR$/build/test-results/TEST-cell.RedCellTests.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/TEST-cell.SickCellTests.xml" afterPath="$PROJECT_DIR$/build/test-results/TEST-cell.SickCellTests.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/TEST-cell.WhiteCellTests.xml" afterPath="$PROJECT_DIR$/build/test-results/TEST-cell.WhiteCellTests.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/TEST-helper.AttackerTests.xml" afterPath="$PROJECT_DIR$/build/test-results/TEST-helper.AttackerTests.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/TEST-helper.HealthBarTests.xml" afterPath="$PROJECT_DIR$/build/test-results/TEST-helper.HealthBarTests.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/TEST-helper.LocatableTests.xml" afterPath="$PROJECT_DIR$/build/test-results/TEST-helper.LocatableTests.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/TEST-helper.ScoreBoardTests.xml" afterPath="$PROJECT_DIR$/build/test-results/TEST-helper.ScoreBoardTests.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/TEST-virus.AntiVirusManagerTests.xml" afterPath="$PROJECT_DIR$/build/test-results/TEST-virus.AntiVirusManagerTests.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/TEST-virus.AntiVirusTests.xml" afterPath="$PROJECT_DIR$/build/test-results/TEST-virus.AntiVirusTests.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/TEST-virus.VirusGroupManagerTests.xml" afterPath="$PROJECT_DIR$/build/test-results/TEST-virus.VirusGroupManagerTests.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/TEST-virus.VirusGroupTests.xml" afterPath="$PROJECT_DIR$/build/test-results/TEST-virus.VirusGroupTests.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/TEST-virus.VirusTests.xml" afterPath="$PROJECT_DIR$/build/test-results/TEST-virus.VirusTests.xml" />
     </list>
     <ignored path="APCS-Final-Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,6 +146,46 @@
                 <option name="myItemId" value="APCS-Final-Project" />
                 <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ProjectNode" />
               </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="Tasks" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.TasksNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="verification" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.TasksNode$1" />
+              </PATH_ELEMENT>
+            </PATH>
+            <PATH>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ExternalProjectsStructure$RootNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="APCS-Final-Project" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ProjectNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="Tasks" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.TasksNode" />
+              </PATH_ELEMENT>
+            </PATH>
+            <PATH>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ExternalProjectsStructure$RootNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="APCS-Final-Project" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.ProjectNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="Tasks" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.TasksNode" />
+              </PATH_ELEMENT>
+              <PATH_ELEMENT>
+                <option name="myItemId" value="build" />
+                <option name="myItemType" value="com.intellij.openapi.externalSystem.view.TasksNode$1" />
+              </PATH_ELEMENT>
             </PATH>
             <PATH>
               <PATH_ELEMENT>
@@ -82,11 +211,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build/docs/javadoc/index.html">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="34">
+              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -95,18 +224,8 @@
       <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+            <state relative-caret-position="119">
+              <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -620,6 +739,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="APCS-Final-Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Virus-Attack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="org.jetbrains.plugins.gradle.projectView.GradleTreeStructureProvider$GradleSourceSetDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -650,7 +787,7 @@
       <recent name="C:\Users\vikranth\Documents\GitHub\Virus-Attack\APCS-Final-Project\src\main\resources\background" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Virus-Attack [tasks]">
+  <component name="RunManager" selected="Gradle.Virus-Attack [check]">
     <configuration default="false" name="Virus-Attack [check]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -669,60 +806,6 @@
       </ExternalSystemSettings>
       <method />
     </configuration>
-    <configuration default="false" name="Virus-Attack [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <method />
-    </configuration>
-    <configuration default="false" name="Virus-Attack [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <method />
-    </configuration>
-    <configuration default="false" name="Virus-Attack [assemble]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="assemble" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <method />
-    </configuration>
     <configuration default="false" name="Virus-Attack [tasks]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -735,6 +818,60 @@
         <option name="taskNames">
           <list>
             <option value="tasks" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="false" name="Virus-Attack [classes]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="classes" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="false" name="Virus-Attack [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="false" name="Virus-Attack [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="test" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -1273,23 +1410,23 @@
       <item index="0" class="java.lang.String" itemvalue="Application.Run" />
       <item index="1" class="java.lang.String" itemvalue="Gauge Execution.Run" />
       <item index="2" class="java.lang.String" itemvalue="Gradle.Virus-Attack [check]" />
-      <item index="3" class="java.lang.String" itemvalue="Gradle.Virus-Attack [test]" />
-      <item index="4" class="java.lang.String" itemvalue="Gradle.Virus-Attack [build]" />
-      <item index="5" class="java.lang.String" itemvalue="Gradle.Virus-Attack [assemble]" />
-      <item index="6" class="java.lang.String" itemvalue="Gradle.Virus-Attack [tasks]" />
+      <item index="3" class="java.lang.String" itemvalue="Gradle.Virus-Attack [tasks]" />
+      <item index="4" class="java.lang.String" itemvalue="Gradle.Virus-Attack [classes]" />
+      <item index="5" class="java.lang.String" itemvalue="Gradle.Virus-Attack [clean]" />
+      <item index="6" class="java.lang.String" itemvalue="Gradle.Virus-Attack [test]" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Gradle.Virus-Attack [tasks]" />
-        <item index="1" class="java.lang.String" itemvalue="Gradle.Virus-Attack [assemble]" />
-        <item index="2" class="java.lang.String" itemvalue="Gradle.Virus-Attack [build]" />
-        <item index="3" class="java.lang.String" itemvalue="Gradle.Virus-Attack [test]" />
-        <item index="4" class="java.lang.String" itemvalue="Gradle.Virus-Attack [check]" />
+        <item index="0" class="java.lang.String" itemvalue="Gradle.Virus-Attack [test]" />
+        <item index="1" class="java.lang.String" itemvalue="Gradle.Virus-Attack [clean]" />
+        <item index="2" class="java.lang.String" itemvalue="Gradle.Virus-Attack [classes]" />
+        <item index="3" class="java.lang.String" itemvalue="Gradle.Virus-Attack [check]" />
+        <item index="4" class="java.lang.String" itemvalue="Gradle.Virus-Attack [tasks]" />
       </list>
     </recent_temporary>
   </component>
   <component name="SbtLocalSettings">
-    <option name="lastUpdateTimestamp" value="1477187957532" />
+    <option name="lastUpdateTimestamp" value="1477188893086" />
     <option name="modificationStamps">
       <map>
         <entry key="$PROJECT_DIR$/../../gorilla" value="1474424029773" />
@@ -1315,7 +1452,7 @@
       <option name="presentableId" value="Default" />
       <updated>1477183469954</updated>
       <workItem from="1477183471375" duration="3629000" />
-      <workItem from="1477187148647" duration="1610000" />
+      <workItem from="1477187148647" duration="1808000" />
     </task>
     <servers />
   </component>
@@ -1326,17 +1463,39 @@
     <history-entry file="APCS-Final-Project_[test] - 2016.10.22 at 18h 04m 03s.xml">
       <configuration name="APCS-Final-Project [test]" configurationId="GradleRunConfiguration" />
     </history-entry>
+    <history-entry file="Virus-Attack_[check] - 2016.10.22 at 19h 14m 27s.xml">
+      <configuration name="Virus-Attack [check]" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="Virus-Attack_[check] - 2016.10.22 at 19h 14m 30s.xml">
+      <configuration name="Virus-Attack [check]" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="Virus-Attack_[check] - 2016.10.22 at 19h 14m 56s.xml">
+      <configuration name="Virus-Attack [check]" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="Virus-Attack_[check] - 2016.10.22 at 19h 15m 12s.xml">
+      <configuration name="Virus-Attack [check]" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="Virus-Attack_[check] - 2016.10.22 at 19h 15m 22s.xml">
+      <configuration name="Virus-Attack [check]" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="Virus-Attack_[test] - 2016.10.22 at 19h 14m 31s.xml">
+      <configuration name="Virus-Attack [test]" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="Virus-Attack_[test] - 2016.10.22 at 19h 15m 20s.xml">
+      <configuration name="Virus-Attack [test]" configurationId="GradleRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5239000" />
+    <option name="totallyTimeSpent" value="5437000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="995" height="1041" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -1346,7 +1505,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3433155" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3433155" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19144385" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -1354,7 +1513,6 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1454,16 +1612,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/build/docs/javadoc/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        <state relative-caret-position="170">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -1476,10 +1626,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state relative-caret-position="119">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
           <folding />
         </state>
       </provider>

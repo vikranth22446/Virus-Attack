@@ -3,8 +3,9 @@ jdk:
   - oraclejdk8
 before_script:
 - chmod a+x gradlew
-sccript: ./gradlew build
-
+sccript:
+  - ./gradlew build
+  - ./gradlew check
 branches:
   only:
     - master
