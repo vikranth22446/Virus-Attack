@@ -2,6 +2,7 @@
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 .gradle/
+
 # Package Files #
 *.war
 *.ear
@@ -62,6 +63,11 @@ build/tmp/compileJava/
 build/tmp/compileTestJava/
 src/test/resources/
 build/tmp/
-build/reports/
+build/reports/tests/
+build/
 build/classes/
-build/test-results
+build/test-results/
+*.bin
+*.js
+build/test-results/TEST-cell.CellManagerTests.xml
+*.xml

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="helper.LocatableTests" tests="6" skipped="0" failures="0" errors="0" timestamp="2016-10-23T02:22:09" hostname="Vikranth-desk" time="0.087">
+<testsuite name="helper.LocatableTests" tests="6" skipped="0" failures="0" errors="0" timestamp="2016-10-23T02:31:36" hostname="Vikranth-desk" time="0.177">
   <properties/>
   <testcase name="locatableGetX" classname="helper.LocatableTests" time="0.0"/>
-  <testcase name="locatableGetY" classname="helper.LocatableTests" time="0.001"/>
+  <testcase name="locatableGetY" classname="helper.LocatableTests" time="0.002"/>
   <testcase name="locatableDistance" classname="helper.LocatableTests" time="0.0"/>
   <testcase name="locatableGetX" classname="helper.LocatableTests" time="0.0"/>
   <testcase name="locatableGetY" classname="helper.LocatableTests" time="0.0"/>
