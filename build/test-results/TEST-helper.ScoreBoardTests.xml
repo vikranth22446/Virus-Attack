@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="helper.ScoreBoardTests" tests="18" skipped="0" failures="0" errors="0" timestamp="2016-10-23T01:46:01" hostname="Vikranth-desk" time="0.079">
+  <properties/>
+  <testcase name="getSeconds" classname="helper.ScoreBoardTests" time="0.014"/>
+  <testcase name="getRedCellsConquered" classname="helper.ScoreBoardTests" time="0.0"/>
+  <testcase name="increaseWhiteDeaths" classname="helper.ScoreBoardTests" time="0.0"/>
+  <testcase name="getTotalScore" classname="helper.ScoreBoardTests" time="0.0"/>
+  <testcase name="getWhiteCellsKilled" classname="helper.ScoreBoardTests" time="0.001"/>
+  <testcase name="everyTurnTest" classname="helper.ScoreBoardTests" time="0.0"/>
+  <testcase name="scoreBoardContructorTest" classname="helper.ScoreBoardTests" time="0.0"/>
+  <testcase name="increaseRedCellsDead" classname="helper.ScoreBoardTests" time="0.001"/>
+  <testcase name="scoreBoardtoStringTest" classname="helper.ScoreBoardTests" time="0.001"/>
+  <testcase name="getSeconds" classname="helper.ScoreBoardTests" time="0.001"/>
+  <testcase name="getRedCellsConquered" classname="helper.ScoreBoardTests" time="0.001"/>
+  <testcase name="increaseWhiteDeaths" classname="helper.ScoreBoardTests" time="0.001"/>
+  <testcase name="getTotalScore" classname="helper.ScoreBoardTests" time="0.001"/>
+  <testcase name="getWhiteCellsKilled" classname="helper.ScoreBoardTests" time="0.001"/>
+  <testcase name="everyTurnTest" classname="helper.ScoreBoardTests" time="0.001"/>
+  <testcase name="scoreBoardContructorTest" classname="helper.ScoreBoardTests" time="0.001"/>
+  <testcase name="increaseRedCellsDead" classname="helper.ScoreBoardTests" time="0.0"/>
+  <testcase name="scoreBoardtoStringTest" classname="helper.ScoreBoardTests" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

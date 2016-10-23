@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="helper.AttackerTests" tests="44" skipped="0" failures="0" errors="0" timestamp="2016-10-23T01:46:01" hostname="Vikranth-desk" time="0.074">
+  <properties/>
+  <testcase name="attackerreduceHealth" classname="helper.AttackerTests" time="0.0"/>
+  <testcase name="attackerGetDistance" classname="helper.AttackerTests" time="0.0"/>
+  <testcase name="attackerConstructor" classname="helper.AttackerTests" time="0.0"/>
+  <testcase name="attackerGetAttackRadius" classname="helper.AttackerTests" time="0.0"/>
+  <testcase name="attackerVelocityX" classname="helper.AttackerTests" time="0.0"/>
+  <testcase name="attackerVelocityY" classname="helper.AttackerTests" time="0.0"/>
+  <testcase name="attackerHealth" classname="helper.AttackerTests" time="0.0"/>
+  <testcase name="attackerHeight" classname="helper.AttackerTests" time="0.0"/>
+  <testcase name="attackerIsDead" classname="helper.AttackerTests" time="0.0"/>
+  <testcase name="attackerYLocation" classname="helper.AttackerTests" time="0.0"/>
+  <testcase name="attackerToString" classname="helper.AttackerTests" time="0.0"/>
+  <testcase name="attackerGetDistanceWithoutLocatable" classname="helper.AttackerTests" time="0.0"/>
+  <testcase name="attackerGetX" classname="helper.AttackerTests" time="0.0"/>
+  <testcase name="attackerGetY" classname="helper.AttackerTests" time="0.0"/>
+  <testcase name="attackerSetX" classname="helper.AttackerTests" time="0.0"/>
+  <testcase name="attackerSetY" classname="helper.AttackerTests" time="0.003"/>
+  <testcase name="attackerSetCoordinate" classname="helper.AttackerTests" time="0.001"/>
+  <testcase name="attackerSetVx" classname="helper.AttackerTests" time="0.0"/>
+  <testcase name="attackerSetVy" classname="helper.AttackerTests" time="0.0"/>
+  <testcase name="attackerSpeed" classname="helper.AttackerTests" time="0.001"/>
+  <testcase name="attackerWidth" classname="helper.AttackerTests" time="0.0"/>
+  <testcase name="attackerXLocation" classname="helper.AttackerTests" time="0.0"/>
+  <testcase name="attackerreduceHealth" classname="helper.AttackerTests" time="0.0"/>
+  <testcase name="attackerGetDistance" classname="helper.AttackerTests" time="0.0"/>
+  <testcase name="attackerConstructor" classname="helper.AttackerTests" time="0.0"/>
+  <testcase name="attackerGetAttackRadius" classname="helper.AttackerTests" time="0.0"/>
+  <testcase name="attackerVelocityX" classname="helper.AttackerTests" time="0.0"/>
+  <testcase name="attackerVelocityY" classname="helper.AttackerTests" time="0.0"/>
+  <testcase name="attackerHealth" classname="helper.AttackerTests" time="0.0"/>
+  <testcase name="attackerHeight" classname="helper.AttackerTests" time="0.0"/>
+  <testcase name="attackerIsDead" classname="helper.AttackerTests" time="0.0"/>
+  <testcase name="attackerYLocation" classname="helper.AttackerTests" time="0.001"/>
+  <testcase name="attackerToString" classname="helper.AttackerTests" time="0.0"/>
+  <testcase name="attackerGetDistanceWithoutLocatable" classname="helper.AttackerTests" time="0.0"/>
+  <testcase name="attackerGetX" classname="helper.AttackerTests" time="0.0"/>
+  <testcase name="attackerGetY" classname="helper.AttackerTests" time="0.0"/>
+  <testcase name="attackerSetX" classname="helper.AttackerTests" time="0.0"/>
+  <testcase name="attackerSetY" classname="helper.AttackerTests" time="0.0"/>
+  <testcase name="attackerSetCoordinate" classname="helper.AttackerTests" time="0.0"/>
+  <testcase name="attackerSetVx" classname="helper.AttackerTests" time="0.0"/>
+  <testcase name="attackerSetVy" classname="helper.AttackerTests" time="0.001"/>
+  <testcase name="attackerSpeed" classname="helper.AttackerTests" time="0.0"/>
+  <testcase name="attackerWidth" classname="helper.AttackerTests" time="0.0"/>
+  <testcase name="attackerXLocation" classname="helper.AttackerTests" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

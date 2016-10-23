@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="virus.VirusGroupTests" tests="12" skipped="0" failures="0" errors="0" timestamp="2016-10-23T01:46:02" hostname="Vikranth-desk" time="0.015">
+  <properties/>
+  <testcase name="virusGroupSetCoord" classname="virus.VirusGroupTests" time="0.0"/>
+  <testcase name="virusGroupGetVirus" classname="virus.VirusGroupTests" time="0.0"/>
+  <testcase name="virusGroupAddVirus" classname="virus.VirusGroupTests" time="0.001"/>
+  <testcase name="virusGroupOtherConstructor" classname="virus.VirusGroupTests" time="0.0"/>
+  <testcase name="virusGroupConstructor" classname="virus.VirusGroupTests" time="0.0"/>
+  <testcase name="virusGroupRemove" classname="virus.VirusGroupTests" time="0.001"/>
+  <testcase name="virusGroupSetCoord" classname="virus.VirusGroupTests" time="0.0"/>
+  <testcase name="virusGroupGetVirus" classname="virus.VirusGroupTests" time="0.0"/>
+  <testcase name="virusGroupAddVirus" classname="virus.VirusGroupTests" time="0.0"/>
+  <testcase name="virusGroupOtherConstructor" classname="virus.VirusGroupTests" time="0.0"/>
+  <testcase name="virusGroupConstructor" classname="virus.VirusGroupTests" time="0.0"/>
+  <testcase name="virusGroupRemove" classname="virus.VirusGroupTests" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

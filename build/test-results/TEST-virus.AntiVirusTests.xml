@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="virus.AntiVirusTests" tests="4" skipped="0" failures="0" errors="0" timestamp="2016-10-23T01:46:02" hostname="Vikranth-desk" time="0.07">
+  <properties/>
+  <testcase name="antiVirusConstructor" classname="virus.AntiVirusTests" time="0.0"/>
+  <testcase name="antiVirusToString" classname="virus.AntiVirusTests" time="0.0"/>
+  <testcase name="antiVirusConstructor" classname="virus.AntiVirusTests" time="0.0"/>
+  <testcase name="antiVirusToString" classname="virus.AntiVirusTests" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

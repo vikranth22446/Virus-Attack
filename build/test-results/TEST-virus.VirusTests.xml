@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="virus.VirusTests" tests="12" skipped="0" failures="0" errors="0" timestamp="2016-10-23T01:46:02" hostname="Vikranth-desk" time="0.015">
+  <properties/>
+  <testcase name="virusMoving" classname="virus.VirusTests" time="0.0"/>
+  <testcase name="virusUpdate" classname="virus.VirusTests" time="0.0"/>
+  <testcase name="virusConstructor" classname="virus.VirusTests" time="0.0"/>
+  <testcase name="virusIdleMovement" classname="virus.VirusTests" time="0.0"/>
+  <testcase name="virusReduceHealth" classname="virus.VirusTests" time="0.0"/>
+  <testcase name="virusToString" classname="virus.VirusTests" time="0.001"/>
+  <testcase name="virusMoving" classname="virus.VirusTests" time="0.0"/>
+  <testcase name="virusUpdate" classname="virus.VirusTests" time="0.0"/>
+  <testcase name="virusConstructor" classname="virus.VirusTests" time="0.0"/>
+  <testcase name="virusIdleMovement" classname="virus.VirusTests" time="0.0"/>
+  <testcase name="virusReduceHealth" classname="virus.VirusTests" time="0.0"/>
+  <testcase name="virusToString" classname="virus.VirusTests" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

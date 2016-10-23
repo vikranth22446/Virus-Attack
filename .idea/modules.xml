@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Virus-Attack.iml" filepath="$PROJECT_DIR$/Virus-Attack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/APCS-Final-Project.iml" filepath="$PROJECT_DIR$/.idea/modules/APCS-Final-Project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/APCS-Final-Project_main.iml" filepath="$PROJECT_DIR$/.idea/modules/APCS-Final-Project_main.iml" group="APCS-Final-Project" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/APCS-Final-Project_test.iml" filepath="$PROJECT_DIR$/.idea/modules/APCS-Final-Project_test.iml" group="APCS-Final-Project" />
     </modules>
   </component>
 </project>
