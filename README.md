@@ -1,4 +1,4 @@
-![Build Status](https://travis-ci.org/vikranth22446/Virus-Attack.svg?branch=master)
+[![Build Status](https://travis-ci.org/vikranth22446/Virus-Attack.svg?branch=master)](https://travis-ci.org/vikranth22446/Virus-Attack)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/613615f1ae62412a8bfe77f170470e6a)](https://www.codacy.com/app/rama22446/Virus-Attack?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=vikranth22446/Virus-Attack&amp;utm_campaign=Badge_Grade)
 [![License](https://img.shields.io/cocoapods/l/EasyQL.svg?style=flat)](https://github.com/vikranth22446/Dvcon-India-App/blob/master/LICENSE.md)
 # APCS-Final-Project
