@@ -6,7 +6,7 @@ jdk:
 before_install:
   - chmod +x gradlew
 before_script:
-  - gradle assemble
+  - gradle clean assemble
 scripts:
   - gradle check
   - gradle test
