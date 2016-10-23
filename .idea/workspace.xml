@@ -1,16 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1d35cb49-1c5a-449d-9711-4146df15f456" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/config/sample.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+    <list default="true" id="1d35cb49-1c5a-449d-9711-4146df15f456" name="Default" comment="Move Docs&#10;">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/docs/javadoc/script.js" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/allclasses-frame.html" afterPath="$PROJECT_DIR$/docs/allclasses-frame.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/allclasses-noframe.html" afterPath="$PROJECT_DIR$/docs/allclasses-noframe.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/antivirus/AntiVirus.html" afterPath="$PROJECT_DIR$/docs/antivirus/AntiVirus.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/antivirus/AntiVirusManager.html" afterPath="$PROJECT_DIR$/docs/antivirus/AntiVirusManager.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/antivirus/package-frame.html" afterPath="$PROJECT_DIR$/docs/antivirus/package-frame.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/antivirus/package-summary.html" afterPath="$PROJECT_DIR$/docs/antivirus/package-summary.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/antivirus/package-tree.html" afterPath="$PROJECT_DIR$/docs/antivirus/package-tree.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/cell/Cell.html" afterPath="$PROJECT_DIR$/docs/cell/Cell.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/cell/CellManager.html" afterPath="$PROJECT_DIR$/docs/cell/CellManager.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/cell/RedCell.html" afterPath="$PROJECT_DIR$/docs/cell/RedCell.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/cell/SickCell.html" afterPath="$PROJECT_DIR$/docs/cell/SickCell.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/cell/WhiteCell.html" afterPath="$PROJECT_DIR$/docs/cell/WhiteCell.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/cell/package-frame.html" afterPath="$PROJECT_DIR$/docs/cell/package-frame.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/cell/package-summary.html" afterPath="$PROJECT_DIR$/docs/cell/package-summary.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/cell/package-tree.html" afterPath="$PROJECT_DIR$/docs/cell/package-tree.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/constant-values.html" afterPath="$PROJECT_DIR$/docs/constant-values.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/deprecated-list.html" afterPath="$PROJECT_DIR$/docs/deprecated-list.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/gui/GameOverScreen.html" afterPath="$PROJECT_DIR$/docs/gui/GameOverScreen.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/gui/WelcomeScreen.html" afterPath="$PROJECT_DIR$/docs/gui/WelcomeScreen.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/gui/World.html" afterPath="$PROJECT_DIR$/docs/gui/World.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/gui/package-frame.html" afterPath="$PROJECT_DIR$/docs/gui/package-frame.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/gui/package-summary.html" afterPath="$PROJECT_DIR$/docs/gui/package-summary.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/gui/package-tree.html" afterPath="$PROJECT_DIR$/docs/gui/package-tree.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/help-doc.html" afterPath="$PROJECT_DIR$/docs/help-doc.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/helper/Attacker.html" afterPath="$PROJECT_DIR$/docs/helper/Attacker.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/helper/Constants.html" afterPath="$PROJECT_DIR$/docs/helper/Constants.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/helper/HealthBar.html" afterPath="$PROJECT_DIR$/docs/helper/HealthBar.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/helper/InputHandler.html" afterPath="$PROJECT_DIR$/docs/helper/InputHandler.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/helper/Locatable.html" afterPath="$PROJECT_DIR$/docs/helper/Locatable.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/helper/ScoreBoard.html" afterPath="$PROJECT_DIR$/docs/helper/ScoreBoard.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/helper/package-frame.html" afterPath="$PROJECT_DIR$/docs/helper/package-frame.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/helper/package-summary.html" afterPath="$PROJECT_DIR$/docs/helper/package-summary.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/helper/package-tree.html" afterPath="$PROJECT_DIR$/docs/helper/package-tree.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/index-all.html" afterPath="$PROJECT_DIR$/docs/index-all.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/index.html" afterPath="$PROJECT_DIR$/docs/index.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/overview-frame.html" afterPath="$PROJECT_DIR$/docs/overview-frame.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/overview-summary.html" afterPath="$PROJECT_DIR$/docs/overview-summary.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/overview-tree.html" afterPath="$PROJECT_DIR$/docs/overview-tree.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/package-list" afterPath="$PROJECT_DIR$/docs/package-list" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/serialized-form.html" afterPath="$PROJECT_DIR$/docs/serialized-form.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/stylesheet.css" afterPath="$PROJECT_DIR$/docs/stylesheet.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/virus/Virus.html" afterPath="$PROJECT_DIR$/docs/virus/Virus.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/virus/VirusGroup.html" afterPath="$PROJECT_DIR$/docs/virus/VirusGroup.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/virus/VirusGroupManager.html" afterPath="$PROJECT_DIR$/docs/virus/VirusGroupManager.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/virus/package-frame.html" afterPath="$PROJECT_DIR$/docs/virus/package-frame.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/virus/package-summary.html" afterPath="$PROJECT_DIR$/docs/virus/package-summary.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/docs/javadoc/virus/package-tree.html" afterPath="$PROJECT_DIR$/docs/virus/package-tree.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/antivirus/AntiVirus.java" afterPath="$PROJECT_DIR$/src/main/java/antivirus/AntiVirus.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cell/CellManager.java" afterPath="$PROJECT_DIR$/src/main/java/cell/CellManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/gui/World.java" afterPath="$PROJECT_DIR$/src/main/java/gui/World.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/virus/VirusGroupManager.java" afterPath="$PROJECT_DIR$/src/main/java/virus/VirusGroupManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/cell/CellManagerTests.java" afterPath="$PROJECT_DIR$/src/test/java/cell/CellManagerTests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/cell/SickCellTests.java" afterPath="$PROJECT_DIR$/src/test/java/cell/SickCellTests.java" />
     </list>
     <ignored path="APCS-Final-Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -165,9 +205,11 @@
       <file leaf-file-name="World.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/gui/World.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3441">
+            <state relative-caret-position="3893">
               <caret line="243" column="8" selection-start-line="243" selection-start-column="8" selection-end-line="243" selection-end-column="8" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -175,9 +217,29 @@
       <file leaf-file-name="VirusGroupManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/virus/VirusGroupManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
+            <state relative-caret-position="1054">
               <caret line="70" column="8" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="8" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#1239#1240#0" expanded="false" />
+                <element signature="e#1268#1269#0" expanded="false" />
+                <element signature="e#2902#2903#0" expanded="false" />
+                <element signature="e#2940#2941#0" expanded="false" />
+                <element signature="e#3151#3152#0" expanded="false" />
+                <element signature="e#3217#3218#0" expanded="false" />
+                <element signature="e#3399#3400#0" expanded="false" />
+                <element signature="e#3465#3466#0" expanded="false" />
+                <element signature="e#3621#3622#0" expanded="false" />
+                <element signature="e#3677#3678#0" expanded="false" />
+                <element signature="e#4596#4597#0" expanded="false" />
+                <element signature="e#4635#4636#0" expanded="false" />
+                <element signature="e#4752#4753#0" expanded="false" />
+                <element signature="e#4783#4784#0" expanded="false" />
+                <element signature="e#4952#4953#0" expanded="false" />
+                <element signature="e#4981#4982#0" expanded="false" />
+                <element signature="e#5556#5557#0" expanded="false" />
+                <element signature="e#5583#5584#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -185,9 +247,19 @@
       <file leaf-file-name="CellManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cell/CellManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
+            <state relative-caret-position="2856">
               <caret line="180" column="0" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#2714#2715#0" expanded="false" />
+                <element signature="e#2750#2751#0" expanded="false" />
+                <element signature="e#2892#2893#0" expanded="false" />
+                <element signature="e#2924#2925#0" expanded="false" />
+                <element signature="e#3070#3071#0" expanded="false" />
+                <element signature="e#3104#3105#0" expanded="false" />
+                <element signature="e#3927#3928#0" expanded="false" />
+                <element signature="e#3965#3966#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -195,18 +267,50 @@
       <file leaf-file-name="CellManagerTests.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/cell/CellManagerTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
+            <state relative-caret-position="935">
               <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SickCellTests.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/cell/SickCellTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SickCellTests.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/cell/SickCellTests.java">
+      <file leaf-file-name="index-all.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/index-all.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stylesheet.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/stylesheet.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -606,7 +710,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="953" />
+    <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1041" />
   </component>
@@ -678,6 +782,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -888,11 +995,22 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="APCS-Final-Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Virus-Attack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="docs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -911,11 +1029,11 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vikranth\Documents\GitHub\Virus-Attack\docs" />
       <recent name="C:\Users\vikranth\Documents\GitHub\Virus-Attack\APCS-Final-Project" />
       <recent name="C:\Users\vikranth\Documents\GitHub\Virus-Attack\APCS-Final-Project\src\main\resources\images\cell" />
       <recent name="C:\Users\vikranth\Documents\GitHub\Virus-Attack\APCS-Final-Project\src\main\resources\images\background" />
       <recent name="C:\Users\vikranth\Documents\GitHub\Virus-Attack\APCS-Final-Project\src\main\resources\images" />
-      <recent name="C:\Users\vikranth\Documents\GitHub\Virus-Attack\APCS-Final-Project\src\main\resources\background" />
     </key>
   </component>
   <component name="RunManager" selected="Gradle.Virus-Attack [check]">
@@ -1618,6 +1736,8 @@
       <workItem from="1477190450419" duration="13000" />
       <workItem from="1477192839713" duration="627000" />
       <workItem from="1477195518968" duration="905000" />
+      <workItem from="1477199513556" duration="8000" />
+      <workItem from="1477200219316" duration="519000" />
     </task>
     <servers />
   </component>
@@ -1654,15 +1774,16 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9077000" />
+    <option name="totallyTimeSpent" value="9604000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1041" extended-state="0" />
+    <frame x="-7" y="0" width="974" height="1041" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -1680,7 +1801,6 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1695,6 +1815,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Move Docs&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Move Docs&#10;" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="1" />
@@ -1706,27 +1830,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/helper/AttackerTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="41" column="37" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1924,7 +2027,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1938,40 +2040,98 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/gui/World.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3441">
+        <state relative-caret-position="3893">
           <caret line="243" column="8" selection-start-line="243" selection-start-column="8" selection-end-line="243" selection-end-column="8" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/virus/VirusGroupManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
+        <state relative-caret-position="1054">
           <caret line="70" column="8" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="8" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1239#1240#0" expanded="false" />
+            <element signature="e#1268#1269#0" expanded="false" />
+            <element signature="e#2902#2903#0" expanded="false" />
+            <element signature="e#2940#2941#0" expanded="false" />
+            <element signature="e#3151#3152#0" expanded="false" />
+            <element signature="e#3217#3218#0" expanded="false" />
+            <element signature="e#3399#3400#0" expanded="false" />
+            <element signature="e#3465#3466#0" expanded="false" />
+            <element signature="e#3621#3622#0" expanded="false" />
+            <element signature="e#3677#3678#0" expanded="false" />
+            <element signature="e#4596#4597#0" expanded="false" />
+            <element signature="e#4635#4636#0" expanded="false" />
+            <element signature="e#4752#4753#0" expanded="false" />
+            <element signature="e#4783#4784#0" expanded="false" />
+            <element signature="e#4952#4953#0" expanded="false" />
+            <element signature="e#4981#4982#0" expanded="false" />
+            <element signature="e#5556#5557#0" expanded="false" />
+            <element signature="e#5583#5584#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cell/CellManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
+        <state relative-caret-position="2856">
           <caret line="180" column="0" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#2714#2715#0" expanded="false" />
+            <element signature="e#2750#2751#0" expanded="false" />
+            <element signature="e#2892#2893#0" expanded="false" />
+            <element signature="e#2924#2925#0" expanded="false" />
+            <element signature="e#3070#3071#0" expanded="false" />
+            <element signature="e#3104#3105#0" expanded="false" />
+            <element signature="e#3927#3928#0" expanded="false" />
+            <element signature="e#3965#3966#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/cell/CellManagerTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
+        <state relative-caret-position="935">
           <caret line="58" column="8" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="8" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/cell/SickCellTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state relative-caret-position="119">
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/index-all.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/stylesheet.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
           <folding />
         </state>
       </provider>
