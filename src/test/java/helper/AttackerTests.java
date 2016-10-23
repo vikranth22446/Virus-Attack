@@ -48,7 +48,7 @@ public class AttackerTests {
     public void attackerSetCoordinate() {
         Attacker attacker = new Virus(30, 30);
         attacker.setCoordinate(40, 40);
-        assertTrue("<<The coordinate is set wrong>>", 2 == attacker.getVx());
+        assertTrue("<<The coordinate is set wrong>>", 3 == attacker.getVx());
     }
 
     @Test
