@@ -2,50 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1d35cb49-1c5a-449d-9711-4146df15f456" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.13/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/test/helper/AttackerTests.class" afterPath="$PROJECT_DIR$/build/classes/test/helper/AttackerTests.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/binary/test/results.bin" afterPath="$PROJECT_DIR$/build/test-results/binary/test/results.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/classes/cell.CellManagerTests.html" afterPath="$PROJECT_DIR$/build/reports/tests/classes/cell.CellManagerTests.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/classes/cell.CellTests.html" afterPath="$PROJECT_DIR$/build/reports/tests/classes/cell.CellTests.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/classes/cell.RedCellTests.html" afterPath="$PROJECT_DIR$/build/reports/tests/classes/cell.RedCellTests.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/classes/cell.SickCellTests.html" afterPath="$PROJECT_DIR$/build/reports/tests/classes/cell.SickCellTests.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/classes/cell.WhiteCellTests.html" afterPath="$PROJECT_DIR$/build/reports/tests/classes/cell.WhiteCellTests.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/classes/helper.AttackerTests.html" afterPath="$PROJECT_DIR$/build/reports/tests/classes/helper.AttackerTests.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/classes/helper.HealthBarTests.html" afterPath="$PROJECT_DIR$/build/reports/tests/classes/helper.HealthBarTests.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/classes/helper.LocatableTests.html" afterPath="$PROJECT_DIR$/build/reports/tests/classes/helper.LocatableTests.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/classes/helper.ScoreBoardTests.html" afterPath="$PROJECT_DIR$/build/reports/tests/classes/helper.ScoreBoardTests.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/classes/virus.AntiVirusManagerTests.html" afterPath="$PROJECT_DIR$/build/reports/tests/classes/virus.AntiVirusManagerTests.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/classes/virus.AntiVirusTests.html" afterPath="$PROJECT_DIR$/build/reports/tests/classes/virus.AntiVirusTests.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/classes/virus.VirusGroupManagerTests.html" afterPath="$PROJECT_DIR$/build/reports/tests/classes/virus.VirusGroupManagerTests.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/classes/virus.VirusGroupTests.html" afterPath="$PROJECT_DIR$/build/reports/tests/classes/virus.VirusGroupTests.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/classes/virus.VirusTests.html" afterPath="$PROJECT_DIR$/build/reports/tests/classes/virus.VirusTests.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/css/base-style.css" afterPath="$PROJECT_DIR$/build/reports/tests/css/base-style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/css/style.css" afterPath="$PROJECT_DIR$/build/reports/tests/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/index.html" afterPath="$PROJECT_DIR$/build/reports/tests/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/js/report.js" afterPath="$PROJECT_DIR$/build/reports/tests/js/report.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/packages/cell.html" afterPath="$PROJECT_DIR$/build/reports/tests/packages/cell.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/packages/helper.html" afterPath="$PROJECT_DIR$/build/reports/tests/packages/helper.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/reports/tests/packages/virus.html" afterPath="$PROJECT_DIR$/build/reports/tests/packages/virus.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/TEST-cell.CellManagerTests.xml" afterPath="$PROJECT_DIR$/build/test-results/TEST-cell.CellManagerTests.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/TEST-cell.CellTests.xml" afterPath="$PROJECT_DIR$/build/test-results/TEST-cell.CellTests.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/TEST-cell.RedCellTests.xml" afterPath="$PROJECT_DIR$/build/test-results/TEST-cell.RedCellTests.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/TEST-cell.SickCellTests.xml" afterPath="$PROJECT_DIR$/build/test-results/TEST-cell.SickCellTests.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/TEST-cell.WhiteCellTests.xml" afterPath="$PROJECT_DIR$/build/test-results/TEST-cell.WhiteCellTests.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/TEST-helper.AttackerTests.xml" afterPath="$PROJECT_DIR$/build/test-results/TEST-helper.AttackerTests.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/TEST-helper.HealthBarTests.xml" afterPath="$PROJECT_DIR$/build/test-results/TEST-helper.HealthBarTests.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/TEST-helper.LocatableTests.xml" afterPath="$PROJECT_DIR$/build/test-results/TEST-helper.LocatableTests.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/TEST-helper.ScoreBoardTests.xml" afterPath="$PROJECT_DIR$/build/test-results/TEST-helper.ScoreBoardTests.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/TEST-virus.AntiVirusManagerTests.xml" afterPath="$PROJECT_DIR$/build/test-results/TEST-virus.AntiVirusManagerTests.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/TEST-virus.AntiVirusTests.xml" afterPath="$PROJECT_DIR$/build/test-results/TEST-virus.AntiVirusTests.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/TEST-virus.VirusGroupManagerTests.xml" afterPath="$PROJECT_DIR$/build/test-results/TEST-virus.VirusGroupManagerTests.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/TEST-virus.VirusGroupTests.xml" afterPath="$PROJECT_DIR$/build/test-results/TEST-virus.VirusGroupTests.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/test-results/TEST-virus.VirusTests.xml" afterPath="$PROJECT_DIR$/build/test-results/TEST-virus.VirusTests.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/helper/AttackerTests.java" afterPath="$PROJECT_DIR$/src/test/java/helper/AttackerTests.java" />
     </list>
     <ignored path="APCS-Final-Project.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -210,6 +168,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="71" column="2" selection-start-line="71" selection-start-column="2" selection-end-line="71" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -610,8 +570,9 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
+    <option name="y" value="116" />
     <option name="width" value="1175" />
-    <option name="height" value="1041" />
+    <option name="height" value="925" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -1499,6 +1460,7 @@
       <updated>1477183469954</updated>
       <workItem from="1477183471375" duration="3629000" />
       <workItem from="1477187148647" duration="2489000" />
+      <workItem from="1477189815796" duration="423000" />
     </task>
     <servers />
   </component>
@@ -1535,9 +1497,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="6541000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="1175" height="1041" extended-state="0" />
+    <frame x="-7" y="116" width="1175" height="925" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1547,7 +1510,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3270925" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.375" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1799,6 +1762,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="71" column="2" selection-start-line="71" selection-start-column="2" selection-end-line="71" selection-end-column="2" />
           <folding />
         </state>
       </provider>

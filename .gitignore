@@ -71,3 +71,4 @@ build/test-results/
 *.js
 build/test-results/TEST-cell.CellManagerTests.xml
 *.xml
+.idea/workspace.xml
