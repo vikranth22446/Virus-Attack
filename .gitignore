@@ -56,3 +56,8 @@ crashlytics-build.properties
 
 # Created by .ignore support plugin (hsz.mobi)
 Virus-Attack.iml
+APCS-Final-Project/
+build/dependency-cache/
+build/tmp/compileJava/
+build/tmp/compileTestJava/
+src/test/resources/
