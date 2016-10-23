@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="cell.WhiteCellTests" tests="18" skipped="0" failures="0" errors="0" timestamp="2016-10-23T02:31:36" hostname="Vikranth-desk" time="0.265">
+<testsuite name="cell.WhiteCellTests" tests="18" skipped="0" failures="0" errors="0" timestamp="2016-10-23T02:40:58" hostname="Vikranth-desk" time="0.532">
   <properties/>
   <testcase name="whiteCellSplit" classname="cell.WhiteCellTests" time="0.0"/>
   <testcase name="whiteCellSetAttacked" classname="cell.WhiteCellTests" time="0.0"/>
@@ -8,15 +8,15 @@
   <testcase name="whiteCellConstructor" classname="cell.WhiteCellTests" time="0.0"/>
   <testcase name="whiteCellProduceUnit" classname="cell.WhiteCellTests" time="0.0"/>
   <testcase name="whiteCellMove" classname="cell.WhiteCellTests" time="0.0"/>
-  <testcase name="whiteCellGetTime" classname="cell.WhiteCellTests" time="0.001"/>
+  <testcase name="whiteCellGetTime" classname="cell.WhiteCellTests" time="0.0"/>
   <testcase name="whiteCellToString" classname="cell.WhiteCellTests" time="0.0"/>
-  <testcase name="whiteCellSplit" classname="cell.WhiteCellTests" time="0.0"/>
+  <testcase name="whiteCellSplit" classname="cell.WhiteCellTests" time="0.001"/>
   <testcase name="whiteCellSetAttacked" classname="cell.WhiteCellTests" time="0.0"/>
-  <testcase name="whiteCellUpdateTime" classname="cell.WhiteCellTests" time="0.0"/>
+  <testcase name="whiteCellUpdateTime" classname="cell.WhiteCellTests" time="0.001"/>
   <testcase name="whiteCellIsAttacked" classname="cell.WhiteCellTests" time="0.0"/>
   <testcase name="whiteCellConstructor" classname="cell.WhiteCellTests" time="0.0"/>
   <testcase name="whiteCellProduceUnit" classname="cell.WhiteCellTests" time="0.0"/>
-  <testcase name="whiteCellMove" classname="cell.WhiteCellTests" time="0.001"/>
+  <testcase name="whiteCellMove" classname="cell.WhiteCellTests" time="0.0"/>
   <testcase name="whiteCellGetTime" classname="cell.WhiteCellTests" time="0.0"/>
   <testcase name="whiteCellToString" classname="cell.WhiteCellTests" time="0.0"/>
   <system-out><![CDATA[0
