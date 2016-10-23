@@ -56,7 +56,6 @@ public class CellManagerTests {
 
     @Test
     public void cellManagerRemoveCell() {
-        CellManager cm = new CellManager();
         CellManager.whiteValues.clear();
         CellManager.whiteValues.add(new WhiteCell(0, 0, 200));
         CellManager.removeCell(0);

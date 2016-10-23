@@ -68,7 +68,6 @@ public class VirusGroupManager {
      * @param yOffset the y offset to draw at
      */
     public void draw(Graphics g, int xOffset, int yOffset) {
-        int counter = 0;
         for (int n = 1; n <= 6; n++) {
             Color c = new Color(122, 122, 0);
             if (n == 1)

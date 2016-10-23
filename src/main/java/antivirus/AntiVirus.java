@@ -7,7 +7,6 @@ import virus.Virus;
 import virus.VirusGroupManager;
 
 import java.awt.*;
-import java.awt.image.BufferedImage;
 
 
 /**
@@ -133,20 +132,7 @@ public class AntiVirus extends Attacker implements Locatable {
      */
     public void draw(Graphics g, int xOffset, int yOffset) {
         g.setColor(Color.blue);
-        BufferedImage in;
-//        try {
-////            URL url = getClass().getResource("main.cell.images/antibody.png");
-////            File f;
-////            try {
-////                f = new File(url.toURI());
-////            } catch (URISyntaxException e) {
-////                f = new File(url.getPath());
-////            }
-////            in = ImageIO.read(f);
-////            g.drawImage(in, getX() - xOffset, getY() - yOffset, null);
-//
-//        } catch (IOException e) {
-//        }
+      //TODO ADD IMAGE FOR ANTIVIRUS
     }
 
 

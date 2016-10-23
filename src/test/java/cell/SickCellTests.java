@@ -41,7 +41,6 @@ public class SickCellTests {
     @Test
     public void sickCellProduceUnit() {
         SickCell wc = new SickCell(0, 0, 100);
-        VirusGroupManager vgm = new VirusGroupManager();
         Collection<VirusGroup> al = VirusGroupManager.groups.values();
         int a = 0;
         for (VirusGroup vg : al) {

@@ -74,7 +74,6 @@ public class CellManager {
         }
         for (int[] sickPoint : sickPoints) {
             Cell cell = new SickCell(sickPoint[0], sickPoint[1], -100);
-
             addSickCell(cell);
         }
     }

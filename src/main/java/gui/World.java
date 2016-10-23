@@ -80,7 +80,7 @@ public class World implements Runnable {
     /**
      * creates all the objects, get the canvas, sets frame size, adds listening to input handler
      */
-    World() {
+    public World() {
 
         /*
       the JFrame
@@ -109,7 +109,7 @@ public class World implements Runnable {
             File f;
             try {
                 f = new File(url.toURI());
-            } catch(URISyntaxException e) {
+            } catch (URISyntaxException e) {
                 f = new File(url.getPath());
             }
             bg = ImageIO.read(f);
@@ -154,11 +154,11 @@ public class World implements Runnable {
             render();
             cellManager.produce();
             String val = isGameOver();
-            if(val.equals("win") || val.equals("lost")){
-            	gameOver = val;
-            	GAME_OVER = true;
+            if (val.equals("win") || val.equals("lost")) {
+                gameOver = val;
+                GAME_OVER = true;
             }
-            
+
             if (GAME_OVER) {
                 render(time);
                 GameOverScreen gameOverScreen = new GameOverScreen();
@@ -222,30 +222,28 @@ public class World implements Runnable {
 
         bs.show();
     }
-    
-    public String isGameOver(){
-    	if(CellManager.whiteValues.size() == 0){
-    		return "win";
-    	}
-    	else if(CellManager.sickValues.size() == 0 ){
-    		for(int n : vgm.getKeys()){
-    			if(VirusGroupManager.groups.get(n).size() != 0){
-    				return "neither";
-    			}
-    		}
-    		return "lost";
-    	}
-    	return "neither";
+
+    public String isGameOver() {
+        if (CellManager.whiteValues.size() == 0) {
+            return "win";
+        } else if (CellManager.sickValues.size() == 0) {
+            for (int n : vgm.getKeys()) {
+                if (VirusGroupManager.groups.get(n).size() != 0) {
+                    return "neither";
+                }
+            }
+            return "lost";
+        }
+        return "neither";
     }
-    private Thread thread;
+
     /**
      * the start method run from main
      */
     public synchronized void start() {
-        thread = new Thread(this);
+        Thread thread = new Thread(this);
         thread.start();
     }
-
 
 
 }
