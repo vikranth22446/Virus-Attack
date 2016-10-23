@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="virus.AntiVirusManagerTests" tests="6" skipped="0" failures="0" errors="0" timestamp="2016-10-23T02:15:11" hostname="Vikranth-desk" time="0.174">
+<testsuite name="virus.AntiVirusManagerTests" tests="6" skipped="0" failures="0" errors="0" timestamp="2016-10-23T02:22:09" hostname="Vikranth-desk" time="0.026">
   <properties/>
   <testcase name="antiVirusManagerConstructor" classname="virus.AntiVirusManagerTests" time="0.0"/>
   <testcase name="antiVirusManagerAddAnti" classname="virus.AntiVirusManagerTests" time="0.0"/>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="cell.SickCellTests" tests="6" skipped="0" failures="0" errors="0" timestamp="2016-10-23T02:15:11" hostname="Vikranth-desk" time="0.388">
+<testsuite name="cell.SickCellTests" tests="6" skipped="0" failures="0" errors="0" timestamp="2016-10-23T02:22:09" hostname="Vikranth-desk" time="0.174">
   <properties/>
-  <testcase name="sickCellConstructor" classname="cell.SickCellTests" time="0.0"/>
-  <testcase name="sickCellProduceUnit" classname="cell.SickCellTests" time="0.002"/>
+  <testcase name="sickCellConstructor" classname="cell.SickCellTests" time="0.001"/>
+  <testcase name="sickCellProduceUnit" classname="cell.SickCellTests" time="0.005"/>
   <testcase name="sickCellToString" classname="cell.SickCellTests" time="0.0"/>
   <testcase name="sickCellConstructor" classname="cell.SickCellTests" time="0.0"/>
   <testcase name="sickCellProduceUnit" classname="cell.SickCellTests" time="0.0"/>
-  <testcase name="sickCellToString" classname="cell.SickCellTests" time="0.001"/>
+  <testcase name="sickCellToString" classname="cell.SickCellTests" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

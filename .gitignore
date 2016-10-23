@@ -1,7 +1,7 @@
 ### Java template
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
-
+.gradle/
 # Package Files #
 *.war
 *.ear
@@ -61,3 +61,7 @@ build/dependency-cache/
 build/tmp/compileJava/
 build/tmp/compileTestJava/
 src/test/resources/
+build/tmp/
+build/reports/
+build/classes/
+build/test-results
